@@ -1,0 +1,15 @@
+name = Radix
+description = Drupal Bootstrapped
+
+core        = 7.x
+engine      = phptemplate
+
+regions[content] = Content
+
+;stylesheets[all][] = css/bootstrap.css
+;stylesheets[all][] = css/bootstrap-responsive.css
+
+stylesheets[all][] = css/layout.css
+stylesheets[all][] = css/reset.css
+stylesheets[all][] = css/fonts.css
+stylesheets[all][] = css/structure.css
