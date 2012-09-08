@@ -11,30 +11,13 @@
   margin: 0 10px 0 0;
 }
 
-#name-and-slogan {
-  float: left;
-}
-
-#name-and-slogan #site-name{
+#name-and-slogan .brand{
   font-size: 2.0em;
   line-height: 1.2em;
 }
 
-#header .search-form {
-  float: right;
-  margin: 4px 0;
-}
-
-#header .search-form input {
+#search-form-wrapper input {
   margin: 0;
-}
-
-#header .search-form input.form-text {
-  width: 150px;
-}
-
-#header .search-form .form-actions input {
-  border-bottom-color: auto;
 }
 
 /******************************************************************************
@@ -318,7 +301,7 @@ input[type="color"],
 
 input,
 textarea {
-  width: 210px;
+  width: 90%;
 }
 
 textarea {
@@ -644,25 +627,9 @@ table td.checkbox input[type="checkbox"] {
 /******************************************************************************
  * Navigation
  *****************************************************************************/
-#navigation {
-  margin: 20px auto;
-}
-
-#navigation:after {
-  display: table;
-  line-height: 0;
-  content: "";
-  clear: both;
-}
-
 #navigation ul {
-  margin: 0;
+  margin: 20px 0;
   padding: 0;
-  float: left;
-}
-
-#navigation ul#secondary-menu {
-  float: right;
 }
 
 #navigation ul:after {
@@ -677,11 +644,6 @@ table td.checkbox input[type="checkbox"] {
   list-style: none outside none;
   margin: 0 5px 0 0;
   padding: 0;
-}
-
-#navigation ul#secondary-menu > li{
-  float: right;
-  margin: 0 0 0 5px;
 }
 
 #navigation ul > li:first-child {

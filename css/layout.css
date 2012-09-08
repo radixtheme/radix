@@ -2,11 +2,6 @@
  * @file
  * Styles for layout
  */
-#page-wrapper {
-  width: 960px;
-  margin: 0px auto;
-}
-
-.admin-menu #page-wrapper {
-  margin-top: 50px;
-}
+ #page-wrapper {
+  margin: 0 auto;
+ }

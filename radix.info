@@ -11,6 +11,7 @@ regions[content] = Content
 
 stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/reset.css
-stylesheets[all][] = css/grid.css
+stylesheets[all][] = css/responsive.css
+;stylesheets[all][] = css/grid.css
 stylesheets[all][] = css/fonts.css
 stylesheets[all][] = css/structure.css
