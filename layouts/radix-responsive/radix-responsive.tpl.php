@@ -12,19 +12,19 @@
 
 <div class="panel-display clearfix container <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 
-  <div class="span12 panel-panel">
-    <div class="panel-panel-inner">
+  <div class="panel-panel row-fluid">
+    <div class="span12 panel-panel-inner">
       <?php print $content['header']; ?>
     </div>
   </div>
   
-  <div class="row">
-    <div class="span3 panel-panel">
+  <div class="row-fluid">
+    <div class="span2 panel-panel">
       <div class="panel-panel-inner">
         <?php print $content['left']; ?>
       </div>
     </div>
-    <div class="span6 panel-panel">
+    <div class="span7 panel-panel">
       <div class="panel-panel-inner">
         <?php print $content['content']; ?>
       </div>
@@ -36,8 +36,8 @@
     </div>
   </div>
 
-  <div class="span12 panel-panel">
-    <div class="panel-panel-inner">
+  <div class="panel-panel row-fluid">
+    <div class="span12 panel-panel-inner">
       <?php print $content['footer']; ?>
     </div>
   </div>

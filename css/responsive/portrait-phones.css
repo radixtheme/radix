@@ -5,3 +5,43 @@
  body {
   background: #FFE540;
  }
+
+ .nav-collapse {
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.page-header h1 small {
+  display: block;
+  line-height: 20px;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  border: 1px solid #ccc;
+}
+.form-horizontal .control-label {
+  float: none;
+  width: auto;
+  padding-top: 0;
+  text-align: left;
+}
+.form-horizontal .controls {
+  margin-left: 0;
+}
+.form-horizontal .control-list {
+  padding-top: 0;
+}
+.form-horizontal .form-actions {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.modal {
+  top: 10px;
+  right: 10px;
+  left: 10px;
+}
+.modal-header .close {
+  padding: 10px;
+  margin: -10px;
+}
+.carousel-caption {
+  position: static;
+}
