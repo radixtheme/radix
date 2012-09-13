@@ -1,0 +1,10 @@
+/**
+ * Other CSS - Not sure where to put these yet
+ */
+
+/******************************************************************************
+ * Panels CSS Overrides
+ *****************************************************************************/
+ #panels-dnd-main .panels-display {
+  width: 100% !important;
+ }

@@ -893,6 +893,10 @@
   .carousel-caption {
     position: static;
   }
+  .field-type-text-with-summary img {
+    width: 97%;
+    height: auto;
+  }
 }
 
 @media (max-width: 979px) {

@@ -1,0 +1,20 @@
+/**
+ * @file
+ * Responsive Styles - Landscape phone to portrait tablet
+ * (max-width: 767px)
+ */
+.hidden-desktop {
+  display: inherit !important;
+}
+
+.visible-desktop {
+  display: none !important;
+}
+
+.visible-phone {
+  display: inherit !important;
+}
+
+.hidden-phone {
+  display: none !important;
+}
