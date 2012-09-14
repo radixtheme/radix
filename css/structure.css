@@ -630,6 +630,7 @@ table td.checkbox input[type="checkbox"] {
 #navigation ul {
   margin: 20px 0;
   padding: 0;
+  float: right;
 }
 
 #navigation ul:after {
@@ -669,6 +670,9 @@ table td.checkbox input[type="checkbox"] {
  
 /* Landscape phones and down */
 @media (max-width: 480px) {
+  #navigation ul {
+    float: none;
+  }
   #navigation ul > li {
     float: none;
     list-style: none outside none;
