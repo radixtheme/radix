@@ -6,15 +6,16 @@ engine      = phptemplate
 
 regions[content] = Content
 
+stylesheets[all][] = css/bootstrap-responsive.css
 stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/reset.css
 stylesheets[all][] = css/fonts.css
 stylesheets[all][] = css/structure.css
 
-stylesheets[screen and (min-width: 1200px)][] = css/responsive/large-desktop.css
-stylesheets[screen and (min-width: 768px) and (max-width: 979px)][] = css/responsive/landscape-tablet-and-smaller-desktop.css
-stylesheets[screen and (max-width: 767px)][] = css/responsive/landscape-phone-portrait-tablet.css
-stylesheets[screen and (max-width: 480px)][] = css/responsive/portrait-phones.css
+;stylesheets[screen and (min-width: 1200px)][] = css/responsive/large-desktop.css
+;stylesheets[screen and (min-width: 768px) and (max-width: 979px)][] = css/responsive/landscape-tablet-and-smaller-desktop.css
+;stylesheets[screen and (max-width: 767px)][] = css/responsive/landscape-phone-portrait-tablet.css
+;stylesheets[screen and (max-width: 480px)][] = css/responsive/portrait-phones.css
 
 stylesheets[all][] = css/other.css
 
