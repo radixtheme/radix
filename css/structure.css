@@ -526,7 +526,7 @@ table td.checkbox input[type="checkbox"] {
  *****************************************************************************/
  .breadcrumb {
   padding: 8px 15px;
-  margin: 0 0 20px;
+  margin: 18px 0;
   list-style: none;
   background-color: #f5f5f5;
   -webkit-border-radius: 4px;
