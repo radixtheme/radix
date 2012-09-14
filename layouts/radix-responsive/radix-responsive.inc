@@ -22,8 +22,9 @@ $plugin = array(
   'regions' => array(
     'top' => t('Top'),
     'left' => t('Left'),
-    'content' => t('Content'),
+    'center' => t('Center'),
     'right' => t('Right'),
     'bottom' => t('Bottom'),
   ),
+  'css' => 'radix-responsive.css'
 );

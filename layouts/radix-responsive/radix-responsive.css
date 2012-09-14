@@ -10,12 +10,20 @@
  
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-
+  .radix-responsive-panel-layout .center {
+    width: 74.30939226% !important;
+  }
+  .radix-responsive-panel-layout .right {
+    clear: left;
+    width: 99.999999993% !important;
+    margin: 2.762430939% 0 0 !important;
+    background: red;
+  }
 }
  
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) { 
-
+  
 }
  
 /* Landscape phones and down */

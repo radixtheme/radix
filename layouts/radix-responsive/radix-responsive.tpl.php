@@ -10,23 +10,25 @@
  */
 ?>
 
-<div class="panel-display container clearfix <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
+<div class="panel-display container radix-responsive-panel-layout clearfix <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 
-  <div class="top panel-panel">
-    <div class="span12 panel-panel-inner">
-      <?php print $content['top']; ?>
+  <?php if ($content['top']): ?>
+    <div class="top panel-panel">
+      <div class="span12 panel-panel-inner">
+        <?php print $content['top']; ?>
+      </div>
     </div>
-  </div>
-  
+  <?php endif; ?>
+
   <div class="center-wrapper">
     <div class="span3 panel-panel left sidebar">
       <div class="panel-panel-inner">
         <?php print $content['left']; ?>
       </div>
     </div>
-    <div class="span7 panel-panel content">
+    <div class="span7 panel-panel center">
       <div class="panel-panel-inner">
-        <?php print $content['content']; ?>
+        <?php print $content['center']; ?>
       </div>
     </div>
     <div class="span2 panel-panel right sidebar">
@@ -36,10 +38,12 @@
     </div>
   </div>
 
-  <div class="bottom panel-panel">
-    <div class="span12 panel-panel-inner">
-      <?php print $content['bottom']; ?>
+  <?php if ($content['bottom']): ?>
+    <div class="bottom panel-panel">
+      <div class="span12 panel-panel-inner">
+        <?php print $content['bottom']; ?>
+      </div>
     </div>
-  </div>
+  <?php endif; ?>
   
 </div><!-- /.panel-display -->

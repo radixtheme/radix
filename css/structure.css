@@ -655,6 +655,7 @@ table td.checkbox input[type="checkbox"] {
   text-decoration: none;
   display: block;
   padding: 8px 15px;
+  background: #ddd;
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
