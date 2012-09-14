@@ -666,3 +666,13 @@ table td.checkbox input[type="checkbox"] {
 #navigation ul > li.active-trail > a {
   background: #eee;
 }
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  #navigation ul > li {
+    float: none;
+    list-style: none outside none;
+    margin: 0 0 5px;
+    padding: 0;
+  }
+}

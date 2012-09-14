@@ -2,6 +2,15 @@
  * @file
  * CSS for Radix Resposive Layout
  */
+.left {
+  background: #189FDE;
+}
+.center {
+  background: #B23754;
+}
+.right {
+  background: #59AA66;
+}
 
 /* Large desktop */
 @media (min-width: 1200px) { 
@@ -17,7 +26,6 @@
     clear: left;
     width: 99.999999993% !important;
     margin: 2.762430939% 0 0 !important;
-    background: red;
   }
 }
  
