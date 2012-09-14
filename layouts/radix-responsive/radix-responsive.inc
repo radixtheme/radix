@@ -20,10 +20,10 @@ $plugin = array(
   ),
   'theme' => 'radix_responsive',
   'regions' => array(
-    'header' => t('Header'),
+    'top' => t('Top'),
     'left' => t('Left'),
     'content' => t('Content'),
     'right' => t('Right'),
-    'footer' => t('Footer'),
+    'bottom' => t('Bottom'),
   ),
 );

@@ -12,9 +12,9 @@
 
 <div class="panel-display container clearfix <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 
-  <div class="header panel-panel">
+  <div class="top panel-panel">
     <div class="span12 panel-panel-inner">
-      <?php print $content['header']; ?>
+      <?php print $content['top']; ?>
     </div>
   </div>
   
@@ -36,9 +36,9 @@
     </div>
   </div>
 
-  <div class="footer panel-panel">
+  <div class="bottom panel-panel">
     <div class="span12 panel-panel-inner">
-      <?php print $content['footer']; ?>
+      <?php print $content['bottom']; ?>
     </div>
   </div>
   
