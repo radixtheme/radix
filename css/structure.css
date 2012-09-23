@@ -680,3 +680,17 @@ table td.checkbox input[type="checkbox"] {
     padding: 0;
   }
 }
+
+/******************************************************************************
+ * Links
+ *****************************************************************************/
+ul.links.inline {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+ul.links.inline li {
+  padding: 0;
+  margin: 0 10px 0 0;
+}
+
