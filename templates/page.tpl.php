@@ -69,18 +69,28 @@
 <header id="header" class="header" role="header">
   <div class="container">
     <div class="row">
-      <div class="span3">
-        <?php if ($logo): ?>
-          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-            <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-          </a>
-        <?php endif; ?>
-      </div>
-      <div class="span9">
-        <?php if ($main_menu || $secondary_menu): ?>
-          <div id="navigation" class="clearfix">
-            <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')))); ?>
-            <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix')))); ?>
+      <div class="span12">
+        <?php if ($main_menu): ?>
+          <div id="navigation" class="navbar">
+            <div class="navbar-inner">
+              <div class="container">
+                <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+
+                <?php if ($logo): ?>
+                  <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo" class="brand">
+                    <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+                  </a>
+                <?php endif; ?>
+
+                <div class="nav-collapse">
+                  <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('pull-right', 'inline', 'nav')))); ?>
+                </div>
+            </div>
           </div> <!-- /#navigation -->
         <?php endif; ?>
       </div>
@@ -92,7 +102,7 @@
   <div class="container">
     <div class="row">
       <?php if ($breadcrumb): ?>
-        <div id="breadcrumb" class="span8">
+        <div id="breadcrumb" class="span8 visible-desktop">
           <?php print $breadcrumb; ?>
         </div>
       <?php endif; ?>

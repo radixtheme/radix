@@ -1,6 +1,14 @@
 <?php
 
 /**
+ * Implementation of template_preprocess_html()
+ */
+function radix_preprocess_html(&$variables) {
+  // add jQuery 1.8.2 for Bootstrap 2.0
+  drupal_add_js('http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js', 'external');
+}
+
+/**
  * Implements template_preprocess_page().
  */
 function radix_preprocess_page(&$variables) {

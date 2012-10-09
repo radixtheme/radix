@@ -8,6 +8,9 @@
 #breadcrumb {
   .breadcrumb {
     margin: 0;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 1.0em;
   }
 }
 
@@ -234,5 +237,17 @@ table {
   // Account for multiple tbody instances
   tbody + tbody {
     border-top: 2px solid $tableBorder;
+  }
+}
+
+// Links
+// --------------------------------------------------
+ul.links {
+  &.inline {
+    margin: 0;
+    li {
+      margin: 0 10px 0 0;
+      padding: 0;
+    }
   }
 }

@@ -32,3 +32,36 @@
     }
   }
 }
+
+// Search Form
+// --------------------------------------------------
+.search-form {
+  input {
+    &.form-text {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 767px) { 
+  .search-form {
+    input {
+      &.form-text {
+        width: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) { 
+  .search-form {
+    input {
+      &.form-text {
+        width: 93%;
+      }
+      &.form-submit {
+        display: none;
+      }
+    }
+  }
+}

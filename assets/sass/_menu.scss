@@ -5,71 +5,47 @@
 $header-menu-anchor-height: $header-height / 3;
 $header-menu-margin-top-bottom: $header-height / 3;
 
-// Main Menu
-#navigation > ul {
-  margin: $header-menu-margin-top-bottom 0;
-  display: block;
-  padding: 0;
-  li {
-    float: left;
-    margin: 0 0 0 10px;
+#navigation {
+  margin: 0;
+  .navbar-inner {
     padding: 0;
-    a {
-      color: $header-links-color;
-      border-right: 1px solid $header-links-color;
-      text-transform: uppercase;
-      height: $header-menu-anchor-height;
-      line-height: $header-menu-anchor-height;
-      padding: 0 10px 0 0;
-      font-size: 0.85em;
-    }
-    &:last-child {
-      a {
-        padding-right: 0;
-        border-right: 0;
+    background: none;
+    border: none;
+    @include border-radius(0);
+    @include box-shadow(none);
+    ul {
+      &.nav {
+        margin: $header-menu-margin-top-bottom 0;
+        li {
+          a {
+            height: $header-menu-anchor-height;
+            line-height: $header-menu-anchor-height;
+            display: block;
+            @include border-radius(0);
+            &.active {
+              @include box-shadow(none);
+            }
+          }
+        }
       }
     }
   }
-  &#main-menu {
-    float: left;
-  }
-  &#secondary-menu {
-    float: right;
-  }
 }
 
-#footer .inner > ul.menu {
-  margin: 30px 0 20px;
-  display: block;
-  padding: 0;
-  overflow: hidden;
-  li {
-    margin: 0;
-    padding: 0;
-    list-style: none outside none;
-    background: none;
-    a {
-      color: $footer-links-color;
-      display: block;
-    }
-  }
-  > li {
-    float: left;
-    margin-right: 60px;
-    > a {
-      color: $footer-links-heading-color;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-    &:last-child {
-      margin-right: 0px;
-    }
-    > ul.menu {
-      margin: 0;
-      li {
-        a {
-          font-size: 0.80em;
-          line-height: 1.6em;
+@media (max-width: 767px) {
+  #navigation {
+    .navbar-inner {
+      ul {
+        &.nav {
+          margin: 0 0 10px;
+          li {
+            display: block;
+            a {
+              &.active {
+                @include box-shadow(none);
+              }
+            }
+          }
         }
       }
     }
