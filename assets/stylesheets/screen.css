@@ -7324,8 +7324,8 @@ body #footer {
 /* line 9, ../sass/_structure.scss */
 #breadcrumb .breadcrumb {
   margin: 0;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding: 0;
+  background: none;
   font-size: 1.0em; }
 
 /* line 20, ../sass/_structure.scss */
