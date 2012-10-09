@@ -92,12 +92,12 @@
   <div class="container">
     <div class="row">
       <?php if ($breadcrumb): ?>
-        <div id="breadcrumb" class="span6">
+        <div id="breadcrumb" class="span8">
           <?php print $breadcrumb; ?>
         </div>
       <?php endif; ?>
       <?php if ($search_form): ?>
-        <div class="span6">
+        <div class="span4">
           <?php print $search_form; ?>
         </div>
       <?php endif; ?>

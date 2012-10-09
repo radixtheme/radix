@@ -3,9 +3,14 @@
 // --------------------------------------------------
 
 // Background Colors
-$header-bg-color: #EEEEEE;
-$main-bg-color: #FFFFFF;
-$footer-bg-color: #EEEEEE;
+$header-background-color: #EEEEEE;
+$main-background-color: #FFFFFF;
+$footer-background-color: #1E1E1E;
 
 // Text Colors
-$text-color: #222222;
+$text-color: #333333;
+
+// Links Colors
+$header-links-color: #000000;
+$footer-links-color: lighten($footer-background-color, 40%);
+$footer-links-heading-color: lighten($footer-background-color, 100%);

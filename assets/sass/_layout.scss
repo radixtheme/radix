@@ -2,11 +2,25 @@
 // Layout
 // Styles for main layout
 // --------------------------------------------------
+$header-height: 80px;
+
 body {
   #header {
-    background-color: $header-bg-color;
+    background-color: $header-background-color;
+    min-height: $header-height;
+    #logo {
+      margin-right: 20px;
+      height: $header-height;
+      line-height: $header-height;
+    }
+  }
+  #main {
+    background-color: $main-background-color;
     .container {
       padding: 10px 0;
     }
+  }
+  #footer {
+    background-color: $footer-background-color;
   }
 }
