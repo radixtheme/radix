@@ -2,8 +2,8 @@
 // Styles for Menus and Navs
 // --------------------------------------------------
 
-$header-menu-anchor-height: $header-height / 3;
-$header-menu-margin-top-bottom: $header-height / 3;
+$logo-height: 32px; // setting height of logo img here will center navs and search
+$header-menu-margin-top-bottom: $logo-height / 2.5;
 
 #navigation {
   margin: 0;
@@ -17,12 +17,15 @@ $header-menu-margin-top-bottom: $header-height / 3;
       &.nav {
         margin: $header-menu-margin-top-bottom 0;
         li {
+          padding: 0;
           a {
-            height: $header-menu-anchor-height;
-            line-height: $header-menu-anchor-height;
             display: block;
+            margin: 0;
             @include border-radius(0);
-            &.active {
+            text-shadow: none;
+            &.active, &:hover {
+              background: none;
+              text-decoration: underline;
               @include box-shadow(none);
             }
           }
@@ -30,7 +33,7 @@ $header-menu-margin-top-bottom: $header-height / 3;
       }
     }
     .btn-navbar-wrapper {
-      padding-top: 10px;
+      margin-top: 10px;
       .btn-navbar {
         @include gradientBar(#222, #111);
         font-weight: normal;
@@ -63,10 +66,34 @@ $header-menu-margin-top-bottom: $header-height / 3;
           }
         }
       }
-    }
-    .nav-collapse {
-      float: none !important;
-      clear: both;
+      .btn-navbar-wrapper {
+        margin-top: 5px;
+      }
+      .nav-collapse {
+        float: none !important;
+        clear: both;
+        &#nav-collapse {
+          margin: 10px -20px 0 !important;
+          padding: 0 20px !important;
+          background: darken($header-background-color, 15%);
+          ul {
+            > li {
+              > a {
+                text-align: center;
+              }
+            }
+          }
+        }
+        &#search-collapse {
+          margin: 0 -20px !important;
+          padding: 0 20px !important;
+          background: darken($header-background-color, 25%);
+          form {
+            padding: 10px 0;
+            text-align: center;
+          }
+        }
+      }
     }
   }
 }

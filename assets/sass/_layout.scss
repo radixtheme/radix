@@ -2,16 +2,9 @@
 // Layout
 // Styles for main layout
 // --------------------------------------------------
-$header-height: 40px;
-
 body {
   #header {
     background-color: $header-background-color;
-    min-height: $header-height;
-    #logo {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
   }
   #main {
     background-color: $main-background-color;
@@ -39,6 +32,7 @@ body {
       #logo {
         height: auto !important;
         line-height: inherit !important;
+        max-width: 80px;
       }
     }
     .footer {
