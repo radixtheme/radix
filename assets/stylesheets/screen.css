@@ -7291,38 +7291,35 @@ body #header {
   min-height: 40px; }
   /* line 11, ../sass/_layout.scss */
   body #header #logo {
-    margin-right: 20px;
-    height: 40px;
-    line-height: 40px;
-    padding-top: 0;
-    padding-bottom: 0; }
-/* line 19, ../sass/_layout.scss */
+    padding-top: 10px;
+    padding-bottom: 10px; }
+/* line 16, ../sass/_layout.scss */
 body #main {
   background-color: white; }
-  /* line 21, ../sass/_layout.scss */
+  /* line 18, ../sass/_layout.scss */
   body #main .container {
     padding: 10px 0; }
-/* line 25, ../sass/_layout.scss */
+/* line 22, ../sass/_layout.scss */
 body #footer {
   background-color: whitesmoke;
   border-top: 1px solid gainsboro; }
-  /* line 28, ../sass/_layout.scss */
+  /* line 25, ../sass/_layout.scss */
   body #footer .container {
     padding: 10px 0;
     min-height: 30px; }
 
 @media (max-width: 767px) {
-  /* line 37, ../sass/_layout.scss */
+  /* line 34, ../sass/_layout.scss */
   body .header {
     margin-left: -20px;
     margin-right: -20px;
     padding-left: 20px;
     padding-right: 20px; }
-    /* line 42, ../sass/_layout.scss */
+    /* line 39, ../sass/_layout.scss */
     body .header #logo {
       height: auto !important;
       line-height: inherit !important; }
-  /* line 47, ../sass/_layout.scss */
+  /* line 44, ../sass/_layout.scss */
   body .footer {
     margin-left: -20px;
     margin-right: -20px;
@@ -7581,42 +7578,46 @@ ul.links.inline {
           -webkit-box-shadow: none;
           -moz-box-shadow: none;
           box-shadow: none; }
-    /* line 33, ../sass/_menu.scss */
-    #navigation .navbar-inner .btn-navbar-wrapper .btn-navbar {
-      color: white;
-      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-      background-color: #1b1b1b;
-      background-image: -moz-linear-gradient(top, #222222, #111111);
-      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
-      background-image: -webkit-linear-gradient(top, #222222, #111111);
-      background-image: -o-linear-gradient(top, #222222, #111111);
-      background-image: linear-gradient(to bottom, #222222, #111111);
-      background-repeat: repeat-x;
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF222222', endColorstr='#FF111111', GradientType=0);
-      border-color: #111111 #111111 black;
-      border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-      font-weight: normal;
-      font-size: 1.4em;
-      padding: 5px 10px 4px; }
-      /* line 38, ../sass/_menu.scss */
-      #navigation .navbar-inner .btn-navbar-wrapper .btn-navbar span {
-        width: auto !important;
-        height: auto !important;
-        text-shadow: none !important; }
+    /* line 32, ../sass/_menu.scss */
+    #navigation .navbar-inner .btn-navbar-wrapper {
+      padding-top: 10px; }
+      /* line 34, ../sass/_menu.scss */
+      #navigation .navbar-inner .btn-navbar-wrapper .btn-navbar {
+        color: white;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        background-color: #1b1b1b;
+        background-image: -moz-linear-gradient(top, #222222, #111111);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
+        background-image: -webkit-linear-gradient(top, #222222, #111111);
+        background-image: -o-linear-gradient(top, #222222, #111111);
+        background-image: linear-gradient(to bottom, #222222, #111111);
+        background-repeat: repeat-x;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF222222', endColorstr='#FF111111', GradientType=0);
+        border-color: #111111 #111111 black;
+        border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
+        font-weight: normal;
+        font-size: 1.4em;
+        padding: 5px 10px 4px;
+        margin-top: 0; }
+        /* line 40, ../sass/_menu.scss */
+        #navigation .navbar-inner .btn-navbar-wrapper .btn-navbar span {
+          width: auto !important;
+          height: auto !important;
+          text-shadow: none !important; }
 
 @media (max-width: 767px) {
-  /* line 52, ../sass/_menu.scss */
+  /* line 54, ../sass/_menu.scss */
   #navigation .navbar-inner ul.nav {
     margin: 0; }
-    /* line 54, ../sass/_menu.scss */
+    /* line 56, ../sass/_menu.scss */
     #navigation .navbar-inner ul.nav li {
       display: block; }
-      /* line 57, ../sass/_menu.scss */
+      /* line 59, ../sass/_menu.scss */
       #navigation .navbar-inner ul.nav li a.active {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none; }
-  /* line 65, ../sass/_menu.scss */
+  /* line 67, ../sass/_menu.scss */
   #navigation .nav-collapse {
     float: none !important;
     clear: both; } }

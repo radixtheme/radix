@@ -30,11 +30,13 @@ $header-menu-margin-top-bottom: $header-height / 3;
       }
     }
     .btn-navbar-wrapper {
+      padding-top: 10px;
       .btn-navbar {
         @include gradientBar(#222, #111);
         font-weight: normal;
         font-size: 1.4em;
         padding: 5px 10px 4px;
+        margin-top: 0;
         span {
           width: auto !important;
           height: auto !important;
