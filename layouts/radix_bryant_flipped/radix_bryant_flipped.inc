@@ -1,11 +1,11 @@
 <?php
 // Plugin definition
 $plugin = array(
-  'title' => t('Bryant'),
-  'icon' => 'radix-bryant.png',
+  'title' => t('Bryant Flipped'),
+  'icon' => 'radix-bryant-flipped.png',
   'category' => t('Radix'),
-  'theme' => 'radix_bryant',
-  'css' => 'radix-bryant.css',
+  'theme' => 'radix_bryant_flipped',
+  'css' => 'radix-bryant-flipped.css',
   'regions' => array(
     'sidebar' => t('Sidebar'),
     'contentmain' => t('Content'),
