@@ -5277,6 +5277,9 @@ a.label:hover, a.badge:hover {
 /* line 6, ../sass/_layout.scss */
 body #header {
   background-color: #eeeeee; }
+  /* line 8, ../sass/_layout.scss */
+  body #header .container {
+    padding: 10px 0; }
 
 /* line 8, ../sass/_structure.scss */
 #breadcrumb {

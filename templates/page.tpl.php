@@ -56,7 +56,7 @@
  *   comment/reply/12345).
  *
  * Regions:
- * - $page['header']: Items for the header region.
+ * - $page['help']: Dynamic help text, mostly for admin pages.
  * - $page['content']: The main content of the current page.
  * - $page['footer']: Items for the footer region.
  *
@@ -66,57 +66,71 @@
  * @see html.tpl.php
  */
 ?>
-<div id="page-wrapper" class="container container-fluid">
-
-  <div id="header"><div class="row-fluid clearfix">
-    <?php if ($site_name || $site_slogan): ?>
-      <div id="name-and-slogan" class="clearfix span4">
+<header id="header" class="header" role="header">
+  <div class="container">
+    <div class="row">
+      <div class="span3">
         <?php if ($logo): ?>
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
             <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
           </a>
         <?php endif; ?>
-        <?php if ($site_name): ?>
-          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="brand"><span><?php print $site_name; ?></span></a>        
+      </div>
+      <div class="span9">
+        <?php if ($main_menu || $secondary_menu): ?>
+          <div id="navigation" class="clearfix">
+            <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')))); ?>
+            <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix')))); ?>
+          </div> <!-- /#navigation -->
         <?php endif; ?>
-        <?php if ($site_slogan): ?>
-          <p class="slogan"><?php print $site_slogan; ?></p>
-        <?php endif; ?>
-      </div> <!-- /#name-and-slogan -->
-    <?php endif; ?>
-    <?php if ($main_menu): ?>
-      <div id="navigation" class="span8">
-        <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'clearfix')), 'heading' => t(''))); ?>  
-      </div> <!-- /#navigation -->
-   <?php endif; ?>
-  </div></div> <!-- /#header -->
-
-  <?php if ($breadcrumb): ?>
-    <div id="breadcrumb" class="row-fluid visible-desktop">
-      <div class="span12">
-        <?php print $breadcrumb; ?>
       </div>
     </div>
-  <?php endif; ?>
+  </div>
+</header>
 
-  <?php print $messages; ?>
+<div id="main">
+  <div class="container">
+    <div class="row">
+      <?php if ($breadcrumb): ?>
+        <div id="breadcrumb" class="span6">
+          <?php print $breadcrumb; ?>
+        </div>
+      <?php endif; ?>
+      <?php if ($search_form): ?>
+        <div class="span6">
+          <?php print $search_form; ?>
+        </div>
+      <?php endif; ?>
+    </div>
+    <?php if ($messages): ?>
+      <div id="messages">
+        <?php print $messages; ?>
+      </div>
+    <?php endif; ?>
+    <div class="row">
+      <div class="span12">
+        <a id="main-content"></a>
+        <?php print render($title_prefix); ?>
+        <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
+        <?php print render($title_suffix); ?>
+        <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+        <?php print render($page['help']); ?>
+        <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+        <?php print render($page['content']); ?>
+        <?php print $feed_icons; ?>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <div id="main-wrapper">
-    <div id="content" class="row-fluid">
-      <a id="main-content"></a>
-      <?php print render($title_prefix); ?>
-      <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
-      <?php print render($title_suffix); ?>
-      <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
-      <?php print render($page['help']); ?>
-      <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
-      <?php print render($page['content']); ?>
-      <?php print $feed_icons; ?>
-    </div> <!-- /#content -->
-  </div> <!-- /#main-wrapper -->
-
-  <div id="footer"><div class="section">
-    <?php print render($page['footer']); ?>
-  </div></div> <!-- /.section, /#footer -->
-
-</div> <!-- /#page-wrapper -->
+<footer id="footer" class="footer" role="footer">
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <div class="inner">
+          <?php print render($footer_menu); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

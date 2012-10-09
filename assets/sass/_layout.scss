@@ -5,5 +5,8 @@
 body {
   #header {
     background-color: $header-bg-color;
+    .container {
+      padding: 10px 0;
+    }
   }
 }
