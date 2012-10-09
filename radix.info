@@ -1,22 +1,31 @@
-name = Radix
-description = Drupal Bootstrapped
-
+name        = Radix
+description = A Drupal theme with Bootstrap and SASS
+screenshot  = screenshot.png
 core        = 7.x
-engine      = phptemplate
 
-regions[content] = Content
+; CSS - General
+stylesheets[all][]     = assets/stylesheets/screen.css
+stylesheets[print][]   = assets/stylesheets/print.css
 
-stylesheets[all][] = css/bootstrap-responsive.css
-stylesheets[all][] = css/layout.css
-stylesheets[all][] = css/reset.css
-stylesheets[all][] = css/fonts.css
-stylesheets[all][] = css/structure.css
+; CSS - Conditional
+stylesheets-conditional[IE][all][] = assets/stylesheets/ie.css
 
-;stylesheets[screen and (min-width: 1200px)][] = css/responsive/large-desktop.css
-;stylesheets[screen and (min-width: 768px) and (max-width: 979px)][] = css/responsive/landscape-tablet-and-smaller-desktop.css
-;stylesheets[screen and (max-width: 767px)][] = css/responsive/landscape-phone-portrait-tablet.css
-;stylesheets[screen and (max-width: 480px)][] = css/responsive/portrait-phones.css
+; Javascript
+scripts[] = assets/javascripts/modernizr-2.6.1.min.js
+scripts[] = assets/javascripts/bootstrap.js
+scripts[] = assets/javascripts/screen.js
 
-stylesheets[all][] = css/other.css
+; Regions
+regions[help]         = Help
+regions[content]      = Content
+regions[footer]       = Footer
 
+; Features
+features[] = logo
+features[] = name
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
+
+; Plugins
 plugins[panels][layouts] = layouts
