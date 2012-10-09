@@ -26,6 +26,7 @@ function radix_preprocess_page(&$variables) {
  */
 function radix_table($variables) {
   // add default classes to table elements
+  $variables['attributes']['class'] = (isset($variables['attributes']['class'])) ? $variables['attributes']['class'] : array();
   $variables['attributes']['class'] = array_merge($variables['attributes']['class'], array('table', 'table-striped', 'table-bordered'));
   
   $header = $variables['header'];
