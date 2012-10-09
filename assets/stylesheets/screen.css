@@ -5274,6 +5274,10 @@ a.label:hover, a.badge:hover {
 .affix {
   position: fixed; }
 
+/* line 6, ../sass/_layout.scss */
+body #header {
+  background-color: #eeeeee; }
+
 /* line 8, ../sass/_structure.scss */
 #breadcrumb {
   margin: 10px auto; }
@@ -5459,13 +5463,64 @@ div.messages {
     background-color: #d9edf7;
     border-color: #bce8f1; }
 
+/* line 207, ../sass/_structure.scss */
+table {
+  width: 100%;
+  margin-bottom: 20px; }
+  /* line 212, ../sass/_structure.scss */
+  table th,
+  table td {
+    padding: 8px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid #dddddd; }
+  /* line 219, ../sass/_structure.scss */
+  table th {
+    font-weight: bold; }
+  /* line 223, ../sass/_structure.scss */
+  table thead th {
+    vertical-align: bottom; }
+  /* line 232, ../sass/_structure.scss */
+  table caption + thead tr:first-child th,
+  table caption + thead tr:first-child td,
+  table colgroup + thead tr:first-child th,
+  table colgroup + thead tr:first-child td,
+  table thead:first-child tr:first-child th,
+  table thead:first-child tr:first-child td {
+    border-top: 0; }
+  /* line 236, ../sass/_structure.scss */
+  table tbody + tbody {
+    border-top: 2px solid #dddddd; }
+
 /* line 9, ../sass/_form.scss */
 #node-edit #edit-title {
-  font-size: 1.8em;
+  font-size: 1.6em;
   line-height: 1.6em;
   height: 45px; }
+/* line 15, ../sass/_form.scss */
+#node-edit .burr-flipped-sidebar .panel-pane {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: whitesmoke;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  padding: 10px; }
+  /* line 21, ../sass/_mixin.scss */
+  #node-edit .burr-flipped-sidebar .panel-pane blockquote {
+    border-color: #ddd;
+    border-color: rgba(0, 0, 0, 0.15); }
+  /* line 18, ../sass/_form.scss */
+  #node-edit .burr-flipped-sidebar .panel-pane .pane-title {
+    margin-top: 0; }
 
-/* line 16, ../sass/_form.scss */
+/* line 25, ../sass/_form.scss */
 .filter-wrapper {
   min-height: 20px;
   padding: 19px;
@@ -5483,9 +5538,9 @@ div.messages {
   .filter-wrapper blockquote {
     border-color: #ddd;
     border-color: rgba(0, 0, 0, 0.15); }
-  /* line 19, ../sass/_form.scss */
+  /* line 28, ../sass/_form.scss */
   .filter-wrapper .filter-guidelines {
     padding: 0; }
-    /* line 21, ../sass/_form.scss */
+    /* line 30, ../sass/_form.scss */
     .filter-wrapper .filter-guidelines .tips {
       margin-left: 0; }

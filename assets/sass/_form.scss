@@ -7,9 +7,18 @@
 // --------------------------------------------------
 #node-edit {
   #edit-title {
-    font-size: 1.8em;
+    font-size: 1.6em;
     line-height: 1.6em;
     height: 45px;
+  }
+  .burr-flipped-sidebar {
+    .panel-pane {
+      @include well();
+      padding: 10px;
+      .pane-title {
+        margin-top: 0;
+      }
+    }
   }
 }
 
