@@ -73,22 +73,29 @@
         <?php if ($main_menu): ?>
           <div id="navigation" class="navbar">
             <div class="navbar-inner">
-              <div class="container">
-                <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </a>
-
+              <div class="container clearfix">
                 <?php if ($logo): ?>
-                  <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo" class="brand">
+                  <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo" class="pull-left brand">
                     <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
                   </a>
                 <?php endif; ?>
 
-                <div class="nav-collapse">
-                  <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('pull-right', 'inline', 'nav')))); ?>
+                <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+                <div class="btn-navbar-wrapper pull-right">
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target="#nav-collapse">
+                    <span class="icon-reorder"></span>
+                  </a>
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target="#search-collapse">
+                    <span class="icon-search"></span>
+                  </a>
+                </div>
+
+                <div id="nav-collapse" class="nav-collapse">
+                  <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('inline', 'nav')))); ?>
+                </div>
+
+                <div id="search-collapse" class="nav-collapse">
+                  <?php print $search_form; ?>
                 </div>
             </div>
           </div> <!-- /#navigation -->
@@ -102,13 +109,8 @@
   <div class="container">
     <div class="row">
       <?php if ($breadcrumb): ?>
-        <div id="breadcrumb" class="span8 visible-desktop">
+        <div id="breadcrumb" class="span12 visible-desktop">
           <?php print $breadcrumb; ?>
-        </div>
-      <?php endif; ?>
-      <?php if ($search_form): ?>
-        <div class="span4">
-          <?php print $search_form; ?>
         </div>
       <?php endif; ?>
     </div>

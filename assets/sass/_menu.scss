@@ -29,6 +29,19 @@ $header-menu-margin-top-bottom: $header-height / 3;
         }
       }
     }
+    .btn-navbar-wrapper {
+      .btn-navbar {
+        @include gradientBar(#222, #111);
+        font-weight: normal;
+        font-size: 1.4em;
+        padding: 5px 10px 4px;
+        span {
+          width: auto !important;
+          height: auto !important;
+          text-shadow: none !important;
+        }
+      }
+    }
   }
 }
 
@@ -37,7 +50,7 @@ $header-menu-margin-top-bottom: $header-height / 3;
     .navbar-inner {
       ul {
         &.nav {
-          margin: 0 0 10px;
+          margin: 0;
           li {
             display: block;
             a {
@@ -48,6 +61,10 @@ $header-menu-margin-top-bottom: $header-height / 3;
           }
         }
       }
+    }
+    .nav-collapse {
+      float: none !important;
+      clear: both;
     }
   }
 }

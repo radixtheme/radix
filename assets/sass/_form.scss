@@ -43,25 +43,14 @@
   }
 }
 
-@media (max-width: 767px) { 
-  .search-form {
-    input {
-      &.form-text {
-        width: auto;
-      }
-    }
-  }
+#header .search-form {
+  margin: $header-menu-margin-top-bottom 0;
+  float: right;
 }
 
-@media (max-width: 480px) { 
-  .search-form {
-    input {
-      &.form-text {
-        width: 93%;
-      }
-      &.form-submit {
-        display: none;
-      }
-    }
+@media (max-width: 767px) {
+  #header .search-form {
+    margin: 0;
+    float: none;
   }
 }

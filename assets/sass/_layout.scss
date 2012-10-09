@@ -2,7 +2,7 @@
 // Layout
 // Styles for main layout
 // --------------------------------------------------
-$header-height: 80px;
+$header-height: 40px;
 
 body {
   #header {
@@ -12,6 +12,8 @@ body {
       margin-right: 20px;
       height: $header-height;
       line-height: $header-height;
+      padding-top: 0;
+      padding-bottom: 0;
     }
   }
   #main {
