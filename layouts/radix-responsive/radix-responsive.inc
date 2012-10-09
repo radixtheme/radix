@@ -4,6 +4,7 @@
 $plugin = array(
   'title' => t('Radix Responsive'),
   'category' => t('Radix'),
+  'icon' => 'radix-responsive-desktop.png',
   'sets' => array(
     'desktop' => array(
       'title' => t('Desktop'),                       

@@ -4,7 +4,7 @@
 $plugin = array(
   'title' => t('Radix'),
   'category' => t('Radix'),
-  'icon' => 'isaac-desktop.png',
+  'icon' => 'radix-desktop.png',
   'sets' => array(
     'desktop' => array(
       'title' => t('Desktop'),                       
