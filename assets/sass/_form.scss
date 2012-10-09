@@ -2,3 +2,24 @@
 // Layout
 // Styles for Forms
 // --------------------------------------------------
+
+// General
+// --------------------------------------------------
+#node-edit {
+  #edit-title {
+    font-size: 1.8em;
+    line-height: 1.6em;
+    height: 45px;
+  }
+}
+
+.filter-wrapper {
+  @include well();
+  margin-top: 10px;
+  .filter-guidelines {
+    padding: 0;
+    .tips {
+      margin-left: 0;
+    }
+  }
+}
