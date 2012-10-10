@@ -4,16 +4,16 @@ screenshot  = screenshot.png
 core        = 7.x
 
 ; CSS - General
-stylesheets[all][]     = assets/stylesheets/screen.css
-stylesheets[print][]   = assets/stylesheets/print.css
+stylesheets[all][]     = assets/stylesheets/radix-style.css
+stylesheets[print][]   = assets/stylesheets/radix-print.css
 
 ; CSS - Conditional
-stylesheets-conditional[IE][all][] = assets/stylesheets/ie.css
+stylesheets-conditional[IE][all][] = assets/stylesheets/radix-ie.css
 
 ; Javascript
 scripts[] = assets/javascripts/modernizr-2.6.1.min.js
 scripts[] = assets/javascripts/bootstrap.js
-scripts[] = assets/javascripts/screen.js
+scripts[] = assets/javascripts/radix-script.js
 
 ; Regions
 regions[help]         = Help
