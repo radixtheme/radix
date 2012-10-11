@@ -90,13 +90,13 @@
                   </a>
                 </div>
 
-                <div id="nav-collapse" class="nav-collapse">
-                  <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('inline', 'nav')))); ?>
+                <div id="nav-collapse" class="nav-collapse pull-right">
+                  <?php print $main_menu ?>
                 </div>
 
-                <div id="search-collapse" class="nav-collapse">
+                <!-- <div id="search-collapse" class="nav-collapse">
                   <?php print $search_form; ?>
-                </div>
+                </div> -->
             </div>
           </div> <!-- /#navigation -->
         <?php endif; ?>

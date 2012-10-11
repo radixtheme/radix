@@ -1,10 +1,6 @@
 // Menu
 // Styles for Menus and Navs
 // --------------------------------------------------
-
-$logo-height: 32px; // setting height of logo img here will center navs and search
-$header-menu-margin-top-bottom: $logo-height / 2.5;
-
 #navigation {
   margin: 0;
   .navbar-inner {
@@ -13,21 +9,77 @@ $header-menu-margin-top-bottom: $logo-height / 2.5;
     border: none;
     @include border-radius(0);
     @include box-shadow(none);
-    ul {
-      &.nav {
-        margin: $header-menu-margin-top-bottom 0;
+    #nav-collapse {
+      > ul.menu {
+        margin: 20px 0 0;
+        position: relative;
+        display: inline-table;
         li {
+          list-style: none outside none;
           padding: 0;
+          margin: 0;
+          position: relative;
           a {
             display: block;
             margin: 0;
-            @include border-radius(0);
             text-shadow: none;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            color: $header-links-color;
+            text-decoration: none;
+            @include border-radius(0);
             &.active, &:hover {
               background: none;
-              text-decoration: underline;
+              border-bottom: 2px solid $header-links-color;
               @include box-shadow(none);
             }
+          }
+          ul {
+            display: none;
+            position: absolute;
+            width: 150px;
+            top: 100%;
+            left: 50%;
+            margin: 0 0 0 -75px;
+            padding: 50px 0 0;
+            background: url("../images/icon/icon-caret.png") no-repeat center 42px transparent;
+            > li {
+              > a {
+                background: #FFF;
+                padding: 12px 15px;
+                &.active, &:hover {
+                  background: #eee;
+                  border-bottom: none;
+                }
+              }
+            }
+          }
+        }
+        > li {
+          float: left;
+          &.expanded {
+            > a {
+              &:hover {
+                border: none;
+              }
+            }
+          }
+          &:hover {
+            > ul.menu {
+              display: block;
+            }
+          }
+        }
+        &:after {
+          content: ""; 
+          clear: both; 
+          display: block;
+        }
+      }
+      &.pull-right {
+        > ul.menu {
+          > li {
+            margin: 0 0 0 25px;
           }
         }
       }
@@ -54,7 +106,7 @@ $header-menu-margin-top-bottom: $logo-height / 2.5;
   #navigation {
     .navbar-inner {
       ul {
-        &.nav {
+        &.menu {
           margin: 0;
           li {
             display: block;
@@ -76,10 +128,22 @@ $header-menu-margin-top-bottom: $logo-height / 2.5;
           margin: 10px -20px 0 !important;
           padding: 0 20px !important;
           background: darken($header-background-color, 15%);
-          ul {
+          ul.menu {
+            margin: 0;
+            display: block;
             > li {
+              float: none !important;
+              margin: 0;
               > a {
                 text-align: center;
+                display: block;
+                padding: 10px 0;
+                &:hover, &.active {
+                  border: none;
+                }
+              }
+              ul {
+                display: none;
               }
             }
           }

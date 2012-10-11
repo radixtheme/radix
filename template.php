@@ -19,6 +19,9 @@ function radix_preprocess_page(&$variables) {
   $search_box_form['basic']['submit']['#value'] = t('Search');
   $search_box = drupal_render($search_box_form);
   $variables['search_form'] = (user_access('search content')) ? $search_box : NULL;
+
+  $main_menu_tree = menu_tree_all_data('main-menu');
+  $variables['main_menu'] = render(menu_tree_output($main_menu_tree));
 }
 
 /**
