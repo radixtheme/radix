@@ -77,6 +77,7 @@
                 <?php if ($logo): ?>
                   <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo" class="pull-left brand">
                     <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+                    <?php print $site_name; ?>
                   </a>
                 <?php endif; ?>
 

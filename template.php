@@ -5,7 +5,7 @@
  */
 function radix_preprocess_html(&$variables) {
   // add jQuery 1.8.2 for Bootstrap 2.0
-  drupal_add_js('http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js', 'external');
+  //drupal_add_js('http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js', 'external');
 }
 
 /**
