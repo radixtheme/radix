@@ -105,8 +105,8 @@
   </div>
 </header>
 
-<div id="main">
-  <div class="container">
+<div id="main-wrapper">
+  <div id="main" class="container">
     <div class="row">
       <?php if ($breadcrumb): ?>
         <div id="breadcrumb" class="span12 visible-desktop">
@@ -119,7 +119,7 @@
         <?php print $messages; ?>
       </div>
     <?php endif; ?>
-    <div class="row">
+    <div id="content" class="row">
       <div class="span12">
         <a id="main-content"></a>
         <?php print render($title_prefix); ?>
