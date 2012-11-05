@@ -1,10 +1,10 @@
 <?php
 // Plugin definition
 $plugin = array(
-  'title' => t('Geary'),
+  'title' => t('Radix Geary'),
   'icon' => 'radix-geary.png',
   'category' => t('Radix'),
-  'theme' => 'radix-geary',
+  'theme' => 'radix_geary',
   'css' => 'radix-geary.css',
   'regions' => array(
     'header' => t('Header'),

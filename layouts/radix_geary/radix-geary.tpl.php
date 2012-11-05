@@ -28,12 +28,12 @@
     </div>
     <div class="span4 content panel-panel">
       <div class="geary-column-content-region-inner geary-content-inner panel-panel-inner">
-        <?php print $content['contentmain']; ?>
+        <?php print $content['column2']; ?>
       </div>
     </div>
     <div class="span4 sidebar panel-panel">
       <div class="geary-column-content-region-inner geary-column2-inner panel-panel-inner">
-        <?php print $content['column2']; ?>
+        <?php print $content['column3']; ?>
       </div>
     </div>
   </div>

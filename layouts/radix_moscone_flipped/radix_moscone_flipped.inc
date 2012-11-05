@@ -1,7 +1,7 @@
 <?php
 // Plugin definition
 $plugin = array(
-  'title' => t('Moscone Flipped'),
+  'title' => t('Radix Moscone Flipped'),
   'icon' => 'radix-moscone-flipped.png',
   'category' => t('Radix'),
   'theme' => 'radix_moscone_flipped',
