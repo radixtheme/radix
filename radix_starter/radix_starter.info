@@ -6,6 +6,11 @@ core        = 7.x
 ; Base - Radix
 base theme  = radix
 
+; Regions
+regions[help]         = Help
+regions[content]      = Content
+regions[footer]       = Footer
+
 ; CSS - General
 stylesheets[all][]     = assets/stylesheets/screen.css
 stylesheets[print][]   = assets/stylesheets/print.css
