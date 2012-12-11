@@ -75,7 +75,6 @@ $header-menu-margin-top-bottom: $logo-height / 2.5;
         &#nav-collapse {
           margin: 10px -20px 0 !important;
           padding: 0 20px !important;
-          background: darken($header-background-color, 15%);
           ul {
             > li {
               > a {
@@ -87,7 +86,6 @@ $header-menu-margin-top-bottom: $logo-height / 2.5;
         &#search-collapse {
           margin: 0 -20px !important;
           padding: 0 20px !important;
-          background: darken($header-background-color, 25%);
           form {
             padding: 10px 0;
             text-align: center;

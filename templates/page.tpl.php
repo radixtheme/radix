@@ -95,9 +95,11 @@
               </div>
               <?php endif; ?>
 
-              <div id="search-collapse" class="nav-collapse">
-                <?php print $search_form; ?>
-              </div>
+              <?php if ($search_form): ?>
+                <div id="search-collapse" class="nav-collapse">
+                  <?php print $search_form; ?>
+                </div>
+              <?php endif; ?>
           </div>
         </div> <!-- /#navigation -->
       </div>

@@ -19,12 +19,14 @@ function radix_js_alter(&$js) {
  */
 function radix_preprocess_page(&$variables) {
   // Add search_form to theme
-  $search_box_form = drupal_get_form('search_form');
-  $search_box_form['basic']['keys']['#title'] = '';
-  $search_box_form['basic']['keys']['#attributes'] = array('placeholder' => 'Search');
-  $search_box_form['basic']['submit']['#value'] = t('Search');
-  $search_box = drupal_render($search_box_form);
-  $variables['search_form'] = (user_access('search content')) ? $search_box : NULL;
+  if (module_exists('search') && user_access('search content')) {
+    $search_box_form = drupal_get_form('search_form');
+    $search_box_form['basic']['keys']['#title'] = '';
+    $search_box_form['basic']['keys']['#attributes'] = array('placeholder' => 'Search');
+    $search_box_form['basic']['submit']['#value'] = t('Search');
+    $search_box = drupal_render($search_box_form);
+    $variables['search_form'] = (user_access('search content')) ? $search_box : NULL;
+  }
 }
 
 /**
