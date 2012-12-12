@@ -35,26 +35,12 @@
 
 // Search Form
 // --------------------------------------------------
-.search-form {
-  input {
-    &.form-text {
-      margin: 0;
-      display: inline-block;
+.navbar {
+  .search-form {
+    input {
+      &.form-submit {
+        display: none;
+      }
     }
-    &.form-submit {
-      margin: 0;
-    }
-  }
-}
-
-#header .search-form {
-  margin: $header-menu-margin-top-bottom 0;
-  float: right;
-}
-
-@media (max-width: 767px) {
-  #header .search-form {
-    margin: 0;
-    float: none;
   }
 }

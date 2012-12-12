@@ -12,7 +12,7 @@ stylesheets-conditional[IE][all][] = assets/stylesheets/radix-ie.css
 
 ; Javascript
 scripts[] = assets/javascripts/modernizr-2.6.1.min.js
-scripts[] = assets/javascripts/bootstrap.js
+;scripts[] = assets/javascripts/bootstrap.js
 scripts[] = assets/javascripts/radix-script.js
 
 ; Regions

@@ -6204,6 +6204,10 @@ ul.icons {
 .icon-user-md:before {
   content: "\f200"; }
 
+/* line 7, ../sass/_layout.scss */
+body #header #navigation {
+  margin-top: 20px; }
+
 /* line 9, ../sass/_structure.scss */
 #breadcrumb .breadcrumb {
   margin: 0;
@@ -6428,101 +6432,117 @@ ul.links.inline {
     padding: 0; }
 
 /* line 8, ../sass/_menu.scss */
-#navigation {
-  margin: 0; }
-  /* line 10, ../sass/_menu.scss */
-  #navigation .navbar-inner {
+#main-menu > ul.menu {
+  margin: 0;
+  padding: 0;
+  display: table; }
+  /* line 12, ../sass/_menu.scss */
+  #main-menu > ul.menu > li {
+    margin: 0;
     padding: 0;
-    background: none;
-    border: none;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none; }
-    /* line 17, ../sass/_menu.scss */
-    #navigation .navbar-inner ul.nav {
-      margin: 12.8px 0; }
-      /* line 19, ../sass/_menu.scss */
-      #navigation .navbar-inner ul.nav li {
-        padding: 0; }
-        /* line 21, ../sass/_menu.scss */
-        #navigation .navbar-inner ul.nav li a {
-          display: block;
-          margin: 0;
-          -webkit-border-radius: 0;
-          -moz-border-radius: 0;
-          border-radius: 0;
-          text-shadow: none; }
-          /* line 26, ../sass/_menu.scss */
-          #navigation .navbar-inner ul.nav li a.active, #navigation .navbar-inner ul.nav li a:hover {
-            background: none;
-            text-decoration: underline;
-            -webkit-box-shadow: none;
-            -moz-box-shadow: none;
-            box-shadow: none; }
-    /* line 35, ../sass/_menu.scss */
-    #navigation .navbar-inner .btn-navbar-wrapper {
-      margin-top: 10px; }
-      /* line 37, ../sass/_menu.scss */
-      #navigation .navbar-inner .btn-navbar-wrapper .btn-navbar {
-        color: white;
-        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-        background-color: #1b1b1b;
-        background-image: -moz-linear-gradient(top, #222222, #111111);
-        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
-        background-image: -webkit-linear-gradient(top, #222222, #111111);
-        background-image: -o-linear-gradient(top, #222222, #111111);
-        background-image: linear-gradient(to bottom, #222222, #111111);
-        background-repeat: repeat-x;
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF222222', endColorstr='#FF111111', GradientType=0);
-        border-color: #111111 #111111 black;
-        border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-        font-weight: normal;
-        font-size: 1.4em;
-        padding: 5px 10px 4px;
-        margin-top: 0; }
-        /* line 43, ../sass/_menu.scss */
-        #navigation .navbar-inner .btn-navbar-wrapper .btn-navbar span {
-          width: auto !important;
-          height: auto !important;
-          text-shadow: none !important; }
-
-@media (max-width: 767px) {
-  /* line 57, ../sass/_menu.scss */
-  #navigation .navbar-inner ul.nav {
-    margin: 0; }
-    /* line 59, ../sass/_menu.scss */
-    #navigation .navbar-inner ul.nav li {
+    position: relative;
+    float: left;
+    list-style: none outside none;
+    position: relative; }
+    /* line 19, ../sass/_menu.scss */
+    #main-menu > ul.menu > li > a {
+      float: none;
+      padding: 10px 15px 10px;
+      color: #777;
+      text-decoration: none;
+      text-shadow: 0 1px 0 white;
       display: block; }
-      /* line 62, ../sass/_menu.scss */
-      #navigation .navbar-inner ul.nav li a.active {
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        box-shadow: none; }
-  /* line 69, ../sass/_menu.scss */
-  #navigation .navbar-inner .btn-navbar-wrapper {
-    margin-top: 5px; }
-  /* line 72, ../sass/_menu.scss */
-  #navigation .navbar-inner .nav-collapse {
-    float: none !important;
-    clear: both; }
-    /* line 75, ../sass/_menu.scss */
-    #navigation .navbar-inner .nav-collapse#nav-collapse {
-      margin: 10px -20px 0 !important;
-      padding: 0 20px !important; }
-      /* line 80, ../sass/_menu.scss */
-      #navigation .navbar-inner .nav-collapse#nav-collapse ul > li > a {
-        text-align: center; }
-    /* line 86, ../sass/_menu.scss */
-    #navigation .navbar-inner .nav-collapse#search-collapse {
-      margin: 0 -20px !important;
-      padding: 0 20px !important; }
-      /* line 89, ../sass/_menu.scss */
-      #navigation .navbar-inner .nav-collapse#search-collapse form {
-        padding: 10px 0;
-        text-align: center; } }
+      /* line 26, ../sass/_menu.scss */
+      #main-menu > ul.menu > li > a:hover {
+        color: #333;
+        text-decoration: none;
+        background-color: transparent; }
+      /* line 31, ../sass/_menu.scss */
+      #main-menu > ul.menu > li > a:focus, #main-menu > ul.menu > li > a.active {
+        color: #555;
+        text-decoration: none;
+        background-color: #E5E5E5;
+        -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+        -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+        box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125); }
+    /* line 38, ../sass/_menu.scss */
+    #main-menu > ul.menu > li > ul.menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 1000;
+      display: none;
+      float: left;
+      min-width: 160px;
+      padding: 5px 0;
+      margin: 2px 0 0;
+      list-style: none;
+      background-color: white;
+      border: 1px solid #CCC;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      -webkit-border-radius: 6px 6px 6px 6px;
+      -moz-border-radius: 6px 6px 6px 6px;
+      border-radius: 6px 6px 6px 6px;
+      -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+      /* line 54, ../sass/_menu.scss */
+      #main-menu > ul.menu > li > ul.menu li {
+        list-style: none outside none;
+        margin: 0;
+        padding: 0; }
+        /* line 58, ../sass/_menu.scss */
+        #main-menu > ul.menu > li > ul.menu li a {
+          display: block;
+          padding: 3px 20px;
+          clear: both;
+          font-weight: normal;
+          line-height: 20px;
+          color: #333;
+          white-space: nowrap; }
+          /* line 66, ../sass/_menu.scss */
+          #main-menu > ul.menu > li > ul.menu li a:focus, #main-menu > ul.menu > li > ul.menu li a:hover {
+            color: white;
+            text-decoration: none;
+            outline: 0;
+            background-color: #0088cc;
+            background-color: #0081c2;
+            background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
+            background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
+            background-image: -o-linear-gradient(top, #0088cc, #0077b3);
+            background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0088CC', endColorstr='#FF0077B3', GradientType=0); }
+      /* line 75, ../sass/_menu.scss */
+      #main-menu > ul.menu > li > ul.menu:before {
+        position: absolute;
+        top: -7px;
+        left: 9px;
+        display: inline-block;
+        border-right: 7px solid transparent;
+        border-bottom: 7px solid #CCC;
+        border-left: 7px solid transparent;
+        border-bottom-color: rgba(0, 0, 0, 0.2);
+        content: ''; }
+      /* line 86, ../sass/_menu.scss */
+      #main-menu > ul.menu > li > ul.menu:after {
+        position: absolute;
+        top: -6px;
+        left: 10px;
+        display: inline-block;
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid white;
+        border-left: 6px solid transparent;
+        content: ''; }
+    /* line 98, ../sass/_menu.scss */
+    #main-menu > ul.menu > li.open > a {
+      color: #555;
+      background-color: #E5E5E5; }
+    /* line 102, ../sass/_menu.scss */
+    #main-menu > ul.menu > li.open ul.menu {
+      display: block; }
+
 /* line 9, ../sass/_form.scss */
 #node-edit #edit-title {
   font-size: 1.6em;
@@ -6575,21 +6595,6 @@ ul.links.inline {
     .filter-wrapper .filter-guidelines .tips {
       margin-left: 0; }
 
-/* line 40, ../sass/_form.scss */
-.search-form input.form-text {
-  margin: 0;
-  display: inline-block; }
-/* line 44, ../sass/_form.scss */
-.search-form input.form-submit {
-  margin: 0; }
-
-/* line 50, ../sass/_form.scss */
-#header .search-form {
-  margin: 12.8px 0;
-  float: right; }
-
-@media (max-width: 767px) {
-  /* line 56, ../sass/_form.scss */
-  #header .search-form {
-    margin: 0;
-    float: none; } }
+/* line 41, ../sass/_form.scss */
+.navbar .search-form input.form-submit {
+  display: none; }
