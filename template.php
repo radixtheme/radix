@@ -35,6 +35,10 @@ function radix_preprocess_page(&$variables) {
   // Format and add main menu to theme
   $main_menu_tree = menu_tree_all_data('main-menu');
   $variables['main_menu'] = menu_tree_output($main_menu_tree);
+
+  // Format and add footer menu to theme
+  $footer_menu_tree = menu_tree_all_data('menu-footer-menu');
+  $variables['footer_menu'] = menu_tree_output($footer_menu_tree);
 }
 
 /**

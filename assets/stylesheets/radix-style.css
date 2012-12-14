@@ -6543,6 +6543,11 @@ ul.links.inline {
     #main-menu > ul.menu > li.open ul.menu {
       display: block; }
 
+/* line 6, ../sass/_panel.scss */
+.panel-display .row .panel-pane {
+  margin-bottom: 20px;
+  background: #eee; }
+
 /* line 9, ../sass/_form.scss */
 #node-edit #edit-title {
   font-size: 1.6em;
@@ -6598,3 +6603,21 @@ ul.links.inline {
 /* line 41, ../sass/_form.scss */
 .navbar .search-form input.form-submit {
   display: none; }
+
+/* line 8, ../sass/_node.scss */
+.field img {
+  border: 1px solid #DDD;
+  padding: 5px;
+  background: #FFFFFF;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055); }
+  /* line 14, ../sass/_node.scss */
+  .field img[style*="float:left"], .field img[style*="float: left"] {
+    margin: 5px 15px 15px 0px; }
+  /* line 17, ../sass/_node.scss */
+  .field img[style*="float:right"], .field img[style*="float: right"] {
+    margin: 5px 0px 15px 15px; }
