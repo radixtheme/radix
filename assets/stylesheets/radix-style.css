@@ -6551,6 +6551,11 @@ ul.links.inline {
     #main-menu > ul.menu > li.open ul.menu {
       display: block; }
 
+/* line 6, ../sass/_panel.scss */
+.panel-display .row .panel-pane {
+  margin-bottom: 20px;
+  background: #eee; }
+
 /* line 9, ../sass/_form.scss */
 #node-edit #edit-title {
   font-size: 1.6em;
