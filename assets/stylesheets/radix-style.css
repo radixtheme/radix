@@ -6204,12 +6204,12 @@ ul.icons {
 .icon-user-md:before {
   content: "\f200"; }
 
-/* line 5, ../sass/_layout.scss */
+/* line 7, ../sass/_layout.scss */
 .show-grid .panel-display .row {
   margin-top: 10px;
   margin-bottom: 20px; }
 
-/* line 10, ../sass/_layout.scss */
+/* line 12, ../sass/_layout.scss */
 .show-grid .panel-display .row [class*="span"] {
   background-color: #eee;
   text-align: center;
@@ -6219,7 +6219,7 @@ ul.icons {
   -moz-border-radius: 4px;
   border-radius: 4px; }
 
-/* line 20, ../sass/_layout.scss */
+/* line 22, ../sass/_layout.scss */
 body #header #navigation {
   margin-top: 20px; }
 

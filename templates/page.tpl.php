@@ -17,21 +17,31 @@
         <div id="navigation" class="navbar">
           <div class="navbar-inner">
             <div class="container clearfix">
+              <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>
+
               <?php if ($logo): ?>
                 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo" class="pull-left brand">
                   <?php print $site_name; ?>
                 </a>
               <?php endif; ?>
 
-              <?php if ($main_menu): ?>
-                <nav id="main-menu" class="main-menu pull-left" role="navigation">
-                  <?php print render($main_menu); ?>
-                </nav> <!-- /#main-menu -->
-              <?php endif; ?>
+              <div class="nav-collapse collapse">
+                <?php if ($main_menu): ?>
+                  <nav id="main-menu" class="main-menu pull-left" role="navigation">
+                    <?php print render($main_menu); ?>
+                  </nav> <!-- /#main-menu -->
+                <?php endif; ?>
 
-              <?php if ($search_form): ?>
-                <?php print $search_form; ?>
-              <?php endif; ?>
+                <?php if ($search_form): ?>
+                  <?php print $search_form; ?>
+                <?php endif; ?>
+              </div>
+              
           </div>
         </div> <!-- /#navigation -->
       </div>
