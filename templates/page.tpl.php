@@ -30,7 +30,7 @@
                 </a>
               <?php endif; ?>
 
-              <div class="nav-collapse collapse">
+              <div class="nav-collapse">
                 <?php if ($main_menu): ?>
                   <nav id="main-menu" class="main-menu pull-left" role="navigation">
                     <?php print render($main_menu); ?>
@@ -41,7 +41,7 @@
                   <?php print $search_form; ?>
                 <?php endif; ?>
               </div>
-              
+
           </div>
         </div> <!-- /#navigation -->
       </div>
