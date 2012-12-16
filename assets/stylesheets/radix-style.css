@@ -6204,7 +6204,22 @@ ul.icons {
 .icon-user-md:before {
   content: "\f200"; }
 
-/* line 7, ../sass/_layout.scss */
+/* line 5, ../sass/_layout.scss */
+.show-grid .panel-display .row {
+  margin-top: 10px;
+  margin-bottom: 20px; }
+
+/* line 10, ../sass/_layout.scss */
+.show-grid .panel-display .row [class*="span"] {
+  background-color: #eee;
+  text-align: center;
+  min-height: 40px;
+  line-height: 40px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
+
+/* line 20, ../sass/_layout.scss */
 body #header #navigation {
   margin-top: 20px; }
 
@@ -6598,3 +6613,21 @@ ul.links.inline {
 /* line 41, ../sass/_form.scss */
 .navbar .search-form input.form-submit {
   display: none; }
+
+/* line 8, ../sass/_node.scss */
+.field img {
+  border: 1px solid #DDD;
+  padding: 5px;
+  background: #FFFFFF;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055); }
+  /* line 14, ../sass/_node.scss */
+  .field img[style*="float:left"], .field img[style*="float: left"] {
+    margin: 5px 15px 15px 0px; }
+  /* line 17, ../sass/_node.scss */
+  .field img[style*="float:right"], .field img[style*="float: right"] {
+    margin: 5px 0px 15px 15px; }
