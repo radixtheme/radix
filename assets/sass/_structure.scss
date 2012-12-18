@@ -240,3 +240,42 @@ ul.links {
     }
   }
 }
+
+// Slideshow - with Field Slideshow
+// --------------------------------------------------
+.field-slideshow-wrapper {
+  position: relative;
+  .field-slideshow-controls {
+    a {
+      position: absolute;
+      z-index: 500;
+      top: 50%;
+      left: 15px;
+      width: 40px;
+      height: 40px;
+      margin-top: -20px;
+      font-size: 60px;
+      font-weight: 100;
+      line-height: 30px;
+      color: #ffffff;
+      text-align: center;
+      background: #222222;
+      border: 3px solid #ffffff;
+      @include border-radius(23px);
+      @include opacity(0.5);
+      &.next {
+        right: 15px;
+        left: auto;
+      }
+      &:hover {
+        color: #ffffff;
+        text-decoration: none;
+        @include opacity(0.9);
+      }
+    }
+  }
+  .field-slideshow-pager {
+    margin-top: 10px;
+    text-align: center;
+  }
+}

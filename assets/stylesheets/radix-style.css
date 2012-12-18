@@ -6439,6 +6439,45 @@ ul.links.inline {
     margin: 0 10px 0 0;
     padding: 0; }
 
+/* line 246, ../sass/_structure.scss */
+.field-slideshow-wrapper {
+  position: relative; }
+  /* line 249, ../sass/_structure.scss */
+  .field-slideshow-wrapper .field-slideshow-controls a {
+    position: absolute;
+    z-index: 500;
+    top: 50%;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    font-size: 60px;
+    font-weight: 100;
+    line-height: 30px;
+    color: #ffffff;
+    text-align: center;
+    background: #222222;
+    border: 3px solid #ffffff;
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 23px;
+    opacity: 0.5;
+    filter: alpha(opacity=50); }
+    /* line 266, ../sass/_structure.scss */
+    .field-slideshow-wrapper .field-slideshow-controls a.next {
+      right: 15px;
+      left: auto; }
+    /* line 270, ../sass/_structure.scss */
+    .field-slideshow-wrapper .field-slideshow-controls a:hover {
+      color: #ffffff;
+      text-decoration: none;
+      opacity: 0.9;
+      filter: alpha(opacity=90); }
+  /* line 277, ../sass/_structure.scss */
+  .field-slideshow-wrapper .field-slideshow-pager {
+    margin-top: 10px;
+    text-align: center; }
+
 /* line 8, ../sass/_menu.scss */
 #main-menu > ul.menu {
   margin: 0;
@@ -6550,11 +6589,6 @@ ul.links.inline {
     /* line 102, ../sass/_menu.scss */
     #main-menu > ul.menu > li.open ul.menu {
       display: block; }
-
-/* line 6, ../sass/_panel.scss */
-.panel-display .row .panel-pane {
-  margin-bottom: 20px;
-  background: #eee; }
 
 /* line 9, ../sass/_form.scss */
 #node-edit #edit-title {
