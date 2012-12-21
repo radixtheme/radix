@@ -5,6 +5,17 @@
 
 // General
 // --------------------------------------------------
+form {
+  fieldset {
+    min-height: 50px;
+    legend {
+      font-size: 18px;
+    }
+  }
+}
+
+// Node Edit Form
+// --------------------------------------------------
 #node-edit {
   #edit-title {
     font-size: 1.6em;
@@ -37,6 +48,9 @@
 // --------------------------------------------------
 .navbar {
   .search-form {
+    .container-inline {
+      padding-top: 0;
+    }
     input {
       &.form-submit {
         display: none;

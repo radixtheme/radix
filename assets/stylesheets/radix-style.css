@@ -6591,11 +6591,18 @@ ul.links.inline {
       display: block; }
 
 /* line 9, ../sass/_form.scss */
+form fieldset {
+  min-height: 50px; }
+  /* line 11, ../sass/_form.scss */
+  form fieldset legend {
+    font-size: 18px; }
+
+/* line 20, ../sass/_form.scss */
 #node-edit #edit-title {
   font-size: 1.6em;
   line-height: 1.6em;
   height: 45px; }
-/* line 15, ../sass/_form.scss */
+/* line 26, ../sass/_form.scss */
 #node-edit .burr-flipped-sidebar .panel-pane {
   min-height: 20px;
   padding: 19px;
@@ -6613,11 +6620,11 @@ ul.links.inline {
   #node-edit .burr-flipped-sidebar .panel-pane blockquote {
     border-color: #ddd;
     border-color: rgba(0, 0, 0, 0.15); }
-  /* line 18, ../sass/_form.scss */
+  /* line 29, ../sass/_form.scss */
   #node-edit .burr-flipped-sidebar .panel-pane .pane-title {
     margin-top: 0; }
 
-/* line 25, ../sass/_form.scss */
+/* line 36, ../sass/_form.scss */
 .filter-wrapper {
   min-height: 20px;
   padding: 19px;
@@ -6635,14 +6642,17 @@ ul.links.inline {
   .filter-wrapper blockquote {
     border-color: #ddd;
     border-color: rgba(0, 0, 0, 0.15); }
-  /* line 28, ../sass/_form.scss */
+  /* line 39, ../sass/_form.scss */
   .filter-wrapper .filter-guidelines {
     padding: 0; }
-    /* line 30, ../sass/_form.scss */
+    /* line 41, ../sass/_form.scss */
     .filter-wrapper .filter-guidelines .tips {
       margin-left: 0; }
 
-/* line 41, ../sass/_form.scss */
+/* line 51, ../sass/_form.scss */
+.navbar .search-form .container-inline {
+  padding-top: 0; }
+/* line 55, ../sass/_form.scss */
 .navbar .search-form input.form-submit {
   display: none; }
 
