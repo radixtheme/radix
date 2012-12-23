@@ -18,10 +18,13 @@
           <div class="navbar-inner">
             <div class="container clearfix">
               <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <a class="btn btn-navbar btn-navbar-menu" data-toggle="collapse" data-target=".nav-menu-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
+              </a>
+              <a class="btn btn-navbar btn-navbar-search" data-toggle="collapse" data-target=".nav-search-collapse">
+                <span class="icon-search"></span>
               </a>
 
               <?php if ($logo): ?>
@@ -30,16 +33,22 @@
                 </a>
               <?php endif; ?>
 
-              <div class="nav-collapse">
-                <?php if ($main_menu): ?>
-                  <nav id="main-menu" class="main-menu pull-left" role="navigation">
-                    <?php print render($main_menu); ?>
-                  </nav> <!-- /#main-menu -->
-                <?php endif; ?>
+              <div class="nav-collapse nav-menu-collapse">
+                <div class="inner">
+                  <?php if ($main_menu): ?>
+                    <nav id="main-menu" class="main-menu pull-left" role="navigation">
+                      <?php print render($main_menu); ?>
+                    </nav> <!-- /#main-menu -->
+                  <?php endif; ?>
+                </div>
+              </div>
 
-                <?php if ($search_form): ?>
-                  <?php print $search_form; ?>
-                <?php endif; ?>
+              <div class="nav-collapse nav-search-collapse">
+                <div class="inner">
+                  <?php if ($search_form): ?>
+                    <?php print $search_form; ?>
+                  <?php endif; ?>
+                </div>
               </div>
 
           </div>

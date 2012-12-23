@@ -2,13 +2,24 @@
 // Styles for Menus and Navs
 // --------------------------------------------------
 
+// General
+// --------------------------------------------------
+.navbar {
+  .btn-navbar-search {
+    padding: 4px 11px;
+    span {
+      line-height: 1.1em;
+    }
+  }
+}
+
 // Main Menu
 // --------------------------------------------------
 #main-menu {
   > ul.menu {
     margin: 0;
     padding: 0;
-    display: table;
+    @include clearfix();
     > li {
       margin: 0;
       padding: 0;
@@ -104,6 +115,42 @@
         }
       }
     }
+  }
+}
+
+
+@media (max-width: 979px) {
+  #main-menu {
+    float: none;
+    > ul.menu {
+      li {
+        display: block;
+        float: none;
+        margin-bottom: 2px;
+        a {
+          display: block;
+          padding: 9px 15px;
+          font-weight: bold;
+          color: #777777;
+          @include border-radius(3px);
+          &:hover {
+            background-color: #f2f2f2;
+          }
+        }
+        &.open {
+          ul.menu {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 980px) {
+  .nav-collapse.collapse {
+    height: auto !important;
+    overflow: visible !important;
   }
 }
 
