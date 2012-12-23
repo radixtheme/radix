@@ -5,17 +5,41 @@
 // Miscellaneous
 // --------------------------------------------------
 .field {
-  img {
-    border: 1px solid #DDD;
-    padding: 5px;
-    background: #FFFFFF;
-    @include border-radius(4px 4px 4px 4px);
-    @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.055));
-    &[style*="float:left"], &[style*="float: left"] {
-      margin: 5px 15px 15px 0px;
+  &.field-type-image {
+    .field-item {
+      border: 1px solid #DDD;
+      padding: 5px;
+      background: #FFFFFF;
+      @include border-radius(4px 4px 4px 4px);
+      @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.055));
+      margin-bottom: 5px;
+      img {
+        width: 100%;
+      }
     }
-    &[style*="float:right"], &[style*="float: right"] {
-      margin: 5px 0px 15px 15px;
+  }
+  &.field-type-long-text {
+    img {
+      border: 1px solid #DDD;
+      padding: 5px;
+      background: #FFFFFF;
+      @include border-radius(4px 4px 4px 4px);
+      @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.055));
+      &[style*="float:left"], &[style*="float: left"] {
+        margin: 5px 15px 15px 0px;
+      }
+      &[style*="float:right"], &[style*="float: right"] {
+        margin: 5px 0px 15px 15px;
+      }
     }
+  }
+}
+
+.field-collection-container {
+  border: 0;
+  .field-collection-view {
+    margin: 0;
+    padding: 0;
+    border: none;
   }
 }

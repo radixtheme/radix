@@ -245,11 +245,41 @@ ul.links {
 // --------------------------------------------------
 .field-slideshow-wrapper {
   position: relative;
+  background-color: #FFFFFF;
+  @include border-radius(4px 4px 4px 4px);
+  @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.055));
+  border: 1px solid #DDD;
+  padding: 5px;
+  > .field-slideshow {
+    width: 100% !important;
+    padding: 0 !important;
+    .field-slideshow-slide {
+      width: 100% !important;
+      img {
+        width: 100% !important;
+      }
+      .field-slideshow-caption {
+        background: rgba(#000000, 0.65);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: #FFFFFF;
+        .field-slideshow-caption-text {
+          display: block;
+          padding: 20px;
+        }
+        h1, h2, h3 {
+          margin-top: 0;
+        }
+      }
+    }
+  }
   .field-slideshow-controls {
     a {
       position: absolute;
       z-index: 500;
-      top: 50%;
+      top: 45%;
       left: 15px;
       width: 40px;
       height: 40px;
@@ -277,5 +307,32 @@ ul.links {
   .field-slideshow-pager {
     margin-top: 10px;
     text-align: center;
+    position: absolute;
+    bottom: 8%;
+    right: 20px;
+    z-index: 500;
+    a {
+      background: #222222;
+      border: 3px solid #ffffff;
+      display: inline-block;
+      margin: 0 3px;
+      width: 25px;
+      height: 25px;
+      line-height: 25px;
+      color: #FFFFFF;
+      text-decoration: none;
+      @include border-radius(25px);
+      @include opacity(0.5);
+      &:hover {
+        color: #ffffff;
+        text-decoration: none;
+        @include opacity(0.9);
+      }
+      &.activeSlide {
+        background: #0088CC;
+        @include opacity(0.9);
+      }
+    }
   }
 }
+

@@ -106,3 +106,64 @@
     }
   }
 }
+
+// Pane Menu Tree
+// --------------------------------------------------
+.pane-menu-tree {  
+  padding: 0;
+  background-color: #fff;
+  margin: 0 0 30px;
+  @include border-radius(6px);
+  @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.065));
+  .pane-title {
+    padding: 8px 14px;
+    margin: 0 0 -1px;
+    border: 1px solid #e5e5e5;
+  }
+  .pane-content {
+    ul.menu {
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none outside none;
+        margin: 0;
+        padding: 0;
+        a {
+          display: block;
+          margin: 0 0 -1px;
+          padding: 8px 14px;
+          border: 1px solid #e5e5e5;
+          &:hover {
+            background-color: #f5f5f5;
+            text-decoration: none;
+          }
+        }
+        &.active-trail {
+          > a {
+            color: #ffffff;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+            background-color: #0088cc;
+          }
+          > ul.menu {
+            display: block;
+            li {
+              a {
+                padding-left: 30px;
+              }
+              &.active-trail {
+                > a {
+                  background-color: #F5F5F5;
+                  color: #0088CC;
+                  text-shadow: none;
+                }
+              }
+            }
+          }
+        }
+      }
+      ul.menu {
+        display: none;
+      }
+    }
+  }
+}

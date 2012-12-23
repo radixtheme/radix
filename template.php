@@ -4,14 +4,33 @@
  * Implementation of template_preprocess_html()
  */
 function radix_preprocess_html(&$variables) {
-  //
+ 
+  // add meta for Bootstrap Responsive
+  // <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  $element = array(
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'name' => 'viewport', 
+      'content' => 'width=device-width, initial-scale=1.0',
+    ),
+  );
+  drupal_add_html_head($element, 'bootstrap_responsive');
 }
 
 /**
- * Implements theme_js_alter().
+ * Implements hook_js_alter().
  */
 function radix_js_alter(&$js) {
   //$js['misc/jquery.js']['data'] = 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js';
+}
+
+/**
+ * Implements hook_css_alter().
+ */
+function radix_css_alter(&$css) {
+  if (isset($css['sites/all/modules/panopoly/panopoly_admin/panopoly-admin.css'])) {
+    unset($css['sites/all/modules/panopoly/panopoly_admin/panopoly-admin.css']);
+  }
 }
 
 /**
@@ -209,6 +228,11 @@ function radix_button($variables) {
   $element['#attributes']['class'][] = 'btn';
   if (!empty($element['#attributes']['disabled'])) {
     $element['#attributes']['class'][] = 'form-button-disabled';
+  }
+
+  // add a btn-primary class if submit button
+  if ($element['#parents'][0] == 'submit') {
+    $element['#attributes']['class'][] = 'btn-primary'; 
   }
 
   return '<input' . drupal_attributes($element['#attributes']) . ' />';

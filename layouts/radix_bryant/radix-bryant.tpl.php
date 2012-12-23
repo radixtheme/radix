@@ -12,14 +12,14 @@
 
 <div class="panel-display bryant clearfix <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 
-  <div class="bryant-container bryant-content-container clearfix row">
+  <div class="row-fluid">
     <div class="span3 sidebar panel-panel">
-      <div class="bryant-sidebar-inner bryant-content-region-inner panel-panel-inner">
+      <div class="panel-panel-inner">
         <?php print $content['sidebar']; ?>
       </div>
     </div>
     <div class="span9 content panel-panel">
-      <div class="bryant-content-inner bryant-content-region-inner panel-panel-inner">
+      <div class="panel-panel-inner">
         <?php print $content['contentmain']; ?>
       </div>
     </div>

@@ -12,14 +12,14 @@
 
 <div class="panel-display burr clearfix <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 
-  <div class="burr-container burr-content-container clearfix row">
+  <div class="row-fluid">
     <div class="span4 sidebar panel-panel">
-      <div class="burr-sidebar-inner burr-content-region-inner panel-panel-inner">
+      <div class="panel-panel-inner">
         <?php print $content['sidebar']; ?>
       </div>
     </div>
     <div class="span8 content panel-panel">
-      <div class="burr-content-inner burr-content-region-inner panel-panel-inner">
+      <div class="panel-panel-inner">
         <?php print $content['contentmain']; ?>
       </div>
     </div>

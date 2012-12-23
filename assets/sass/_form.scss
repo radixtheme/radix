@@ -12,6 +12,11 @@ form {
       font-size: 18px;
     }
   }
+  .form-actions {
+    .btn {
+      margin-right: 10px;
+    }
+  }
 }
 
 // Node Edit Form
@@ -29,6 +34,10 @@ form {
       .pane-title {
         margin-top: 0;
       }
+    }
+    .pane-node-form-buttons {
+      background: none;
+      padding: inherit;
     }
   }
 }
