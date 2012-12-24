@@ -7305,37 +7305,41 @@ body #header #navigation {
   margin-top: 20px; }
 
 /* line 9, ../sass/_structure.scss */
+.page-title-hidden .page-header {
+  display: none; }
+
+/* line 17, ../sass/_structure.scss */
 ul.tabs.primary {
   padding: 0;
   margin: 0;
   margin-bottom: 10px;
   border-bottom: 1px solid #DDD; }
-/* line 15, ../sass/_structure.scss */
+/* line 23, ../sass/_structure.scss */
 ul.action-links {
   padding: 0;
   margin: 0;
   margin-bottom: 10px;
   border-bottom: 1px solid #DDD;
   border-bottom: 0; }
-/* line 23, ../sass/_structure.scss */
+/* line 31, ../sass/_structure.scss */
 ul.tabs:before, ul.tabs:after {
   display: table;
   line-height: 0;
   content: ""; }
-/* line 30, ../sass/_structure.scss */
+/* line 38, ../sass/_structure.scss */
 ul.action-links:before, ul.action-links:after {
   display: table;
   line-height: 0;
   content: ""; }
-/* line 36, ../sass/_structure.scss */
+/* line 44, ../sass/_structure.scss */
 ul.tabs:after, ul.action-links:after {
   clear: both; }
-/* line 39, ../sass/_structure.scss */
+/* line 47, ../sass/_structure.scss */
 ul.tabs > li, ul.action-links > li {
   float: left;
   display: block;
   margin-bottom: -1px; }
-/* line 44, ../sass/_structure.scss */
+/* line 52, ../sass/_structure.scss */
 ul.tabs > li > a, ul.action-links > li > a {
   padding-top: 8px;
   padding-bottom: 8px;
@@ -7347,12 +7351,12 @@ ul.tabs > li > a, ul.action-links > li > a {
   -moz-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
   display: block; }
-/* line 56, ../sass/_structure.scss */
+/* line 64, ../sass/_structure.scss */
 ul.tabs > li > a:hover, ul.action-links > li > a:hover {
   text-decoration: none;
   background-color: #EEE;
   border-color: #EEE #EEE #DDD; }
-/* line 61, ../sass/_structure.scss */
+/* line 69, ../sass/_structure.scss */
 ul.tabs > .active > a, ul.action-links > .active > a {
   color: #555;
   cursor: default;
@@ -7360,7 +7364,7 @@ ul.tabs > .active > a, ul.action-links > .active > a {
   border: 1px solid #DDD;
   border-color: #DDD #DDD #FFF #DDD;
   border-bottom-color: transparent; }
-  /* line 68, ../sass/_structure.scss */
+  /* line 76, ../sass/_structure.scss */
   ul.tabs > .active > a:hover, ul.action-links > .active > a:hover {
     color: #555;
     cursor: default;
@@ -7368,15 +7372,15 @@ ul.tabs > .active > a, ul.action-links > .active > a {
     border: 1px solid #DDD;
     border-color: #DDD #DDD #FFF #DDD;
     border-bottom-color: transparent; }
-/* line 77, ../sass/_structure.scss */
+/* line 85, ../sass/_structure.scss */
 ul.secondary {
   border-bottom: 0;
   padding: 0; }
-/* line 81, ../sass/_structure.scss */
+/* line 89, ../sass/_structure.scss */
 ul.tabs.secondary > li {
   border: 0;
   padding: 0; }
-  /* line 84, ../sass/_structure.scss */
+  /* line 92, ../sass/_structure.scss */
   ul.tabs.secondary > li > a {
     padding-top: 8px;
     padding-bottom: 8px;
@@ -7386,7 +7390,7 @@ ul.tabs.secondary > li {
     -moz-border-radius: 5px;
     border-radius: 5px;
     border: 0 !important; }
-/* line 95, ../sass/_structure.scss */
+/* line 103, ../sass/_structure.scss */
 ul.action-links > li > a {
   padding-top: 8px;
   padding-bottom: 8px;
@@ -7396,22 +7400,22 @@ ul.action-links > li > a {
   -moz-border-radius: 5px;
   border-radius: 5px;
   border: 0 !important; }
-/* line 105, ../sass/_structure.scss */
+/* line 113, ../sass/_structure.scss */
 ul.tabs.secondary > li > a, ul.action-links > li > a {
   padding-right: 12px;
   padding-left: 12px;
   margin-right: 2px;
   line-height: 14px; }
-/* line 111, ../sass/_structure.scss */
+/* line 119, ../sass/_structure.scss */
 ul.tabs.secondary > .active > a, ul.action-links > .active > a {
   color: white;
   background-color: #08C; }
-  /* line 114, ../sass/_structure.scss */
+  /* line 122, ../sass/_structure.scss */
   ul.tabs.secondary > .active > a:hover, ul.action-links > .active > a:hover {
     color: white;
     background-color: #08C; }
 
-/* line 123, ../sass/_structure.scss */
+/* line 131, ../sass/_structure.scss */
 div.vertical-tabs {
   border: none;
   border: 1px solid #DDD;
@@ -7419,13 +7423,13 @@ div.vertical-tabs {
   -moz-border-radius: 4px;
   border-radius: 4px;
   outline: none; }
-  /* line 130, ../sass/_structure.scss */
+  /* line 138, ../sass/_structure.scss */
   div.vertical-tabs ul.vertical-tabs-list {
     border: none;
     margin-top: 20px;
     margin-bottom: 20px;
     outline: none; }
-    /* line 135, ../sass/_structure.scss */
+    /* line 143, ../sass/_structure.scss */
     div.vertical-tabs ul.vertical-tabs-list li {
       border: none;
       background: none;
@@ -7435,26 +7439,26 @@ div.vertical-tabs {
       -moz-border-radius: 4px 0 0 4px;
       border: 1px solid;
       border-color: #fff #ddd #fff #fff; }
-      /* line 144, ../sass/_structure.scss */
+      /* line 152, ../sass/_structure.scss */
       div.vertical-tabs ul.vertical-tabs-list li.selected {
         border-color: #ddd #fff #ddd #ddd; }
-      /* line 147, ../sass/_structure.scss */
+      /* line 155, ../sass/_structure.scss */
       div.vertical-tabs ul.vertical-tabs-list li a {
         outline: none !important;
         border-radius: 4px 0 0 4px;
         -webkit-border-radius: 4px 0 0 4px;
         -moz-border-radius: 4px 0 0 4px; }
-        /* line 152, ../sass/_structure.scss */
+        /* line 160, ../sass/_structure.scss */
         div.vertical-tabs ul.vertical-tabs-list li a:hover {
           background: #EEE; }
-  /* line 158, ../sass/_structure.scss */
+  /* line 166, ../sass/_structure.scss */
   div.vertical-tabs .form-type-textfield input {
     width: 90%;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
     box-sizing: content-box; }
 
-/* line 168, ../sass/_structure.scss */
+/* line 176, ../sass/_structure.scss */
 div.messages {
   padding: 8px 35px 8px 14px;
   margin: 18px 0;
@@ -7466,27 +7470,27 @@ div.messages {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px; }
-  /* line 179, ../sass/_structure.scss */
+  /* line 187, ../sass/_structure.scss */
   div.messages.status {
     color: #468847;
     background-color: #dff0d8;
     border-color: #d6e9c6; }
-  /* line 184, ../sass/_structure.scss */
+  /* line 192, ../sass/_structure.scss */
   div.messages.error {
     color: #b94a48;
     background-color: #f2dede;
     border-color: #eed3d7; }
-  /* line 189, ../sass/_structure.scss */
+  /* line 197, ../sass/_structure.scss */
   div.messages.info {
     color: #3a87ad;
     background-color: #d9edf7;
     border-color: #bce8f1; }
 
-/* line 198, ../sass/_structure.scss */
+/* line 206, ../sass/_structure.scss */
 table {
   width: 100%;
   margin-bottom: 20px; }
-  /* line 203, ../sass/_structure.scss */
+  /* line 211, ../sass/_structure.scss */
   table th,
   table td {
     padding: 8px;
@@ -7494,13 +7498,13 @@ table {
     text-align: left;
     vertical-align: top;
     border-top: 1px solid #dddddd; }
-  /* line 210, ../sass/_structure.scss */
+  /* line 218, ../sass/_structure.scss */
   table th {
     font-weight: bold; }
-  /* line 214, ../sass/_structure.scss */
+  /* line 222, ../sass/_structure.scss */
   table thead th {
     vertical-align: bottom; }
-  /* line 223, ../sass/_structure.scss */
+  /* line 231, ../sass/_structure.scss */
   table caption + thead tr:first-child th,
   table caption + thead tr:first-child td,
   table colgroup + thead tr:first-child th,
@@ -7508,19 +7512,19 @@ table {
   table thead:first-child tr:first-child th,
   table thead:first-child tr:first-child td {
     border-top: 0; }
-  /* line 227, ../sass/_structure.scss */
+  /* line 235, ../sass/_structure.scss */
   table tbody + tbody {
     border-top: 2px solid #dddddd; }
 
-/* line 235, ../sass/_structure.scss */
+/* line 243, ../sass/_structure.scss */
 ul.links.inline {
   margin: 0; }
-  /* line 237, ../sass/_structure.scss */
+  /* line 245, ../sass/_structure.scss */
   ul.links.inline li {
     margin: 0 10px 0 0;
     padding: 0; }
 
-/* line 246, ../sass/_structure.scss */
+/* line 254, ../sass/_structure.scss */
 .field-slideshow-wrapper {
   position: relative;
   background-color: #FFFFFF;
@@ -7532,17 +7536,17 @@ ul.links.inline {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
   border: 1px solid #DDD;
   padding: 5px; }
-  /* line 253, ../sass/_structure.scss */
+  /* line 261, ../sass/_structure.scss */
   .field-slideshow-wrapper > .field-slideshow {
     width: 100% !important;
     padding: 0 !important; }
-    /* line 256, ../sass/_structure.scss */
+    /* line 264, ../sass/_structure.scss */
     .field-slideshow-wrapper > .field-slideshow .field-slideshow-slide {
       width: 100% !important; }
-      /* line 258, ../sass/_structure.scss */
+      /* line 266, ../sass/_structure.scss */
       .field-slideshow-wrapper > .field-slideshow .field-slideshow-slide img {
         width: 100% !important; }
-      /* line 261, ../sass/_structure.scss */
+      /* line 269, ../sass/_structure.scss */
       .field-slideshow-wrapper > .field-slideshow .field-slideshow-slide .field-slideshow-caption {
         background: rgba(0, 0, 0, 0.65);
         position: absolute;
@@ -7550,14 +7554,14 @@ ul.links.inline {
         left: 0;
         width: 100%;
         color: #FFFFFF; }
-        /* line 268, ../sass/_structure.scss */
+        /* line 276, ../sass/_structure.scss */
         .field-slideshow-wrapper > .field-slideshow .field-slideshow-slide .field-slideshow-caption .field-slideshow-caption-text {
           display: block;
           padding: 20px; }
-        /* line 272, ../sass/_structure.scss */
+        /* line 280, ../sass/_structure.scss */
         .field-slideshow-wrapper > .field-slideshow .field-slideshow-slide .field-slideshow-caption h1, .field-slideshow-wrapper > .field-slideshow .field-slideshow-slide .field-slideshow-caption h2, .field-slideshow-wrapper > .field-slideshow .field-slideshow-slide .field-slideshow-caption h3 {
           margin-top: 0; }
-  /* line 279, ../sass/_structure.scss */
+  /* line 287, ../sass/_structure.scss */
   .field-slideshow-wrapper .field-slideshow-controls a {
     position: absolute;
     z-index: 500;
@@ -7578,17 +7582,17 @@ ul.links.inline {
     border-radius: 23px;
     opacity: 0.5;
     filter: alpha(opacity=50); }
-    /* line 296, ../sass/_structure.scss */
+    /* line 304, ../sass/_structure.scss */
     .field-slideshow-wrapper .field-slideshow-controls a.next {
       right: 15px;
       left: auto; }
-    /* line 300, ../sass/_structure.scss */
+    /* line 308, ../sass/_structure.scss */
     .field-slideshow-wrapper .field-slideshow-controls a:hover {
       color: #ffffff;
       text-decoration: none;
       opacity: 0.9;
       filter: alpha(opacity=90); }
-  /* line 307, ../sass/_structure.scss */
+  /* line 315, ../sass/_structure.scss */
   .field-slideshow-wrapper .field-slideshow-pager {
     margin-top: 10px;
     text-align: center;
@@ -7596,7 +7600,7 @@ ul.links.inline {
     bottom: 8%;
     right: 20px;
     z-index: 500; }
-    /* line 314, ../sass/_structure.scss */
+    /* line 322, ../sass/_structure.scss */
     .field-slideshow-wrapper .field-slideshow-pager a {
       background: #222222;
       border: 3px solid #ffffff;
@@ -7612,13 +7616,13 @@ ul.links.inline {
       border-radius: 25px;
       opacity: 0.5;
       filter: alpha(opacity=50); }
-      /* line 326, ../sass/_structure.scss */
+      /* line 334, ../sass/_structure.scss */
       .field-slideshow-wrapper .field-slideshow-pager a:hover {
         color: #ffffff;
         text-decoration: none;
         opacity: 0.9;
         filter: alpha(opacity=90); }
-      /* line 331, ../sass/_structure.scss */
+      /* line 339, ../sass/_structure.scss */
       .field-slideshow-wrapper .field-slideshow-pager a.activeSlide {
         background: #0088CC;
         opacity: 0.9;
