@@ -86,3 +86,14 @@ form {
     }
   }
 }
+
+// Field Overview
+// --------------------------------------------------
+.page-admin {
+  form {
+    select,
+    input.form-text {
+      width: 150px;
+    }
+  }
+}
