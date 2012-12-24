@@ -9,7 +9,6 @@
  * panel of the layout. This layout supports the following sections:
  */
 ?>
-<?php dpm($variables); ?>
 <div class="panel-display burr clearfix <?php if (!empty($classes)) { print $classes; } ?><?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 
   <div class="row-fluid">
