@@ -17,6 +17,11 @@ form {
       margin-right: 10px;
     }
   }
+  .field-type-datetime {
+    select {
+      width: 80px;
+    }
+  }
 }
 
 // Node Edit Form
@@ -91,9 +96,11 @@ form {
 // --------------------------------------------------
 .page-admin {
   form {
-    select,
-    input.form-text {
-      width: 150px;
+    table {
+      select,
+      input.form-text {
+        width: 150px;
+      }
     }
   }
 }

@@ -12,49 +12,45 @@
 ?>
 <header id="header" class="header" role="header">
   <div class="container">
-    <div class="row">
-      <div class="span12">
-        <div id="navigation" class="navbar">
-          <div class="navbar-inner">
-            <div class="container clearfix">
-              <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-              <a class="btn btn-navbar btn-navbar-menu" data-toggle="collapse" data-target=".nav-menu-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </a>
-              <a class="btn btn-navbar btn-navbar-search" data-toggle="collapse" data-target=".nav-search-collapse">
-                <span class="icon-search"></span>
-              </a>
+    <div id="navigation" class="navbar">
+      <div class="navbar-inner">
+        <div class="container clearfix">
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <a class="btn btn-navbar btn-navbar-menu" data-toggle="collapse" data-target=".nav-menu-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="btn btn-navbar btn-navbar-search" data-toggle="collapse" data-target=".nav-search-collapse">
+            <span class="icon-search"></span>
+          </a>
 
-              <?php if ($logo): ?>
-                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo" class="pull-left brand">
-                  <?php print $site_name; ?>
-                </a>
+          <?php if ($logo): ?>
+            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo" class="pull-left brand">
+              <?php print $site_name; ?>
+            </a>
+          <?php endif; ?>
+
+          <div class="nav-collapse nav-menu-collapse">
+            <div class="inner">
+              <?php if ($main_menu): ?>
+                <nav id="main-menu" class="main-menu pull-left" role="navigation">
+                  <?php print render($main_menu); ?>
+                </nav> <!-- /#main-menu -->
               <?php endif; ?>
-
-              <div class="nav-collapse nav-menu-collapse">
-                <div class="inner">
-                  <?php if ($main_menu): ?>
-                    <nav id="main-menu" class="main-menu pull-left" role="navigation">
-                      <?php print render($main_menu); ?>
-                    </nav> <!-- /#main-menu -->
-                  <?php endif; ?>
-                </div>
-              </div>
-
-              <div class="nav-collapse nav-search-collapse">
-                <div class="inner">
-                  <?php if ($search_form): ?>
-                    <?php print $search_form; ?>
-                  <?php endif; ?>
-                </div>
-              </div>
-
+            </div>
           </div>
-        </div> <!-- /#navigation -->
+
+          <div class="nav-collapse nav-search-collapse">
+            <div class="inner">
+              <?php if ($search_form): ?>
+                <?php print $search_form; ?>
+              <?php endif; ?>
+            </div>
+          </div>
+
       </div>
-    </div>
+    </div> <!-- /#navigation -->
   </div>
 </header>
 
@@ -73,20 +69,16 @@
       </div>
     <?php endif; ?>
     <div id="content">
-      <div class="row">
-        <div class="span12 inner">
-          <a id="main-content"></a>
-          <?php if ($title): ?>
-            <div class="page-header">
-              <h1 class="title" id="page-title"><?php print $title; ?></h1>
-            </div>
-          <?php endif; ?>
-          <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
-          <?php print render($page['help']); ?>
-          <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
-          <?php print render($page['content']); ?>
+      <a id="main-content"></a>
+      <?php if ($title): ?>
+        <div class="page-header">
+          <h1 class="title" id="page-title"><?php print $title; ?></h1>
         </div>
-      </div>
+      <?php endif; ?>
+      <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+      <?php print render($page['help']); ?>
+      <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+      <?php print render($page['content']); ?>
     </div>
   </div>
 </div>

@@ -8,6 +8,7 @@
       $(this).removeClass('open');
     });
 
+    // navbar collapse
     $('.btn-navbar').click(function() {
       var target = $($(this).data().target);
       if (target.hasClass('in')) {

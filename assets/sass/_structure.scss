@@ -302,6 +302,7 @@ ul.links {
       text-align: center;
       background: #222222;
       border: 3px solid #ffffff;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       @include border-radius(23px);
       @include opacity(0.5);
       &.next {

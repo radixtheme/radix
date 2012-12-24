@@ -18,7 +18,7 @@
         <?php print $content['contentmain']; ?>
       </div>
     </div>
-    <div class="span4 content panel-panel">
+    <div class="span4 sidebar panel-panel">
       <div class="panel-panel-inner">
         <?php print $content['sidebar']; ?>
       </div>
