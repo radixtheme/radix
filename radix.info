@@ -28,4 +28,4 @@ features[] = main_menu
 features[] = secondary_menu
 
 ; Plugins
-plugins[panels][layouts] = layouts
+;plugins[panels][layouts] = layouts
