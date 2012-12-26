@@ -76,17 +76,23 @@ form {
 @media (max-width: 979px) {
   .navbar {
     .search-form {
-      border: none;
-      padding: 0 0 10px;
+      border: 0 !important;
+      padding: 5px 0 10px;
       margin: 0;
+      @include box-shadow(none);
       .container-inline {
         padding-top: 0;
         margin: 0;
         display: block;
         width: 100%;
+        .form-item {
+          width: 100%;
+          display: block;
+        }
       }
       input {
         margin: 0 auto;
+        display: block;
       }
     }
   }

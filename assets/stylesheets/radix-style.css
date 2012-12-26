@@ -7690,7 +7690,7 @@ ul.links.inline {
 
 /* line 8, ../sass/_menu.scss */
 .navbar .btn-navbar-search {
-  padding: 4px 11px; }
+  padding: 4px 11px 3px; }
   /* line 10, ../sass/_menu.scss */
   .navbar .btn-navbar-search span {
     line-height: 1.1em; }
@@ -7982,19 +7982,27 @@ form .field-type-datetime select {
 @media (max-width: 979px) {
   /* line 78, ../sass/_form.scss */
   .navbar .search-form {
-    border: none;
-    padding: 0 0 10px;
-    margin: 0; }
-    /* line 82, ../sass/_form.scss */
+    border: 0 !important;
+    padding: 5px 0 10px;
+    margin: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+    /* line 83, ../sass/_form.scss */
     .navbar .search-form .container-inline {
       padding-top: 0;
       margin: 0;
       display: block;
       width: 100%; }
-    /* line 88, ../sass/_form.scss */
+      /* line 88, ../sass/_form.scss */
+      .navbar .search-form .container-inline .form-item {
+        width: 100%;
+        display: block; }
+    /* line 93, ../sass/_form.scss */
     .navbar .search-form input {
-      margin: 0 auto; } }
-/* line 101, ../sass/_form.scss */
+      margin: 0 auto;
+      display: block; } }
+/* line 107, ../sass/_form.scss */
 .page-admin form table select,
 .page-admin form table input.form-text {
   width: 150px; }
