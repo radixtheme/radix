@@ -110,3 +110,22 @@ form {
     }
   }
 }
+
+// Features
+// --------------------------------------------------
+#features-export-form {
+  .features-export-parent {
+    margin: 0 0 20px;
+    fieldset.collapsed {
+      min-height: 43px !important;
+      background: none;
+    }
+    .features-export-list {
+      padding: 10px;
+      .form-item {
+        float: none !important;
+      }
+    }
+  }
+}
+
