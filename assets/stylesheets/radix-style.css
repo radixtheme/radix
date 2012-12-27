@@ -7688,6 +7688,10 @@ ul.links.inline {
       -o-animation: progress-bar-stripes 2s linear infinite;
       animation: progress-bar-stripes 2s linear infinite; }
 
+/* line 386, ../sass/_structure.scss */
+.ctools-dropdown-container hr {
+  margin: 0; }
+
 /* line 8, ../sass/_menu.scss */
 .navbar .btn-navbar-search {
   padding: 4px 11px 3px; }
