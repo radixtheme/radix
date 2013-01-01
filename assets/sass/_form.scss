@@ -31,6 +31,13 @@ form {
     font-size: 1.6em;
     line-height: 1.6em;
     height: 45px;
+    width: 90%;
+  }
+  .form-item-path-alias {
+    @include clearfix();
+    label, input {
+      display: inline;
+    }
   }
   .burr-flipped-sidebar {
     .panel-pane {
@@ -43,6 +50,10 @@ form {
     .pane-node-form-buttons {
       background: none;
       padding: inherit;
+      .form-actions {
+        margin: 0;
+        border-top: 0;
+      }
     }
   }
 }

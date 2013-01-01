@@ -237,3 +237,22 @@ function radix_button($variables) {
 
   return '<input' . drupal_attributes($element['#attributes']) . ' />';
 }
+
+/**
+ * Implements theme_menu_link().
+ */
+function radix_link($variables) {
+  $icons = '';
+  if (isset($variables['options']['attributes']['class']) && is_array($variables['options']['attributes']['class'])) {
+    $css_classes = $variables['options']['attributes']['class'];
+    if ($icon_classes = preg_grep('/^icon\-.*/', $css_classes)) {
+      // render an icon for each class
+      foreach ($icon_classes as $icon_class) {
+        $icons .= '<i class="' . $icon_class . '"></i>';
+      }
+      // unset icon classes for attributes to prevent double rendering
+      $variables['options']['attributes']['class'] = array_diff($css_classes, $icon_classes);
+    }
+  }
+  return '<a href="' . check_plain(url($variables['path'], $variables['options'])) . '"' . drupal_attributes($variables['options']['attributes']) . '>' . $icons . ($variables['options']['html'] ? $variables['text'] : check_plain($variables['text'])) . '</a>';
+}
