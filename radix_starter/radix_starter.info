@@ -5,6 +5,7 @@ core        = 7.x
 
 ; Base - Radix
 base theme  = radix
+hidden = true
 
 ; Regions
 regions[help]         = Help
