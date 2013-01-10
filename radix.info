@@ -8,7 +8,8 @@ stylesheets[all][]     = assets/stylesheets/radix-style.css
 stylesheets[print][]   = assets/stylesheets/radix-print.css
 
 ; CSS - Conditional
-stylesheets-conditional[IE][all][] = assets/stylesheets/radix-ie.css
+stylesheets-conditional[IE 7][all][] = assets/stylesheets/radix-ie7.css
+stylesheets-conditional[IE 8][all][] = assets/stylesheets/radix-ie8.css
 
 ; Javascript
 scripts[] = assets/javascripts/modernizr-2.6.1.min.js
@@ -16,7 +17,6 @@ scripts[] = assets/javascripts/modernizr-2.6.1.min.js
 scripts[] = assets/javascripts/radix-script.js
 
 ; Regions
-regions[help]         = Help
 regions[content]      = Content
 regions[footer]       = Footer
 

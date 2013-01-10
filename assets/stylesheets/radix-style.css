@@ -7285,12 +7285,12 @@ ul.icons {
 .icon-user-md:before {
   content: "\f200"; }
 
-/* line 7, ../sass/_layout.scss */
+/* line 5, ../sass/_layout.scss */
 .show-grid .panel-display .row {
   margin-top: 10px;
   margin-bottom: 20px; }
 
-/* line 12, ../sass/_layout.scss */
+/* line 10, ../sass/_layout.scss */
 .show-grid .panel-display .row [class*="span"] {
   background-color: #eee;
   text-align: center;
@@ -7300,11 +7300,11 @@ ul.icons {
   -moz-border-radius: 4px;
   border-radius: 4px; }
 
-/* line 21, ../sass/_layout.scss */
+/* line 19, ../sass/_layout.scss */
 .container .container {
   width: auto; }
 
-/* line 28, ../sass/_layout.scss */
+/* line 26, ../sass/_layout.scss */
 body #header #navigation {
   margin-top: 20px; }
 
