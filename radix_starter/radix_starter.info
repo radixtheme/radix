@@ -8,7 +8,6 @@ base theme  = radix
 hidden = true
 
 ; Regions
-regions[help]         = Help
 regions[content]      = Content
 regions[footer]       = Footer
 
@@ -17,7 +16,8 @@ stylesheets[all][]     = assets/stylesheets/screen.css
 stylesheets[print][]   = assets/stylesheets/print.css
 
 ; CSS - Conditional
-stylesheets-conditional[IE][all][] = assets/stylesheets/ie.css
+stylesheets-conditional[IE 7][all][] = assets/stylesheets/ie7.css
+stylesheets-conditional[IE 8][all][] = assets/stylesheets/ie8.css
 
 ; Javascript
 scripts[] = assets/javascripts/script.js
