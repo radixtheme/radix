@@ -37,7 +37,13 @@ function radix_css_alter(&$css) {
  * Implements template_preprocess_page().
  */
 function radix_preprocess_page(&$variables) {
-  drupal_set_message('This is a message');
+
+  // determine if the page is rendered using panels
+  $variables['is_panel'] = FALSE;
+  if (sizeof(page_manager_get_current_page())) {
+    $variables['is_panel'] = TRUE;
+  }
+
   // Add search_form to theme
   $variables['search_form'] = '';
   if (module_exists('search') && user_access('search content')) {
