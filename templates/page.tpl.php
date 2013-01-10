@@ -55,29 +55,42 @@
 </header>
 
 <div id="main-wrapper">
-  <div id="main" class="container">
+  <div id="main">
     <?php if ($breadcrumb): ?>
-      <div id="breadcrumb" class="row inner visible-desktop">
-        <div class="span12">
+      <div id="breadcrumb" class="visible-desktop">
+        <div class="container">
           <?php print $breadcrumb; ?>
         </div>
       </div>
     <?php endif; ?>
     <?php if ($messages): ?>
       <div id="messages">
-        <?php print $messages; ?>
+        <div class="container">
+          <?php print $messages; ?>
+        </div>
       </div>
     <?php endif; ?>
     <div id="content">
       <a id="main-content"></a>
-      <?php if ($title): ?>
-        <div class="page-header">
-          <h1 class="title" id="page-title"><?php print $title; ?></h1>
-        </div>
-      <?php endif; ?>
-      <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
-      <?php print render($page['help']); ?>
-      <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+      <div id="page-header">
+          <div class="container">
+            <?php if ($title): ?>
+              <div class="page-header">
+                <h1 class="title"><?php print $title; ?></h1>
+              </div>
+            <?php endif; ?>
+            <?php if ($tabs): ?>
+              <div class="tabs">
+                <?php print render($tabs); ?>
+              </div>
+            <?php endif; ?>
+            <?php if ($action_links): ?>
+              <ul class="action-links">
+                <?php print render($action_links); ?>
+              </ul>
+            <?php endif; ?>
+          </div>
+      </div>
       <?php print render($page['content']); ?>
     </div>
   </div>

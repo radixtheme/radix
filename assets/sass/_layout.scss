@@ -17,6 +17,12 @@
   @include border-radius(4px);
 }
 
+.container {
+  .container {
+    width: auto;
+  }
+}
+
 body {
   #header {
     #navigation {

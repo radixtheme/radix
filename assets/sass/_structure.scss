@@ -5,6 +5,12 @@
 
 // Page header
 // --------------------------------------------------
+.page-header {
+  margin: 18px 0;
+  h1 {
+    margin: 0;
+  }
+}
 .page-title-hidden {
   .page-header {
     display: none;
@@ -188,7 +194,7 @@ div.vertical-tabs {
 // --------------------------------------------------
 div.messages {
   padding: 8px 35px 8px 14px;
-  margin: 18px 0;
+  margin: 0 0 18px;
   color: #c09853;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   background-color: #fcf8e3;
