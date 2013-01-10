@@ -7310,7 +7310,7 @@ body #header #navigation {
 
 /* line 8, ../sass/_structure.scss */
 .page-header {
-  margin: 18px 0; }
+  margin: 0 0 18px; }
   /* line 10, ../sass/_structure.scss */
   .page-header h1 {
     margin: 0; }
