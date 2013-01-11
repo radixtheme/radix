@@ -7934,14 +7934,17 @@ form .form-actions .btn {
 /* line 21, ../sass/_form.scss */
 form .field-type-datetime select {
   width: 80px; }
+/* line 25, ../sass/_form.scss */
+form .format-toggle {
+  float: none; }
 
-/* line 30, ../sass/_form.scss */
+/* line 33, ../sass/_form.scss */
 #node-edit #edit-title {
   font-size: 1.6em;
   line-height: 1.6em;
   height: 45px;
   width: 90%; }
-/* line 36, ../sass/_form.scss */
+/* line 39, ../sass/_form.scss */
 #node-edit .form-item-path-alias {
   *zoom: 1; }
   /* line 15, ../sass/bootstrap/_mixins.scss */
@@ -7952,10 +7955,10 @@ form .field-type-datetime select {
   /* line 22, ../sass/bootstrap/_mixins.scss */
   #node-edit .form-item-path-alias:after {
     clear: both; }
-  /* line 38, ../sass/_form.scss */
+  /* line 41, ../sass/_form.scss */
   #node-edit .form-item-path-alias label, #node-edit .form-item-path-alias input {
     display: inline; }
-/* line 43, ../sass/_form.scss */
+/* line 46, ../sass/_form.scss */
 #node-edit .burr-flipped-sidebar .panel-pane {
   min-height: 20px;
   padding: 19px;
@@ -7973,19 +7976,19 @@ form .field-type-datetime select {
   #node-edit .burr-flipped-sidebar .panel-pane blockquote {
     border-color: #ddd;
     border-color: rgba(0, 0, 0, 0.15); }
-  /* line 46, ../sass/_form.scss */
+  /* line 49, ../sass/_form.scss */
   #node-edit .burr-flipped-sidebar .panel-pane .pane-title {
     margin-top: 0; }
-/* line 50, ../sass/_form.scss */
+/* line 53, ../sass/_form.scss */
 #node-edit .burr-flipped-sidebar .pane-node-form-buttons {
   background: none;
   padding: inherit; }
-  /* line 53, ../sass/_form.scss */
+  /* line 56, ../sass/_form.scss */
   #node-edit .burr-flipped-sidebar .pane-node-form-buttons .form-actions {
     margin: 0;
     border-top: 0; }
 
-/* line 61, ../sass/_form.scss */
+/* line 64, ../sass/_form.scss */
 .filter-wrapper {
   min-height: 20px;
   padding: 19px;
@@ -8003,22 +8006,22 @@ form .field-type-datetime select {
   .filter-wrapper blockquote {
     border-color: #ddd;
     border-color: rgba(0, 0, 0, 0.15); }
-  /* line 64, ../sass/_form.scss */
+  /* line 67, ../sass/_form.scss */
   .filter-wrapper .filter-guidelines {
     padding: 0; }
-    /* line 66, ../sass/_form.scss */
+    /* line 69, ../sass/_form.scss */
     .filter-wrapper .filter-guidelines .tips {
       margin-left: 0; }
 
-/* line 76, ../sass/_form.scss */
+/* line 79, ../sass/_form.scss */
 .navbar .search-form .container-inline {
   padding-top: 0; }
-/* line 80, ../sass/_form.scss */
+/* line 83, ../sass/_form.scss */
 .navbar .search-form input.form-submit {
   display: none; }
 
 @media (max-width: 979px) {
-  /* line 89, ../sass/_form.scss */
+  /* line 92, ../sass/_form.scss */
   .navbar .search-form {
     border: 0 !important;
     padding: 5px 0 10px;
@@ -8026,36 +8029,36 @@ form .field-type-datetime select {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none; }
-    /* line 94, ../sass/_form.scss */
+    /* line 97, ../sass/_form.scss */
     .navbar .search-form .container-inline {
       padding-top: 0;
       margin: 0;
       display: block;
       width: 100%; }
-      /* line 99, ../sass/_form.scss */
+      /* line 102, ../sass/_form.scss */
       .navbar .search-form .container-inline .form-item {
         width: 100%;
         display: block; }
-    /* line 104, ../sass/_form.scss */
+    /* line 107, ../sass/_form.scss */
     .navbar .search-form input {
       margin: 0 auto;
       display: block; } }
-/* line 118, ../sass/_form.scss */
+/* line 121, ../sass/_form.scss */
 .page-admin form table select,
 .page-admin form table input.form-text {
   width: 150px; }
 
-/* line 128, ../sass/_form.scss */
+/* line 131, ../sass/_form.scss */
 #features-export-form .features-export-parent {
   margin: 0 0 20px; }
-  /* line 130, ../sass/_form.scss */
+  /* line 133, ../sass/_form.scss */
   #features-export-form .features-export-parent fieldset.collapsed {
     min-height: 43px !important;
     background: none; }
-  /* line 134, ../sass/_form.scss */
+  /* line 137, ../sass/_form.scss */
   #features-export-form .features-export-parent .features-export-list {
     padding: 10px; }
-    /* line 136, ../sass/_form.scss */
+    /* line 139, ../sass/_form.scss */
     #features-export-form .features-export-parent .features-export-list .form-item {
       float: none !important; }
 
