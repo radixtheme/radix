@@ -40,6 +40,14 @@ form {
     select {
       width: 94%;
     }
+    fieldset {
+      legend {
+        font-size: 18px;
+        line-height: 24px;
+        padding-bottom: 5px;
+        margin-top: 10px;
+      }
+    }
     .confirm-parent, 
     .password-parent, 
     .password-suggestions {
