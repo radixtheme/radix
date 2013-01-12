@@ -7938,13 +7938,46 @@ form .field-type-datetime select {
 form .format-toggle {
   float: none; }
 
-/* line 33, ../sass/_form.scss */
+@media (max-width: 767px) {
+  /* line 32, ../sass/_form.scss */
+  form .btn {
+    width: 100%;
+    display: block;
+    clear: both;
+    margin: 0 0 5px; }
+  /* line 40, ../sass/_form.scss */
+  form input.form-text,
+  form textarea,
+  form select {
+    width: 94%; }
+  /* line 45, ../sass/_form.scss */
+  form .confirm-parent,
+  form .password-parent,
+  form .password-suggestions {
+    width: auto !important; }
+  /* line 49, ../sass/_form.scss */
+  form .password-parent div.password-strength {
+    width: 150px;
+    float: right;
+    margin-top: 0;
+    font-size: 10px;
+    margin-bottom: 5px;
+    margin-top: -5px; }
+  /* line 59, ../sass/_form.scss */
+  form .confirm-parent div.password-confirm {
+    width: 110px;
+    float: right;
+    margin-top: 0;
+    font-size: 10px;
+    margin-bottom: 5px;
+    margin-top: -5px; } }
+/* line 74, ../sass/_form.scss */
 #node-edit #edit-title {
   font-size: 1.6em;
   line-height: 1.6em;
   height: 45px;
   width: 90%; }
-/* line 39, ../sass/_form.scss */
+/* line 80, ../sass/_form.scss */
 #node-edit .form-item-path-alias {
   *zoom: 1; }
   /* line 15, ../sass/bootstrap/_mixins.scss */
@@ -7955,10 +7988,10 @@ form .format-toggle {
   /* line 22, ../sass/bootstrap/_mixins.scss */
   #node-edit .form-item-path-alias:after {
     clear: both; }
-  /* line 41, ../sass/_form.scss */
+  /* line 82, ../sass/_form.scss */
   #node-edit .form-item-path-alias label, #node-edit .form-item-path-alias input {
     display: inline; }
-/* line 46, ../sass/_form.scss */
+/* line 87, ../sass/_form.scss */
 #node-edit .burr-flipped-sidebar .panel-pane {
   min-height: 20px;
   padding: 19px;
@@ -7976,19 +8009,19 @@ form .format-toggle {
   #node-edit .burr-flipped-sidebar .panel-pane blockquote {
     border-color: #ddd;
     border-color: rgba(0, 0, 0, 0.15); }
-  /* line 49, ../sass/_form.scss */
+  /* line 90, ../sass/_form.scss */
   #node-edit .burr-flipped-sidebar .panel-pane .pane-title {
     margin-top: 0; }
-/* line 53, ../sass/_form.scss */
+/* line 94, ../sass/_form.scss */
 #node-edit .burr-flipped-sidebar .pane-node-form-buttons {
   background: none;
   padding: inherit; }
-  /* line 56, ../sass/_form.scss */
+  /* line 97, ../sass/_form.scss */
   #node-edit .burr-flipped-sidebar .pane-node-form-buttons .form-actions {
     margin: 0;
     border-top: 0; }
 
-/* line 64, ../sass/_form.scss */
+/* line 105, ../sass/_form.scss */
 .filter-wrapper {
   min-height: 20px;
   padding: 19px;
@@ -8006,22 +8039,22 @@ form .format-toggle {
   .filter-wrapper blockquote {
     border-color: #ddd;
     border-color: rgba(0, 0, 0, 0.15); }
-  /* line 67, ../sass/_form.scss */
+  /* line 108, ../sass/_form.scss */
   .filter-wrapper .filter-guidelines {
     padding: 0; }
-    /* line 69, ../sass/_form.scss */
+    /* line 110, ../sass/_form.scss */
     .filter-wrapper .filter-guidelines .tips {
       margin-left: 0; }
 
-/* line 79, ../sass/_form.scss */
+/* line 120, ../sass/_form.scss */
 .navbar .search-form .container-inline {
   padding-top: 0; }
-/* line 83, ../sass/_form.scss */
+/* line 124, ../sass/_form.scss */
 .navbar .search-form input.form-submit {
   display: none; }
 
 @media (max-width: 979px) {
-  /* line 92, ../sass/_form.scss */
+  /* line 133, ../sass/_form.scss */
   .navbar .search-form {
     border: 0 !important;
     padding: 5px 0 10px;
@@ -8029,36 +8062,36 @@ form .format-toggle {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none; }
-    /* line 97, ../sass/_form.scss */
+    /* line 138, ../sass/_form.scss */
     .navbar .search-form .container-inline {
       padding-top: 0;
       margin: 0;
       display: block;
       width: 100%; }
-      /* line 102, ../sass/_form.scss */
+      /* line 143, ../sass/_form.scss */
       .navbar .search-form .container-inline .form-item {
         width: 100%;
         display: block; }
-    /* line 107, ../sass/_form.scss */
+    /* line 148, ../sass/_form.scss */
     .navbar .search-form input {
       margin: 0 auto;
       display: block; } }
-/* line 121, ../sass/_form.scss */
+/* line 162, ../sass/_form.scss */
 .page-admin form table select,
 .page-admin form table input.form-text {
   width: 150px; }
 
-/* line 131, ../sass/_form.scss */
+/* line 172, ../sass/_form.scss */
 #features-export-form .features-export-parent {
   margin: 0 0 20px; }
-  /* line 133, ../sass/_form.scss */
+  /* line 174, ../sass/_form.scss */
   #features-export-form .features-export-parent fieldset.collapsed {
     min-height: 43px !important;
     background: none; }
-  /* line 137, ../sass/_form.scss */
+  /* line 178, ../sass/_form.scss */
   #features-export-form .features-export-parent .features-export-list {
     padding: 10px; }
-    /* line 139, ../sass/_form.scss */
+    /* line 180, ../sass/_form.scss */
     #features-export-form .features-export-parent .features-export-list .form-item {
       float: none !important; }
 

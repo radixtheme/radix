@@ -27,6 +27,47 @@ form {
   }
 }
 
+@media (max-width: 767px) { 
+  form {
+    .btn {
+      width: 100%;
+      display: block;
+      clear: both;
+      margin: 0 0 5px;
+    }
+    input.form-text,
+    textarea,
+    select {
+      width: 94%;
+    }
+    .confirm-parent, 
+    .password-parent, 
+    .password-suggestions {
+      width: auto !important;
+    }
+    .password-parent {
+      div.password-strength {
+        width: 150px;
+        float: right;
+        margin-top: 0;
+        font-size: 10px;
+        margin-bottom: 5px;
+        margin-top: -5px;
+      }
+    }
+    .confirm-parent {
+      div.password-confirm {
+        width: 110px;
+        float: right;
+        margin-top: 0;
+        font-size: 10px;
+        margin-bottom: 5px;
+        margin-top: -5px;
+      }
+    }
+  }
+}
+
 // Node Edit Form
 // --------------------------------------------------
 #node-edit {
