@@ -10,11 +10,16 @@
       border: 1px solid #DDD;
       padding: 5px;
       background: #FFFFFF;
+      display: table;
       @include border-radius(4px 4px 4px 4px);
       @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.055));
+      @include clearfix();
       margin-bottom: 10px;
       img {
         width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
       }
     }
   }
@@ -22,6 +27,9 @@
     img {
       border: 1px solid #DDD;
       padding: 5px;
+      margin: 0;
+      float: none !important;
+      width: 100%;
       background: #FFFFFF;
       @include border-radius(4px 4px 4px 4px);
       @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.055));

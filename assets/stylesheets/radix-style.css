@@ -7922,6 +7922,16 @@ ul.links.inline {
 .panel-display > .row {
   margin-bottom: 20px; }
 
+/* line 16, ../sass/_panel.scss */
+#panels-ipe-control-container .panels-ipe-button-container {
+  text-align: center; }
+  /* line 18, ../sass/_panel.scss */
+  #panels-ipe-control-container .panels-ipe-button-container .panels-ipe-pseudobutton-container {
+    margin: 0 5px; }
+    /* line 20, ../sass/_panel.scss */
+    #panels-ipe-control-container .panels-ipe-button-container .panels-ipe-pseudobutton-container a {
+      padding: 0px 10px 0px 34px; }
+
 /* line 9, ../sass/_form.scss */
 form fieldset {
   min-height: 50px; }
@@ -8106,20 +8116,36 @@ form .format-toggle {
   border: 1px solid #DDD;
   padding: 5px;
   background: #FFFFFF;
+  display: table;
   -webkit-border-radius: 4px 4px 4px 4px;
   -moz-border-radius: 4px 4px 4px 4px;
   border-radius: 4px 4px 4px 4px;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  *zoom: 1;
   margin-bottom: 10px; }
-  /* line 16, ../sass/_node.scss */
+  /* line 15, ../sass/bootstrap/_mixins.scss */
+  .field.field-type-image .field-item:before, .field.field-type-image .field-item:after {
+    display: table;
+    content: "";
+    line-height: 0; }
+  /* line 22, ../sass/bootstrap/_mixins.scss */
+  .field.field-type-image .field-item:after {
+    clear: both; }
+  /* line 18, ../sass/_node.scss */
   .field.field-type-image .field-item img {
-    width: 100%; }
-/* line 22, ../sass/_node.scss */
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0; }
+/* line 27, ../sass/_node.scss */
 .field.field-type-long-text img {
   border: 1px solid #DDD;
   padding: 5px;
+  margin: 0;
+  float: none !important;
+  width: 100%;
   background: #FFFFFF;
   -webkit-border-radius: 4px 4px 4px 4px;
   -moz-border-radius: 4px 4px 4px 4px;
@@ -8127,17 +8153,17 @@ form .format-toggle {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055); }
-  /* line 28, ../sass/_node.scss */
+  /* line 36, ../sass/_node.scss */
   .field.field-type-long-text img[style*="float:left"], .field.field-type-long-text img[style*="float: left"] {
     margin: 5px 15px 15px 0px; }
-  /* line 31, ../sass/_node.scss */
+  /* line 39, ../sass/_node.scss */
   .field.field-type-long-text img[style*="float:right"], .field.field-type-long-text img[style*="float: right"] {
     margin: 5px 0px 15px 15px; }
 
-/* line 38, ../sass/_node.scss */
+/* line 46, ../sass/_node.scss */
 .field-collection-container {
   border: 0; }
-  /* line 40, ../sass/_node.scss */
+  /* line 48, ../sass/_node.scss */
   .field-collection-container .field-collection-view {
     margin: 0;
     padding: 0;

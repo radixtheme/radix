@@ -9,3 +9,17 @@
     margin-bottom: 20px;
   }
 }
+
+// IPE
+// --------------------------------------------------
+#panels-ipe-control-container {
+  .panels-ipe-button-container {
+    text-align: center;
+    .panels-ipe-pseudobutton-container {
+      margin: 0 5px;
+      a {
+        padding: 0px 10px 0px 34px;
+      }
+    }
+  }
+}
