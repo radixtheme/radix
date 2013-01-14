@@ -19,6 +19,23 @@
       margin: 0 5px;
       a {
         padding: 0px 10px 0px 34px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .panels-ipe-form-container {
+    form {
+      > div {
+        text-align: center;
+      }
+      .form-submit {
+        margin: 0 5px;
+        padding: 0px 10px 0px 34px;
+        &:hover {
+          @include box-shadow(none);
+        }
       }
     }
   }

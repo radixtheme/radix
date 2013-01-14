@@ -7931,6 +7931,21 @@ ul.links.inline {
     /* line 20, ../sass/_panel.scss */
     #panels-ipe-control-container .panels-ipe-button-container .panels-ipe-pseudobutton-container a {
       padding: 0px 10px 0px 34px; }
+      /* line 22, ../sass/_panel.scss */
+      #panels-ipe-control-container .panels-ipe-button-container .panels-ipe-pseudobutton-container a:hover {
+        text-decoration: none; }
+/* line 30, ../sass/_panel.scss */
+#panels-ipe-control-container .panels-ipe-form-container form > div {
+  text-align: center; }
+/* line 33, ../sass/_panel.scss */
+#panels-ipe-control-container .panels-ipe-form-container form .form-submit {
+  margin: 0 5px;
+  padding: 0px 10px 0px 34px; }
+  /* line 36, ../sass/_panel.scss */
+  #panels-ipe-control-container .panels-ipe-form-container form .form-submit:hover {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
 
 /* line 9, ../sass/_form.scss */
 form fieldset {
