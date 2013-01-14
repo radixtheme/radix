@@ -7918,6 +7918,11 @@ ul.links.inline {
     .pane-menu-tree .pane-content ul.menu ul.menu {
       display: none; }
 
+/* line 4, ../sass/_navbar.scss */
+#navbar {
+  font-family: inherit;
+  font-size: 1.0em; }
+
 /* line 8, ../sass/_panel.scss */
 .panel-display > .row {
   margin-bottom: 20px; }
