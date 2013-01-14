@@ -7922,6 +7922,17 @@ ul.links.inline {
 #navbar {
   font-family: inherit;
   font-size: 1.0em; }
+  /* line 7, ../sass/_navbar.scss */
+  #navbar .navbar-bar {
+    background-color: #000000;
+    -webkit-box-shadow: 0 3px 20px black;
+    -moz-box-shadow: 0 3px 20px black;
+    box-shadow: 0 3px 20px black; }
+    /* line 13, ../sass/_navbar.scss */
+    #navbar .navbar-bar .section ul.menu li a {
+      padding: 5px 10px;
+      background-color: #0088CC;
+      background-image: asset-url("glyphicons-halflings-white.png", image); }
 
 /* line 8, ../sass/_panel.scss */
 .panel-display > .row {

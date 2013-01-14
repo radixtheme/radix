@@ -4,4 +4,19 @@
 #navbar {
   font-family: inherit;
   font-size: 1.0em;
+  .navbar-bar {
+    background-color: #000000;
+    @include box-shadow(0 3px 20px #000);
+    .section {
+      ul.menu {
+        li {
+          a {
+            padding: 5px 10px;
+            background-color: #0088CC;
+            background-image: $iconWhiteSpritePath;
+          }
+        }
+      }
+    }
+  }
 }
