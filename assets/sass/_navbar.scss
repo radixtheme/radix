@@ -1,13 +1,11 @@
-// Node
+// 
 // Styles for Navbar module
 // --------------------------------------------------
-$navbar-link-color: #08C;
-
 #navbar {
   font-family: inherit;
   font-size: 1.0em;
   .navbar-bar {
-    background-color: #2B2C30;
+    background-color: $navbar-background-color;
     @include box-shadow(none);
     .section {
       ul.menu {
@@ -50,7 +48,7 @@ $navbar-link-color: #08C;
     }
   }
   .navbar-tray {
-    background-color: #2B2C30;
+    background-color: $navbar-tray-background-color;
     border: none;
     @include box-shadow(inset -5px 0px 15px 0px rgba(#000, 0.4));
     color: #fff;
