@@ -1,19 +1,249 @@
 // Node
 // Styles for Navbar module
 // --------------------------------------------------
+$navbar-link-color: #08C;
+
 #navbar {
   font-family: inherit;
   font-size: 1.0em;
   .navbar-bar {
-    background-color: #000000;
-    @include box-shadow(0 3px 20px #000);
+    background-color: #2B2C30;
+    @include box-shadow(none);
     .section {
       ul.menu {
         li {
+          border-left: 1px solid #000;
+          border-right: 1px solid #333;
           a {
-            padding: 5px 10px;
-            background-color: #0088CC;
-            background-image: $iconWhiteSpritePath;
+            background-image: none !important;
+            color: #999;
+            padding: 1em !important;
+            text-decoration: none;
+            text-shadow: none !important;
+            i {
+              font-size: 1.8em;
+              width: 0.9em;
+              height: 0.9em;
+              line-height: 100%;
+              margin-right: 8px;
+              text-align: center;
+              text-indent: 0;
+              vertical-align: middle;
+            }
+            span {
+              vertical-align: middle;
+            }
+            &:hover,
+            &.active {
+              color: #fff;
+              background: #444;
+            }
+          }
+          &.first {
+            border-left: 0;
+          }
+          &.last {
+            border-right: 0;
+          }
+        }
+      }
+    }
+  }
+  .navbar-tray {
+    background-color: #2B2C30;
+    border: none;
+    @include box-shadow(inset -5px 0px 15px 0px rgba(#000, 0.4));
+    color: #fff;
+    width: 18rem !important;
+    a {
+      color: #999;
+    }
+    .lining {
+      padding: 0;
+    }
+    .navbar-shortcuts {
+      display: none;
+    }
+    .navbar-menu {
+      border: none;
+      margin: 0;
+      .handle {
+        background-size: 30%;
+        width: 4em
+      }
+      .fleximenu {
+        li.open {
+          .box {
+            border: none !important;
+          }
+        }
+        > ul.menu {
+          > li {
+            border: none;
+            border-bottom: 1px solid #000;
+            border-top: 1px solid #333;
+            margin: 0;
+            &.first {
+              border-top: none;
+            }
+            .box {
+              > a {
+                background: none !important;
+                color: #fff;
+                @include clearfix();
+                font-weight: normal;
+                line-height: 100%;
+                padding: 0px;
+                text-decoration: none !important;
+                text-indent: 0;
+                i {
+                  background: #000;
+                  float: left;
+                  font-size: 1.4em;
+                  height: 60px;
+                  line-height: 60px;
+                  width: 60px;
+                  text-align: center;
+                }
+                span {
+                  float: left;
+                  height: 60px;
+                  font-size: 1.2em;
+                  line-height: 60px;
+                  padding: 0 15px;
+                  vertical-align: top;
+                }
+                &:hover {
+                  background: $navbar-link-color !important;
+                  border: none;
+                  text-decoration: none !important;
+                  i {
+                    background-color: darken($navbar-link-color, 20);
+                  }
+                }
+              }
+            }
+            ul.menu {
+              background: #000;
+              border-top: 1px solid #000;
+              padding: 0;
+              margin: 0;
+              li {
+                margin: 0;
+                border: none;
+                .handle {
+                  display: none;
+                }
+                a {
+                  padding: 10px 15px;
+                  background: none !important;
+                  border-left: 60px solid #000;
+                  margin: 0;
+                  &:hover {
+                    text-decoration: none;
+                    border: none;
+                    border-left: 60px solid darken($navbar-link-color, 20);
+                  }
+                }
+                &.open {
+                  border: none;
+                }
+              }
+            }
+            &.open {
+              > .box {
+                background: $navbar-link-color !important;
+                border: none;
+                > a {
+                  text-decoration: none !important;
+                  i {
+                    background-color: darken($navbar-link-color, 20);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu-tray-open {
+  padding-left: 18rem !important;
+  .container {
+    width: 95%;
+  }
+  .navbar-bar {
+    left: 18rem !important;
+  }
+  .navbar-tray {
+    top: 0 !important;
+  }
+}
+
+// Tablet
+@media (min-width: 768px) and (max-width: 979px) {
+  #navbar {
+    .navbar-bar {
+      .section {
+        ul.menu {
+          li {
+            a {
+              height: 55px;
+              line-height: 50px;
+              margin: 0;
+              padding: 0 !important;
+              text-align: center;
+              text-indent: 0;
+              width: 60px;
+              i {
+                font-size: 1.8em;
+                width: 0.9em;
+                height: 0.9em;
+                line-height: 100%;
+                text-align: center;
+                text-indent: 0;
+                vertical-align: middle;
+              }
+              span {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Mobile
+@media (max-width: 767px) {
+  #navbar {
+    .navbar-bar {
+      .section {
+        ul.menu {
+          li {
+            a {
+              height: 55px !important;
+              line-height: 50px;
+              margin: 0;
+              padding: 0 !important;
+              text-align: center;
+              text-indent: 0 !important;
+              i {
+                font-size: 1.8em;
+                width: 0.9em;
+                height: 0.9em;
+                line-height: 100%;
+                text-align: center;
+                text-indent: 0;
+                vertical-align: middle;
+              }
+              span {
+                display: none;
+              }
+            }
           }
         }
       }

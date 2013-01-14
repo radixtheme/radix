@@ -68,14 +68,6 @@ function radix_preprocess_page(&$variables) {
 }
 
 /**
- * Implements template_preprocess_navbar().
- */
-function radix_preprocess_navbar(&$variables) {
-  $navbar = $variables['navbar'];
-  $variables['navbar'] = $navbar;
-}
-
-/**
  * Implements theme_table().
  */
 function radix_table($variables) {
