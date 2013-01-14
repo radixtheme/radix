@@ -1,0 +1,21 @@
+/* line 5, ../sass/_navbar.scss */
+#navbar .navbar-bar {
+  background-color: #2b2c30; }
+/* line 8, ../sass/_navbar.scss */
+#navbar .navbar-tray {
+  background-color: #2b2c30; }
+  /* line 16, ../sass/_navbar.scss */
+  #navbar .navbar-tray .navbar-menu .fleximenu > ul.menu > li .box > a:hover {
+    background: #0088cc !important; }
+    /* line 18, ../sass/_navbar.scss */
+    #navbar .navbar-tray .navbar-menu .fleximenu > ul.menu > li .box > a:hover i {
+      background-color: #004466; }
+  /* line 27, ../sass/_navbar.scss */
+  #navbar .navbar-tray .navbar-menu .fleximenu > ul.menu > li ul.menu li a:hover {
+    border-left: 60px solid #004466; }
+  /* line 34, ../sass/_navbar.scss */
+  #navbar .navbar-tray .navbar-menu .fleximenu > ul.menu > li.open > .box {
+    background: #0088cc !important; }
+    /* line 37, ../sass/_navbar.scss */
+    #navbar .navbar-tray .navbar-menu .fleximenu > ul.menu > li.open > .box > a i {
+      background-color: #004466; }
