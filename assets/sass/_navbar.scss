@@ -6,42 +6,53 @@
   font-size: 1.0em;
   .navbar-bar {
     background-color: $navbar-background-color;
+    padding: 10px 0;
+    height: 60px;
     @include box-shadow(none);
     .section {
+      &.section-user {
+        float: right !important;
+      }
       ul.menu {
         li {
-          border-left: 1px solid #000;
-          border-right: 1px solid #333;
+          margin: 0 10px 0 0;
           a {
-            background-image: none !important;
+            background: lighten($navbar-background-color, 5) !important;
+            border: 1px solid #000;
+            @include border-radius(3px);
+            @include box-shadow(inset rgba(#FFFFFF,0.2) 0 1px 0);
             color: #999;
-            padding: 1em !important;
+            overflow: hidden;
+            padding: 8px 15px !important;
             text-decoration: none;
             text-shadow: none !important;
             i {
-              font-size: 1.8em;
+              font-size: 1.2em;
               width: 0.9em;
               height: 0.9em;
               line-height: 100%;
               margin-right: 8px;
+              margin-top: -3px;
               text-align: center;
               text-indent: 0;
               vertical-align: middle;
             }
             span {
               vertical-align: middle;
+              font-size: 12px;
+              text-transform: uppercase;
             }
             &:hover,
             &.active {
               color: #fff;
-              background: #444;
+              background: $navbar-link-color !important;
+            }
+            &.toggle-tray {
+              margin-left: 10px;
             }
           }
-          &.first {
-            border-left: 0;
-          }
-          &.last {
-            border-right: 0;
+          &:hover {
+            background: none !important;
           }
         }
       }
@@ -188,18 +199,18 @@
         ul.menu {
           li {
             a {
-              height: 55px;
-              line-height: 50px;
+              padding: 8px 15px 9px !important;
               margin: 0;
-              padding: 0 !important;
               text-align: center;
               text-indent: 0;
-              width: 60px;
+              width: auto !important;
+              height: auto !important;
               i {
                 font-size: 1.8em;
                 width: 0.9em;
                 height: 0.9em;
                 line-height: 100%;
+                margin: 0;
                 text-align: center;
                 text-indent: 0;
                 vertical-align: middle;
@@ -209,6 +220,16 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+  .menu-tray-open {
+    .navbar-bar {
+      a {
+        display: none !important;
+        &.toggle-tray {
+          display: block !important;
         }
       }
     }
@@ -223,17 +244,18 @@
         ul.menu {
           li {
             a {
-              height: 55px !important;
-              line-height: 50px;
+              padding: 8px 15px 9px !important;
               margin: 0;
-              padding: 0 !important;
               text-align: center;
               text-indent: 0 !important;
+              width: auto !important;
+              height: auto !important;
               i {
                 font-size: 1.8em;
                 width: 0.9em;
                 height: 0.9em;
                 line-height: 100%;
+                margin: 0;
                 text-align: center;
                 text-indent: 0;
                 vertical-align: middle;
@@ -243,6 +265,16 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+  .menu-tray-open {
+    .navbar-bar {
+      a {
+        display: none !important;
+        &.toggle-tray {
+          display: block !important;
         }
       }
     }

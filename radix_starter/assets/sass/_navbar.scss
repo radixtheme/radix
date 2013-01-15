@@ -4,6 +4,17 @@
 #navbar {
   .navbar-bar {
     background-color: $navbar-background-color;
+    .section {
+      ul.menu {
+        li {
+          a {
+            &:hover, &.active {
+              background: $navbar-link-color !important;
+            }
+          }
+        }
+      }
+    }
   }
   .navbar-tray {
     background-color: $navbar-tray-background-color;
