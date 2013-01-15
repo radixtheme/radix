@@ -131,6 +131,13 @@
                   }
                 }
               }
+              &.expanded {
+                .box {
+                  a {
+                    margin-right: 55px;
+                  }
+                }
+              }
             }
             ul.menu {
               background: #000;
@@ -148,6 +155,12 @@
                   background: none !important;
                   border-left: 60px solid #000;
                   margin: 0;
+                  span {
+                    height: auto;
+                    font-size: 1.0em;
+                    line-height: 100%;
+                    padding: 0;
+                  }
                   &:hover {
                     text-decoration: none;
                     border: none;
