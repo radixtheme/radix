@@ -9,20 +9,20 @@
 @include global-reset;
 @include reset-html5;
 
-// Twitter Bootstrap
-// @see https://github.com/thomas-mcdonald/bootstrap-sass
-// --------------------------------------------------
-// @import "bootstrap";
-// @import "bootstrap-responsive";
-@import "compass_twitter_bootstrap";
-
-// Theme CSS
+// Radix Variables and Mixins
 // --------------------------------------------------
 @import "variable";
 @import "mixin";
-@import "color";
+
+// Compass plugin for Twitter Bootstrap
+// @see https://github.com/vwall/compass-twitter-bootstrap
+@import "compass_twitter_bootstrap";
+@import "compass_twitter_bootstrap_awesome";
+@import "compass_twitter_bootstrap_responsive";
+
+// Theme CSS
+// --------------------------------------------------
 @import "font";
-@import "fontawesome";
 @import "layout";
 @import "structure";
 @import "menu";
