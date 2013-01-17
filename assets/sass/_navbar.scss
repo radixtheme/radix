@@ -5,7 +5,7 @@
   font-family: inherit;
   font-size: 1.0em;
   .navbar-bar {
-    background-color: $navbarBackground;
+    background-color: $drupalNavbarBackground;
     padding: 10px 0;
     height: 60px;
     @include box-shadow(none);
@@ -17,7 +17,7 @@
         li {
           margin: 0 10px 0 0;
           a {
-            background: lighten($navbarBackground, 5) !important;
+            background: lighten($drupalNavbarBackground, 5) !important;
             border: 1px solid #000;
             @include border-radius(3px);
             @include box-shadow(inset rgba(#FFFFFF,0.2) 0 1px 0);
@@ -45,7 +45,7 @@
             &:hover,
             &.active {
               color: #fff;
-              background: $navbarLinkColor !important;
+              background: $drupalNavbarLinkColor !important;
             }
             &.toggle-tray {
               margin-left: 10px;
@@ -59,7 +59,7 @@
     }
   }
   .navbar-tray {
-    background-color: $navbarBackground;
+    background-color: $drupalNavbarBackground;
     border: none;
     @include box-shadow(inset -5px 0px 15px 0px rgba(#000, 0.4));
     color: #fff;
@@ -123,11 +123,11 @@
                   vertical-align: top;
                 }
                 &:hover {
-                  background: $navbarLinkColor !important;
+                  background: $drupalNavbarLinkColor !important;
                   border: none;
                   text-decoration: none !important;
                   i {
-                    background-color: darken($navbarLinkColor, 20);
+                    background-color: darken($drupalNavbarLinkColor, 20);
                   }
                 }
               }
@@ -164,7 +164,7 @@
                   &:hover {
                     text-decoration: none;
                     border: none;
-                    border-left: 60px solid darken($navbarLinkColor, 20);
+                    border-left: 60px solid darken($drupalNavbarLinkColor, 20);
                   }
                 }
                 &.open {
@@ -174,12 +174,12 @@
             }
             &.open {
               > .box {
-                background: $navbarLinkColor !important;
+                background: $drupalNavbarLinkColor !important;
                 border: none;
                 > a {
                   text-decoration: none !important;
                   i {
-                    background-color: darken($navbarLinkColor, 20);
+                    background-color: darken($drupalNavbarLinkColor, 20);
                   }
                 }
               }

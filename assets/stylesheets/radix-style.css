@@ -13858,7 +13858,7 @@ ul.links.inline {
   font-size: 1.0em; }
   /* line 7, ../sass/_navbar.scss */
   #navbar .navbar-bar {
-    background-color: #f2f2f2;
+    background-color: #2b2c30;
     padding: 10px 0;
     height: 60px;
     -webkit-box-shadow: none;
@@ -13872,7 +13872,7 @@ ul.links.inline {
       margin: 0 10px 0 0; }
       /* line 19, ../sass/_navbar.scss */
       #navbar .navbar-bar .section ul.menu li a {
-        background: white !important;
+        background: #37383d !important;
         border: 1px solid #000;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
@@ -13904,7 +13904,7 @@ ul.links.inline {
         /* line 46, ../sass/_navbar.scss */
         #navbar .navbar-bar .section ul.menu li a:hover, #navbar .navbar-bar .section ul.menu li a.active {
           color: #fff;
-          background: #777777 !important; }
+          background: #0088cc !important; }
         /* line 50, ../sass/_navbar.scss */
         #navbar .navbar-bar .section ul.menu li a.toggle-tray {
           margin-left: 10px; }
@@ -13913,7 +13913,7 @@ ul.links.inline {
         background: none !important; }
   /* line 61, ../sass/_navbar.scss */
   #navbar .navbar-tray {
-    background-color: #f2f2f2;
+    background-color: #2b2c30;
     border: none;
     -webkit-box-shadow: inset -5px 0px 15px 0px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: inset -5px 0px 15px 0px rgba(0, 0, 0, 0.4);
@@ -13979,12 +13979,12 @@ ul.links.inline {
             vertical-align: top; }
           /* line 125, ../sass/_navbar.scss */
           #navbar .navbar-tray .navbar-menu .fleximenu > ul.menu > li .box > a:hover {
-            background: #777777 !important;
+            background: #0088cc !important;
             border: none;
             text-decoration: none !important; }
             /* line 129, ../sass/_navbar.scss */
             #navbar .navbar-tray .navbar-menu .fleximenu > ul.menu > li .box > a:hover i {
-              background-color: #444444; }
+              background-color: #004466; }
         /* line 136, ../sass/_navbar.scss */
         #navbar .navbar-tray .navbar-menu .fleximenu > ul.menu > li .box.expanded .box a {
           margin-right: 55px; }
@@ -14017,20 +14017,20 @@ ul.links.inline {
               #navbar .navbar-tray .navbar-menu .fleximenu > ul.menu > li ul.menu li a:hover {
                 text-decoration: none;
                 border: none;
-                border-left: 60px solid #444444; }
+                border-left: 60px solid #004466; }
             /* line 170, ../sass/_navbar.scss */
             #navbar .navbar-tray .navbar-menu .fleximenu > ul.menu > li ul.menu li.open {
               border: none; }
         /* line 176, ../sass/_navbar.scss */
         #navbar .navbar-tray .navbar-menu .fleximenu > ul.menu > li.open > .box {
-          background: #777777 !important;
+          background: #0088cc !important;
           border: none; }
           /* line 179, ../sass/_navbar.scss */
           #navbar .navbar-tray .navbar-menu .fleximenu > ul.menu > li.open > .box > a {
             text-decoration: none !important; }
             /* line 181, ../sass/_navbar.scss */
             #navbar .navbar-tray .navbar-menu .fleximenu > ul.menu > li.open > .box > a i {
-              background-color: #444444; }
+              background-color: #004466; }
 
 /* line 194, ../sass/_navbar.scss */
 .menu-tray-open {

@@ -16,11 +16,12 @@
 
 // Compass plugin for Twitter Bootstrap
 // @see https://github.com/vwall/compass-twitter-bootstrap
+// --------------------------------------------------
 @import "compass_twitter_bootstrap";
 @import "compass_twitter_bootstrap_awesome";
 @import "compass_twitter_bootstrap_responsive";
 
-// Theme CSS
+// Radix Theme CSS
 // --------------------------------------------------
 @import "font";
 @import "layout";
