@@ -79,7 +79,7 @@
               text-decoration: none;
               outline: 0;
               background-color: $dropdownLinkBackgroundActive;
-              @include gradient-vertical($dropdownLinkBackgroundActive, darken($dropdownLinkBackgroundActive, 5%));
+              @include ctb-gradient-vertical($dropdownLinkBackgroundActive, darken($dropdownLinkBackgroundActive, 5%));
             }
           }
         }
