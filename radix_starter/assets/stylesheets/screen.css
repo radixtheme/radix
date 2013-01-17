@@ -7,11 +7,11 @@ Syntax error: File to import not found or unreadable: ../../../radix/assets/sass
                 /usr/local/.rvm/gems/ruby-1.9.3-p194/gems/compass_twitter_bootstrap-2.2.2.1/stylesheets
                 Compass::SpriteImporter
         on line 7 of /Users/arshad/Sites/drupal7/sites/all/themes/radix/radix_starter/assets/sass/_radix.scss
-        from line 14 of /Users/arshad/Sites/drupal7/sites/all/themes/radix/radix_starter/assets/sass/screen.scss
+        from line 15 of /Users/arshad/Sites/drupal7/sites/all/themes/radix/radix_starter/assets/sass/screen.scss
 
 Backtrace:
 /Users/arshad/Sites/drupal7/sites/all/themes/radix/radix_starter/assets/sass/_radix.scss:7
-/Users/arshad/Sites/drupal7/sites/all/themes/radix/radix_starter/assets/sass/screen.scss:14
+/Users/arshad/Sites/drupal7/sites/all/themes/radix/radix_starter/assets/sass/screen.scss:15
 /usr/local/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.1/lib/sass/tree/import_node.rb:64:in `rescue in import'
 /usr/local/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.1/lib/sass/tree/import_node.rb:42:in `import'
 /usr/local/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.1/lib/sass/tree/import_node.rb:25:in `imported_file'
@@ -66,4 +66,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: File to import not found or unreadable: ../../../radix/assets/sass/mixin.\A               Load paths:\A                 /Users/arshad/Sites/drupal7/sites/all/themes/radix/radix_starter/assets/sass\A                 /usr/local/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/blueprint/stylesheets\A                 /usr/local/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets\A                 /usr/local/.rvm/gems/ruby-1.9.3-p194/gems/compass_twitter_bootstrap-2.2.2.1/stylesheets\A                 Compass::SpriteImporter\A         on line 7 of /Users/arshad/Sites/drupal7/sites/all/themes/radix/radix_starter/assets/sass/_radix.scss\A         from line 14 of /Users/arshad/Sites/drupal7/sites/all/themes/radix/radix_starter/assets/sass/screen.scss"; }
+  content: "Syntax error: File to import not found or unreadable: ../../../radix/assets/sass/mixin.\A               Load paths:\A                 /Users/arshad/Sites/drupal7/sites/all/themes/radix/radix_starter/assets/sass\A                 /usr/local/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/blueprint/stylesheets\A                 /usr/local/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets\A                 /usr/local/.rvm/gems/ruby-1.9.3-p194/gems/compass_twitter_bootstrap-2.2.2.1/stylesheets\A                 Compass::SpriteImporter\A         on line 7 of /Users/arshad/Sites/drupal7/sites/all/themes/radix/radix_starter/assets/sass/_radix.scss\A         from line 15 of /Users/arshad/Sites/drupal7/sites/all/themes/radix/radix_starter/assets/sass/screen.scss"; }
