@@ -4,10 +4,12 @@
 @import "compass/utilities";
 @import "compass/css3";
 
-// Theme CSS
+// Mixins and Variables
 // --------------------------------------------------
 @import "mixin";
-@import "color";
+
+// Theme CSS
+// --------------------------------------------------
 @import "font";
 @import "layout";
 @import "structure";
