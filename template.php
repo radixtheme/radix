@@ -40,7 +40,7 @@ function radix_preprocess_page(&$variables) {
 
   // determine if the page is rendered using panels
   $variables['is_panel'] = FALSE;
-  if (sizeof(page_manager_get_current_page())) {
+  if (module_exists('page_manager') && sizeof(page_manager_get_current_page())) {
     $variables['is_panel'] = TRUE;
   }
 
