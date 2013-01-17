@@ -5,7 +5,7 @@ core        = 7.x
 
 ; Base - Radix
 base theme  = radix
-hidden = true
+; hidden = true
 
 ; Regions
 regions[content]      = Content

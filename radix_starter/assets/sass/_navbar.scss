@@ -3,57 +3,9 @@
 // --------------------------------------------------
 #navbar {
   .navbar-bar {
-    background-color: $navbar-background-color;
-    .section {
-      ul.menu {
-        li {
-          a {
-            &:hover, &.active {
-              background: $navbar-link-color !important;
-            }
-          }
-        }
-      }
-    }
+    // Navbar Bar  
   }
   .navbar-tray {
-    background-color: $navbar-tray-background-color;
-    .navbar-menu {
-      .fleximenu {
-        > ul.menu {
-          > li {
-            .box {
-              > a {
-                &:hover {
-                  background: $navbar-link-color !important;
-                  i {
-                    background-color: darken($navbar-link-color, 20);
-                  }
-                }
-              }
-            }
-            ul.menu {
-              li {
-                a {
-                  &:hover {
-                    border-left: 60px solid darken($navbar-link-color, 20);
-                  }
-                }
-              }
-            }
-            &.open {
-              > .box {
-                background: $navbar-link-color !important;
-                > a {
-                  i {
-                    background-color: darken($navbar-link-color, 20);
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+    // Navbar Tray
   }
 }
