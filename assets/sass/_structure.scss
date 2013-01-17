@@ -44,18 +44,10 @@ ul {
     border-bottom: 0;
   }
   &.tabs {
-    &:before, &:after {
-      display: table;
-      line-height: 0;
-      content: "";
-    }
+    @include clearfix();
   }
   &.action-links {
-    &:before, &:after {
-      display: table;
-      line-height: 0;
-      content: "";
-    }
+    @include clearfix();
   }
   &.tabs:after, &.action-links:after {
     clear: both;
@@ -72,15 +64,14 @@ ul {
     background: none;
     border: none;
     border: 1px solid transparent;
-    -webkit-border-radius: 4px 4px 0 0;
-    -moz-border-radius: 4px 4px 0 0;
-    border-radius: 4px 4px 0 0;
+    @include border-radius(4px 4px 0 0);
     display: block;
   }
-  &.tabs > li > a:hover, &.action-links > li > a:hover {
+  &.tabs > li > a:hover, 
+  &.action-links > li > a:hover {
     text-decoration: none;
     background-color: #EEE;
-    border-color: #EEE #EEE #DDD;
+    border-color: $grayLighter $grayLighter #ddd;
   }
   &.tabs > .active > a, &.action-links > .active > a {
     color: #555;
