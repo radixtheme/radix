@@ -44,7 +44,8 @@ ul {
     border-bottom: 0;
   }
   &.tabs {
-    @include clearfix();
+    display: table;
+    width: 100%;
   }
   &.action-links {
     @include clearfix();

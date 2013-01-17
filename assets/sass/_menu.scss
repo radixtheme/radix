@@ -20,6 +20,7 @@
     margin: 0;
     padding: 0;
     @include clearfix();
+    overflow: visible;
     > li {
       margin: 0;
       padding: 0;
