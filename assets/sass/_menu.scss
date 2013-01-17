@@ -40,7 +40,8 @@
           text-decoration: none;
           background-color: $navbarLinkBackgroundHover;
         }
-        &:focus, &.active {
+        &:focus, 
+        &.active {
           color: $navbarLinkColorActive;
           text-decoration: none;
           background-color: $navbarLinkBackgroundActive;
