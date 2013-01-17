@@ -224,6 +224,13 @@ table {
     text-align: left;
     vertical-align: top;
     border-top: 1px solid $tableBorder;
+    &.checkbox {
+      text-align: center;
+      input {
+        float: none !important;
+        margin-left: 0 !important;
+      }
+    }
   }
   th {
     font-weight: bold;
