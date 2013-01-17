@@ -216,7 +216,7 @@ $navbarInverseBrandColor:                $navbarInverseLinkColor !default;
 // @see http://drupal.org/project/navbar
 // -------------------------
 $drupalNavbarBackground: #2B2C30;
-$drupalNavbarLinkColor: #0088CC;
+$drupalNavbarLinkColor: $linkColor !default;
 
 
 // Pagination
