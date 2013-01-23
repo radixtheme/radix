@@ -1,8 +1,7 @@
 // @file
 // SASS partials import
 // --------------------------------------------------
-@import "compass/utilities";
-@import "compass/css3";
+@import "compass";
 
 // Mixins and Variables
 // --------------------------------------------------
@@ -12,7 +11,7 @@
 
 // Radix
 // --------------------------------------------------
-@import "radix";
+@import "compass_radix";
 
 // Theme CSS
 // --------------------------------------------------
