@@ -12,7 +12,7 @@
 ?>
 <header id="header" class="header" role="header">
   <div class="container">
-    <div id="navigation" class="navbar navbar-inverse">
+    <div id="navigation" class="navbar">
       <div class="navbar-inner">
         <div class="container clearfix">
           <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
