@@ -12,7 +12,7 @@
 ?>
 <header id="header" class="header" role="header">
   <div class="container">
-    <div id="navigation" class="navbar">
+    <div id="navigation" class="navbar navbar-inverse">
       <div class="navbar-inner">
         <div class="container clearfix">
           <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -21,9 +21,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="btn btn-navbar btn-navbar-search" data-toggle="collapse" data-target=".nav-search-collapse">
-            <span class="icon-search"></span>
-          </a>
+          <!-- .btn-navbar-search for collapsed search form -->
+          <?php if ($search_form): ?>
+            <a class="btn btn-navbar btn-navbar-search" data-toggle="collapse" data-target=".nav-search-collapse">
+              <span class="icon-search"></span>
+            </a>
+          <?php endif; ?>
 
           <?php if ($logo): ?>
             <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo" class="pull-left brand">
@@ -100,9 +103,11 @@
   <div class="container">
     <div class="row">
       <div class="span12">
-        <div class="inner">
-          <?php print render($footer_menu); ?>
-        </div>
+        <?php if ($footer_menu): ?>
+          <nav id="footer-menu" class="footer-menu">
+            <?php print render($footer_menu); ?>
+          </nav> <!-- /#footer-menu -->
+        <?php endif; ?>
       </div>
     </div>
   </div>
