@@ -4,13 +4,13 @@
  * Implementation of template_preprocess_html()
  */
 function radix_preprocess_html(&$variables) {
- 
+
   // add meta for Bootstrap Responsive
   // <meta name="viewport" content="width=device-width, initial-scale=1.0">
   $element = array(
     '#tag' => 'meta',
     '#attributes' => array(
-      'name' => 'viewport', 
+      'name' => 'viewport',
       'content' => 'width=device-width, initial-scale=1.0',
     ),
   );
@@ -73,8 +73,9 @@ function radix_preprocess_page(&$variables) {
 function radix_table($variables) {
   // add default classes to table elements
   $variables['attributes']['class'] = (isset($variables['attributes']['class'])) ? $variables['attributes']['class'] : array();
+  $variables['attributes']['class'] = (is_array($variables['attributes']['class'])) ? $variables['attributes']['class'] : array($variables['attributes']['class']);
   $variables['attributes']['class'] = array_merge($variables['attributes']['class'], array('table', 'table-striped', 'table-bordered'));
-  
+
   $header = $variables['header'];
   $rows = $variables['rows'];
   $attributes = $variables['attributes'];
@@ -239,7 +240,7 @@ function radix_button($variables) {
 
   // add a btn-primary class if submit button
   if ($element['#parents'][0] == 'submit') {
-    $element['#attributes']['class'][] = 'btn-primary'; 
+    $element['#attributes']['class'][] = 'btn-primary';
   }
 
   return '<input' . drupal_attributes($element['#attributes']) . ' />';
