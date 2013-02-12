@@ -17,10 +17,10 @@ javascripts_dir = "assets/javascripts"
 output_style = (environment == :development) ? :expanded : :expanded
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
-line_comments = (environment == :development) ? true : false
+relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
-# line_comments = false
+line_comments = (environment == :development) ? true : false
 
 
 # If you prefer the indented syntax, you might want to regenerate this
