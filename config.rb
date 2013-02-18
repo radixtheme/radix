@@ -2,6 +2,7 @@
 require "compass_twitter_bootstrap";
 require "compass_radix";
 
+# Set environment [development, production]
 environment = :production
 
 # Set this to the root of your project when deployed:
