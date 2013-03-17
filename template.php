@@ -44,6 +44,11 @@ function radix_preprocess_page(&$variables) {
     $variables['is_panel'] = TRUE;
   }
 
+  // make sure tabs is empty
+  if (empty($variables['tabs']['#primary']) && empty($variables['tabs']['#secondary'])) {
+    $variables['tabs'] = '';
+  }
+
   // Add search_form to theme
   $variables['search_form'] = '';
   if (module_exists('search') && user_access('search content')) {
