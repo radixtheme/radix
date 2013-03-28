@@ -12039,6 +12039,9 @@ body #header #navigation {
 body #footer {
   margin-top: 50px;
 }
+body #footer > .container {
+  padding-bottom: 50px;
+}
 
 .page-header {
   margin: 0 0 18px;
@@ -12053,102 +12056,6 @@ body #footer {
 
 .breadcrumb a i {
   display: none;
-}
-
-ul.tabs.primary {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #dddddd;
-}
-ul.action-links {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #dddddd;
-  border-bottom: 0;
-}
-ul.tabs {
-  display: table;
-  width: 100%;
-}
-ul.action-links {
-  overflow: hidden;
-  *zoom: 1;
-}
-ul.tabs:after, ul.action-links:after {
-  clear: both;
-}
-ul.tabs > li, ul.action-links > li {
-  float: left;
-  display: block;
-  margin-bottom: -1px;
-}
-ul.tabs > li > a, ul.action-links > li > a {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  line-height: 20px;
-  background: none;
-  border: none;
-  border: 1px solid transparent;
-  -webkit-border-radius: 4px 4px 0 0;
-  -moz-border-radius: 4px 4px 0 0;
-  border-radius: 4px 4px 0 0;
-  display: block;
-}
-ul.tabs > li > a:hover, ul.action-links > li > a:hover {
-  text-decoration: none;
-  background-color: #eeeeee;
-  border-color: #eeeeee #eeeeee #dddddd;
-}
-ul.tabs > .active > a, ul.action-links > .active > a {
-  color: #555555;
-  background-color: white;
-  border: 1px solid #dddddd;
-  border-bottom-color: transparent;
-  cursor: default;
-}
-ul.secondary {
-  border-bottom: 0;
-  padding: 0;
-}
-ul.tabs.secondary > li {
-  border: 0;
-  padding: 0;
-}
-ul.tabs.secondary > li > a {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  border: 0 !important;
-}
-ul.action-links > li > a {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  border: 0 !important;
-}
-ul.tabs.secondary > li > a, ul.action-links > li > a {
-  padding-right: 12px;
-  padding-left: 12px;
-  margin-right: 2px;
-  line-height: 14px;
-}
-ul.tabs.secondary > .active > a, ul.action-links > .active > a {
-  color: white;
-  background-color: #0088cc;
-}
-ul.tabs.secondary > .active > a:hover, ul.action-links > .active > a:hover {
-  color: white;
-  background-color: #0088cc;
 }
 
 div.vertical-tabs {
@@ -12582,46 +12489,6 @@ ul.links.inline li {
 }
 .navbar-fixed-top .container {
   width: 940px;
-}
-
-#footer-menu {
-  background-color: #eeeeee;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  margin: 0 0 20px;
-  padding: 20px;
-}
-#footer-menu > ul.menu {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  *zoom: 1;
-}
-#footer-menu > ul.menu > li {
-  float: left;
-  list-style: none outside none;
-  margin: 0 0 20px;
-  padding: 0;
-  width: 20%;
-}
-#footer-menu > ul.menu > li > a,
-#footer-menu > ul.menu > li > span {
-  font-size: 1.0em;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-#footer-menu > ul.menu > li > ul.menu {
-  margin: 0;
-  padding: 0;
-}
-#footer-menu > ul.menu > li > ul.menu > li {
-  list-style: none outside none;
-  margin: 0 5px 0 0;
-}
-#footer-menu > ul.menu > li > ul.menu > li > a,
-#footer-menu > ul.menu > li > ul.menu > li > span {
-  font-size: 0.90em;
 }
 
 #navbar {
