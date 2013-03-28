@@ -13,19 +13,12 @@ stylesheets-conditional[IE 8][all][] = assets/stylesheets/radix-ie8.css
 
 ; Javascript
 scripts[] = assets/javascripts/modernizr-2.6.1.min.js
-;scripts[] = assets/javascripts/bootstrap.js
 scripts[] = assets/javascripts/radix-script.js
 
 ; Regions
 regions[content]      = Content
-regions[footer]       = Footer
 
 ; Features
 features[] = logo
 features[] = name
 features[] = favicon
-features[] = main_menu
-features[] = secondary_menu
-
-; Plugins
-;plugins[panels][layouts] = layouts

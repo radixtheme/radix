@@ -101,14 +101,9 @@
 
 <footer id="footer" class="footer" role="footer">
   <div class="container">
-    <div class="row">
-      <div class="span12">
-        <?php if ($footer_menu): ?>
-          <nav id="footer-menu" class="footer-menu">
-            <?php print render($footer_menu); ?>
-          </nav> <!-- /#footer-menu -->
-        <?php endif; ?>
-      </div>
-    </div>
+    <?php if ($copyright): ?>
+      <small class="copyright pull-left"><?php print $copyright; ?></small>
+    <?php endif; ?>
+    <small class="pull-right"><a href="#"><?php print t('Back to Top'); ?></a></small>
   </div>
 </footer>
