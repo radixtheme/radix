@@ -18,7 +18,7 @@ function radix_menu_link(array $variables) {
   $element = $variables['element'];
   $sub_menu = '';
   
-  if ($element['#below']) {
+  if (isset($element['#below'])) {
     // Wrap in dropdown-menu
     unset($element['#below']['#theme_wrappers']);
     $sub_menu = '<ul class="dropdown-menu">' . drupal_render($element['#below']) . '</ul>';
