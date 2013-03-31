@@ -1,10 +1,10 @@
 (function ($) {
   $(document).ready(function() {
     // menu dropdown
-    $('ul.menu li.expanded').mouseenter(function() {
+    $('ul.nav li.dropdown').mouseenter(function() {
       $(this).addClass('open');
     });
-    $('ul.menu li.expanded').mouseleave(function() {
+    $('ul.nav li.dropdown').mouseleave(function() {
       $(this).removeClass('open');
     });
 
