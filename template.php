@@ -74,8 +74,8 @@ function radix_preprocess_page(&$variables) {
   }
 
   // Format and add main menu to theme
-  $main_menu_tree = menu_tree_all_data('main-menu');
-  $variables['main_menu'] = menu_tree_output($main_menu_tree);
+  $variables['main_menu'] = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
+  $variables['main_menu']['#theme_wrappers'] = array('menu_tree__primary');
 
   // Add a copyright message
   $variables['copyright'] = t('Drupal is a registered trademark of Dries Buytaert.');
