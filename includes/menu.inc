@@ -12,6 +12,13 @@ function radix_menu_tree(&$variables) {
 }
 
 /**
+ * Implements theme_menu_tree__menu_block().
+ */
+function radix_menu_tree__menu_block(&$variables) {
+  return '<ul class="menu nav nav-tabs nav-stacked">' . $variables['tree'] . '</ul>';
+}
+
+/**
  * Implements theme_menu_link().
  */
 function radix_menu_link(array $variables) {
