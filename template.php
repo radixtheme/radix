@@ -5,6 +5,7 @@ require_once $theme_path . '/includes/utilities.inc';
 require_once $theme_path . '/includes/structure.inc';
 require_once $theme_path . '/includes/form.inc';
 require_once $theme_path . '/includes/menu.inc';
+require_once $theme_path . '/includes/comment.inc';
 
 /**
  * Implementation of template_preprocess_html()
