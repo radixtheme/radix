@@ -53,8 +53,8 @@
           </div>
 
       </div>
-    </div> <!-- /#navigation -->
-  </div>
+    </div> 
+  </div> <!-- /#navigation -->
 </header>
 
 <div id="main-wrapper">
@@ -97,7 +97,7 @@
       <?php print render($page['content']); ?>
     </div>
   </div>
-</div>
+</div> <!-- /#main-wrapper -->
 
 <footer id="footer" class="footer" role="footer">
   <div class="container">
