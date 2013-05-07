@@ -9,7 +9,6 @@ hidden = true
 
 ; Regions
 regions[content]      = Content
-regions[footer]       = Footer
 
 ; CSS - General
 stylesheets[all][]     = assets/stylesheets/screen.css
