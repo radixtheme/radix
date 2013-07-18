@@ -47,10 +47,10 @@ function radix_menu_link($variables) {
 
   // Fix for active class.
   if (($element['#href'] == current_path() || ($element['#href'] == '<front>' && drupal_is_front_page())) && (empty($element['#localized_options']['language']) || $element['#localized_options']['language']->language == $language_url->language)) {
-      $element['#attributes']['class'][] = 'active';
+    $element['#attributes']['class'][] = 'active';
   }
 
-  // Add active class to li if active trail
+  // Add active class to li if active trail.
   if (in_array('active-trail', $element['#attributes']['class'])) {
     $element['#attributes']['class'][] = 'active';
   }
@@ -60,7 +60,7 @@ function radix_menu_link($variables) {
 }
 
 /**
- * Implements theme_menu_link__management
+ * Implements theme_menu_link__management.
  *
  * We render the management links as defaults to support the navbar module
  * out of the box.
@@ -84,13 +84,13 @@ function radix_link($variables) {
   if (isset($variables['options']['attributes']['class']) && is_array($variables['options']['attributes']['class'])) {
     $css_classes = $variables['options']['attributes']['class'];
     if ($icon_classes = preg_grep('/^icon\-.*/', $css_classes)) {
-      // render an icon for each class
+      // Render an icon for each class.
       foreach ($icon_classes as $icon_class) {
         $icons .= '<i class="' . $icon_class . '"></i>';
       }
-      // unset icon classes for attributes to prevent double rendering
+      // Unset icon classes for attributes to prevent double rendering.
       $variables['options']['attributes']['class'] = array_diff($css_classes, $icon_classes);
     }
   }
-  return '<a href="' . check_plain(url($variables['path'], $variables['options'])) . '"' . drupal_attributes($variables['options']['attributes']) . '>' . $icons . '<span>' . ($variables['options']['html'] ? $variables['text'] : check_plain($variables['text'])) . '</span>' .  '</a>';
+  return '<a href="' . check_plain(url($variables['path'], $variables['options'])) . '"' . drupal_attributes($variables['options']['attributes']) . '>' . $icons . '<span>' . ($variables['options']['html'] ? $variables['text'] : check_plain($variables['text'])) . '</span>' . '</a>';
 }

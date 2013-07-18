@@ -1,3 +1,7 @@
+/**
+ * @file
+ * JS for Radix.
+ */
 (function ($) {
   $(document).ready(function() {
     // menu dropdown

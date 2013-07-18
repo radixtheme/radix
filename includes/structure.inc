@@ -30,10 +30,14 @@ function radix_menu_local_tasks(&$variables) {
  * Implements theme_table().
  */
 function radix_table($variables) {
-  // add default classes to table elements
+  // Add default classes to table elements.
   $variables['attributes']['class'] = (isset($variables['attributes']['class'])) ? $variables['attributes']['class'] : array();
   $variables['attributes']['class'] = (is_array($variables['attributes']['class'])) ? $variables['attributes']['class'] : array($variables['attributes']['class']);
-  $variables['attributes']['class'] = array_merge($variables['attributes']['class'], array('table', 'table-striped', 'table-bordered'));
+  $variables['attributes']['class'] = array_merge($variables['attributes']['class'], array(
+    'table',
+    'table-striped',
+    'table-bordered',
+  ));
 
   $header = $variables['header'];
   $rows = $variables['rows'];
@@ -62,7 +66,7 @@ function radix_table($variables) {
     foreach ($colgroups as $number => $colgroup) {
       $attributes = array();
 
-      // Check if we're dealing with a simple or complex column
+      // Check if we're dealing with a simple or complex column.
       if (isset($colgroup['data'])) {
         foreach ($colgroup as $key => $value) {
           if ($key == 'data') {
@@ -77,7 +81,7 @@ function radix_table($variables) {
         $cols = $colgroup;
       }
 
-      // Build colgroup
+      // Build colgroup.
       if (is_array($cols) && count($cols)) {
         $output .= ' <colgroup' . drupal_attributes($attributes) . '>';
         $i = 0;
@@ -120,7 +124,8 @@ function radix_table($variables) {
       $cell = tablesort_header($cell, $header, $ts);
       $output .= _theme_table_cell($cell, TRUE);
     }
-    // Using ternary operator to close the tags based on whether or not there are rows
+    // Using ternary operator to close the tags
+    // based on whether or not there are rows.
     $output .= (count($rows) ? " </tr></thead>\n" : "</tr>\n");
   }
   else {
@@ -138,7 +143,7 @@ function radix_table($variables) {
     foreach ($rows as $number => $row) {
       $attributes = array();
 
-      // Check if we're dealing with a simple or complex row
+      // Check if we're dealing with a simple or complex row.
       if (isset($row['data'])) {
         foreach ($row as $key => $value) {
           if ($key == 'data') {
@@ -153,13 +158,13 @@ function radix_table($variables) {
         $cells = $row;
       }
       if (count($cells)) {
-        // Add odd/even class
+        // Add odd/even class.
         if (empty($row['no_striping'])) {
           $class = $flip[$class];
           $attributes['class'][] = $class;
         }
 
-        // Build row
+        // Build row.
         $output .= ' <tr' . drupal_attributes($attributes) . '>';
         $i = 0;
         foreach ($cells as $cell) {

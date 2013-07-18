@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Theme hooks for Radix.
+ */
 
 $theme_path = drupal_get_path('theme', 'radix');
 require_once $theme_path . '/includes/utilities.inc';
@@ -8,10 +12,10 @@ require_once $theme_path . '/includes/menu.inc';
 require_once $theme_path . '/includes/comment.inc';
 
 /**
- * Implementation of template_preprocess_html()
+ * Implementation of template_preprocess_html().
  */
 function radix_preprocess_html(&$variables) {
-  // add meta for Bootstrap Responsive
+  // Add meta for Bootstrap Responsive.
   // <meta name="viewport" content="width=device-width, initial-scale=1.0">
   $element = array(
     '#tag' => 'meta',
@@ -24,23 +28,16 @@ function radix_preprocess_html(&$variables) {
 }
 
 /**
- * Implements hook_js_alter().
- */
-function radix_js_alter(&$js) {
-  //$js['misc/jquery.js']['data'] = 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js';
-}
-
-/**
  * Implements hook_css_alter().
  */
 function radix_css_alter(&$css) {
-  // unset some panopoly css
+  // Unset some panopoly css.
   $panopoly_admin_path = drupal_get_path('module', 'panopoly_admin');
   if (isset($css[$panopoly_admin_path . '/panopoly-admin.css'])) {
     unset($css[$panopoly_admin_path . '/panopoly-admin.css']);
   }
 
-  // unset some core css
+  // Unset some core css.
   unset($css['modules/system/system.menus.css']);
 }
 
@@ -49,18 +46,18 @@ function radix_css_alter(&$css) {
  */
 function radix_preprocess_page(&$variables) {
 
-  // determine if the page is rendered using panels
+  // Determine if the page is rendered using panels.
   $variables['is_panel'] = FALSE;
-  if (module_exists('page_manager') && sizeof(page_manager_get_current_page())) {
+  if (module_exists('page_manager') && count(page_manager_get_current_page())) {
     $variables['is_panel'] = TRUE;
   }
 
-  // make sure tabs is empty
+  // Make sure tabs is empty.
   if (empty($variables['tabs']['#primary']) && empty($variables['tabs']['#secondary'])) {
     $variables['tabs'] = '';
   }
 
-  // Add search_form to theme
+  // Add search_form to theme.
   $variables['search_form'] = '';
   if (module_exists('search') && user_access('search content')) {
     $search_box_form = drupal_get_form('search_form');
@@ -74,10 +71,10 @@ function radix_preprocess_page(&$variables) {
     $variables['search_form'] = (user_access('search content')) ? $search_box : NULL;
   }
 
-  // Format and add main menu to theme
+  // Format and add main menu to theme.
   $variables['main_menu'] = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
   $variables['main_menu']['#theme_wrappers'] = array('menu_tree__primary');
 
-  // Add a copyright message
+  // Add a copyright message.
   $variables['copyright'] = t('Drupal is a registered trademark of Dries Buytaert.');
 }

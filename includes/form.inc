@@ -28,7 +28,12 @@ function radix_form_element($variables) {
     $attributes['class'][] = 'form-type-' . strtr($element['#type'], '_', '-');
   }
   if (!empty($element['#name'])) {
-    $attributes['class'][] = 'form-item-' . strtr($element['#name'], array(' ' => '-', '_' => '-', '[' => '-', ']' => ''));
+    $attributes['class'][] = 'form-item-' . strtr($element['#name'], array(
+      ' ' => '-',
+      '_' => '-',
+      '[' => '-',
+      ']' => '',
+    ));
   }
   // Add a class for disabled elements to facilitate cross-browser styling.
   if (!empty($element['#attributes']['disabled'])) {
@@ -85,7 +90,7 @@ function radix_button($variables) {
     $element['#attributes']['class'][] = 'form-button-disabled';
   }
 
-  // add a btn-primary class if submit button
+  // Add a btn-primary class if submit button.
   if (isset($element['#parents']) && ($element['#parents'][0] == 'submit')) {
     $element['#attributes']['class'][] = 'btn-primary';
   }
