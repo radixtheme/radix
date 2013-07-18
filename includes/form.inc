@@ -86,7 +86,7 @@ function radix_button($variables) {
   }
 
   // add a btn-primary class if submit button
-  if (isset($element['#parents'][0]) && ($element['#parents'][0] == 'submit')) {
+  if (isset($element['#parents']) && ($element['#parents'][0] == 'submit')) {
     $element['#attributes']['class'][] = 'btn-primary';
   }
 
