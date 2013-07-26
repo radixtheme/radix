@@ -5,8 +5,9 @@
 
 // Mixins and Variables
 // --------------------------------------------------
-@import "variable";
-@import "mixin";
+@import "global/variable";
+@import "global/mixin";
+@import "global/font";
 
 // Radix
 // --------------------------------------------------
@@ -15,14 +16,13 @@
 
 // Theme CSS
 // --------------------------------------------------
-@import "font";
-@import "layout";
-@import "structure";
-@import "menu";
-@import "page";
-@import "panel";
-@import "view";
-@import "form";
-@import "comment";
-@import "node";
-@import "user";
+@import "partials/layout";
+@import "partials/structure";
+@import "partials/menu";
+@import "partials/page";
+@import "partials/panel";
+@import "partials/view";
+@import "partials/form";
+@import "partials/comment";
+@import "partials/node";
+@import "partials/user";
