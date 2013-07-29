@@ -59,7 +59,7 @@ function theme_radix_dropdown($variables) {
   foreach ($links as $key => $link) {
     $class = array($key);
 
-    // Add first, last and active classes to the list of links to help out themers.
+    // Add first, last and active classes to the list of links.
     if ($i == 1) {
       $class[] = 'first';
     }
@@ -71,7 +71,7 @@ function theme_radix_dropdown($variables) {
     if (empty($link)) {
       $output .= '<li class="divider"></li>';
       $i++;
-      continue;  
+      continue;
     }
 
     if (isset($link['href']) && ($link['href'] == $_GET['q'] || ($link['href'] == '<front>' && drupal_is_front_page())) && (empty($link['language']) || $link['language']->language == $language_url->language)) {
@@ -90,7 +90,8 @@ function theme_radix_dropdown($variables) {
       $output .= l($link['title'], $link['href'], $link);
     }
     elseif (!empty($link['title'])) {
-      // Some links are actually not links, but we wrap these in <span> for adding title and class attributes.
+      // Some links are actually not links,
+      // but we wrap these in <span> for adding title and class attributes.
       if (empty($link['html'])) {
         $link['title'] = check_plain($link['title']);
       }
@@ -134,7 +135,7 @@ function theme_radix_button_group($variables) {
     $class = array($key);
     $class[] = 'btn';
 
-    // Add first, last and active classes to the list of links to help out themers.
+    // Add first, last and active classes to the list of links.
     if ($i == 1) {
       $class[] = 'first';
     }
@@ -194,12 +195,12 @@ function theme_radix_button_dropdown($variables) {
     $button['title'] .= '<span class="caret"></span>';
     $button['html'] = TRUE;
   }
-  
+
   // Render the button.
   $output .= l($button['title'], $button['href'], $button);
 
   if ($split) {
-    // Add a split button
+    // Add a split button.
     $split_attributes = drupal_array_merge_deep($button['attributes'], array(
       'class' => array('btn', 'dropdown-toggle'),
       'data-toggle' => 'dropdown',
@@ -209,8 +210,7 @@ function theme_radix_button_dropdown($variables) {
 
   // Render the dropdown menu.
   $output .= theme('radix_dropdown', array('links' => $links));
-  
-  $output .= '</div>';
 
+  $output .= '</div>';
   return $output;
 }
