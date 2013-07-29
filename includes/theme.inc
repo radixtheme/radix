@@ -16,9 +16,15 @@ function radix_theme(&$existing, $type, $theme, $path) {
       ),
       'function' => 'theme_radix_dropdown',
     ),
+    'radix_button_group' => array(
+      'variables' => array(
+        'buttons' => NULL,
+        'attributes' => NULL,
+      ),
+      'function' => 'theme_radix_button_group',
+    ),
   );
 }
-
 
 /**
  * Implements theme_radix_dropdown().
@@ -87,6 +93,48 @@ function theme_radix_dropdown($variables) {
   }
 
   $output .= '</ul>';
+  $output .= '</div>';
+
+  return $output;
+}
+
+/**
+ * Implements theme_radix_button_group().
+ */
+function theme_radix_button_group($variables) {
+  $buttons = $variables['buttons'];
+  $attributes = $variables['attributes'];
+  $output = '';
+
+  // Add Bootstrap attributes.
+  $attributes = drupal_array_merge_deep($attributes, array('class' => array('btn-group')));
+
+  $output .= '<div' . drupal_attributes($attributes) . '>';
+
+  $num_links = count($buttons);
+  $i = 1;
+
+  foreach ($buttons as $key => $button) {
+    $class = array($key);
+    $class[] = 'btn';
+
+    // Add first, last and active classes to the list of links to help out themers.
+    if ($i == 1) {
+      $class[] = 'first';
+    }
+    if ($i == $num_links) {
+      $class[] = 'last';
+    }
+
+    // Add Boostrap attributes.
+    $button['attributes'] = drupal_array_merge_deep($button['attributes'], array('class' => $class));
+
+    $output .= l($button['title'], $button['href'], $button);
+
+    $i++;
+    $output .= "</li>\n";
+  }
+
   $output .= '</div>';
 
   return $output;
