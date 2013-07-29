@@ -23,6 +23,14 @@ function radix_theme(&$existing, $type, $theme, $path) {
       ),
       'function' => 'theme_radix_button_group',
     ),
+    'radix_button_dropdown' => array(
+      'variables' => array(
+        'button' => NULL,
+        'links' => NULL,
+        'attributes' => NULL,
+      ),
+      'function' => 'theme_radix_button_dropdown',
+    ),
   );
 }
 
@@ -31,13 +39,16 @@ function radix_theme(&$existing, $type, $theme, $path) {
  */
 function theme_radix_dropdown($variables) {
   $links = $variables['links'];
-  $attributes = $variables['attributes'];
+  $attributes = (isset($variables['attributes'])) ? $variables['attributes'] : array();
+  $wrapper = (isset($variables['wrapper'])) ? $variables['wrapper'] : FALSE;
   $output = '';
 
   // Add Bootstrap attributes.
   $attributes = drupal_array_merge_deep($attributes, array('class' => array('dropdown-menu')));
 
-  $output .= '<div class="dropdown">';
+  if ($wrapper) {
+    $output .= '<div class="dropdown">';
+  }
   $output .= '<ul' . drupal_attributes($attributes) . '>';
 
   $num_links = count($links);
@@ -93,7 +104,10 @@ function theme_radix_dropdown($variables) {
   }
 
   $output .= '</ul>';
-  $output .= '</div>';
+
+  if ($wrapper) {
+    $output .= '</div>';
+  }
 
   return $output;
 }
@@ -135,6 +149,43 @@ function theme_radix_button_group($variables) {
     $output .= "</li>\n";
   }
 
+  $output .= '</div>';
+
+  return $output;
+}
+
+/**
+ * Implements theme_radix_button_dropdown().
+ */
+function theme_radix_button_dropdown($variables) {
+  $button = $variables['button'];
+  $links = $variables['links'];
+  $attributes = $variables['attributes'];
+  $output = '';
+
+  // Add Bootstrap attributes.
+  $attributes = drupal_array_merge_deep($attributes, array('class' => array('btn-group')));
+
+  $output .= '<div' . drupal_attributes($attributes) . '>';
+
+  // Add Boostrap attributes.
+  $button['attributes'] = drupal_array_merge_deep($button['attributes'], array(
+    'class' => array('btn', 'dropdown-toggle'),
+    'data-toggle' => 'dropdown',
+  ));
+
+  // No link for button
+  $button['absolute'] = TRUE;
+  $button['fragment'] = FALSE;
+  $button['html'] = TRUE;
+
+  // Add caret to title
+  $button['title'] .= '<span class="caret"></span>';
+  
+  $output .= l($button['title'], '', $button);
+
+  $output .= theme('radix_dropdown', array('links' => $links));
+  
   $output .= '</div>';
 
   return $output;
