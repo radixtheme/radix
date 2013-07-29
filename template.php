@@ -6,6 +6,7 @@
 
 $theme_path = drupal_get_path('theme', 'radix');
 require_once $theme_path . '/includes/utilities.inc';
+require_once $theme_path . '/includes/theme.inc';
 require_once $theme_path . '/includes/structure.inc';
 require_once $theme_path . '/includes/form.inc';
 require_once $theme_path . '/includes/menu.inc';
