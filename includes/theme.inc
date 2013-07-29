@@ -13,6 +13,7 @@ function radix_theme(&$existing, $type, $theme, $path) {
       'variables' => array(
         'links' => NULL,
         'attributes' => NULL,
+        'wrapper' => NULL,
       ),
       'function' => 'theme_radix_dropdown',
     ),
@@ -27,6 +28,7 @@ function radix_theme(&$existing, $type, $theme, $path) {
       'variables' => array(
         'button' => NULL,
         'links' => NULL,
+        'split' => NULL,
         'attributes' => NULL,
       ),
       'function' => 'theme_radix_button_dropdown',
@@ -161,6 +163,7 @@ function theme_radix_button_dropdown($variables) {
   $button = $variables['button'];
   $links = $variables['links'];
   $attributes = $variables['attributes'];
+  $split = $variables['split'];
   $output = '';
 
   // Add Bootstrap attributes.
@@ -168,22 +171,43 @@ function theme_radix_button_dropdown($variables) {
 
   $output .= '<div' . drupal_attributes($attributes) . '>';
 
-  // Add Boostrap attributes.
-  $button['attributes'] = drupal_array_merge_deep($button['attributes'], array(
-    'class' => array('btn', 'dropdown-toggle'),
-    'data-toggle' => 'dropdown',
-  ));
+  // Handle split buttons.
+  if ($split) {
+    // Add Boostrap attributes.
+    $button['attributes'] = drupal_array_merge_deep($button['attributes'], array(
+      'class' => array('btn'),
+    ));
+  }
+  else {
+    // Add Boostrap attributes.
+    $button['attributes'] = drupal_array_merge_deep($button['attributes'], array(
+      'class' => array('btn', 'dropdown-toggle'),
+      'data-toggle' => 'dropdown',
+    ));
 
-  // No link for button
-  $button['absolute'] = TRUE;
-  $button['fragment'] = FALSE;
-  $button['html'] = TRUE;
+    // When split, we do not want the button to have href.
+    $button['href'] = '';
+    $button['absolute'] = TRUE;
+    $button['fragment'] = FALSE;
 
-  // Add caret to title
-  $button['title'] .= '<span class="caret"></span>';
+    // Add caret to title.
+    $button['title'] .= '<span class="caret"></span>';
+    $button['html'] = TRUE;
+  }
   
-  $output .= l($button['title'], '', $button);
+  // Render the button.
+  $output .= l($button['title'], $button['href'], $button);
 
+  if ($split) {
+    // Add a split button
+    $split_attributes = drupal_array_merge_deep($button['attributes'], array(
+      'class' => array('btn', 'dropdown-toggle'),
+      'data-toggle' => 'dropdown',
+    ));
+    $output .= '<button ' . drupal_attributes($split_attributes) . '><span class="caret"></span></button>';
+  }
+
+  // Render the dropdown menu.
   $output .= theme('radix_dropdown', array('links' => $links));
   
   $output .= '</div>';
