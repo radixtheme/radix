@@ -58,7 +58,7 @@
 </header>
 
 <div id="main-wrapper">
-  <div id="main" class="main <?php print (!$is_panel) ? 'container' : ''; } ?>">
+  <div id="main" class="main <?php print (!$is_panel) ? 'container' : ''; ?>">
     <?php if ($breadcrumb): ?>
       <div id="breadcrumb" class="visible-desktop">
         <div class="container">
