@@ -5,10 +5,10 @@
 (function ($) {
   $(document).ready(function() {
     // menu dropdown
-    $('ul.nav li.dropdown').mouseenter(function() {
+    $('.navbar ul.nav li.dropdown').mouseenter(function() {
       $(this).addClass('open');
     });
-    $('ul.nav li.dropdown').mouseleave(function() {
+    $('.navbar ul.nav li.dropdown').mouseleave(function() {
       $(this).removeClass('open');
     });
 
