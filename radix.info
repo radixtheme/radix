@@ -17,6 +17,7 @@ scripts[] = assets/javascripts/modernizr-2.6.1.min.js
 ; jQuery 1.8 breaks Panels IPE et al.
 ; Add Bootstrap javascript indivually.
 scripts[] = assets/javascripts/bootstrap/dropdown.js
+scripts[] = assets/javascripts/bootstrap/tab.js
 
 scripts[] = assets/javascripts/radix-script.js
 
