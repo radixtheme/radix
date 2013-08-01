@@ -8055,9 +8055,11 @@ ul.links.inline li {
   margin: 0 auto;
 }
 
-/* line 302, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
+/* line 304, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
 ul.nav,
-ul.navl li {
+ul.navl li,
+ul.dropdown-menu,
+ul.dropdown-menu li {
   list-style: none outside none !important;
 }
 
