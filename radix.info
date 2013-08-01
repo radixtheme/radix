@@ -18,6 +18,7 @@ scripts[] = assets/javascripts/modernizr-2.6.1.min.js
 ; Add Bootstrap javascript indivually.
 scripts[] = assets/javascripts/bootstrap/dropdown.js
 scripts[] = assets/javascripts/bootstrap/tab.js
+scripts[] = assets/javascripts/bootstrap/tooltip.js
 
 scripts[] = assets/javascripts/radix-script.js
 
