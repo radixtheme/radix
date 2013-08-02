@@ -47,6 +47,9 @@ function radix_css_alter(&$css) {
  */
 function radix_preprocess_page(&$variables) {
 
+  // Add Bootstrap JS.
+  drupal_add_js('http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js', 'external');
+
   // Determine if the page is rendered using panels.
   $variables['is_panel'] = FALSE;
   if (module_exists('page_manager') && count(page_manager_get_current_page())) {
