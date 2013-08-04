@@ -16,7 +16,7 @@ scripts[] = assets/javascripts/modernizr-2.6.1.min.js
 scripts[] = assets/javascripts/radix-script.js
 
 ; Regions
-regions[content]      = Content
+regions[content] = Content
 
 ; Features
 features[] = logo

@@ -8,7 +8,7 @@ base theme  = radix
 hidden = true
 
 ; Regions
-regions[content]      = Content
+regions[content] = Content
 
 ; CSS - General
 stylesheets[all][]     = assets/stylesheets/screen.css

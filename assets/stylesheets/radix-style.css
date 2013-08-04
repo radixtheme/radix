@@ -8646,23 +8646,33 @@ html.js input.throbbing {
 .field.field-type-long-text img[style*="float:right"], .field.field-type-long-text img[style*="float: right"] {
   margin: 5px 0px 15px 15px;
 }
-
 /* line 46, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
+.field img.panopoly-image-full,
+.field img.panopoly-image-half,
+.field img.panopoly-image-quarter {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  float: none;
+  margin: 0;
+}
+
+/* line 55, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
 .field-collection-container {
   border: 0;
 }
-/* line 48, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
+/* line 57, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
 .field-collection-container .field-collection-view {
   margin: 0;
   padding: 0;
   border: none;
 }
 
-/* line 56, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
+/* line 65, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
 .field ul, .field ol {
   list-style: inherit;
 }
-/* line 59, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
+/* line 68, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
 .field ol {
   list-style: decimal;
 }
