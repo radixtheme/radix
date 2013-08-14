@@ -92,5 +92,5 @@ function radix_link($variables) {
       $variables['options']['attributes']['class'] = array_diff($css_classes, $icon_classes);
     }
   }
-  return '<a href="' . check_plain(url($variables['path'], $variables['options'])) . '"' . drupal_attributes($variables['options']['attributes']) . '>' . $icons . '<span>' . ($variables['options']['html'] ? $variables['text'] : check_plain($variables['text'])) . '</span>' . '</a>';
+  return '<a href="' . check_plain(url($variables['path'], $variables['options'])) . '"' . drupal_attributes($variables['options']['attributes']) . '>' . $icons . ($variables['options']['html'] ? $variables['text'] : check_plain($variables['text'])) . '</a>';
 }
