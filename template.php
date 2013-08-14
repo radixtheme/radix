@@ -50,7 +50,7 @@ function radix_preprocess_page(&$variables) {
   drupal_add_js('http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js', 'external');
 
   // Add CSS for Font Awesome
-  drupal_add_css('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css', 'external');
+  // drupal_add_css('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css', 'external');
 
   // Determine if the page is rendered using panels.
   $variables['is_panel'] = FALSE;
