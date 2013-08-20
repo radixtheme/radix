@@ -10,6 +10,10 @@ hidden = true
 ; Regions
 regions[content] = Content
 
+; Panels
+plugins[panels][layouts] = panels/layouts
+plugins[panels][styles] = panels/styles
+
 ; CSS - General
 stylesheets[all][]     = assets/stylesheets/screen.css
 stylesheets[print][]   = assets/stylesheets/print.css
