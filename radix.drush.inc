@@ -92,6 +92,7 @@ function drush_radix($name = NULL, $machine_name = NULL) {
 
   // Replace all occurrences of 'radix_starter' with the machine name of our sub theme.
   drush_op('radix_file_str_replace', $subtheme_path . '/template.php', 'radix_starter', $machine_name);
+  drush_op('radix_file_str_replace', $subtheme_path . '/theme-settings.php', 'radix_starter', $machine_name);
 
   // Notify user of the newly created theme.
   drush_print(dt('Radix subtheme "!name" created in: !path', array(
