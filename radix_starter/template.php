@@ -4,12 +4,11 @@
  * Theme functions
  */
 
-$theme_path = drupal_get_path('theme', 'radix_starter');
-require_once $theme_path . '/includes/structure.inc';
-require_once $theme_path . '/includes/form.inc';
-require_once $theme_path . '/includes/menu.inc';
-require_once $theme_path . '/includes/comment.inc';
-require_once $theme_path . '/includes/node.inc';
+require_once dirname(__FILE__) . '/includes/structure.inc';
+require_once dirname(__FILE__) . '/includes/form.inc';
+require_once dirname(__FILE__) . '/includes/menu.inc';
+require_once dirname(__FILE__) . '/includes/comment.inc';
+require_once dirname(__FILE__) . '/includes/node.inc';
 
 /**
  * Implements hook_css_alter().
