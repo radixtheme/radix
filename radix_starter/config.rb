@@ -2,9 +2,9 @@
 require "compass_twitter_bootstrap";
 require "compass_radix";
 
-environment = :production
+# Remember to switch this to :production when deployed to a live site.
+environment = :development
 
-# Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "assets/stylesheets"
 sass_dir = "assets/sass"
