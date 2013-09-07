@@ -10,10 +10,18 @@
 @import "global/mixin";
 @import "global/font";
 
+// Bootswatch
+// --------------------------------------------------
+@import "bootswatch/_variables";
+
 // Radix
 // --------------------------------------------------
 @import "compass_radix";
 @import "compass_radix_responsive";
+
+// Bootswatch
+// --------------------------------------------------
+@import "bootswatch/bootswatch";
 
 // Theme CSS
 // --------------------------------------------------
