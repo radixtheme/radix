@@ -9502,11 +9502,23 @@ ul.dropdown-menu li {
   line-height: 1.1em;
 }
 
-/* line 173, ../../extensions/compass_radix/stylesheets/compass_radix/_menu.scss */
+/* line 21, ../../extensions/compass_radix/stylesheets/compass_radix/_menu.scss */
+ul.nav > li.dropdown:after {
+  width: 100%;
+  height: 2px;
+  background: none;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  content: '';
+}
+
+/* line 192, ../../extensions/compass_radix/stylesheets/compass_radix/_menu.scss */
 .navbar-fixed-top {
   margin-top: 0 !important;
 }
-/* line 175, ../../extensions/compass_radix/stylesheets/compass_radix/_menu.scss */
+/* line 194, ../../extensions/compass_radix/stylesheets/compass_radix/_menu.scss */
 .navbar-fixed-top .container {
   width: 940px;
 }
