@@ -5,6 +5,11 @@
  */
 
 /**
+ * Bootswatch theme URI.
+ */
+define('BOOTSWATCH_URI', 'https://github.com/arshad/radix-bootswatch/archive/master.zip');
+
+/**
  * Implements hook_drush_command().
  */
 function radix_drush_command() {
@@ -19,6 +24,7 @@ function radix_drush_command() {
       'machine_name' => 'The machine-readable name of your subtheme. This will be auto-generated from the human-readable name if ommited.',
       'description' => 'The description of your subtheme.',
       'destination' => 'The destination of your subtheme. Defaults to "all" (sites/all/themes).',
+      'bootswatch' => 'The Bootswatch theme to use. See https://github.com/arshad/radix-bootswatch.',
     ),
     'examples' => array(
       'drush radix "My Theme"' => 'Creates a Radix subtheme called "My Theme", using the default options.',
@@ -75,6 +81,28 @@ function drush_radix($name = NULL, $machine_name = NULL) {
     drush_die(dt('The directory "!directory" was not found.', array('!directory' => dirname($subtheme_path))));
   }
   drush_op('drush_copy_dir', $starter_path, $subtheme_path);
+
+  // Copy Bootswatch theme to bootswatch folder.
+  if ($bootswatch = drush_get_option('bootswatch')) {
+    // Switch to a temp directory.
+    $current_dir = getcwd();
+    chdir(drush_tempdir());
+
+    if ($filepath = drush_download_file(BOOTSWATCH_URI)) {
+      $filename = basename($filepath);
+      $dirname =  basename($filepath, '.zip');
+
+      // Decompress the zip archive.
+      drush_tarball_extract($filename, $dirname, TRUE);
+
+      // Copy bootswatch theme to subtheme.
+      $bootswatch_path = $subtheme_path . '/assets/sass/bootswatch/';
+      drush_move_dir($dirname . '/radix-bootswatch-master/' . $bootswatch, $bootswatch_path, TRUE);
+    }
+    
+    // Set working directory back to the previous working directory.
+    chdir($current_dir);
+  }
 
   // Rename the .info file.
   $subtheme_info_file = $subtheme_path . '/' . $machine_name . '.info';
