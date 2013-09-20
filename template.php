@@ -45,8 +45,11 @@ function radix_css_alter(&$css) {
  * Implements template_preprocess_page().
  */
 function radix_preprocess_page(&$variables) {
+  global $base_url;
+  
   // Add Bootstrap JS.
-  drupal_add_js('http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js', 'external');
+  $base = parse_url($base_url);
+  drupal_add_js($base['scheme'] . '://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js', 'external');
 
   // Add CSS for Font Awesome
   // drupal_add_css('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css', 'external');
