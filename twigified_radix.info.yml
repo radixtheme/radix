@@ -1,5 +1,5 @@
-name: twigified_radix
-description: New Drupal 8 Twig Theme created with the help of Twigify.
+name: Radix
+description: Radix is a base theme for Drupal with Bootstrap and Sass.
 screenshot: screenshot.png
 core: 8.x
 stylesheets:
