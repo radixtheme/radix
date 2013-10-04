@@ -493,8 +493,10 @@ function twigified_radix_template_preprocess_menu_link(&$variables) {
  *   An associative array containing:
  *   - twigified_radix_template_preprocess_menu_tree__menu_block: the markup outputted by the original radix_menu_tree__menu_block theme function.
  */
-function twigified_radix_template_preprocess_menu_tree__menu_block(&$) {
-  $['twigified_radix_template_preprocess_menu_tree__menu_block'] = '<ul class="menu nav nav-tabs nav-stacked">' . $variables['tree'] . '</ul>';
+function twigified_radix_template_preprocess_menu_tree__menu_block(&$placeholder) {
+//  $['twigified_radix_template_preprocess_menu_tree__menu_block'] = '<ul class="menu nav nav-tabs nav-stacked">' . $variables['tree'] . '</ul>';
+  $twigified_radix_template_preprocess_menu_tree__menu_block = '<ul class="menu nav nav-tabs nav-stacked">' . $variables['tree'] . '</ul>';
+
 }
 /**
  * The following could probably be moved to menu-tree--menu-block.html.twig:
@@ -510,8 +512,9 @@ function twigified_radix_template_preprocess_menu_tree__menu_block(&$) {
  *   An associative array containing:
  *   - twigified_radix_template_preprocess_menu_tree: the markup outputted by the original radix_menu_tree theme function.
  */
-function twigified_radix_template_preprocess_menu_tree(&$) {
-  $['twigified_radix_template_preprocess_menu_tree'] = '<ul class="menu nav">' . $variables['tree'] . '</ul>';
+function twigified_radix_template_preprocess_menu_tree(&$placeholder) {
+//  $['twigified_radix_template_preprocess_menu_tree'] = '<ul class="menu nav">' . $variables['tree'] . '</ul>';
+  $placeholder['twigified_radix_template_preprocess_menu_tree'] = '<ul class="menu nav">' . $variables['tree'] . '</ul>';
 }
 /**
  * The following could probably be moved to menu-tree.html.twig:
@@ -527,7 +530,7 @@ function twigified_radix_template_preprocess_menu_tree(&$) {
  *   An associative array containing:
  *   - twigified_radix_template_preprocess_menu_local_tasks: the markup outputted by the original radix_menu_local_tasks theme function.
  */
-function twigified_radix_template_preprocess_menu_local_tasks(&$) {
+function twigified_radix_template_preprocess_menu_local_tasks(&$placeholder) {
   $output = '';
 
   if (!empty($variables['primary'])) {
@@ -543,7 +546,8 @@ function twigified_radix_template_preprocess_menu_local_tasks(&$) {
     $output .= drupal_render($variables['secondary']);
   }
 
-  $['twigified_radix_template_preprocess_menu_local_tasks'] = $output;
+//  $['twigified_radix_template_preprocess_menu_local_tasks'] = $output;
+  $placeholder['twigified_radix_template_preprocess_menu_local_tasks'] = $output;
 }
 /**
  * The following could probably be moved to menu-local-tasks.html.twig:

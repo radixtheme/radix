@@ -24,7 +24,6 @@ function radix_drush_command() {
       'machine_name' => 'The machine-readable name of your subtheme. This will be auto-generated from the human-readable name if ommited.',
       'description' => 'The description of your subtheme.',
       'destination' => 'The destination of your subtheme. Defaults to "all" (sites/all/themes).',
-      'kit' => 'The name of the starter kit to use. Defaults to "default".',
       'bootswatch' => 'The Bootswatch theme to use. See https://github.com/arshad/radix-bootswatch.',
     ),
     'examples' => array(
@@ -76,19 +75,12 @@ function drush_radix($name = NULL, $machine_name = NULL) {
   }
   $subtheme_path = drush_normalize_path(drush_get_context('DRUSH_DRUPAL_ROOT') . '/' . $subtheme_path . '/' . $machine_name);
 
-  // Determine the kit to use.
-  if ($kit = drush_get_option('kit')) {
-    $kit = drush_trim_path($kit);
-  } else {
-    $kit = 'default';
-  }
-
-  // Make a fresh copy of the kit.
-  $kit_path = drush_normalize_path(drush_get_context('DRUSH_DRUPAL_ROOT') . '/' . drupal_get_path('theme', 'radix') . '/kits/' . $kit);
+  // Make a fresh copy of radix_starter.
+  $starter_path = drush_normalize_path(drush_get_context('DRUSH_DRUPAL_ROOT') . '/' . drupal_get_path('theme', 'radix') . '/radix_starter');
   if (!is_dir(dirname($subtheme_path))) {
     drush_die(dt('The directory "!directory" was not found.', array('!directory' => dirname($subtheme_path))));
   }
-  drush_op('drush_copy_dir', $kit_path, $subtheme_path);
+  drush_op('drush_copy_dir', $starter_path, $subtheme_path);
 
   // Copy Bootswatch theme to bootswatch folder.
   if ($bootswatch = drush_get_option('bootswatch')) {
@@ -114,31 +106,27 @@ function drush_radix($name = NULL, $machine_name = NULL) {
 
   // Rename the .info file.
   $subtheme_info_file = $subtheme_path . '/' . $machine_name . '.info';
-  drush_op('rename', drush_normalize_path($subtheme_path . '/kit.info'), drush_normalize_path($subtheme_info_file));
+  drush_op('rename', drush_normalize_path($subtheme_path . '/radix_starter.info'), drush_normalize_path($subtheme_info_file));
 
   // Alter the contents of the .info file based on the command options.
   $alterations = array(
-    '{{Name}}' => $name,
-    '{{Description}}' => 'A theme based on Radix.',
-    '{{machine_name}}' => $machine_name,
+    '= Radix Starter' => '= ' . $name,
     'hidden = true' => '',
   );
   if ($description = drush_get_option('description')) {
-    $alterations['{{Description}}'] = $description;
+    $alterations['= A starter theme based on Radix'] = '= ' . $description;
   }
   drush_op('radix_file_str_replace', $subtheme_info_file, array_keys($alterations), $alterations);
 
-  // Replace all occurrences of '{{machine_name}}' with the machine name of our sub theme.
-  drush_op('radix_file_str_replace', $subtheme_path . '/template.php', '{{machine_name}}', $machine_name);
-  drush_op('radix_file_str_replace', $subtheme_path . '/theme-settings.php', '{{machine_name}}', $machine_name);
+  // Replace all occurrences of 'radix_starter' with the machine name of our sub theme.
+  drush_op('radix_file_str_replace', $subtheme_path . '/template.php', 'radix_starter', $machine_name);
+  drush_op('radix_file_str_replace', $subtheme_path . '/theme-settings.php', 'radix_starter', $machine_name);
 
   // Notify user of the newly created theme.
-  $message = dt('Radix subtheme "!name" created in: !path using the "!kit" kit.', array(
+  drush_print(dt('Radix subtheme "!name" created in: !path', array(
     '!name' => $name,
     '!path' => $subtheme_path,
-    '!kit' => $kit,
-  ));
-  drush_print($message);
+  )));
 }
 
 /**

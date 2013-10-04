@@ -1,0 +1,19 @@
+name: twigified_radix
+description: New Drupal 8 Twig Theme created with the help of Twigify.
+screenshot: screenshot.png
+core: 8.x
+stylesheets:
+  all:
+   - assets/stylesheets/radix-style.css
+  print:
+   - assets/stylesheets/radix-print.css
+stylesheets-conditional:
+scripts:
+   - assets/javascripts/modernizr-2.6.1.min.js
+   - assets/javascripts/radix-script.js
+regions:
+   content: 'Content'
+features:
+version: VERSION
+engine: twig
+type: theme

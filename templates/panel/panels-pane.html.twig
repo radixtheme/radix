@@ -1,4 +1,4 @@
-<?php
+{#
 /**
  * @file panels-pane.tpl.php
  * Main panel pane template
@@ -15,44 +15,43 @@
  * - $feeds: Any feed icons or associated with the content
  * - $display: The complete panels display object containing all kinds of
  *   data including the contexts and all of the other panes being displayed.
- */
-?>
-<?php if ($pane_prefix): ?>
-  <?php print $pane_prefix; ?>
-<?php endif; ?>
-<div class="<?php print $classes; ?>" <?php print $id; ?>>
-  <?php if ($admin_links): ?>
-    <?php print $admin_links; ?>
-  <?php endif; ?>
+ */#}
+{% if pane_prefix %}
+  {{ pane_prefix }}
+{% endif %}
+<div class="{{ classes }}" {{ id }}>
+  {% if admin_links %}
+    {{ admin_links }}
+  {% endif %}
 
-  <?php print render($title_prefix); ?>
-  <?php if ($title): ?>
-    <h4<?php print $title_attributes; ?>><?php print $title; ?></h4>
-  <?php endif; ?>
-  <?php print render($title_suffix); ?>
+  {{ title_prefix }}
+  {% if title %}
+    <h4{{ title_attributes }}>{{ title }}</h4>
+  {% endif %}
+  {{ title_suffix }}
 
-  <?php if ($feeds): ?>
+  {% if feeds %}
     <div class="feed">
-      <?php print $feeds; ?>
+      {{ feeds }}
     </div>
-  <?php endif; ?>
+  {% endif %}
 
   <div class="pane-content">
-    <?php print render($content); ?>
+    {{ content }}
   </div>
 
-  <?php if ($links): ?>
+  {% if links %}
     <div class="links">
-      <?php print $links; ?>
+      {{ links }}
     </div>
-  <?php endif; ?>
+  {% endif %}
 
-  <?php if ($more): ?>
+  {% if more %}
     <div class="more-link">
-      <?php print $more; ?>
+      {{ more }}
     </div>
-  <?php endif; ?>
+  {% endif %}
 </div>
-<?php if ($pane_suffix): ?>
-  <?php print $pane_suffix; ?>
-<?php endif; ?>
+{% if pane_suffix %}
+  {{ pane_suffix }}
+{% endif %}

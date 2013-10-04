@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ * Template file for field_slideshow
+ */#}
+<div id="field-slideshow-{{ id }}-wrapper" class="field-slideshow-wrapper">
+
+  <div class="{{ classes }}" style="width:{{ slides_max_width }}px; height:{{ slides_max_height }}px">
+    {# PHP: foreach ($items as $num => $item) : #}
+      <div class="{{ item.classes }}"{% if num %} style="display:none;"{% endif %}>
+        {{ item.image }}
+        {% if isset(item.caption)and item.caption != '' %}
+          <div class="field-slideshow-caption">
+            <span class="field-slideshow-caption-text">{{ item.caption }}</span>
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+
+  {% if not empty(controls) %}
+    <div id="field-slideshow-{{ id }}-controls" class="field-slideshow-controls">
+      <a href="#" class="prev">&lsaquo;</a>
+      <a href="#" class="next">&rsaquo;</a>
+    </div>
+  {% endif %}
+
+  {% if isset(pager)and pager != '' %}
+
+    {% if pager == 'number' %}
+
+      <div id="field-slideshow-{{ id }}-pager" class="field-slideshow-pager slides-{# PHP: print count($items); #}"></div>
+
+    {% elseif pager == 'image' or pager == 'carousel' %}
+
+      {% if pager == 'carousel' %}
+        <div id="field-slideshow-{{ id }}-carousel-wrapper" class="field-slideshow-carousel-wrapper">
+          <a href="#" class="carousel-prev">«</a>
+          <div id="field-slideshow-{{ id }}-carousel" class="field-slideshow-carousel">
+      {% endif %}
+
+      {{ thumbnails }}
+
+      {% if pager == 'carousel' %}
+          </div>
+          <a href="#" class="carousel-next">»</a>
+        </div>
+      {% endif %}
+
+    {% endif %}
+
+  {% endif %}
+
+</div>
