@@ -52,9 +52,10 @@
             </div>
           </div>
 
-      </div>
-    </div> 
-  </div> <!-- /#navigation -->
+        </div>
+      </div> 
+    </div> <!-- /#navigation -->
+  </div>
 </header>
 
 <div id="main-wrapper">
