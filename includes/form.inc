@@ -68,7 +68,7 @@ function radix_form_element($variables) {
   }
 
   if (!empty($element['#description'])) {
-    $output .= '<div class="description">' . $element['#description'] . "</div>\n";
+    $output .= '<span class="help-block">' . $element['#description'] . "</span>\n";
   }
 
   $output .= "</div>\n";
