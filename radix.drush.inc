@@ -114,7 +114,7 @@ function drush_radix($name = NULL, $machine_name = NULL) {
 
   // Rename the .info file.
   $subtheme_info_file = $subtheme_path . '/' . $machine_name . '.info';
-  drush_op('rename', drush_normalize_path($subtheme_path . '/kit.info'), drush_normalize_path($subtheme_info_file));
+  drush_op('rename', drush_normalize_path($subtheme_path . '/' . $kit . '.info'), drush_normalize_path($subtheme_info_file));
 
   // Alter the contents of the .info file based on the command options.
   $alterations = array(

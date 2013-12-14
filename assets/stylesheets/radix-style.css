@@ -264,14 +264,6 @@ textarea {
 }
 
 @media print {
-  /* line 155, ../../../../../../../../../../usr/local/.rvm/gems/ruby-2.0.0-p0/gems/compass_twitter_bootstrap-2.3.1/stylesheets/compass_twitter_bootstrap/_reset.scss */
-  * {
-    text-shadow: none !important;
-    color: #000 !important;
-    background: transparent !important;
-    box-shadow: none !important;
-  }
-
   /* line 163, ../../../../../../../../../../usr/local/.rvm/gems/ruby-2.0.0-p0/gems/compass_twitter_bootstrap-2.3.1/stylesheets/compass_twitter_bootstrap/_reset.scss */
   a,
   a:visited {
@@ -2554,7 +2546,7 @@ table th[class*="span"],
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url('../images/glyphicons-halflings.png?1367692547');
+  background-image: url('../images/glyphicons-halflings.png?1387021168');
   background-position: 14px 14px;
   background-repeat: no-repeat;
   margin-top: 1px;
@@ -2579,7 +2571,7 @@ table th[class*="span"],
 .dropdown-submenu:focus > a > [class^="icon-"],
 .dropdown-submenu:hover > a > [class*=" icon-"],
 .dropdown-submenu:focus > a > [class*=" icon-"] {
-  background-image: url('../images/glyphicons-halflings-white.png?1367692547');
+  background-image: url('../images/glyphicons-halflings-white.png?1387021168');
 }
 
 /* line 52, ../../../../../../../../../../usr/local/.rvm/gems/ruby-2.0.0-p0/gems/compass_twitter_bootstrap-2.3.1/stylesheets/compass_twitter_bootstrap/_sprites.scss */
@@ -9479,13 +9471,7 @@ ul.links.inline li {
   margin: 0;
 }
 
-/* line 296, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
-.contextual-links-region {
-  display: table;
-  margin: 0 auto;
-}
-
-/* line 304, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
+/* line 299, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
 ul.nav,
 ul.navl li,
 ul.dropdown-menu,
@@ -9717,7 +9703,7 @@ select[size] {
 
 /* line 70, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 html.js input.form-autocomplete {
-  background: url('../images/throbber.gif?1367692547') no-repeat right 8px white !important;
+  background: url('../images/throbber.gif?1387021168') no-repeat right 8px white !important;
 }
 
 /* line 73, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */

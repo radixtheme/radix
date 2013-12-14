@@ -1,5 +1,5 @@
 name        = Radix
-description = A Drupal theme with Bootstrap and SASS
+description = A Drupal theme with Bootstrap and Sass.
 screenshot  = screenshot.png
 core        = 7.x
 
