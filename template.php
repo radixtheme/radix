@@ -94,7 +94,4 @@ function radix_preprocess_page(&$variables) {
       '!command' => '<code>compass watch</code>',
     )), 'error');
   }
-
-  drupal_set_message(t("Don't panic!"));
-  drupal_set_message(t("Don't panic!"), 'warning');
 }
