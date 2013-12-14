@@ -93,6 +93,9 @@ function radix_preprocess_page(&$variables) {
 
   // Display a message if Sass has not been compiled.
   $stylesheet_path = path_to_theme() . '/assets/stylesheets/screen.css';
+  if (_radix_current_theme() == 'radix') {
+    $stylesheet_path = path_to_theme() . '/assets/stylesheets/radix-style.css';
+  }
   if (!file_exists($stylesheet_path)) {
     drupal_set_message(t('It looks like !path has not been created yet. Run !command in your theme directory to create it.', array(
       '!path' => '<em>' . $stylesheet_path . '</em>',
