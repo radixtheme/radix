@@ -19,6 +19,13 @@ function radix_menu_tree__menu_block(&$variables) {
 }
 
 /**
+ * Implements theme_menu_tree__navbar_nav().
+ */
+function radix_menu_tree__navbar_nav(&$variables) {
+  return '<ul class="menu nav navbar-nav">' . $variables['tree'] . '</ul>';
+}
+
+/**
  * Implements theme_menu_link().
  */
 function radix_menu_link($variables) {
