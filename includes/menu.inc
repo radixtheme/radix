@@ -15,7 +15,7 @@ function radix_menu_tree(&$variables) {
  * Implements theme_menu_tree__menu_block().
  */
 function radix_menu_tree__menu_block(&$variables) {
-  return '<ul class="menu nav nav-tabs nav-stacked">' . $variables['tree'] . '</ul>';
+  return '<ul class="menu nav nav-pills nav-stacked">' . $variables['tree'] . '</ul>';
 }
 
 /**
