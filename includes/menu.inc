@@ -26,6 +26,27 @@ function radix_menu_tree__navbar_nav(&$variables) {
 }
 
 /**
+ * Implements theme_menu_tree__nav_tabs().
+ */
+function radix_menu_tree__nav_tabs(&$variables) {
+  return '<ul class="nav nav-tabs">' . $variables['tree'] . '</ul>';
+}
+
+/**
+ * Implements theme_menu_tree__nav_pills().
+ */
+function radix_menu_tree__nav_pills(&$variables) {
+  return '<ul class="nav nav-pills">' . $variables['tree'] . '</ul>';
+}
+
+/**
+ * Implements theme_menu_tree__nav_pills_stacked().
+ */
+function radix_menu_tree__nav_pills_stacked(&$variables) {
+  return '<ul class="nav nav-pills nav-stacked">' . $variables['tree'] . '</ul>';
+}
+
+/**
  * Implements theme_menu_link().
  */
 function radix_menu_link($variables) {
