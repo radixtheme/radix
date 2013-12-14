@@ -44,19 +44,18 @@
 </header>
 
 <div id="main-wrapper">
-  <div id="main" class="main container">
-    <?php if ($breadcrumb): ?>
-      <div id="breadcrumb" class="visible-desktop">
-        <?php print $breadcrumb; ?>
-      </div>
-    <?php endif; ?>
-    <?php if ($messages): ?>
-      <div id="messages">
-        <?php print $messages; ?>
-      </div>
-    <?php endif; ?>
-    <div id="content">
-      <a id="main-content"></a>
+  <div id="main" class="main">
+    <div class="container">
+      <?php if ($breadcrumb): ?>
+        <div id="breadcrumb" class="visible-desktop">
+          <?php print $breadcrumb; ?>
+        </div>
+      <?php endif; ?>
+      <?php if ($messages): ?>
+        <div id="messages">
+          <?php print $messages; ?>
+        </div>
+      <?php endif; ?>
       <div id="page-header">
         <?php if ($title): ?>
           <div class="page-header">
@@ -74,9 +73,11 @@
           </ul>
         <?php endif; ?>
       </div>
+    </div>
+    <div id="content" class="<?php print (!$is_panel) ? 'container' : ''; ?>">
       <?php print render($page['content']); ?>
     </div>
-  </div>
+  </div> <!-- /#main -->
 </div> <!-- /#main-wrapper -->
 
 <footer id="footer" class="footer" role="footer">
