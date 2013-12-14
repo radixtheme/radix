@@ -74,7 +74,7 @@ function radix_preprocess_page(&$variables) {
     $search_box_form['basic']['keys']['#attributes'] = array('placeholder' => 'Search');
     $search_box_form['basic']['submit']['#value'] = t('Search');
     $search_box_form['#attributes']['class'][] = 'navbar-form';
-    $search_box_form['#attributes']['class'][] = 'navbar-right';
+    $search_box_form['#attributes']['class'][] = 'navbar-left';
     $search_box = drupal_render($search_box_form);
     $variables['search_form'] = (user_access('search content')) ? $search_box : NULL;
   }
@@ -82,6 +82,10 @@ function radix_preprocess_page(&$variables) {
   // Format and add main menu to theme.
   $variables['main_menu'] = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
   $variables['main_menu']['#theme_wrappers'] = array('menu_tree__navbar_nav');
+
+  // Format and add user menu to theme.
+  $variables['user_menu'] = menu_tree('user-menu');
+  $variables['user_menu']['#theme_wrappers'] = array('menu_tree__navbar_right');
 
   // Add a copyright message.
   $variables['copyright'] = t('Drupal is a registered trademark of Dries Buytaert.');

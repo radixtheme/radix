@@ -26,6 +26,20 @@ function radix_menu_tree__navbar_nav(&$variables) {
 }
 
 /**
+ * Implements theme_menu_tree__navbar_left().
+ */
+function radix_menu_tree__navbar_left(&$variables) {
+  return '<ul class="menu nav navbar-nav navbar-left">' . $variables['tree'] . '</ul>';
+}
+
+/**
+ * Implements theme_menu_tree__navbar_right().
+ */
+function radix_menu_tree__navbar_right(&$variables) {
+  return '<ul class="menu nav navbar-nav navbar-right">' . $variables['tree'] . '</ul>';
+}
+
+/**
  * Implements theme_menu_tree__nav_tabs().
  */
 function radix_menu_tree__nav_tabs(&$variables) {
