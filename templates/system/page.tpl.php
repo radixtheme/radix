@@ -68,7 +68,7 @@
           </div>
         <?php endif; ?>
         <?php if ($action_links): ?>
-          <ul class="nav nav-pills action-links">
+          <ul class="action-links">
             <?php print render($action_links); ?>
           </ul>
         <?php endif; ?>

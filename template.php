@@ -66,6 +66,11 @@ function radix_preprocess_page(&$variables) {
     $variables['tabs'] = '';
   }
 
+  // Theme action links as buttons.
+  foreach ($variables['action_links'] as $key => &$link) {
+    $link['#link']['localized_options']['attributes'] = array('class' => array('btn', 'btn-primary', 'btn-sm'));
+  }
+
   // Add search_form to theme.
   $variables['search_form'] = '';
   if (module_exists('search') && user_access('search content')) {
