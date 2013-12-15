@@ -7745,454 +7745,215 @@ td.visible-print {
   }
 }
 /*
- *  Font Awesome 3.2.1
- *  the iconic font designed for Bootstrap
- *  ------------------------------------------------------------------------------
- *  The full suite of pictographic icons, examples, and documentation can be
- *  found at http://fontawesome.io.  Stay up to date on Twitter at
- *  http://twitter.com/fontawesome.
- *
- *  License
- *  ------------------------------------------------------------------------------
- *  - The Font Awesome font is licensed under SIL OFL 1.1 -
- *    http://scripts.sil.org/OFL
- *  - Font Awesome CSS, LESS, and SASS files are licensed under MIT License -
- *    http://opensource.org/licenses/mit-license.html
- *  - Font Awesome documentation licensed under CC BY 3.0 -
- *    http://creativecommons.org/licenses/by/3.0/
- *  - Attribution is no longer required in Font Awesome 3.0, but much appreciated:
- *    "Font Awesome by Dave Gandy - http://fontawesome.io"
- *
- *  Author - Dave Gandy
- *  ------------------------------------------------------------------------------
- *  Email: dave@fontawesome.io
- *  Twitter: http://twitter.com/davegandy
- *  Work: Lead Product Designer @ Kyruus - http://kyruus.com
+ *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot?v=3.2.1");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=3.2.1") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=3.2.1") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=3.2.1") format("truetype"), url("../fonts/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1") format("svg");
+  src: url("../fonts/fontawesome-webfont.eot?v=4.0.3");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=4.0.3") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.0.3") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
-/* FONT AWESOME CORE
- * -------------------------- */
-/* line 5, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-[class^="icon-"],
-[class*=" icon-"] {
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: inherit;
-  -webkit-font-smoothing: antialiased;
-  *margin-right: .3em;
-}
-
-/* line 10, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  text-decoration: inherit;
+/* line 4, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
+.fa {
   display: inline-block;
-  speak: none;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* makes the font 33% larger relative to the icon container */
-/* line 17, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-.icon-large:before {
-  vertical-align: -10%;
+/* line 5, ../../extensions/compass_radix/stylesheets/fontawesome/_larger.scss */
+.fa-lg {
   font-size: 1.3333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
 }
 
-/* makes sure icons active on rollover in links */
-/* line 25, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-a [class^="icon-"],
-a [class*=" icon-"] {
-  display: inline;
+/* line 10, ../../extensions/compass_radix/stylesheets/fontawesome/_larger.scss */
+.fa-2x {
+  font-size: 2em;
 }
 
-/* increased font size for icon-large */
-/* line 33, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-[class^="icon-"].icon-fixed-width,
-[class*=" icon-"].icon-fixed-width {
-  display: inline-block;
-  width: 1.1428571429em;
-  text-align: right;
-  padding-right: 0.2857142857em;
-}
-/* line 38, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-[class^="icon-"].icon-fixed-width.icon-large,
-[class*=" icon-"].icon-fixed-width.icon-large {
-  width: 1.4285714286em;
+/* line 11, ../../extensions/compass_radix/stylesheets/fontawesome/_larger.scss */
+.fa-3x {
+  font-size: 3em;
 }
 
-/* line 44, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-.icons-ul {
+/* line 12, ../../extensions/compass_radix/stylesheets/fontawesome/_larger.scss */
+.fa-4x {
+  font-size: 4em;
+}
+
+/* line 13, ../../extensions/compass_radix/stylesheets/fontawesome/_larger.scss */
+.fa-5x {
+  font-size: 5em;
+}
+
+/* line 3, ../../extensions/compass_radix/stylesheets/fontawesome/_fixed-width.scss */
+.fa-fw {
+  width: 1.2857142857em;
+  text-align: center;
+}
+
+/* line 4, ../../extensions/compass_radix/stylesheets/fontawesome/_list.scss */
+.fa-ul {
+  padding-left: 0;
   margin-left: 2.1428571429em;
   list-style-type: none;
 }
-/* line 48, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-.icons-ul > li {
+/* line 8, ../../extensions/compass_radix/stylesheets/fontawesome/_list.scss */
+.fa-ul > li {
   position: relative;
 }
-/* line 50, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-.icons-ul .icon-li {
+
+/* line 10, ../../extensions/compass_radix/stylesheets/fontawesome/_list.scss */
+.fa-li {
   position: absolute;
   left: -2.1428571429em;
   width: 2.1428571429em;
+  top: 0.1428571429em;
   text-align: center;
-  line-height: inherit;
+}
+/* line 16, ../../extensions/compass_radix/stylesheets/fontawesome/_list.scss */
+.fa-li.fa-lg {
+  left: -1.8571428571em;
 }
 
-/* line 62, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-[class^="icon-"].hide,
-[class*=" icon-"].hide {
-  display: none;
-}
-
-/* line 67, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-.icon-muted {
-  color: #eeeeee;
-}
-
-/* line 68, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-.icon-light {
-  color: white;
-}
-
-/* line 69, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-.icon-dark {
-  color: #333333;
-}
-
-/* line 74, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-.icon-border {
-  border: solid 1px #eeeeee;
+/* line 4, ../../extensions/compass_radix/stylesheets/fontawesome/_bordered-pulled.scss */
+.fa-border {
   padding: .2em .25em .15em;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  border: solid 0.08em #eeeeee;
+  border-radius: .1em;
 }
 
-/* line 83, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-.icon-2x {
-  font-size: 2em;
-}
-/* line 85, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-.icon-2x.icon-border {
-  border-width: 2px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-}
-
-/* line 90, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-.icon-3x {
-  font-size: 3em;
-}
-/* line 92, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-.icon-3x.icon-border {
-  border-width: 3px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-
-/* line 97, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-.icon-4x {
-  font-size: 4em;
-}
-/* line 99, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-.icon-4x.icon-border {
-  border-width: 4px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-}
-
-/* line 105, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-.icon-5x {
-  font-size: 5em;
-}
-/* line 107, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-.icon-5x.icon-border {
-  border-width: 5px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  border-radius: 7px;
-}
-
-/* line 118, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
+/* line 10, ../../extensions/compass_radix/stylesheets/fontawesome/_bordered-pulled.scss */
 .pull-right {
   float: right;
 }
 
-/* line 119, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
+/* line 11, ../../extensions/compass_radix/stylesheets/fontawesome/_bordered-pulled.scss */
 .pull-left {
   float: left;
 }
 
-/* line 123, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-[class^="icon-"].pull-left,
-[class*=" icon-"].pull-left {
+/* line 14, ../../extensions/compass_radix/stylesheets/fontawesome/_bordered-pulled.scss */
+.fa.pull-left {
   margin-right: .3em;
 }
-/* line 126, ../../extensions/compass_radix/stylesheets/fontawesome/_core.scss */
-[class^="icon-"].pull-right,
-[class*=" icon-"].pull-right {
+/* line 15, ../../extensions/compass_radix/stylesheets/fontawesome/_bordered-pulled.scss */
+.fa.pull-right {
   margin-left: .3em;
 }
 
-/* BOOTSTRAP SPECIFIC CLASSES
- * -------------------------- */
-/* Bootstrap 2.0 sprites.less reset */
-/* line 6, ../../extensions/compass_radix/stylesheets/fontawesome/_bootstrap.scss */
-[class^="icon-"],
-[class*=" icon-"] {
-  display: inline;
-  width: auto;
-  height: auto;
-  line-height: normal;
-  vertical-align: baseline;
-  background-image: none;
-  background-position: 0% 0%;
-  background-repeat: repeat;
-  margin-top: 0;
-}
-
-/* more sprites.less reset */
-/* line 31, ../../extensions/compass_radix/stylesheets/fontawesome/_bootstrap.scss */
-.icon-white,
-.nav-pills > .active > a > [class^="icon-"],
-.nav-pills > .active > a > [class*=" icon-"],
-.nav-list > .active > a > [class^="icon-"],
-.nav-list > .active > a > [class*=" icon-"],
-.navbar-inverse .nav > .active > a > [class^="icon-"],
-.navbar-inverse .nav > .active > a > [class*=" icon-"],
-.dropdown-menu > li > a:hover > [class^="icon-"],
-.dropdown-menu > li > a:hover > [class*=" icon-"],
-.dropdown-menu > .active > a > [class^="icon-"],
-.dropdown-menu > .active > a > [class*=" icon-"],
-.dropdown-submenu:hover > a > [class^="icon-"],
-.dropdown-submenu:hover > a > [class*=" icon-"] {
-  background-image: none;
-}
-
-/* keeps Bootstrap styles with and without icons the same */
-/* line 41, ../../extensions/compass_radix/stylesheets/fontawesome/_bootstrap.scss */
-.btn [class^="icon-"].icon-large,
-.btn [class*=" icon-"].icon-large, .nav [class^="icon-"].icon-large,
-.nav [class*=" icon-"].icon-large {
-  line-height: .9em;
-}
-/* line 42, ../../extensions/compass_radix/stylesheets/fontawesome/_bootstrap.scss */
-.btn [class^="icon-"].icon-spin,
-.btn [class*=" icon-"].icon-spin, .nav [class^="icon-"].icon-spin,
-.nav [class*=" icon-"].icon-spin {
-  display: inline-block;
-}
-
-/* line 48, ../../extensions/compass_radix/stylesheets/fontawesome/_bootstrap.scss */
-.nav-tabs [class^="icon-"], .nav-tabs [class^="icon-"].icon-large,
-.nav-tabs [class*=" icon-"],
-.nav-tabs [class*=" icon-"].icon-large, .nav-pills [class^="icon-"], .nav-pills [class^="icon-"].icon-large,
-.nav-pills [class*=" icon-"],
-.nav-pills [class*=" icon-"].icon-large {
-  line-height: .9em;
-}
-
-/* line 55, ../../extensions/compass_radix/stylesheets/fontawesome/_bootstrap.scss */
-.btn [class^="icon-"].pull-left.icon-2x, .btn [class^="icon-"].pull-right.icon-2x,
-.btn [class*=" icon-"].pull-left.icon-2x,
-.btn [class*=" icon-"].pull-right.icon-2x {
-  margin-top: .18em;
-}
-/* line 57, ../../extensions/compass_radix/stylesheets/fontawesome/_bootstrap.scss */
-.btn [class^="icon-"].icon-spin.icon-large,
-.btn [class*=" icon-"].icon-spin.icon-large {
-  line-height: .8em;
-}
-
-/* line 64, ../../extensions/compass_radix/stylesheets/fontawesome/_bootstrap.scss */
-.btn.btn-small [class^="icon-"].pull-left.icon-2x, .btn.btn-small [class^="icon-"].pull-right.icon-2x,
-.btn.btn-small [class*=" icon-"].pull-left.icon-2x,
-.btn.btn-small [class*=" icon-"].pull-right.icon-2x {
-  margin-top: .25em;
-}
-
-/* line 70, ../../extensions/compass_radix/stylesheets/fontawesome/_bootstrap.scss */
-.btn.btn-large [class^="icon-"],
-.btn.btn-large [class*=" icon-"] {
-  margin-top: 0;
-}
-/* line 73, ../../extensions/compass_radix/stylesheets/fontawesome/_bootstrap.scss */
-.btn.btn-large [class^="icon-"].pull-left.icon-2x, .btn.btn-large [class^="icon-"].pull-right.icon-2x,
-.btn.btn-large [class*=" icon-"].pull-left.icon-2x,
-.btn.btn-large [class*=" icon-"].pull-right.icon-2x {
-  margin-top: .05em;
-}
-/* line 75, ../../extensions/compass_radix/stylesheets/fontawesome/_bootstrap.scss */
-.btn.btn-large [class^="icon-"].pull-left.icon-2x,
-.btn.btn-large [class*=" icon-"].pull-left.icon-2x {
-  margin-right: .2em;
-}
-/* line 76, ../../extensions/compass_radix/stylesheets/fontawesome/_bootstrap.scss */
-.btn.btn-large [class^="icon-"].pull-right.icon-2x,
-.btn.btn-large [class*=" icon-"].pull-right.icon-2x {
-  margin-left: .2em;
-}
-
-/* Fixes alignment in nav lists */
-/* line 82, ../../extensions/compass_radix/stylesheets/fontawesome/_bootstrap.scss */
-.nav-list [class^="icon-"],
-.nav-list [class*=" icon-"] {
-  line-height: inherit;
-}
-
-/* EXTRAS
- * -------------------------- */
-/* Stacked and layered icon */
-/* line 25, ../../extensions/compass_radix/stylesheets/fontawesome/_mixins.scss */
-.icon-stack {
-  position: relative;
-  display: inline-block;
-  width: 2em;
-  height: 2em;
-  line-height: 2em;
-  vertical-align: -35%;
-}
-/* line 33, ../../extensions/compass_radix/stylesheets/fontawesome/_mixins.scss */
-.icon-stack [class^="icon-"],
-.icon-stack [class*=" icon-"] {
-  display: block;
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  font-size: 1em;
-  line-height: inherit;
-  *line-height: 2em;
-}
-/* line 43, ../../extensions/compass_radix/stylesheets/fontawesome/_mixins.scss */
-.icon-stack .icon-stack-base {
-  font-size: 2em;
-  *line-height: 1em;
-}
-
-/* Animated rotating icon */
-/* line 8, ../../extensions/compass_radix/stylesheets/fontawesome/_extras.scss */
-.icon-spin {
-  display: inline-block;
+/* line 4, ../../extensions/compass_radix/stylesheets/fontawesome/_spinning.scss */
+.fa-spin {
+  -webkit-animation: spin 2s infinite linear;
   -moz-animation: spin 2s infinite linear;
   -o-animation: spin 2s infinite linear;
-  -webkit-animation: spin 2s infinite linear;
   animation: spin 2s infinite linear;
 }
 
-/* Prevent stack and spinners from being taken inline when inside a link */
-/* line 18, ../../extensions/compass_radix/stylesheets/fontawesome/_extras.scss */
-a .icon-stack,
-a .icon-spin {
-  display: inline-block;
-  text-decoration: none;
-}
-
 @-moz-keyframes spin {
-  /* line 24, ../../extensions/compass_radix/stylesheets/fontawesome/_extras.scss */
+  /* line 12, ../../extensions/compass_radix/stylesheets/fontawesome/_spinning.scss */
   0% {
     -moz-transform: rotate(0deg);
   }
 
-  /* line 25, ../../extensions/compass_radix/stylesheets/fontawesome/_extras.scss */
+  /* line 13, ../../extensions/compass_radix/stylesheets/fontawesome/_spinning.scss */
   100% {
     -moz-transform: rotate(359deg);
   }
 }
 
 @-webkit-keyframes spin {
-  /* line 28, ../../extensions/compass_radix/stylesheets/fontawesome/_extras.scss */
+  /* line 16, ../../extensions/compass_radix/stylesheets/fontawesome/_spinning.scss */
   0% {
     -webkit-transform: rotate(0deg);
   }
 
-  /* line 29, ../../extensions/compass_radix/stylesheets/fontawesome/_extras.scss */
+  /* line 17, ../../extensions/compass_radix/stylesheets/fontawesome/_spinning.scss */
   100% {
     -webkit-transform: rotate(359deg);
   }
 }
 
 @-o-keyframes spin {
-  /* line 32, ../../extensions/compass_radix/stylesheets/fontawesome/_extras.scss */
+  /* line 20, ../../extensions/compass_radix/stylesheets/fontawesome/_spinning.scss */
   0% {
     -o-transform: rotate(0deg);
   }
 
-  /* line 33, ../../extensions/compass_radix/stylesheets/fontawesome/_extras.scss */
+  /* line 21, ../../extensions/compass_radix/stylesheets/fontawesome/_spinning.scss */
   100% {
     -o-transform: rotate(359deg);
   }
 }
 
 @-ms-keyframes spin {
-  /* line 36, ../../extensions/compass_radix/stylesheets/fontawesome/_extras.scss */
+  /* line 24, ../../extensions/compass_radix/stylesheets/fontawesome/_spinning.scss */
   0% {
     -ms-transform: rotate(0deg);
   }
 
-  /* line 37, ../../extensions/compass_radix/stylesheets/fontawesome/_extras.scss */
+  /* line 25, ../../extensions/compass_radix/stylesheets/fontawesome/_spinning.scss */
   100% {
     -ms-transform: rotate(359deg);
   }
 }
 
 @keyframes spin {
-  /* line 40, ../../extensions/compass_radix/stylesheets/fontawesome/_extras.scss */
+  /* line 28, ../../extensions/compass_radix/stylesheets/fontawesome/_spinning.scss */
   0% {
     transform: rotate(0deg);
   }
 
-  /* line 41, ../../extensions/compass_radix/stylesheets/fontawesome/_extras.scss */
+  /* line 29, ../../extensions/compass_radix/stylesheets/fontawesome/_spinning.scss */
   100% {
     transform: rotate(359deg);
   }
 }
 
-/* Icon rotations and mirroring */
-/* line 45, ../../extensions/compass_radix/stylesheets/fontawesome/_extras.scss */
-.icon-rotate-90:before {
+/* line 4, ../../extensions/compass_radix/stylesheets/fontawesome/_rotated-flipped.scss */
+.fa-rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
 }
 
-/* line 54, ../../extensions/compass_radix/stylesheets/fontawesome/_extras.scss */
-.icon-rotate-180:before {
+/* line 5, ../../extensions/compass_radix/stylesheets/fontawesome/_rotated-flipped.scss */
+.fa-rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 }
 
-/* line 63, ../../extensions/compass_radix/stylesheets/fontawesome/_extras.scss */
-.icon-rotate-270:before {
+/* line 6, ../../extensions/compass_radix/stylesheets/fontawesome/_rotated-flipped.scss */
+.fa-rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
   -webkit-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   -o-transform: rotate(270deg);
   transform: rotate(270deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
-/* line 72, ../../extensions/compass_radix/stylesheets/fontawesome/_extras.scss */
-.icon-flip-horizontal:before {
+/* line 8, ../../extensions/compass_radix/stylesheets/fontawesome/_rotated-flipped.scss */
+.fa-flip-horizontal {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
   -webkit-transform: scale(-1, 1);
   -moz-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
@@ -8200,8 +7961,9 @@ a .icon-spin {
   transform: scale(-1, 1);
 }
 
-/* line 80, ../../extensions/compass_radix/stylesheets/fontawesome/_extras.scss */
-.icon-flip-vertical:before {
+/* line 9, ../../extensions/compass_radix/stylesheets/fontawesome/_rotated-flipped.scss */
+.fa-flip-vertical {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$rotation);
   -webkit-transform: scale(1, -1);
   -moz-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
@@ -8209,1834 +7971,1924 @@ a .icon-spin {
   transform: scale(1, -1);
 }
 
-/* ensure rotation occurs inside anchor tags */
-/* line 91, ../../extensions/compass_radix/stylesheets/fontawesome/_extras.scss */
-a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, a .icon-flip-horizontal:before, a .icon-flip-vertical:before {
+/* line 4, ../../extensions/compass_radix/stylesheets/fontawesome/_stacked.scss */
+.fa-stack {
+  position: relative;
   display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+
+/* line 12, ../../extensions/compass_radix/stylesheets/fontawesome/_stacked.scss */
+.fa-stack-1x, .fa-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 18, ../../extensions/compass_radix/stylesheets/fontawesome/_stacked.scss */
+.fa-stack-1x {
+  line-height: inherit;
+}
+
+/* line 19, ../../extensions/compass_radix/stylesheets/fontawesome/_stacked.scss */
+.fa-stack-2x {
+  font-size: 2em;
+}
+
+/* line 20, ../../extensions/compass_radix/stylesheets/fontawesome/_stacked.scss */
+.fa-inverse {
+  color: white;
 }
 
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
- * readers do not read off random characters that represent icons */
+   readers do not read off random characters that represent icons */
 /* line 4, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-glass:before {
+.fa-glass:before {
   content: "\f000";
 }
 
 /* line 5, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-music:before {
+.fa-music:before {
   content: "\f001";
 }
 
 /* line 6, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-search:before {
+.fa-search:before {
   content: "\f002";
 }
 
 /* line 7, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-envelope-alt:before {
+.fa-envelope-o:before {
   content: "\f003";
 }
 
 /* line 8, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-heart:before {
+.fa-heart:before {
   content: "\f004";
 }
 
 /* line 9, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-star:before {
+.fa-star:before {
   content: "\f005";
 }
 
 /* line 10, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-star-empty:before {
+.fa-star-o:before {
   content: "\f006";
 }
 
 /* line 11, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-user:before {
+.fa-user:before {
   content: "\f007";
 }
 
 /* line 12, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-film:before {
+.fa-film:before {
   content: "\f008";
 }
 
 /* line 13, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-th-large:before {
+.fa-th-large:before {
   content: "\f009";
 }
 
 /* line 14, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-th:before {
+.fa-th:before {
   content: "\f00a";
 }
 
 /* line 15, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-th-list:before {
+.fa-th-list:before {
   content: "\f00b";
 }
 
 /* line 16, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-ok:before {
+.fa-check:before {
   content: "\f00c";
 }
 
 /* line 17, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-remove:before {
+.fa-times:before {
   content: "\f00d";
 }
 
 /* line 18, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-zoom-in:before {
+.fa-search-plus:before {
   content: "\f00e";
 }
 
 /* line 19, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-zoom-out:before {
+.fa-search-minus:before {
   content: "\f010";
 }
 
-/* line 21, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-power-off:before,
-.icon-off:before {
+/* line 20, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-power-off:before {
   content: "\f011";
 }
 
-/* line 22, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-signal:before {
+/* line 21, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-signal:before {
   content: "\f012";
 }
 
-/* line 24, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-gear:before,
-.icon-cog:before {
+/* line 23, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-gear:before,
+.fa-cog:before {
   content: "\f013";
 }
 
-/* line 25, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-trash:before {
+/* line 24, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-trash-o:before {
   content: "\f014";
 }
 
-/* line 26, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-home:before {
+/* line 25, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-home:before {
   content: "\f015";
 }
 
-/* line 27, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-file-alt:before {
+/* line 26, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-file-o:before {
   content: "\f016";
 }
 
-/* line 28, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-time:before {
+/* line 27, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-clock-o:before {
   content: "\f017";
 }
 
-/* line 29, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-road:before {
+/* line 28, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-road:before {
   content: "\f018";
 }
 
-/* line 30, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-download-alt:before {
+/* line 29, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-download:before {
   content: "\f019";
 }
 
-/* line 31, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-download:before {
+/* line 30, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-arrow-circle-o-down:before {
   content: "\f01a";
 }
 
-/* line 32, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-upload:before {
+/* line 31, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-arrow-circle-o-up:before {
   content: "\f01b";
 }
 
-/* line 33, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-inbox:before {
+/* line 32, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-inbox:before {
   content: "\f01c";
 }
 
-/* line 34, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-play-circle:before {
+/* line 33, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-play-circle-o:before {
   content: "\f01d";
 }
 
-/* line 36, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-rotate-right:before,
-.icon-repeat:before {
+/* line 35, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-rotate-right:before,
+.fa-repeat:before {
   content: "\f01e";
 }
 
-/* line 37, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-refresh:before {
+/* line 36, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-refresh:before {
   content: "\f021";
 }
 
-/* line 38, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-list-alt:before {
+/* line 37, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-list-alt:before {
   content: "\f022";
 }
 
-/* line 39, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-lock:before {
+/* line 38, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-lock:before {
   content: "\f023";
 }
 
-/* line 40, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-flag:before {
+/* line 39, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-flag:before {
   content: "\f024";
 }
 
-/* line 41, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-headphones:before {
+/* line 40, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-headphones:before {
   content: "\f025";
 }
 
-/* line 42, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-volume-off:before {
+/* line 41, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-volume-off:before {
   content: "\f026";
 }
 
-/* line 43, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-volume-down:before {
+/* line 42, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-volume-down:before {
   content: "\f027";
 }
 
-/* line 44, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-volume-up:before {
+/* line 43, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-volume-up:before {
   content: "\f028";
 }
 
-/* line 45, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-qrcode:before {
+/* line 44, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-qrcode:before {
   content: "\f029";
 }
 
-/* line 46, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-barcode:before {
+/* line 45, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-barcode:before {
   content: "\f02a";
 }
 
-/* line 47, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-tag:before {
+/* line 46, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-tag:before {
   content: "\f02b";
 }
 
-/* line 48, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-tags:before {
+/* line 47, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-tags:before {
   content: "\f02c";
 }
 
-/* line 49, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-book:before {
+/* line 48, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-book:before {
   content: "\f02d";
 }
 
-/* line 50, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-bookmark:before {
+/* line 49, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-bookmark:before {
   content: "\f02e";
 }
 
-/* line 51, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-print:before {
+/* line 50, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-print:before {
   content: "\f02f";
 }
 
-/* line 52, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-camera:before {
+/* line 51, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-camera:before {
   content: "\f030";
 }
 
-/* line 53, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-font:before {
+/* line 52, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-font:before {
   content: "\f031";
 }
 
-/* line 54, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-bold:before {
+/* line 53, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-bold:before {
   content: "\f032";
 }
 
-/* line 55, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-italic:before {
+/* line 54, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-italic:before {
   content: "\f033";
 }
 
-/* line 56, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-text-height:before {
+/* line 55, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-text-height:before {
   content: "\f034";
 }
 
-/* line 57, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-text-width:before {
+/* line 56, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-text-width:before {
   content: "\f035";
 }
 
-/* line 58, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-align-left:before {
+/* line 57, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-align-left:before {
   content: "\f036";
 }
 
-/* line 59, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-align-center:before {
+/* line 58, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-align-center:before {
   content: "\f037";
 }
 
-/* line 60, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-align-right:before {
+/* line 59, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-align-right:before {
   content: "\f038";
 }
 
-/* line 61, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-align-justify:before {
+/* line 60, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-align-justify:before {
   content: "\f039";
 }
 
-/* line 62, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-list:before {
+/* line 61, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-list:before {
   content: "\f03a";
 }
 
 /* line 63, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-indent-left:before {
+.fa-dedent:before,
+.fa-outdent:before {
   content: "\f03b";
 }
 
 /* line 64, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-indent-right:before {
+.fa-indent:before {
   content: "\f03c";
 }
 
 /* line 65, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-facetime-video:before {
+.fa-video-camera:before {
   content: "\f03d";
 }
 
 /* line 66, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-picture:before {
+.fa-picture-o:before {
   content: "\f03e";
 }
 
 /* line 67, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-pencil:before {
+.fa-pencil:before {
   content: "\f040";
 }
 
 /* line 68, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-map-marker:before {
+.fa-map-marker:before {
   content: "\f041";
 }
 
 /* line 69, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-adjust:before {
+.fa-adjust:before {
   content: "\f042";
 }
 
 /* line 70, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-tint:before {
+.fa-tint:before {
   content: "\f043";
 }
 
-/* line 71, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-edit:before {
+/* line 72, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-edit:before,
+.fa-pencil-square-o:before {
   content: "\f044";
 }
 
-/* line 72, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-share:before {
+/* line 73, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-share-square-o:before {
   content: "\f045";
 }
 
-/* line 73, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-check:before {
+/* line 74, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-check-square-o:before {
   content: "\f046";
 }
 
-/* line 74, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-move:before {
+/* line 75, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-arrows:before {
   content: "\f047";
 }
 
-/* line 75, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-step-backward:before {
+/* line 76, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-step-backward:before {
   content: "\f048";
 }
 
-/* line 76, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-fast-backward:before {
+/* line 77, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-fast-backward:before {
   content: "\f049";
 }
 
-/* line 77, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-backward:before {
+/* line 78, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-backward:before {
   content: "\f04a";
 }
 
-/* line 78, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-play:before {
+/* line 79, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-play:before {
   content: "\f04b";
 }
 
-/* line 79, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-pause:before {
+/* line 80, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-pause:before {
   content: "\f04c";
 }
 
-/* line 80, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-stop:before {
+/* line 81, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-stop:before {
   content: "\f04d";
 }
 
-/* line 81, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-forward:before {
+/* line 82, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-forward:before {
   content: "\f04e";
 }
 
-/* line 82, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-fast-forward:before {
+/* line 83, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-fast-forward:before {
   content: "\f050";
 }
 
-/* line 83, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-step-forward:before {
+/* line 84, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-step-forward:before {
   content: "\f051";
 }
 
-/* line 84, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-eject:before {
+/* line 85, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-eject:before {
   content: "\f052";
 }
 
-/* line 85, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-chevron-left:before {
+/* line 86, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-chevron-left:before {
   content: "\f053";
 }
 
-/* line 86, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-chevron-right:before {
+/* line 87, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-chevron-right:before {
   content: "\f054";
 }
 
-/* line 87, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-plus-sign:before {
+/* line 88, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-plus-circle:before {
   content: "\f055";
 }
 
-/* line 88, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-minus-sign:before {
+/* line 89, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-minus-circle:before {
   content: "\f056";
 }
 
-/* line 89, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-remove-sign:before {
+/* line 90, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-times-circle:before {
   content: "\f057";
 }
 
-/* line 90, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-ok-sign:before {
+/* line 91, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-check-circle:before {
   content: "\f058";
 }
 
-/* line 91, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-question-sign:before {
+/* line 92, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-question-circle:before {
   content: "\f059";
 }
 
-/* line 92, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-info-sign:before {
+/* line 93, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-info-circle:before {
   content: "\f05a";
 }
 
-/* line 93, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-screenshot:before {
+/* line 94, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-crosshairs:before {
   content: "\f05b";
 }
 
-/* line 94, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-remove-circle:before {
+/* line 95, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-times-circle-o:before {
   content: "\f05c";
 }
 
-/* line 95, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-ok-circle:before {
+/* line 96, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-check-circle-o:before {
   content: "\f05d";
 }
 
-/* line 96, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-ban-circle:before {
+/* line 97, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-ban:before {
   content: "\f05e";
 }
 
-/* line 97, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-arrow-left:before {
+/* line 98, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-arrow-left:before {
   content: "\f060";
 }
 
-/* line 98, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-arrow-right:before {
+/* line 99, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-arrow-right:before {
   content: "\f061";
 }
 
-/* line 99, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-arrow-up:before {
+/* line 100, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-arrow-up:before {
   content: "\f062";
 }
 
-/* line 100, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-arrow-down:before {
+/* line 101, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-arrow-down:before {
   content: "\f063";
 }
 
-/* line 102, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-mail-forward:before,
-.icon-share-alt:before {
+/* line 103, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-mail-forward:before,
+.fa-share:before {
   content: "\f064";
 }
 
-/* line 103, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-resize-full:before {
+/* line 104, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-expand:before {
   content: "\f065";
 }
 
-/* line 104, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-resize-small:before {
+/* line 105, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-compress:before {
   content: "\f066";
 }
 
-/* line 105, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-plus:before {
+/* line 106, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-plus:before {
   content: "\f067";
 }
 
-/* line 106, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-minus:before {
+/* line 107, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-minus:before {
   content: "\f068";
 }
 
-/* line 107, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-asterisk:before {
+/* line 108, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-asterisk:before {
   content: "\f069";
 }
 
-/* line 108, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-exclamation-sign:before {
+/* line 109, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-exclamation-circle:before {
   content: "\f06a";
 }
 
-/* line 109, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-gift:before {
+/* line 110, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-gift:before {
   content: "\f06b";
 }
 
-/* line 110, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-leaf:before {
+/* line 111, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-leaf:before {
   content: "\f06c";
 }
 
-/* line 111, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-fire:before {
+/* line 112, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-fire:before {
   content: "\f06d";
 }
 
-/* line 112, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-eye-open:before {
+/* line 113, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-eye:before {
   content: "\f06e";
 }
 
-/* line 113, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-eye-close:before {
+/* line 114, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-eye-slash:before {
   content: "\f070";
 }
 
-/* line 114, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-warning-sign:before {
+/* line 116, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-warning:before,
+.fa-exclamation-triangle:before {
   content: "\f071";
 }
 
-/* line 115, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-plane:before {
+/* line 117, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-plane:before {
   content: "\f072";
 }
 
-/* line 116, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-calendar:before {
+/* line 118, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-calendar:before {
   content: "\f073";
 }
 
-/* line 117, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-random:before {
+/* line 119, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-random:before {
   content: "\f074";
 }
 
-/* line 118, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-comment:before {
+/* line 120, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-comment:before {
   content: "\f075";
 }
 
-/* line 119, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-magnet:before {
+/* line 121, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-magnet:before {
   content: "\f076";
 }
 
-/* line 120, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-chevron-up:before {
+/* line 122, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-chevron-up:before {
   content: "\f077";
 }
 
-/* line 121, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-chevron-down:before {
+/* line 123, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-chevron-down:before {
   content: "\f078";
 }
 
-/* line 122, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-retweet:before {
+/* line 124, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-retweet:before {
   content: "\f079";
 }
 
-/* line 123, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-shopping-cart:before {
+/* line 125, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-shopping-cart:before {
   content: "\f07a";
 }
 
-/* line 124, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-folder-close:before {
+/* line 126, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-folder:before {
   content: "\f07b";
 }
 
-/* line 125, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-folder-open:before {
+/* line 127, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-folder-open:before {
   content: "\f07c";
 }
 
-/* line 126, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-resize-vertical:before {
+/* line 128, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-arrows-v:before {
   content: "\f07d";
 }
 
-/* line 127, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-resize-horizontal:before {
+/* line 129, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-arrows-h:before {
   content: "\f07e";
 }
 
-/* line 128, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-bar-chart:before {
+/* line 130, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-bar-chart-o:before {
   content: "\f080";
 }
 
-/* line 129, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-twitter-sign:before {
+/* line 131, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-twitter-square:before {
   content: "\f081";
 }
 
-/* line 130, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-facebook-sign:before {
+/* line 132, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-facebook-square:before {
   content: "\f082";
 }
 
-/* line 131, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-camera-retro:before {
+/* line 133, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-camera-retro:before {
   content: "\f083";
 }
 
-/* line 132, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-key:before {
+/* line 134, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-key:before {
   content: "\f084";
 }
 
-/* line 134, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-gears:before,
-.icon-cogs:before {
+/* line 136, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-gears:before,
+.fa-cogs:before {
   content: "\f085";
 }
 
-/* line 135, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-comments:before {
+/* line 137, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-comments:before {
   content: "\f086";
 }
 
-/* line 136, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-thumbs-up-alt:before {
+/* line 138, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-thumbs-o-up:before {
   content: "\f087";
 }
 
-/* line 137, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-thumbs-down-alt:before {
+/* line 139, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-thumbs-o-down:before {
   content: "\f088";
 }
 
-/* line 138, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-star-half:before {
+/* line 140, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-star-half:before {
   content: "\f089";
 }
 
-/* line 139, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-heart-empty:before {
+/* line 141, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-heart-o:before {
   content: "\f08a";
 }
 
-/* line 140, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-signout:before {
+/* line 142, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-sign-out:before {
   content: "\f08b";
 }
 
-/* line 141, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-linkedin-sign:before {
+/* line 143, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-linkedin-square:before {
   content: "\f08c";
 }
 
-/* line 142, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-pushpin:before {
+/* line 144, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-thumb-tack:before {
   content: "\f08d";
 }
 
-/* line 143, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-external-link:before {
+/* line 145, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-external-link:before {
   content: "\f08e";
 }
 
-/* line 144, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-signin:before {
+/* line 146, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-sign-in:before {
   content: "\f090";
 }
 
-/* line 145, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-trophy:before {
+/* line 147, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-trophy:before {
   content: "\f091";
 }
 
-/* line 146, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-github-sign:before {
+/* line 148, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-github-square:before {
   content: "\f092";
 }
 
-/* line 147, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-upload-alt:before {
+/* line 149, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-upload:before {
   content: "\f093";
 }
 
-/* line 148, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-lemon:before {
+/* line 150, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-lemon-o:before {
   content: "\f094";
 }
 
-/* line 149, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-phone:before {
+/* line 151, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-phone:before {
   content: "\f095";
 }
 
-/* line 151, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-unchecked:before,
-.icon-check-empty:before {
+/* line 152, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-square-o:before {
   content: "\f096";
 }
 
-/* line 152, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-bookmark-empty:before {
+/* line 153, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-bookmark-o:before {
   content: "\f097";
 }
 
-/* line 153, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-phone-sign:before {
+/* line 154, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-phone-square:before {
   content: "\f098";
 }
 
-/* line 154, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-twitter:before {
+/* line 155, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-twitter:before {
   content: "\f099";
 }
 
-/* line 155, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-facebook:before {
+/* line 156, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-facebook:before {
   content: "\f09a";
 }
 
-/* line 156, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-github:before {
+/* line 157, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-github:before {
   content: "\f09b";
 }
 
-/* line 157, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-unlock:before {
+/* line 158, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-unlock:before {
   content: "\f09c";
 }
 
-/* line 158, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-credit-card:before {
+/* line 159, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-credit-card:before {
   content: "\f09d";
 }
 
-/* line 159, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-rss:before {
+/* line 160, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-rss:before {
   content: "\f09e";
 }
 
-/* line 160, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-hdd:before {
+/* line 161, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-hdd-o:before {
   content: "\f0a0";
 }
 
-/* line 161, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-bullhorn:before {
+/* line 162, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-bullhorn:before {
   content: "\f0a1";
 }
 
-/* line 162, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-bell:before {
-  content: "\f0a2";
-}
-
 /* line 163, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-certificate:before {
-  content: "\f0a3";
-}
-
-/* line 164, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-hand-right:before {
-  content: "\f0a4";
-}
-
-/* line 165, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-hand-left:before {
-  content: "\f0a5";
-}
-
-/* line 166, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-hand-up:before {
-  content: "\f0a6";
-}
-
-/* line 167, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-hand-down:before {
-  content: "\f0a7";
-}
-
-/* line 168, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-circle-arrow-left:before {
-  content: "\f0a8";
-}
-
-/* line 169, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-circle-arrow-right:before {
-  content: "\f0a9";
-}
-
-/* line 170, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-circle-arrow-up:before {
-  content: "\f0aa";
-}
-
-/* line 171, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-circle-arrow-down:before {
-  content: "\f0ab";
-}
-
-/* line 172, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-globe:before {
-  content: "\f0ac";
-}
-
-/* line 173, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-wrench:before {
-  content: "\f0ad";
-}
-
-/* line 174, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-tasks:before {
-  content: "\f0ae";
-}
-
-/* line 175, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-filter:before {
-  content: "\f0b0";
-}
-
-/* line 176, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-briefcase:before {
-  content: "\f0b1";
-}
-
-/* line 177, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-fullscreen:before {
-  content: "\f0b2";
-}
-
-/* line 178, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-group:before {
-  content: "\f0c0";
-}
-
-/* line 179, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-link:before {
-  content: "\f0c1";
-}
-
-/* line 180, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-cloud:before {
-  content: "\f0c2";
-}
-
-/* line 181, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-beaker:before {
-  content: "\f0c3";
-}
-
-/* line 182, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-cut:before {
-  content: "\f0c4";
-}
-
-/* line 183, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-copy:before {
-  content: "\f0c5";
-}
-
-/* line 185, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-paperclip:before,
-.icon-paper-clip:before {
-  content: "\f0c6";
-}
-
-/* line 186, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-save:before {
-  content: "\f0c7";
-}
-
-/* line 187, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-sign-blank:before {
-  content: "\f0c8";
-}
-
-/* line 188, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-reorder:before {
-  content: "\f0c9";
-}
-
-/* line 189, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-list-ul:before {
-  content: "\f0ca";
-}
-
-/* line 190, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-list-ol:before {
-  content: "\f0cb";
-}
-
-/* line 191, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-strikethrough:before {
-  content: "\f0cc";
-}
-
-/* line 192, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-underline:before {
-  content: "\f0cd";
-}
-
-/* line 193, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-table:before {
-  content: "\f0ce";
-}
-
-/* line 194, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-magic:before {
-  content: "\f0d0";
-}
-
-/* line 195, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-truck:before {
-  content: "\f0d1";
-}
-
-/* line 196, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-pinterest:before {
-  content: "\f0d2";
-}
-
-/* line 197, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-pinterest-sign:before {
-  content: "\f0d3";
-}
-
-/* line 198, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-google-plus-sign:before {
-  content: "\f0d4";
-}
-
-/* line 199, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-google-plus:before {
-  content: "\f0d5";
-}
-
-/* line 200, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-money:before {
-  content: "\f0d6";
-}
-
-/* line 201, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-caret-down:before {
-  content: "\f0d7";
-}
-
-/* line 202, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-caret-up:before {
-  content: "\f0d8";
-}
-
-/* line 203, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-caret-left:before {
-  content: "\f0d9";
-}
-
-/* line 204, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-caret-right:before {
-  content: "\f0da";
-}
-
-/* line 205, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-columns:before {
-  content: "\f0db";
-}
-
-/* line 206, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-sort:before {
-  content: "\f0dc";
-}
-
-/* line 207, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-sort-down:before {
-  content: "\f0dd";
-}
-
-/* line 208, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-sort-up:before {
-  content: "\f0de";
-}
-
-/* line 209, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-envelope:before {
-  content: "\f0e0";
-}
-
-/* line 210, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-linkedin:before {
-  content: "\f0e1";
-}
-
-/* line 212, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-rotate-left:before,
-.icon-undo:before {
-  content: "\f0e2";
-}
-
-/* line 213, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-legal:before {
-  content: "\f0e3";
-}
-
-/* line 214, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-dashboard:before {
-  content: "\f0e4";
-}
-
-/* line 215, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-comment-alt:before {
-  content: "\f0e5";
-}
-
-/* line 216, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-comments-alt:before {
-  content: "\f0e6";
-}
-
-/* line 217, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-bolt:before {
-  content: "\f0e7";
-}
-
-/* line 218, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-sitemap:before {
-  content: "\f0e8";
-}
-
-/* line 219, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-umbrella:before {
-  content: "\f0e9";
-}
-
-/* line 220, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-paste:before {
-  content: "\f0ea";
-}
-
-/* line 221, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-lightbulb:before {
-  content: "\f0eb";
-}
-
-/* line 222, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-exchange:before {
-  content: "\f0ec";
-}
-
-/* line 223, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-cloud-download:before {
-  content: "\f0ed";
-}
-
-/* line 224, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-cloud-upload:before {
-  content: "\f0ee";
-}
-
-/* line 225, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-user-md:before {
-  content: "\f0f0";
-}
-
-/* line 226, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-stethoscope:before {
-  content: "\f0f1";
-}
-
-/* line 227, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-suitcase:before {
-  content: "\f0f2";
-}
-
-/* line 228, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-bell-alt:before {
+.fa-bell:before {
   content: "\f0f3";
 }
 
+/* line 164, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-certificate:before {
+  content: "\f0a3";
+}
+
+/* line 165, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-hand-o-right:before {
+  content: "\f0a4";
+}
+
+/* line 166, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-hand-o-left:before {
+  content: "\f0a5";
+}
+
+/* line 167, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-hand-o-up:before {
+  content: "\f0a6";
+}
+
+/* line 168, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-hand-o-down:before {
+  content: "\f0a7";
+}
+
+/* line 169, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-arrow-circle-left:before {
+  content: "\f0a8";
+}
+
+/* line 170, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-arrow-circle-right:before {
+  content: "\f0a9";
+}
+
+/* line 171, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-arrow-circle-up:before {
+  content: "\f0aa";
+}
+
+/* line 172, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-arrow-circle-down:before {
+  content: "\f0ab";
+}
+
+/* line 173, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-globe:before {
+  content: "\f0ac";
+}
+
+/* line 174, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-wrench:before {
+  content: "\f0ad";
+}
+
+/* line 175, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-tasks:before {
+  content: "\f0ae";
+}
+
+/* line 176, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-filter:before {
+  content: "\f0b0";
+}
+
+/* line 177, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-briefcase:before {
+  content: "\f0b1";
+}
+
+/* line 178, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-arrows-alt:before {
+  content: "\f0b2";
+}
+
+/* line 180, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-group:before,
+.fa-users:before {
+  content: "\f0c0";
+}
+
+/* line 182, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-chain:before,
+.fa-link:before {
+  content: "\f0c1";
+}
+
+/* line 183, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-cloud:before {
+  content: "\f0c2";
+}
+
+/* line 184, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-flask:before {
+  content: "\f0c3";
+}
+
+/* line 186, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-cut:before,
+.fa-scissors:before {
+  content: "\f0c4";
+}
+
+/* line 188, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-copy:before,
+.fa-files-o:before {
+  content: "\f0c5";
+}
+
+/* line 189, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-paperclip:before {
+  content: "\f0c6";
+}
+
+/* line 191, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-save:before,
+.fa-floppy-o:before {
+  content: "\f0c7";
+}
+
+/* line 192, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-square:before {
+  content: "\f0c8";
+}
+
+/* line 193, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-bars:before {
+  content: "\f0c9";
+}
+
+/* line 194, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-list-ul:before {
+  content: "\f0ca";
+}
+
+/* line 195, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-list-ol:before {
+  content: "\f0cb";
+}
+
+/* line 196, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-strikethrough:before {
+  content: "\f0cc";
+}
+
+/* line 197, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-underline:before {
+  content: "\f0cd";
+}
+
+/* line 198, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-table:before {
+  content: "\f0ce";
+}
+
+/* line 199, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-magic:before {
+  content: "\f0d0";
+}
+
+/* line 200, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-truck:before {
+  content: "\f0d1";
+}
+
+/* line 201, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-pinterest:before {
+  content: "\f0d2";
+}
+
+/* line 202, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-pinterest-square:before {
+  content: "\f0d3";
+}
+
+/* line 203, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-google-plus-square:before {
+  content: "\f0d4";
+}
+
+/* line 204, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-google-plus:before {
+  content: "\f0d5";
+}
+
+/* line 205, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-money:before {
+  content: "\f0d6";
+}
+
+/* line 206, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-caret-down:before {
+  content: "\f0d7";
+}
+
+/* line 207, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-caret-up:before {
+  content: "\f0d8";
+}
+
+/* line 208, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-caret-left:before {
+  content: "\f0d9";
+}
+
+/* line 209, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-caret-right:before {
+  content: "\f0da";
+}
+
+/* line 210, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-columns:before {
+  content: "\f0db";
+}
+
+/* line 212, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-unsorted:before,
+.fa-sort:before {
+  content: "\f0dc";
+}
+
+/* line 214, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-sort-down:before,
+.fa-sort-asc:before {
+  content: "\f0dd";
+}
+
+/* line 216, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-sort-up:before,
+.fa-sort-desc:before {
+  content: "\f0de";
+}
+
+/* line 217, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-envelope:before {
+  content: "\f0e0";
+}
+
+/* line 218, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-linkedin:before {
+  content: "\f0e1";
+}
+
+/* line 220, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-rotate-left:before,
+.fa-undo:before {
+  content: "\f0e2";
+}
+
+/* line 222, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-legal:before,
+.fa-gavel:before {
+  content: "\f0e3";
+}
+
+/* line 224, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-dashboard:before,
+.fa-tachometer:before {
+  content: "\f0e4";
+}
+
+/* line 225, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-comment-o:before {
+  content: "\f0e5";
+}
+
+/* line 226, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-comments-o:before {
+  content: "\f0e6";
+}
+
+/* line 228, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-flash:before,
+.fa-bolt:before {
+  content: "\f0e7";
+}
+
 /* line 229, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-coffee:before {
-  content: "\f0f4";
+.fa-sitemap:before {
+  content: "\f0e8";
 }
 
 /* line 230, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-food:before {
-  content: "\f0f5";
-}
-
-/* line 231, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-file-text-alt:before {
-  content: "\f0f6";
+.fa-umbrella:before {
+  content: "\f0e9";
 }
 
 /* line 232, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-building:before {
-  content: "\f0f7";
+.fa-paste:before,
+.fa-clipboard:before {
+  content: "\f0ea";
 }
 
 /* line 233, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-hospital:before {
-  content: "\f0f8";
+.fa-lightbulb-o:before {
+  content: "\f0eb";
 }
 
 /* line 234, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-ambulance:before {
-  content: "\f0f9";
+.fa-exchange:before {
+  content: "\f0ec";
 }
 
 /* line 235, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-medkit:before {
-  content: "\f0fa";
+.fa-cloud-download:before {
+  content: "\f0ed";
 }
 
 /* line 236, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-fighter-jet:before {
-  content: "\f0fb";
+.fa-cloud-upload:before {
+  content: "\f0ee";
 }
 
 /* line 237, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-beer:before {
-  content: "\f0fc";
+.fa-user-md:before {
+  content: "\f0f0";
 }
 
 /* line 238, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-h-sign:before {
-  content: "\f0fd";
+.fa-stethoscope:before {
+  content: "\f0f1";
 }
 
 /* line 239, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-plus-sign-alt:before {
-  content: "\f0fe";
+.fa-suitcase:before {
+  content: "\f0f2";
 }
 
 /* line 240, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-double-angle-left:before {
-  content: "\f100";
+.fa-bell-o:before {
+  content: "\f0a2";
 }
 
 /* line 241, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-double-angle-right:before {
-  content: "\f101";
+.fa-coffee:before {
+  content: "\f0f4";
 }
 
 /* line 242, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-double-angle-up:before {
-  content: "\f102";
+.fa-cutlery:before {
+  content: "\f0f5";
 }
 
 /* line 243, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-double-angle-down:before {
-  content: "\f103";
+.fa-file-text-o:before {
+  content: "\f0f6";
 }
 
 /* line 244, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-angle-left:before {
-  content: "\f104";
+.fa-building-o:before {
+  content: "\f0f7";
 }
 
 /* line 245, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-angle-right:before {
-  content: "\f105";
+.fa-hospital-o:before {
+  content: "\f0f8";
 }
 
 /* line 246, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-angle-up:before {
-  content: "\f106";
+.fa-ambulance:before {
+  content: "\f0f9";
 }
 
 /* line 247, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-angle-down:before {
-  content: "\f107";
+.fa-medkit:before {
+  content: "\f0fa";
 }
 
 /* line 248, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-desktop:before {
-  content: "\f108";
+.fa-fighter-jet:before {
+  content: "\f0fb";
 }
 
 /* line 249, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-laptop:before {
-  content: "\f109";
+.fa-beer:before {
+  content: "\f0fc";
 }
 
 /* line 250, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-tablet:before {
-  content: "\f10a";
+.fa-h-square:before {
+  content: "\f0fd";
 }
 
 /* line 251, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-mobile-phone:before {
-  content: "\f10b";
+.fa-plus-square:before {
+  content: "\f0fe";
 }
 
 /* line 252, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-circle-blank:before {
-  content: "\f10c";
+.fa-angle-double-left:before {
+  content: "\f100";
 }
 
 /* line 253, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-quote-left:before {
-  content: "\f10d";
+.fa-angle-double-right:before {
+  content: "\f101";
 }
 
 /* line 254, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-quote-right:before {
-  content: "\f10e";
+.fa-angle-double-up:before {
+  content: "\f102";
 }
 
 /* line 255, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-spinner:before {
-  content: "\f110";
+.fa-angle-double-down:before {
+  content: "\f103";
 }
 
 /* line 256, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-circle:before {
-  content: "\f111";
+.fa-angle-left:before {
+  content: "\f104";
+}
+
+/* line 257, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-angle-right:before {
+  content: "\f105";
 }
 
 /* line 258, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-mail-reply:before,
-.icon-reply:before {
-  content: "\f112";
+.fa-angle-up:before {
+  content: "\f106";
 }
 
 /* line 259, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-github-alt:before {
-  content: "\f113";
+.fa-angle-down:before {
+  content: "\f107";
 }
 
 /* line 260, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-folder-close-alt:before {
-  content: "\f114";
+.fa-desktop:before {
+  content: "\f108";
 }
 
 /* line 261, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-folder-open-alt:before {
-  content: "\f115";
+.fa-laptop:before {
+  content: "\f109";
 }
 
 /* line 262, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-expand-alt:before {
-  content: "\f116";
-}
-
-/* line 263, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-collapse-alt:before {
-  content: "\f117";
+.fa-tablet:before {
+  content: "\f10a";
 }
 
 /* line 264, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-smile:before {
-  content: "\f118";
+.fa-mobile-phone:before,
+.fa-mobile:before {
+  content: "\f10b";
 }
 
 /* line 265, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-frown:before {
-  content: "\f119";
+.fa-circle-o:before {
+  content: "\f10c";
 }
 
 /* line 266, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-meh:before {
-  content: "\f11a";
+.fa-quote-left:before {
+  content: "\f10d";
 }
 
 /* line 267, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-gamepad:before {
-  content: "\f11b";
+.fa-quote-right:before {
+  content: "\f10e";
 }
 
 /* line 268, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-keyboard:before {
-  content: "\f11c";
+.fa-spinner:before {
+  content: "\f110";
 }
 
 /* line 269, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-flag-alt:before {
-  content: "\f11d";
-}
-
-/* line 270, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-flag-checkered:before {
-  content: "\f11e";
+.fa-circle:before {
+  content: "\f111";
 }
 
 /* line 271, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-terminal:before {
-  content: "\f120";
+.fa-mail-reply:before,
+.fa-reply:before {
+  content: "\f112";
 }
 
 /* line 272, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-code:before {
-  content: "\f121";
+.fa-github-alt:before {
+  content: "\f113";
 }
 
 /* line 273, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-reply-all:before {
-  content: "\f122";
+.fa-folder-o:before {
+  content: "\f114";
 }
 
 /* line 274, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-mail-reply-all:before {
-  content: "\f122";
+.fa-folder-open-o:before {
+  content: "\f115";
+}
+
+/* line 275, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-smile-o:before {
+  content: "\f118";
 }
 
 /* line 276, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-star-half-full:before,
-.icon-star-half-empty:before {
-  content: "\f123";
+.fa-frown-o:before {
+  content: "\f119";
 }
 
 /* line 277, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-location-arrow:before {
-  content: "\f124";
+.fa-meh-o:before {
+  content: "\f11a";
 }
 
 /* line 278, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-crop:before {
-  content: "\f125";
+.fa-gamepad:before {
+  content: "\f11b";
 }
 
 /* line 279, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-code-fork:before {
-  content: "\f126";
+.fa-keyboard-o:before {
+  content: "\f11c";
 }
 
 /* line 280, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-unlink:before {
-  content: "\f127";
+.fa-flag-o:before {
+  content: "\f11d";
 }
 
 /* line 281, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-question:before {
-  content: "\f128";
+.fa-flag-checkered:before {
+  content: "\f11e";
 }
 
 /* line 282, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-info:before {
-  content: "\f129";
+.fa-terminal:before {
+  content: "\f120";
 }
 
 /* line 283, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-exclamation:before {
-  content: "\f12a";
+.fa-code:before {
+  content: "\f121";
 }
 
 /* line 284, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-superscript:before {
-  content: "\f12b";
+.fa-reply-all:before {
+  content: "\f122";
 }
 
 /* line 285, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-subscript:before {
-  content: "\f12c";
-}
-
-/* line 286, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-eraser:before {
-  content: "\f12d";
-}
-
-/* line 287, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-puzzle-piece:before {
-  content: "\f12e";
+.fa-mail-reply-all:before {
+  content: "\f122";
 }
 
 /* line 288, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-microphone:before {
-  content: "\f130";
+.fa-star-half-empty:before,
+.fa-star-half-full:before,
+.fa-star-half-o:before {
+  content: "\f123";
 }
 
 /* line 289, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-microphone-off:before {
-  content: "\f131";
+.fa-location-arrow:before {
+  content: "\f124";
 }
 
 /* line 290, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-shield:before {
-  content: "\f132";
+.fa-crop:before {
+  content: "\f125";
 }
 
 /* line 291, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-calendar-empty:before {
-  content: "\f133";
-}
-
-/* line 292, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-fire-extinguisher:before {
-  content: "\f134";
+.fa-code-fork:before {
+  content: "\f126";
 }
 
 /* line 293, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-rocket:before {
-  content: "\f135";
+.fa-unlink:before,
+.fa-chain-broken:before {
+  content: "\f127";
 }
 
 /* line 294, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-maxcdn:before {
-  content: "\f136";
+.fa-question:before {
+  content: "\f128";
 }
 
 /* line 295, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-chevron-sign-left:before {
-  content: "\f137";
+.fa-info:before {
+  content: "\f129";
 }
 
 /* line 296, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-chevron-sign-right:before {
-  content: "\f138";
+.fa-exclamation:before {
+  content: "\f12a";
 }
 
 /* line 297, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-chevron-sign-up:before {
-  content: "\f139";
+.fa-superscript:before {
+  content: "\f12b";
 }
 
 /* line 298, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-chevron-sign-down:before {
-  content: "\f13a";
+.fa-subscript:before {
+  content: "\f12c";
 }
 
 /* line 299, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-html5:before {
-  content: "\f13b";
+.fa-eraser:before {
+  content: "\f12d";
 }
 
 /* line 300, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-css3:before {
-  content: "\f13c";
+.fa-puzzle-piece:before {
+  content: "\f12e";
 }
 
 /* line 301, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-anchor:before {
-  content: "\f13d";
+.fa-microphone:before {
+  content: "\f130";
 }
 
 /* line 302, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-unlock-alt:before {
-  content: "\f13e";
+.fa-microphone-slash:before {
+  content: "\f131";
 }
 
 /* line 303, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-bullseye:before {
-  content: "\f140";
+.fa-shield:before {
+  content: "\f132";
 }
 
 /* line 304, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-ellipsis-horizontal:before {
-  content: "\f141";
+.fa-calendar-o:before {
+  content: "\f133";
 }
 
 /* line 305, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-ellipsis-vertical:before {
-  content: "\f142";
+.fa-fire-extinguisher:before {
+  content: "\f134";
 }
 
 /* line 306, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-rss-sign:before {
-  content: "\f143";
+.fa-rocket:before {
+  content: "\f135";
 }
 
 /* line 307, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-play-sign:before {
-  content: "\f144";
+.fa-maxcdn:before {
+  content: "\f136";
 }
 
 /* line 308, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-ticket:before {
-  content: "\f145";
+.fa-chevron-circle-left:before {
+  content: "\f137";
 }
 
 /* line 309, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-minus-sign-alt:before {
-  content: "\f146";
+.fa-chevron-circle-right:before {
+  content: "\f138";
 }
 
 /* line 310, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-check-minus:before {
-  content: "\f147";
+.fa-chevron-circle-up:before {
+  content: "\f139";
 }
 
 /* line 311, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-level-up:before {
-  content: "\f148";
+.fa-chevron-circle-down:before {
+  content: "\f13a";
 }
 
 /* line 312, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-level-down:before {
-  content: "\f149";
+.fa-html5:before {
+  content: "\f13b";
 }
 
 /* line 313, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-check-sign:before {
-  content: "\f14a";
+.fa-css3:before {
+  content: "\f13c";
 }
 
 /* line 314, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-edit-sign:before {
-  content: "\f14b";
+.fa-anchor:before {
+  content: "\f13d";
 }
 
 /* line 315, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-external-link-sign:before {
-  content: "\f14c";
+.fa-unlock-alt:before {
+  content: "\f13e";
 }
 
 /* line 316, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-share-sign:before {
-  content: "\f14d";
+.fa-bullseye:before {
+  content: "\f140";
 }
 
 /* line 317, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-compass:before {
-  content: "\f14e";
+.fa-ellipsis-h:before {
+  content: "\f141";
 }
 
 /* line 318, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-collapse:before {
-  content: "\f150";
+.fa-ellipsis-v:before {
+  content: "\f142";
 }
 
 /* line 319, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-collapse-top:before {
-  content: "\f151";
+.fa-rss-square:before {
+  content: "\f143";
 }
 
 /* line 320, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-expand:before {
-  content: "\f152";
+.fa-play-circle:before {
+  content: "\f144";
+}
+
+/* line 321, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-ticket:before {
+  content: "\f145";
 }
 
 /* line 322, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-euro:before,
-.icon-eur:before {
-  content: "\f153";
+.fa-minus-square:before {
+  content: "\f146";
 }
 
 /* line 323, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-gbp:before {
-  content: "\f154";
+.fa-minus-square-o:before {
+  content: "\f147";
+}
+
+/* line 324, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-level-up:before {
+  content: "\f148";
 }
 
 /* line 325, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-dollar:before,
-.icon-usd:before {
-  content: "\f155";
+.fa-level-down:before {
+  content: "\f149";
+}
+
+/* line 326, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-check-square:before {
+  content: "\f14a";
 }
 
 /* line 327, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-rupee:before,
-.icon-inr:before {
-  content: "\f156";
+.fa-pencil-square:before {
+  content: "\f14b";
+}
+
+/* line 328, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-external-link-square:before {
+  content: "\f14c";
 }
 
 /* line 329, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-yen:before,
-.icon-jpy:before {
-  content: "\f157";
+.fa-share-square:before {
+  content: "\f14d";
 }
 
-/* line 331, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-renminbi:before,
-.icon-cny:before {
-  content: "\f158";
+/* line 330, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-compass:before {
+  content: "\f14e";
 }
 
-/* line 333, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-won:before,
-.icon-krw:before {
-  content: "\f159";
+/* line 332, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-toggle-down:before,
+.fa-caret-square-o-down:before {
+  content: "\f150";
 }
 
-/* line 335, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-bitcoin:before,
-.icon-btc:before {
-  content: "\f15a";
+/* line 334, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-toggle-up:before,
+.fa-caret-square-o-up:before {
+  content: "\f151";
 }
 
 /* line 336, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-file:before {
-  content: "\f15b";
-}
-
-/* line 337, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-file-text:before {
-  content: "\f15c";
+.fa-toggle-right:before,
+.fa-caret-square-o-right:before {
+  content: "\f152";
 }
 
 /* line 338, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-sort-by-alphabet:before {
-  content: "\f15d";
+.fa-euro:before,
+.fa-eur:before {
+  content: "\f153";
 }
 
 /* line 339, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-sort-by-alphabet-alt:before {
-  content: "\f15e";
-}
-
-/* line 340, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-sort-by-attributes:before {
-  content: "\f160";
+.fa-gbp:before {
+  content: "\f154";
 }
 
 /* line 341, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-sort-by-attributes-alt:before {
-  content: "\f161";
-}
-
-/* line 342, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-sort-by-order:before {
-  content: "\f162";
+.fa-dollar:before,
+.fa-usd:before {
+  content: "\f155";
 }
 
 /* line 343, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-sort-by-order-alt:before {
-  content: "\f163";
-}
-
-/* line 344, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-thumbs-up:before {
-  content: "\f164";
-}
-
-/* line 345, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-thumbs-down:before {
-  content: "\f165";
-}
-
-/* line 346, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-youtube-sign:before {
-  content: "\f166";
+.fa-rupee:before,
+.fa-inr:before {
+  content: "\f156";
 }
 
 /* line 347, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-youtube:before {
-  content: "\f167";
-}
-
-/* line 348, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-xing:before {
-  content: "\f168";
-}
-
-/* line 349, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-xing-sign:before {
-  content: "\f169";
+.fa-cny:before,
+.fa-rmb:before,
+.fa-yen:before,
+.fa-jpy:before {
+  content: "\f157";
 }
 
 /* line 350, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-youtube-play:before {
-  content: "\f16a";
-}
-
-/* line 351, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-dropbox:before {
-  content: "\f16b";
+.fa-ruble:before,
+.fa-rouble:before,
+.fa-rub:before {
+  content: "\f158";
 }
 
 /* line 352, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-stackexchange:before {
-  content: "\f16c";
-}
-
-/* line 353, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-instagram:before {
-  content: "\f16d";
+.fa-won:before,
+.fa-krw:before {
+  content: "\f159";
 }
 
 /* line 354, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-flickr:before {
-  content: "\f16e";
+.fa-bitcoin:before,
+.fa-btc:before {
+  content: "\f15a";
 }
 
 /* line 355, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-adn:before {
-  content: "\f170";
+.fa-file:before {
+  content: "\f15b";
 }
 
 /* line 356, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-bitbucket:before {
-  content: "\f171";
+.fa-file-text:before {
+  content: "\f15c";
 }
 
 /* line 357, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-bitbucket-sign:before {
-  content: "\f172";
+.fa-sort-alpha-asc:before {
+  content: "\f15d";
 }
 
 /* line 358, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-tumblr:before {
-  content: "\f173";
+.fa-sort-alpha-desc:before {
+  content: "\f15e";
 }
 
 /* line 359, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-tumblr-sign:before {
-  content: "\f174";
+.fa-sort-amount-asc:before {
+  content: "\f160";
 }
 
 /* line 360, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-long-arrow-down:before {
-  content: "\f175";
+.fa-sort-amount-desc:before {
+  content: "\f161";
 }
 
 /* line 361, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-long-arrow-up:before {
-  content: "\f176";
+.fa-sort-numeric-asc:before {
+  content: "\f162";
 }
 
 /* line 362, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-long-arrow-left:before {
-  content: "\f177";
+.fa-sort-numeric-desc:before {
+  content: "\f163";
 }
 
 /* line 363, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-long-arrow-right:before {
-  content: "\f178";
+.fa-thumbs-up:before {
+  content: "\f164";
 }
 
 /* line 364, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-apple:before {
-  content: "\f179";
+.fa-thumbs-down:before {
+  content: "\f165";
 }
 
 /* line 365, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-windows:before {
-  content: "\f17a";
+.fa-youtube-square:before {
+  content: "\f166";
 }
 
 /* line 366, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-android:before {
-  content: "\f17b";
+.fa-youtube:before {
+  content: "\f167";
 }
 
 /* line 367, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-linux:before {
-  content: "\f17c";
+.fa-xing:before {
+  content: "\f168";
 }
 
 /* line 368, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-dribbble:before {
-  content: "\f17d";
+.fa-xing-square:before {
+  content: "\f169";
 }
 
 /* line 369, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-skype:before {
-  content: "\f17e";
+.fa-youtube-play:before {
+  content: "\f16a";
 }
 
 /* line 370, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-foursquare:before {
-  content: "\f180";
+.fa-dropbox:before {
+  content: "\f16b";
 }
 
 /* line 371, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-trello:before {
-  content: "\f181";
+.fa-stack-overflow:before {
+  content: "\f16c";
 }
 
 /* line 372, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-female:before {
-  content: "\f182";
+.fa-instagram:before {
+  content: "\f16d";
 }
 
 /* line 373, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-male:before {
-  content: "\f183";
+.fa-flickr:before {
+  content: "\f16e";
 }
 
 /* line 374, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-gittip:before {
-  content: "\f184";
+.fa-adn:before {
+  content: "\f170";
 }
 
 /* line 375, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-sun:before {
-  content: "\f185";
+.fa-bitbucket:before {
+  content: "\f171";
 }
 
 /* line 376, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-moon:before {
-  content: "\f186";
+.fa-bitbucket-square:before {
+  content: "\f172";
 }
 
 /* line 377, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-archive:before {
-  content: "\f187";
+.fa-tumblr:before {
+  content: "\f173";
 }
 
 /* line 378, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-bug:before {
-  content: "\f188";
+.fa-tumblr-square:before {
+  content: "\f174";
 }
 
 /* line 379, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-vk:before {
-  content: "\f189";
+.fa-long-arrow-down:before {
+  content: "\f175";
 }
 
 /* line 380, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-weibo:before {
-  content: "\f18a";
+.fa-long-arrow-up:before {
+  content: "\f176";
 }
 
 /* line 381, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
-.icon-renren:before {
+.fa-long-arrow-left:before {
+  content: "\f177";
+}
+
+/* line 382, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-long-arrow-right:before {
+  content: "\f178";
+}
+
+/* line 383, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-apple:before {
+  content: "\f179";
+}
+
+/* line 384, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-windows:before {
+  content: "\f17a";
+}
+
+/* line 385, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-android:before {
+  content: "\f17b";
+}
+
+/* line 386, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-linux:before {
+  content: "\f17c";
+}
+
+/* line 387, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-dribbble:before {
+  content: "\f17d";
+}
+
+/* line 388, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-skype:before {
+  content: "\f17e";
+}
+
+/* line 389, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-foursquare:before {
+  content: "\f180";
+}
+
+/* line 390, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-trello:before {
+  content: "\f181";
+}
+
+/* line 391, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-female:before {
+  content: "\f182";
+}
+
+/* line 392, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-male:before {
+  content: "\f183";
+}
+
+/* line 393, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-gittip:before {
+  content: "\f184";
+}
+
+/* line 394, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-sun-o:before {
+  content: "\f185";
+}
+
+/* line 395, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-moon-o:before {
+  content: "\f186";
+}
+
+/* line 396, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-archive:before {
+  content: "\f187";
+}
+
+/* line 397, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-bug:before {
+  content: "\f188";
+}
+
+/* line 398, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-vk:before {
+  content: "\f189";
+}
+
+/* line 399, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-weibo:before {
+  content: "\f18a";
+}
+
+/* line 400, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-renren:before {
   content: "\f18b";
+}
+
+/* line 401, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-pagelines:before {
+  content: "\f18c";
+}
+
+/* line 402, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-stack-exchange:before {
+  content: "\f18d";
+}
+
+/* line 403, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-arrow-circle-o-right:before {
+  content: "\f18e";
+}
+
+/* line 404, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-arrow-circle-o-left:before {
+  content: "\f190";
+}
+
+/* line 406, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-toggle-left:before,
+.fa-caret-square-o-left:before {
+  content: "\f191";
+}
+
+/* line 407, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-dot-circle-o:before {
+  content: "\f192";
+}
+
+/* line 408, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-wheelchair:before {
+  content: "\f193";
+}
+
+/* line 409, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-vimeo-square:before {
+  content: "\f194";
+}
+
+/* line 411, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-turkish-lira:before,
+.fa-try:before {
+  content: "\f195";
+}
+
+/* line 412, ../../extensions/compass_radix/stylesheets/fontawesome/_icons.scss */
+.fa-plus-square-o:before {
+  content: "\f196";
 }
 
 /* line 6, ../../extensions/compass_radix/stylesheets/compass_radix/_layout.scss */
@@ -10098,6 +9950,8 @@ div.vertical-tabs {
   outline: none;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
 }
 /* line 54, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
@@ -10114,6 +9968,8 @@ div.vertical-tabs ul.vertical-tabs-list li {
   outline: none !important;
   -webkit-border-radius: 4px 0 0 4px;
   -moz-border-radius: 4px 0 0 4px;
+  -ms-border-radius: 4px 0 0 4px;
+  -o-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
   border: 1px solid;
   border-color: #fff #ddd #fff #fff;
@@ -10127,6 +9983,8 @@ div.vertical-tabs ul.vertical-tabs-list li a {
   outline: none !important;
   -webkit-border-radius: 4px 0 0 4px;
   -moz-border-radius: 4px 0 0 4px;
+  -ms-border-radius: 4px 0 0 4px;
+  -o-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
 }
 /* line 72, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
@@ -10215,6 +10073,8 @@ ul.links.inline li {
   background-color: #FFFFFF;
   -webkit-border-radius: 4px 4px 4px 4px;
   -moz-border-radius: 4px 4px 4px 4px;
+  -ms-border-radius: 4px 4px 4px 4px;
+  -o-border-radius: 4px 4px 4px 4px;
   border-radius: 4px 4px 4px 4px;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
@@ -10271,6 +10131,8 @@ ul.links.inline li {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-border-radius: 23px;
   -moz-border-radius: 23px;
+  -ms-border-radius: 23px;
+  -o-border-radius: 23px;
   border-radius: 23px;
   opacity: 0.5;
   filter: alpha(opacity=50);
@@ -10309,6 +10171,8 @@ ul.links.inline li {
   text-decoration: none;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
   border-radius: 25px;
   opacity: 0.5;
   filter: alpha(opacity=50);
@@ -10343,6 +10207,8 @@ ul.links.inline li {
   background: none;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
 }
 /* line 260, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
@@ -10350,6 +10216,8 @@ ul.links.inline li {
   height: 40px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
   background-image: -webkit-linear-gradient(45deg, #0088cc 25%, transparent 25%, transparent 50%, #0088cc 50%, #0088cc 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, #0088cc 25%, transparent 25%, transparent 50%, #0088cc 50%, #0088cc 75%, transparent 75%, transparent);
@@ -10536,6 +10404,8 @@ html.js input.throbbing {
   border: 1px solid #e3e3e3;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -10570,6 +10440,8 @@ html.js input.throbbing {
   border: 1px solid #e3e3e3;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -10666,56 +10538,7 @@ html.js input.throbbing {
   float: none !important;
 }
 
-/* line 9, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
-.field.field-type-image .field-item {
-  border: 1px solid #DDD;
-  padding: 5px;
-  background: #FFFFFF;
-  display: table;
-  -webkit-border-radius: 4px 4px 4px 4px;
-  -moz-border-radius: 4px 4px 4px 4px;
-  border-radius: 4px 4px 4px 4px;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
-  margin-bottom: 10px;
-}
-/* line 21, ../../../../../../../../../../usr/local/.rvm/gems/ruby-2.0.0-p0/gems/bootstrap-sass-3.0.3.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.field.field-type-image .field-item:before, .field.field-type-image .field-item:after {
-  content: " ";
-  display: table;
-}
-/* line 25, ../../../../../../../../../../usr/local/.rvm/gems/ruby-2.0.0-p0/gems/bootstrap-sass-3.0.3.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.field.field-type-image .field-item:after {
-  clear: both;
-}
-/* line 18, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
-.field.field-type-image .field-item img {
-  margin: 0;
-  padding: 0;
-}
-/* line 27, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
-.field.field-type-long-text img {
-  border: 1px solid #DDD;
-  padding: 5px;
-  margin: 0;
-  float: none !important;
-  width: 100%;
-  background: #FFFFFF;
-  -webkit-border-radius: 4px 4px 4px 4px;
-  -moz-border-radius: 4px 4px 4px 4px;
-  border-radius: 4px 4px 4px 4px;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
-}
-/* line 36, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
-.field.field-type-long-text img[style*="float:left"], .field.field-type-long-text img[style*="float: left"] {
-  margin: 5px 15px 15px 0px;
-}
-/* line 39, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
-.field.field-type-long-text img[style*="float:right"], .field.field-type-long-text img[style*="float: right"] {
-  margin: 5px 0px 15px 15px;
-}
-/* line 46, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
+/* line 10, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
 .field img.panopoly-image-full,
 .field img.panopoly-image-half,
 .field img.panopoly-image-quarter {
@@ -10726,22 +10549,22 @@ html.js input.throbbing {
   margin: 0;
 }
 
-/* line 55, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
+/* line 19, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
 .field-collection-container {
   border: 0;
 }
-/* line 57, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
+/* line 21, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
 .field-collection-container .field-collection-view {
   margin: 0;
   padding: 0;
   border: none;
 }
 
-/* line 65, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
+/* line 29, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
 .field ul, .field ol {
   list-style: inherit;
 }
-/* line 68, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
+/* line 32, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
 .field ol {
   list-style: decimal;
 }
