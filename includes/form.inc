@@ -86,6 +86,7 @@ function radix_button($variables) {
 
   $element['#attributes']['class'][] = 'form-' . $element['#button_type'];
   $element['#attributes']['class'][] = 'btn';
+  $element['#attributes']['class'][] = 'btn-default';
   if (!empty($element['#attributes']['disabled'])) {
     $element['#attributes']['class'][] = 'form-button-disabled';
   }

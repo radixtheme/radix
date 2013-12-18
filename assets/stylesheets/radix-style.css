@@ -10430,8 +10430,12 @@ html.js input.throbbing {
   margin: 0;
   border-top: 0;
 }
+/* line 113, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+#node-edit .pane-node-form-buttons {
+  clear: both;
+}
 
-/* line 115, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 118, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 .filter-wrapper {
   min-height: 20px;
   padding: 19px;
@@ -10452,90 +10456,52 @@ html.js input.throbbing {
   border-color: #ddd;
   border-color: rgba(0, 0, 0, 0.15);
 }
-/* line 118, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 121, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 .filter-wrapper .form-item {
   margin: 0 0 10px;
   padding: 0;
 }
-/* line 122, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 125, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 .filter-wrapper .filter-guidelines {
   padding: 0;
 }
-/* line 124, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 127, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 .filter-wrapper .filter-guidelines .tips {
   margin-left: 0;
 }
 
-/* line 134, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
-.navbar .search-form .container-inline {
-  padding-top: 0;
-}
-/* line 138, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
-.navbar .search-form input.form-submit {
-  display: none;
-}
-
-/* line 147, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
-.navbar-inverse .search-form input.search-query {
-  color: white;
-  background-color: #515151;
-  border-color: #111111;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.15);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.15);
-  -webkit-transition: none;
-  transition: none;
-}
-/* line 57, ../../../../../../../../../../usr/local/.rvm/gems/ruby-2.0.0-p0/gems/bootstrap-sass-3.0.3.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.navbar-inverse .search-form input.search-query:-moz-placeholder {
-  color: #cccccc;
-}
-/* line 58, ../../../../../../../../../../usr/local/.rvm/gems/ruby-2.0.0-p0/gems/bootstrap-sass-3.0.3.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.navbar-inverse .search-form input.search-query::-moz-placeholder {
-  color: #cccccc;
-  opacity: 1;
-}
-/* line 60, ../../../../../../../../../../usr/local/.rvm/gems/ruby-2.0.0-p0/gems/bootstrap-sass-3.0.3.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.navbar-inverse .search-form input.search-query:-ms-input-placeholder {
-  color: #cccccc;
-}
-/* line 61, ../../../../../../../../../../usr/local/.rvm/gems/ruby-2.0.0-p0/gems/bootstrap-sass-3.0.3.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.navbar-inverse .search-form input.search-query::-webkit-input-placeholder {
-  color: #cccccc;
-}
-/* line 157, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
-.navbar-inverse .search-form input.search-query:focus, .navbar-inverse .search-form input.search-query.focused {
-  padding: 5px 15px;
-  color: #333333;
-  text-shadow: 0 1px 0 white;
-  background-color: white;
-  border: 0;
-  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-  outline: 0;
-}
-
-/* line 176, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 139, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 .page-admin form table select,
 .page-admin form table input.form-text {
   width: 150px;
 }
 
-/* line 186, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 149, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 #features-export-form .features-export-parent {
   margin: 0 0 20px;
 }
-/* line 188, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 151, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 #features-export-form .features-export-parent fieldset.collapsed {
   min-height: 43px !important;
   background: none;
 }
-/* line 192, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 155, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 #features-export-form .features-export-parent .features-export-list {
   padding: 10px;
 }
-/* line 194, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 157, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 #features-export-form .features-export-parent .features-export-list .form-item {
   float: none !important;
+}
+
+/* line 167, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+#panels-panel-context-edit-content .container {
+  width: auto;
+  padding: 0;
+}
+/* line 170, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+#panels-panel-context-edit-content .container .row {
+  margin-bottom: 20px;
 }
 
 /* line 10, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
