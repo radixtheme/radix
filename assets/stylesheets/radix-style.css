@@ -10240,11 +10240,20 @@ ul.links.inline li {
 }
 
 /* line 280, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
+.item-list ul.pagination {
+  margin: 20px 0;
+}
+/* line 282, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
+.item-list ul.pagination > li {
+  margin: 0;
+}
+
+/* line 291, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
 .ctools-dropdown-container hr {
   margin: 0;
 }
 
-/* line 288, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
+/* line 299, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
 ul.nav,
 ul.navl li,
 ul.dropdown-menu,
