@@ -10503,12 +10503,14 @@ html.js input.throbbing {
   float: none !important;
 }
 
-/* line 167, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 168, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+#panels-panel-context-edit-move .container,
 #panels-panel-context-edit-content .container {
   width: auto;
   padding: 0;
 }
-/* line 170, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 171, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+#panels-panel-context-edit-move .container .row,
 #panels-panel-context-edit-content .container .row {
   margin-bottom: 20px;
 }
