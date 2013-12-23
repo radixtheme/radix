@@ -9989,14 +9989,14 @@ div.vertical-tabs ul.vertical-tabs-list li a {
 }
 /* line 72, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
 div.vertical-tabs ul.vertical-tabs-list li a:hover {
-  color: white;
-  background: #0088cc;
+  color: #fff;
+  background: #428bca;
   text-decoration: none;
 }
 /* line 76, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
 div.vertical-tabs ul.vertical-tabs-list li a:hover strong {
   text-decoration: none;
-  color: white;
+  color: #fff;
 }
 /* line 84, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
 div.vertical-tabs .vertical-tabs-panes {
@@ -10013,13 +10013,13 @@ div.vertical-tabs .form-type-textfield input {
 /* line 97, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
 table {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 1.428571429;
 }
 /* line 102, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
 table th,
 table td {
   padding: 8px;
-  line-height: 20px;
+  line-height: 1.428571429;
   text-align: left;
   vertical-align: top;
   border-top: 1px solid #dddddd;
@@ -10107,7 +10107,7 @@ ul.links.inline li {
   bottom: 0;
   left: 0;
   width: 100%;
-  color: white;
+  color: #fff;
 }
 /* line 183, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
 .field-slideshow-wrapper > .field-slideshow .field-slideshow-slide .field-slideshow-caption .field-slideshow-caption-text {
@@ -10130,7 +10130,7 @@ ul.links.inline li {
   font-size: 60px;
   font-weight: 100;
   line-height: 30px;
-  color: white;
+  color: #fff;
   text-align: center;
   background: #222222;
   border: 3px solid #ffffff;
@@ -10150,7 +10150,7 @@ ul.links.inline li {
 }
 /* line 216, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
 .field-slideshow-wrapper .field-slideshow-controls a:hover {
-  color: white;
+  color: #fff;
   text-decoration: none;
   opacity: 0.9;
   filter: alpha(opacity=90);
@@ -10173,7 +10173,7 @@ ul.links.inline li {
   width: 25px;
   height: 25px;
   line-height: 25px;
-  color: white;
+  color: #fff;
   text-decoration: none;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
@@ -10185,14 +10185,14 @@ ul.links.inline li {
 }
 /* line 242, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
 .field-slideshow-wrapper .field-slideshow-pager a:hover {
-  color: white;
+  color: #fff;
   text-decoration: none;
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
 /* line 247, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
 .field-slideshow-wrapper .field-slideshow-pager a.activeSlide {
-  background: #0088cc;
+  background: #428bca;
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
@@ -10225,8 +10225,8 @@ ul.links.inline li {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  background-image: -webkit-linear-gradient(45deg, #0088cc 25%, transparent 25%, transparent 50%, #0088cc 50%, #0088cc 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, #0088cc 25%, transparent 25%, transparent 50%, #0088cc 50%, #0088cc 75%, transparent 75%, transparent);
+  background-image: -webkit-linear-gradient(45deg, #428bca 25%, transparent 25%, transparent 50%, #428bca 50%, #428bca 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, #428bca 25%, transparent 25%, transparent 50%, #428bca 50%, #428bca 75%, transparent 75%, transparent);
   -webkit-background-size: 40px 40px;
   -moz-background-size: 40px 40px;
   -o-background-size: 40px 40px;
@@ -10577,7 +10577,7 @@ html.js input.throbbing {
 }
 /* line 19, ../../extensions/compass_radix/stylesheets/compass_radix/_comment.scss */
 .comment .submitted .new {
-  color: #9d261d;
+  color: #d9534f;
 }
 /* line 23, ../../extensions/compass_radix/stylesheets/compass_radix/_comment.scss */
 .comment .content {
@@ -10632,33 +10632,5 @@ html.js input.throbbing {
     font-size: 10px;
     margin-bottom: 5px;
     margin-top: -5px;
-  }
-}
-@media (max-width: 979px) {
-  /* line 58, ../../extensions/compass_radix/stylesheets/compass_radix/_responsive_form.scss */
-  .navbar .search-form {
-    border: 0 !important;
-    padding: 5px 0 10px;
-    margin: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-  /* line 63, ../../extensions/compass_radix/stylesheets/compass_radix/_responsive_form.scss */
-  .navbar .search-form .container-inline {
-    padding-top: 0;
-    margin: 0;
-    display: block;
-    width: 100%;
-  }
-  /* line 68, ../../extensions/compass_radix/stylesheets/compass_radix/_responsive_form.scss */
-  .navbar .search-form .container-inline .form-item {
-    width: 100%;
-    display: block;
-  }
-  /* line 73, ../../extensions/compass_radix/stylesheets/compass_radix/_responsive_form.scss */
-  .navbar .search-form input {
-    margin: 0 auto;
-    display: block;
-    width: 85%;
   }
 }

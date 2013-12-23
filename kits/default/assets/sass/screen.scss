@@ -8,7 +8,6 @@
 @import "global/variable";
 @import "global/helper";
 @import "global/mixin";
-@import "global/font";
 
 // Bootswatch
 // --------------------------------------------------
@@ -25,6 +24,7 @@
 
 // Theme CSS
 // --------------------------------------------------
+@import "global/font";
 @import "partials/layout";
 @import "partials/structure";
 @import "partials/menu";
