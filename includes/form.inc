@@ -5,6 +5,81 @@
  */
 
 /**
+ * Implements theme_form().
+ */
+function radix_form($variables) {
+  $element = $variables['element'];
+  if (isset($element['#action'])) {
+    $element['#attributes']['action'] = drupal_strip_dangerous_protocols($element['#action']);
+  }
+  element_set_attributes($element, array('method', 'id'));
+  if (empty($element['#attributes']['accept-charset'])) {
+    $element['#attributes']['accept-charset'] = "UTF-8";
+  }
+
+  // Add the role attribute.
+  $element['#attributes']['role'] = "form";
+
+  // Anonymous DIV to satisfy XHTML compliance.
+  return '<form' . drupal_attributes($element['#attributes']) . '><div>' . $element['#children'] . '</div></form>';
+}
+
+/**
+ * Implements hook_element_info_alter().
+ */
+function radix_element_info_alter(&$elements) {
+  foreach ($elements as &$element) {
+    // Process all elements.
+    $element['#process'][] = '_radix_process_element';
+    // Process input elements.
+    if (!empty($element['#input'])) {
+      $element['#process'][] = '_radix_process_input';
+    }
+  }
+}
+
+/**
+ * Process all elements.
+ */
+function _radix_process_element(&$element, &$form_state) {
+  // Add form-inline or form-group classes.
+  if (!empty($element['#attributes']['class']) && is_array($element['#attributes']['class'])) {
+    if (in_array('container-inline', $element['#attributes']['class'])) {
+      $element['#attributes']['class'][] = 'form-inline';
+    }
+    if (in_array('form-wrapper', $element['#attributes']['class'])) {
+      $element['#attributes']['class'][] = 'form-group';
+    }
+  }
+  return $element;
+}
+
+/**
+ * Process input elements.
+ */
+function _radix_process_input(&$element, &$form_state) {
+  // Add form-control class.
+  $types = array(
+    'textfield',
+    'textarea',
+    'password',
+    'password_confirm',
+    'select',
+    'machine_name',
+    'emailfield',
+    'numberfield',
+    'rangefield',
+    'searchfield',
+    'telfield',
+    'urlfield',
+  );
+  if (!empty($element['#type']) && (in_array($element['#type'], $types))) {
+    $element['#attributes']['class'][] = 'form-control';
+  }
+  return $element;
+}
+
+/**
  * Implements theme_form_element().
  */
 function radix_form_element($variables) {
@@ -113,70 +188,21 @@ function radix_button($variables) {
 }
 
 /**
- * Implements theme_textfield().
+ * Implements theme_date().
  */
-function radix_textfield($variables) {
+function radix_date($variables) {
   $element = $variables['element'];
-  $element['#attributes']['type'] = 'text';
-  element_set_attributes($element, array('id', 'name', 'value', 'size', 'maxlength'));
-  _form_set_class($element, array('form-text'));
-  _form_set_class($element, array('form-control'));
 
-  $extra = '';
-  if ($element['#autocomplete_path'] && drupal_valid_path($element['#autocomplete_path'])) {
-    drupal_add_library('system', 'drupal.autocomplete');
-    $element['#attributes']['class'][] = 'form-autocomplete';
-
-    $attributes = array();
-    $attributes['type'] = 'hidden';
-    $attributes['id'] = $element['#attributes']['id'] . '-autocomplete';
-    $attributes['value'] = url($element['#autocomplete_path'], array('absolute' => TRUE));
-    $attributes['disabled'] = 'disabled';
-    $attributes['class'][] = 'autocomplete';
-    $extra = '<input' . drupal_attributes($attributes) . ' />';
+  $attributes = array();
+  if (isset($element['#id'])) {
+    $attributes['id'] = $element['#id'];
   }
-
-  $output = '<input' . drupal_attributes($element['#attributes']) . ' />';
-
-  return $output . $extra;
-}
-
-/**
- * Implements theme_password().
- */
-function radix_password($variables) {
-  $element = $variables['element'];
-  $element['#attributes']['type'] = 'password';
-  element_set_attributes($element, array('id', 'name', 'size', 'maxlength'));
-  _form_set_class($element, array('form-text'));
-  _form_set_class($element, array('form-control'));
-
-  return '<input' . drupal_attributes($element['#attributes']) . ' />';
-}
-
-/**
- * Implements theme_textarea().
- */
-function radix_textarea($variables) {
-  $element = $variables['element'];
-  element_set_attributes($element, array('id', 'name', 'cols', 'rows'));
-  _form_set_class($element, array('form-textarea'));
-  _form_set_class($element, array('form-control'));
-
-  $wrapper_attributes = array(
-    'class' => array('form-textarea-wrapper'),
-  );
-
-  // Add resizable behavior.
-  if (!empty($element['#resizable'])) {
-    drupal_add_library('system', 'drupal.textarea');
-    $wrapper_attributes['class'][] = 'resizable';
+  if (!empty($element['#attributes']['class'])) {
+    $attributes['class'] = (array) $element['#attributes']['class'];
   }
+  $attributes['class'][] = 'form-inline';
 
-  $output = '<div' . drupal_attributes($wrapper_attributes) . '>';
-  $output .= '<textarea' . drupal_attributes($element['#attributes']) . '>' . check_plain($element['#value']) . '</textarea>';
-  $output .= '</div>';
-  return $output;
+  return '<div' . drupal_attributes($attributes) . '>' . drupal_render_children($element) . '</div>';
 }
 
 /**
@@ -191,11 +217,11 @@ function radix_fieldset($variables) {
   $output = '<fieldset' . drupal_attributes($element['#attributes']) . '>';
   if (!empty($element['#title'])) {
     // Always wrap fieldset legends in a SPAN for CSS positioning.
-    $output .= '<legend class="panel-heading"><span class="panel-title fieldset-legend">' . $element['#title'] . '</span></legend>';
+    $output .= '<legend class="panel-heading"><div class="panel-title fieldset-legend">' . $element['#title'] . '</div></legend>';
   }
   $output .= '<div class="panel-body fieldset-wrapper">';
   if (!empty($element['#description'])) {
-    $output .= '<div class="fieldset-description">' . $element['#description'] . '</div>';
+    $output .= '<p class="help-block">' . $element['#description'] . '</p>';
   }
   $output .= $element['#children'];
   if (isset($element['#value'])) {
