@@ -79,6 +79,7 @@ function radix_preprocess_page(&$variables) {
     $search_box_form['basic']['keys']['#title'] = '';
     $search_box_form['basic']['keys']['#size'] = 20;
     $search_box_form['basic']['keys']['#attributes'] = array('placeholder' => 'Search');
+    $search_box_form['basic']['keys']['#attributes']['class'][] = 'form-control';
     $search_box_form['basic']['submit']['#value'] = t('Search');
     $search_box_form['#attributes']['class'][] = 'navbar-form';
     $search_box_form['#attributes']['class'][] = 'navbar-left';
