@@ -113,6 +113,11 @@ function radix_form_element($variables) {
     ));
   }
 
+  // Add error class.
+  if (isset($element['#parents']) && form_get_error($element) !== NULL && !empty($element['#validated'])) {
+    $attributes['class'][] = 'has-error';
+  }
+
   // Add radios, checkboxes and form-group classes.
   if (isset($element['#type'])) {
     if ($element['#type'] == "radio") {
