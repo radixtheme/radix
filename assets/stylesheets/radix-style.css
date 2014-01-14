@@ -9850,7 +9850,7 @@ body #footer {
 }
 
 /* line 32, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
-.tabs {
+.tabs, .nav-tabs {
   margin: 0 0 18px;
 }
 
