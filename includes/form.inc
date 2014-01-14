@@ -84,6 +84,9 @@ function _radix_process_input(&$element, &$form_state) {
  */
 function radix_form_element($variables) {
   $element = &$variables['element'];
+  $is_checkbox = FALSE;
+  $is_radio = FALSE;
+
   // This is also used in the installer, pre-database setup.
   $t = get_t();
 
@@ -114,9 +117,11 @@ function radix_form_element($variables) {
   if (isset($element['#type'])) {
     if ($element['#type'] == "radio") {
       $attributes['class'][] = 'radio';
+      $is_radio = TRUE;
     }
     elseif ($element['#type'] == "checkbox") {
       $attributes['class'][] = 'checkbox';
+      $is_checkbox = TRUE;
     }
     else {
       $attributes['class'][] = 'form-group';
@@ -144,8 +149,13 @@ function radix_form_element($variables) {
       break;
 
     case 'after':
-      $output .= ' ' . $prefix . $element['#children'] . $suffix;
-      $output .= ' ' . theme('form_element_label', $variables) . "\n";
+      if ($is_radio || $is_checkbox) {
+        $output .= ' ' . $prefix . theme('form_element_label', $variables) . $suffix;
+      }
+      else {
+        $variables['#children'] = ' ' . $prefix . $element['#children'] . $suffix;
+        $output .= ' ' . theme('form_element_label', $variables) . "\n";
+      }
       break;
 
     case 'none':
@@ -162,6 +172,54 @@ function radix_form_element($variables) {
   $output .= "</div>\n";
 
   return $output;
+}
+
+/**
+ * Implements theme_form_element_label().
+ */
+function radix_form_element_label($variables) {
+  $element = $variables['element'];
+  // This is also used in the installer, pre-database setup.
+  $t = get_t();
+
+  // Radios and checkboxes are rendered differently.
+  $is_radio_or_checkbox = (isset($element['#type']) && ('checkbox' === $element['#type'] || 'radio' === $element['#type']));
+
+  // If title and required marker are both empty, output no label.
+  if ((!isset($element['#title']) || $element['#title'] === '') && empty($element['#required']) && !$is_radio_or_checkbox) {
+    return '';
+  }
+
+  // If the element is required, a required marker is appended to the label.
+  $required = !empty($element['#required']) ? theme('form_required_marker', array('element' => $element)) : '';
+
+  $title = filter_xss_admin($element['#title']);
+
+  $attributes = array();
+  // Style the label as class option to display inline with the element.
+  if ($element['#title_display'] == 'after' && !$is_radio_or_checkbox) {
+    $attributes['class'] = 'option';
+  }
+  // Show label only to screen readers to avoid disruption in visual flows.
+  elseif ($element['#title_display'] == 'invisible') {
+    $attributes['class'] = 'element-invisible';
+  }
+
+  if (!empty($element['#id'])) {
+    $attributes['for'] = $element['#id'];
+  }
+
+  // Radio and checkboxes goes inside label.
+  $output = '';
+  if ($is_radio_or_checkbox && isset($element['#children'])) {
+    $output .= $element['#children'];
+  }
+
+  // Append label.
+  $output .= $t('!title !required', array('!title' => $title, '!required' => $required));
+
+  // The leading whitespace helps visually separate fields from inline labels.
+  return ' <label' . drupal_attributes($attributes) . '>' . $output . "</label>\n";
 }
 
 /**

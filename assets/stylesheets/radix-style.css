@@ -10278,20 +10278,6 @@ form .format-toggle {
   float: none;
 }
 
-/* line 47, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
-.radio input[type="radio"],
-.radio-inline input[type="radio"],
-.checkbox input[type="checkbox"],
-.checkbox-inline input[type="checkbox"] {
-  margin-top: 4px;
-}
-
-/* line 52, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
-.form-type-radio .description,
-.form-type-checkbox .description {
-  margin-left: 0;
-}
-
 /* line 59, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 form .field-multiple-table thead th {
   padding: 10px !important;
