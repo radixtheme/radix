@@ -10331,22 +10331,15 @@ html.js fieldset.collapsed {
   form input.form-text,
   form textarea,
   form select {
-    width: 94%;
+    width: 100%;
   }
-  /* line 113, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
-  form fieldset legend {
-    font-size: 18px;
-    line-height: 24px;
-    padding-bottom: 5px;
-    margin-top: 10px;
-  }
-  /* line 122, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+  /* line 114, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
   form .confirm-parent,
   form .password-parent,
   form .password-suggestions {
     width: auto !important;
   }
-  /* line 126, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+  /* line 118, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
   form .password-parent div.password-strength {
     width: 150px;
     float: right;
@@ -10355,7 +10348,7 @@ html.js fieldset.collapsed {
     margin-bottom: 5px;
     margin-top: -5px;
   }
-  /* line 136, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+  /* line 128, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
   form .confirm-parent div.password-confirm {
     width: 110px;
     float: right;
@@ -10365,7 +10358,7 @@ html.js fieldset.collapsed {
     margin-top: -5px;
   }
 }
-/* line 151, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 143, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 #node-edit #edit-title {
   font-size: 1.6em;
   line-height: 1.6em;
@@ -10381,11 +10374,11 @@ html.js fieldset.collapsed {
 #node-edit .form-item-path-alias:after {
   clear: both;
 }
-/* line 159, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 151, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 #node-edit .form-item-path-alias label, #node-edit .form-item-path-alias input {
   display: inline;
 }
-/* line 164, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 156, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 #node-edit .burr-flipped-sidebar .panel-pane {
   min-height: 20px;
   padding: 19px;
@@ -10406,26 +10399,26 @@ html.js fieldset.collapsed {
   border-color: #ddd;
   border-color: rgba(0, 0, 0, 0.15);
 }
-/* line 167, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 159, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 #node-edit .burr-flipped-sidebar .panel-pane .pane-title {
   margin-top: 0;
 }
-/* line 171, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 163, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 #node-edit .burr-flipped-sidebar .pane-node-form-buttons {
   background: none;
   padding: inherit;
 }
-/* line 174, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 166, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 #node-edit .burr-flipped-sidebar .pane-node-form-buttons .form-actions {
   margin: 0;
   border-top: 0;
 }
-/* line 180, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 172, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 #node-edit .pane-node-form-buttons {
   clear: both;
 }
 
-/* line 185, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 177, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 .filter-wrapper {
   min-height: 20px;
   padding: 19px;
@@ -10446,51 +10439,51 @@ html.js fieldset.collapsed {
   border-color: #ddd;
   border-color: rgba(0, 0, 0, 0.15);
 }
-/* line 188, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 180, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 .filter-wrapper .form-item {
   margin: 0 0 10px;
   padding: 0;
 }
-/* line 192, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 184, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 .filter-wrapper .filter-guidelines {
   padding: 0;
 }
-/* line 194, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 186, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 .filter-wrapper .filter-guidelines .tips {
   margin-left: 0;
 }
 
-/* line 206, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 198, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 .page-admin form table select,
 .page-admin form table input.form-text {
   width: 150px;
 }
 
-/* line 216, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 208, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 #features-export-form .features-export-parent {
   margin: 0 0 20px;
 }
-/* line 218, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 210, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 #features-export-form .features-export-parent fieldset.collapsed {
   min-height: 43px !important;
   background: none;
 }
-/* line 222, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 214, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 #features-export-form .features-export-parent .features-export-list {
   padding: 10px;
 }
-/* line 224, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 216, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 #features-export-form .features-export-parent .features-export-list .form-item {
   float: none !important;
 }
 
-/* line 235, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 227, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 #panels-panel-context-edit-move .container,
 #panels-panel-context-edit-content .container {
   width: auto;
   padding: 0;
 }
-/* line 238, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 230, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 #panels-panel-context-edit-move .container .row,
 #panels-panel-context-edit-content .container .row {
   margin-bottom: 20px;
