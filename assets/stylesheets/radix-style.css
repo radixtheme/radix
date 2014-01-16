@@ -9827,7 +9827,7 @@ body #header {
 }
 /* line 9, ../../extensions/compass_radix/stylesheets/compass_radix/_layout.scss */
 body #footer {
-  margin: 18px 0;
+  margin: 36px 0;
 }
 
 /* line 8, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
@@ -10222,32 +10222,37 @@ ul.nav > li.dropdown:after {
   margin-bottom: 20px;
 }
 
-/* line 16, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
+/* line 12, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
+.panel-flexible .panel-separator {
+  display: none;
+}
+
+/* line 19, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
 #panels-ipe-control-container .panels-ipe-button-container {
   text-align: center;
 }
-/* line 18, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
+/* line 21, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
 #panels-ipe-control-container .panels-ipe-button-container .panels-ipe-pseudobutton-container {
   margin: 0 5px;
 }
-/* line 20, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
+/* line 23, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
 #panels-ipe-control-container .panels-ipe-button-container .panels-ipe-pseudobutton-container a {
   padding: 0px 10px 0px 34px;
 }
-/* line 22, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
+/* line 25, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
 #panels-ipe-control-container .panels-ipe-button-container .panels-ipe-pseudobutton-container a:hover {
   text-decoration: none;
 }
-/* line 30, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
+/* line 33, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
 #panels-ipe-control-container .panels-ipe-form-container form > div {
   text-align: center;
 }
-/* line 33, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
+/* line 36, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
 #panels-ipe-control-container .panels-ipe-form-container form .form-submit {
   margin: 0 5px;
   padding: 0px 10px 0px 34px;
 }
-/* line 36, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
+/* line 39, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
 #panels-ipe-control-container .panels-ipe-form-container form .form-submit:hover {
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -10497,9 +10502,19 @@ html.js fieldset.collapsed {
   margin-bottom: 20px;
 }
 
-/* line 226, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 227, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+.navbar-form .form-wrapper {
+  padding: 0;
+}
+/* line 230, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 .navbar-form .form-submit {
   display: none;
+}
+
+/* line 240, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+.pane-search-box form .form-wrapper .form-group {
+  display: block;
+  margin-bottom: 10px;
 }
 
 /* line 10, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
@@ -10522,6 +10537,23 @@ html.js fieldset.collapsed {
   margin: 0;
   padding: 0;
   border: none;
+}
+
+/* line 33, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
+.node-panopoly-news-article.node-teaser .panel-pane {
+  margin: 0 0 10px 260px;
+}
+/* line 36, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
+.node-panopoly-news-article.node-teaser .pane-node-field-featured-image {
+  float: left;
+  margin-left: 0;
+}
+@media (max-width: 767px) {
+  /* line 42, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
+  .node-panopoly-news-article .panel-pane {
+    float: none !important;
+    margin: 0 0 10px !important;
+  }
 }
 
 /* line 5, ../../extensions/compass_radix/stylesheets/compass_radix/_comment.scss */
