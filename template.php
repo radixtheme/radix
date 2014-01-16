@@ -82,7 +82,7 @@ function radix_preprocess_page(&$variables) {
     $search_box_form['basic']['keys']['#attributes']['class'][] = 'form-control';
     $search_box_form['basic']['submit']['#value'] = t('Search');
     $search_box_form['#attributes']['class'][] = 'navbar-form';
-    $search_box_form['#attributes']['class'][] = 'navbar-left';
+    $search_box_form['#attributes']['class'][] = 'navbar-right';
     $search_box = drupal_render($search_box_form);
     $variables['search_form'] = (user_access('search content')) ? $search_box : NULL;
   }

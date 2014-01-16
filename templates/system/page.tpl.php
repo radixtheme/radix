@@ -34,9 +34,6 @@
         <?php if ($search_form): ?>
           <?php print $search_form; ?>
         <?php endif; ?>
-        <?php if ($user_menu): ?>
-          <?php print render($user_menu); ?>
-        <?php endif; ?>
       </div><!-- /.navbar-collapse -->
 
     </nav>
