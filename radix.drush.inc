@@ -7,7 +7,7 @@
 /**
  * Bootswatch theme URI.
  */
-define('BOOTSWATCH_URI', 'https://github.com/arshad/radix-bootswatch/archive/master.zip');
+define('BOOTSWATCH_URI', 'https://github.com/arshad/radix-bootswatch/archive/7.x-2.x.zip');
 
 /**
  * Implements hook_drush_command().
