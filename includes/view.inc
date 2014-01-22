@@ -7,6 +7,18 @@
 /**
  * Implements theme_views_mini_pager().
  */
+function radix_preprocess_views_view_table(&$variables) {
+  // Add Bootstrap table classes.
+  $variables['classes_array'] = array_merge($variables['classes_array'], array(
+    'table',
+    'table-striped',
+    'table-bordered',
+  ));
+}
+
+/**
+ * Implements theme_views_mini_pager().
+ */
 function radix_views_mini_pager($vars) {
   global $pager_page_array, $pager_total;
 

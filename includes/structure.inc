@@ -55,7 +55,8 @@ function radix_table($variables) {
     $attributes['class'][] = 'sticky-enabled';
   }
 
-  $output = '<table' . drupal_attributes($attributes) . ">\n";
+  $output = '<div class="table-responsive">';
+  $output .= '<table' . drupal_attributes($attributes) . ">\n";
 
   if (isset($caption)) {
     $output .= '<caption>' . $caption . "</caption>\n";
@@ -178,6 +179,8 @@ function radix_table($variables) {
   }
 
   $output .= "</table>\n";
+  $output .= "</div>";
+  
   return $output;
 }
 

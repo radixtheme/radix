@@ -10205,7 +10205,15 @@ ul.dropdown-menu li {
   list-style: none outside none !important;
 }
 
-/* line 320, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
+/* line 321, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
+.drupal-navbar .navbar-bar,
+.drupal-navbar .navbar-tray-vertical > .navbar-lining:before,
+.drupal-navbar .navbar-tray-horizontal {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 325, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
 .drupal-navbar .navbar-tray-vertical,
 .drupal-navbar .navbar-tray-vertical > .navbar-lining:before {
   bottom: 0;
@@ -10213,7 +10221,7 @@ ul.dropdown-menu li {
 }
 
 @media only screen and (min-width: 38.125em) {
-  /* line 325, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
+  /* line 330, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
   body.navbar-tray-open.navbar-vertical {
     margin-left: 240px !important;
   }
