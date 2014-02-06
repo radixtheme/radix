@@ -10323,35 +10323,39 @@ body.ctools-modal-open {
 #modalContent .panels-categories-description {
   padding: 20px;
 }
+/* line 401, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
+#modalContent .panels-section-columns {
+  padding-bottom: 20px;
+}
 
-/* line 402, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
+/* line 405, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
 #modal-content fieldset.widget-preview {
   margin-top: 18px;
   margin-bottom: 0;
   position: static;
   border: 1px solid #ddd;
 }
-/* line 407, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
+/* line 410, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
 #modal-content fieldset.widget-preview .panel-heading {
   position: relative;
 }
-/* line 409, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
+/* line 412, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
 #modal-content fieldset.widget-preview .panel-heading .btn {
   position: absolute;
   right: 10px;
   top: 5px;
 }
 
-/* line 417, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
+/* line 420, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
 #modal-content .ctools-auto-submit-full-form fieldset {
   width: 48%;
   display: block !important;
 }
-/* line 420, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
+/* line 423, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
 #modal-content .ctools-auto-submit-full-form fieldset fieldset {
   width: 100%;
 }
-/* line 423, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
+/* line 426, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
 #modal-content .ctools-auto-submit-full-form fieldset.widget-preview-single {
   float: right;
   margin-left: 1em;
@@ -10359,7 +10363,7 @@ body.ctools-modal-open {
   width: 48%;
   max-width: 48% !important;
 }
-/* line 431, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
+/* line 434, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
 #modal-content .ctools-auto-submit-full-form .form-actions {
   float: right;
   clear: right;
@@ -10368,12 +10372,12 @@ body.ctools-modal-open {
   text-align: right;
 }
 
-/* line 441, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
+/* line 444, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
 #modal-content .form-item-view-settings {
   display: block;
 }
 
-/* line 444, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
+/* line 447, ../../extensions/compass_radix/stylesheets/compass_radix/_structure.scss */
 #modal-content .form-item-exposed-use-pager {
   display: block;
 }
