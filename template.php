@@ -39,6 +39,11 @@ function radix_css_alter(&$css) {
     unset($css[$panopoly_admin_path . '/panopoly-admin.css']);
   }
 
+  $panopoly_magic_path = drupal_get_path('module', 'panopoly_magic');
+  if (isset($css[$panopoly_magic_path . '/css/panopoly-modal.css'])) {
+    unset($css[$panopoly_magic_path . '/css/panopoly-modal.css']);
+  }
+
   // Unset some core css.
   unset($css['modules/system/system.menus.css']);
 }

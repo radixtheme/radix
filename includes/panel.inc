@@ -28,3 +28,111 @@ function radix_preprocess_panels_pane(&$variables) {
     }
   }
 }
+
+/**
+ * Implements template_preprocess_panels_add_content_modal().
+ */
+function radix_preprocess_panels_add_content_modal(&$variables) {
+  // Process the list of categories.
+  $variables['categories_array'] = array();
+  foreach ($variables['categories'] as $key => $category_info) {
+    // 'root' category is actually displayed under the categories, so
+    // skip it.
+    if ($key == 'root') {
+      continue;
+    }
+
+    $class = 'panels-modal-add-category btn btn-default';
+    if ($key == $variables['category']) {
+      $class .= ' active';
+    }
+
+    $url = $variables['renderer']->get_url('select-content', $variables['region'], $key);
+    $variables['categories_array'][] = ctools_ajax_text_button($category_info['title'], $url, '', $class);
+  }
+
+  // Now render the top level buttons (aka the root category) if any.
+  $variables['root_content'] = '';
+  if (!empty($variables['categories']['root'])) {
+    foreach ($variables['categories']['root']['content'] as $content_type) {
+      $variables['root_content_array'][] = theme('panels_add_content_link', array('renderer' => $variables['renderer'], 'region' => $variables['region'], 'content_type' => $content_type));
+    }
+  }
+}
+
+/**
+ * Implements template_process_panels_add_content_modal().
+ */
+function radix_process_panels_add_content_modal(&$vars) {
+  $content = !empty($vars['categories'][$vars['category']]['content']) ? $vars['categories'][$vars['category']]['content'] : array();
+
+  // If no category is selected or the category is empty or our special empty
+  // category render a 'header' that will appear instead of the columns.
+  if (empty($vars['category']) || empty($content) || $vars['category'] == 'root') {
+    // Nothing to do since there is no preview
+  }
+  else {
+    $titles = array_keys($content);
+    natcasesort($titles);
+    $col_size = count($titles) / $vars['column_count'];
+
+    // Zero out the existing column data
+    $count = 0;
+    foreach ($titles as $title) {
+      $which = floor($count++ / $col_size) + 1;
+      $vars['columns'][$which] = '';
+    }
+
+    // Read the column data with our preview functionality
+    $count = 0;
+    foreach ($titles as $title) {
+      $which = floor($count++ / $col_size) + 1;
+
+      // Add an 'Add' button to widget.
+      $content[$title]['title'] = t('Add');
+      $widget_title = theme('panels_add_content_link', array(
+        'renderer' => $vars['renderer'], 
+        'region' => $vars['region'], 
+        'content_type' => $content[$title],
+      ));
+
+      // Render the widget preview.
+      $widget_preview = (!empty($content[$title]['preview']) ? $content[$title]['preview'] : t('No Preview'));
+
+      // Render the preview output as a fieldset.
+      $preview_output = '<fieldset class="widget-preview panel panel-default">';
+      $preview_output .= '<legend class="panel-heading">';
+      $preview_output .= '<div class="panel-title fieldset-legend pull-left">' . $title . '</div>';
+      $preview_output .= $widget_title;
+      $preview_output .= '</legend>';
+      $preview_output .= '<div class="panel-body">';
+      $preview_output .= $widget_preview;
+      $preview_output .= '</div>';
+      $preview_output .= '</fieldset>';
+
+      $vars['columns'][$which] .= $preview_output;
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_panels_add_content_link().
+ */
+function radix_preprocess_panels_add_content_link(&$vars) {
+  $vars['title'] = filter_xss_admin($vars['content_type']['title']);
+  $vars['description'] = isset($vars['content_type']['description']) ? $vars['content_type']['description'] : $vars['title'];
+  $vars['icon'] = ctools_content_admin_icon($vars['content_type']);
+  $vars['url'] = $vars['renderer']->get_url('add-pane', $vars['region'], $vars['content_type']['type_name'], $vars['content_type']['subtype_name']);
+
+  $icon = theme('image', array('path' => $vars['icon']));
+  $title = $icon . ' ' . $vars['title'];
+  $button_classes = 'panels-modal-add-config btn btn-default btn-md';
+  $vars['button'] = ctools_ajax_text_button($title, $vars['url'], $vars['description'], $button_classes);
+
+  // If title is Add, assume we are rendering an 'Add' button for preview;
+  if ($vars['title'] == t('Add')) {
+    $title = '<i class="fa fa-plus"></i> ' . $vars['title'];
+    $button_classes = 'panels-modal-add-config btn btn-success btn-sm pull-right';
+    $vars['button'] = ctools_ajax_text_button($title, $vars['url'], $vars['description'], $button_classes);
+  }
+}
