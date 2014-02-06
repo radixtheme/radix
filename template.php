@@ -46,7 +46,7 @@ function radix_css_alter(&$css) {
  */
 function radix_preprocess_page(&$variables) {
   global $base_url;
-  
+
   // Add Bootstrap JS.
   $base = parse_url($base_url);
   drupal_add_js($base['scheme'] . '://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js', 'external');
@@ -89,9 +89,9 @@ function radix_preprocess_page(&$variables) {
   // Display a message if Sass has not been compiled.
   $stylesheet_path = path_to_theme() . '/assets/stylesheets/screen.css';
   if (!file_exists($stylesheet_path)) {
-    drupal_set_message(t('It looks like !path has not been created yet. Run !command in your theme directory to create it.', array(
-      '!path' => '<em>' . $stylesheet_path . '</em>',
-      '!command' => '<code>compass watch</code>',
+    drupal_set_message(t('It looks like %path has not been created yet. Run <code>@command</code> in your theme directory to create it.', array(
+      '%path' => $stylesheet_path,
+      '@command' => 'compass watch',
     )), 'error');
   }
 }
