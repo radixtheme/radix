@@ -26,8 +26,8 @@
       animationSpeed: 'fast',
       modalSize: {
         type: 'scale',
-        width: 1.0,
-        height: 1.0,
+        width: 0.8,
+        height: 0.8,
         addWidth: 0,
         addHeight: 0,
         // How much to remove from the inner content to make space for the
