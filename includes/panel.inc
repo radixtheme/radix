@@ -42,7 +42,7 @@ function radix_preprocess_panels_add_content_modal(&$variables) {
       continue;
     }
 
-    $class = 'panels-modal-add-category btn btn-default';
+    $class = 'panels-modal-add-category btn btn-sm btn-default';
     if ($key == $variables['category']) {
       $class .= ' active';
     }
@@ -126,7 +126,7 @@ function radix_preprocess_panels_add_content_link(&$vars) {
 
   $icon = theme('image', array('path' => $vars['icon']));
   $title = $icon . ' ' . $vars['title'];
-  $button_classes = 'panels-modal-add-config btn btn-default btn-md';
+  $button_classes = 'panels-modal-add-config btn btn-default btn-sm';
   $vars['button'] = ctools_ajax_text_button($title, $vars['url'], $vars['description'], $button_classes);
 
   // If title is Add, assume we are rendering an 'Add' button for preview;
