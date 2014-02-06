@@ -50,6 +50,13 @@ function radix_drush_help($section) {
  * Implements drush_hook_COMMAND().
  */
 function drush_radix($name = NULL, $machine_name = NULL) {
+
+  // If no $name provided, abort.
+  if (!$name) {
+    drush_print(dt('Theme name missing. See help using drush radix --help.'));
+    return;
+  }
+
   // Determine the theme name.
   if (!isset($name)) {
     $name = drush_get_option('name');
