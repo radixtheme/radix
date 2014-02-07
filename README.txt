@@ -12,15 +12,15 @@ Maintainer(s):  Arshad Chummun (http://arshad.github.io)
 # Subtheming Guide
 
   1. Install the required gems:
-      
-      sudo gem install compass_radix
-    
+
+      sudo gem install compass_radix -v 2
+
     This should install all required gems for Radix.
 
   2. Download the latest Radix and place it in your themes folder.
-  
+
   3. Using drush run the following command to create a subtheme.
-  
+
       drush radix "SUBTHEME_NAME"
 
     You can also specify some options when creating your subtheme.
