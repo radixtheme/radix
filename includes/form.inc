@@ -96,6 +96,9 @@ function radix_form_element($variables) {
     '#title_display' => 'before',
   );
 
+  // Add the default form-item class.
+  $attributes['class'][] = 'form-item';
+
   // Add element #id for #type 'item'.
   if (isset($element['#markup']) && !empty($element['#id'])) {
     $attributes['id'] = $element['#id'];
