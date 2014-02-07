@@ -5,6 +5,19 @@
  */
 
 /**
+ * Implements template_preprocess().
+ */
+function radix_preprocess_views_view(&$variables) {
+  $view = $variables['view'];
+
+  // Add a .row class to wrap .views-row.
+  $variables['view_content_class'] = 'view-content';
+  if ($view->style_plugin->plugin_name != 'list') {
+    $variables['view_content_class'] .= ' row';
+  }
+}
+
+/**
  * Implements theme_views_mini_pager().
  */
 function radix_preprocess_views_view_table(&$variables) {
