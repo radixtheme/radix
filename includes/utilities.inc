@@ -22,12 +22,9 @@ function _radix_get_bootstrap_panel_classes() {
  * Returns the current active theme.
  */
 function _radix_current_theme() {
-  global $custom_theme, $theme, $user;
+  global $custom_theme, $theme;
 
-  if (!empty($user->theme)) {
-    $current_theme = $user->theme;
-  }
-  elseif (!empty($custom_theme)) {
+  if (!empty($custom_theme)) {
     $current_theme = $custom_theme;
   }
   else {
