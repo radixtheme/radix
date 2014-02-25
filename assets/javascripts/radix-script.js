@@ -2,9 +2,12 @@
  * @file
  * JS for Radix.
  */
-(function ($) {
-  $(document).ready(function() {
-    // Tooltip.
-    $('[data-toggle="tooltip"]').tooltip();
-  });
-})(jQuery);
+(function ($, Drupal, window, document, undefined) {
+
+  Drupal.behaviors.RadixTooltips = {
+    attach: function(context, settings) {
+      $('[data-toggle="tooltip"]', context).tooltip();
+    }
+  };
+  
+})(jQuery, Drupal, this, this.document);
