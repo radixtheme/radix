@@ -40,7 +40,7 @@
   <div class="panels-section-columns col-md-10">
     <div class="row">
       <?php foreach ($columns as $column_id => $column): ?>
-        <div class="panels-section-column col-md-6">
+        <div class="panels-section-column col-md-6 col-sm-12 col-xs-12">
           <div class="inside">
             <?php print $column; ?>
           </div>
