@@ -52,6 +52,7 @@ function radix_css_alter(&$css) {
  * Implements hook_js_alter().
  */
 function radix_js_alter(&$javascript) {
+  // Add radix-modal only when required.
   $ctools_modal = drupal_get_path('module', 'ctools') . '/js/modal.js';
   $radix_modal = drupal_get_path('theme', 'radix') . '/assets/javascripts/radix-modal.js';
   if (!empty($javascript[$ctools_modal]) && empty($javascript[$radix_modal])) {
@@ -59,6 +60,7 @@ function radix_js_alter(&$javascript) {
       drupal_js_defaults(), array('group' => JS_THEME, 'data' => $radix_modal));
   }
 }
+
 /**
  * Implements template_preprocess_page().
  */
