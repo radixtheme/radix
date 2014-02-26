@@ -49,11 +49,22 @@ function radix_css_alter(&$css) {
 }
 
 /**
+ * Implements hook_js_alter().
+ */
+function radix_js_alter(&$javascript) {
+  $ctools_modal = drupal_get_path('module', 'ctools') . '/js/modal.js';
+  $radix_modal = drupal_get_path('theme', 'radix') . '/assets/javascripts/radix-modal.js';
+  if (!empty($javascript[$ctools_modal]) && empty($javascript[$radix_modal])) {
+    $javascript[$radix_modal] = array_merge(
+      drupal_js_defaults(), array('group' => JS_THEME, 'data' => $radix_modal));
+  }
+}
+/**
  * Implements template_preprocess_page().
  */
 function radix_preprocess_page(&$variables) {
   global $base_url;
-  
+
   // Add Bootstrap JS.
   $base = parse_url($base_url);
   drupal_add_js($base['scheme'] . '://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js', 'external');
