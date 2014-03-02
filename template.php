@@ -1,16 +1,43 @@
 <?php
+/**
+ * @file
+ * Theme hooks for Radix.
+ */
+
+require_once dirname(__FILE__) . '/includes/utilities.inc';
+require_once dirname(__FILE__) . '/includes/theme.inc';
+require_once dirname(__FILE__) . '/includes/structure.inc';
+require_once dirname(__FILE__) . '/includes/form.inc';
+require_once dirname(__FILE__) . '/includes/menu.inc';
+require_once dirname(__FILE__) . '/includes/comment.inc';
+require_once dirname(__FILE__) . '/includes/panel.inc';
+require_once dirname(__FILE__) . '/includes/view.inc';
 
 /**
- * Implementation of template_preprocess_html()
+ * Implementation of template_preprocess_html().
  */
 function radix_preprocess_html(&$variables) {
+<<<<<<< HEAD
   // add jQuery 1.8.2 for Bootstrap 2.0
   //drupal_add_js('http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js', 'external');
+=======
+  // Add meta for Bootstrap Responsive.
+  // <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  $element = array(
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'name' => 'viewport',
+      'content' => 'width=device-width, initial-scale=1.0',
+    ),
+  );
+  drupal_add_html_head($element, 'bootstrap_responsive');
+>>>>>>> origin/7.x-3.x
 }
 
 /**
- * Implements template_preprocess_page().
+ * Implements hook_css_alter().
  */
+<<<<<<< HEAD
 function radix_preprocess_page(&$variables) {
   // Add search_form to theme
   $search_box_form = drupal_get_form('search_form');
@@ -22,177 +49,101 @@ function radix_preprocess_page(&$variables) {
 
   $main_menu_tree = menu_tree_all_data('main-menu');
   $variables['main_menu'] = render(menu_tree_output($main_menu_tree));
+=======
+function radix_css_alter(&$css) {
+  // Unset some panopoly css.
+  $panopoly_admin_path = drupal_get_path('module', 'panopoly_admin');
+  if (isset($css[$panopoly_admin_path . '/panopoly-admin.css'])) {
+    unset($css[$panopoly_admin_path . '/panopoly-admin.css']);
+  }
+
+  $panopoly_magic_path = drupal_get_path('module', 'panopoly_magic');
+  if (isset($css[$panopoly_magic_path . '/css/panopoly-modal.css'])) {
+    unset($css[$panopoly_magic_path . '/css/panopoly-modal.css']);
+  }
+
+  // Unset some core css.
+  unset($css['modules/system/system.menus.css']);
+>>>>>>> origin/7.x-3.x
 }
 
 /**
- * Implements theme_table().
+ * Implements hook_js_alter().
  */
-function radix_table($variables) {
-  // add default classes to table elements
-  $variables['attributes']['class'] = (isset($variables['attributes']['class'])) ? $variables['attributes']['class'] : array();
-  $variables['attributes']['class'] = array_merge($variables['attributes']['class'], array('table', 'table-striped', 'table-bordered'));
-  
-  $header = $variables['header'];
-  $rows = $variables['rows'];
-  $attributes = $variables['attributes'];
-  $caption = $variables['caption'];
-  $colgroups = $variables['colgroups'];
-  $sticky = $variables['sticky'];
-  $empty = $variables['empty'];
-
-  // Add sticky headers, if applicable.
-  if (count($header) && $sticky) {
-    drupal_add_js('misc/tableheader.js');
-    // Add 'sticky-enabled' class to the table to identify it for JS.
-    // This is needed to target tables constructed by this function.
-    $attributes['class'][] = 'sticky-enabled';
+function radix_js_alter(&$javascript) {
+  // Add radix-modal only when required.
+  $ctools_modal = drupal_get_path('module', 'ctools') . '/js/modal.js';
+  $radix_modal = drupal_get_path('theme', 'radix') . '/assets/javascripts/radix-modal.js';
+  if (!empty($javascript[$ctools_modal]) && empty($javascript[$radix_modal])) {
+    $javascript[$radix_modal] = array_merge(
+      drupal_js_defaults(), array('group' => JS_THEME, 'data' => $radix_modal));
   }
-
-  $output = '<table' . drupal_attributes($attributes) . ">\n";
-
-  if (isset($caption)) {
-    $output .= '<caption>' . $caption . "</caption>\n";
-  }
-
-  // Format the table columns:
-  if (count($colgroups)) {
-    foreach ($colgroups as $number => $colgroup) {
-      $attributes = array();
-
-      // Check if we're dealing with a simple or complex column
-      if (isset($colgroup['data'])) {
-        foreach ($colgroup as $key => $value) {
-          if ($key == 'data') {
-            $cols = $value;
-          }
-          else {
-            $attributes[$key] = $value;
-          }
-        }
-      }
-      else {
-        $cols = $colgroup;
-      }
-
-      // Build colgroup
-      if (is_array($cols) && count($cols)) {
-        $output .= ' <colgroup' . drupal_attributes($attributes) . '>';
-        $i = 0;
-        foreach ($cols as $col) {
-          $output .= ' <col' . drupal_attributes($col) . ' />';
-        }
-        $output .= " </colgroup>\n";
-      }
-      else {
-        $output .= ' <colgroup' . drupal_attributes($attributes) . " />\n";
-      }
-    }
-  }
-
-  // Add the 'empty' row message if available.
-  if (!count($rows) && $empty) {
-    $header_count = 0;
-    foreach ($header as $header_cell) {
-      if (is_array($header_cell)) {
-        $header_count += isset($header_cell['colspan']) ? $header_cell['colspan'] : 1;
-      }
-      else {
-        $header_count++;
-      }
-    }
-    $rows[] = array(array(
-        'data' => $empty,
-        'colspan' => $header_count,
-        'class' => array('empty', 'message'),
-      ));
-  }
-
-  // Format the table header:
-  if (count($header)) {
-    $ts = tablesort_init($header);
-    // HTML requires that the thead tag has tr tags in it followed by tbody
-    // tags. Using ternary operator to check and see if we have any rows.
-    $output .= (count($rows) ? ' <thead><tr>' : ' <tr>');
-    foreach ($header as $cell) {
-      $cell = tablesort_header($cell, $header, $ts);
-      $output .= _theme_table_cell($cell, TRUE);
-    }
-    // Using ternary operator to close the tags based on whether or not there are rows
-    $output .= (count($rows) ? " </tr></thead>\n" : "</tr>\n");
-  }
-  else {
-    $ts = array();
-  }
-
-  // Format the table rows:
-  if (count($rows)) {
-    $output .= "<tbody>\n";
-    $flip = array(
-      'even' => 'odd',
-      'odd' => 'even',
-    );
-    $class = 'even';
-    foreach ($rows as $number => $row) {
-      $attributes = array();
-
-      // Check if we're dealing with a simple or complex row
-      if (isset($row['data'])) {
-        foreach ($row as $key => $value) {
-          if ($key == 'data') {
-            $cells = $value;
-          }
-          else {
-            $attributes[$key] = $value;
-          }
-        }
-      }
-      else {
-        $cells = $row;
-      }
-      if (count($cells)) {
-        // Add odd/even class
-        if (empty($row['no_striping'])) {
-          $class = $flip[$class];
-          $attributes['class'][] = $class;
-        }
-
-        // Build row
-        $output .= ' <tr' . drupal_attributes($attributes) . '>';
-        $i = 0;
-        foreach ($cells as $cell) {
-          $cell = tablesort_cell($cell, $header, $ts, $i++);
-          $output .= _theme_table_cell($cell);
-        }
-        $output .= " </tr>\n";
-      }
-    }
-    $output .= "</tbody>\n";
-  }
-
-  $output .= "</table>\n";
-  return $output;
 }
 
 /**
- * Returns HTML for a button form element.
- *
- * @param $variables
- *   An associative array containing:
- *   - element: An associative array containing the properties of the element.
- *     Properties used: #attributes, #button_type, #name, #value.
- *
- * @ingroup themeable
+ * Implements template_preprocess_page().
  */
-function radix_button($variables) {
-  $element = $variables['element'];
-  $element['#attributes']['type'] = 'submit';
-  element_set_attributes($element, array('id', 'name', 'value'));
+function radix_preprocess_page(&$variables) {
+  global $base_url;
 
-  $element['#attributes']['class'][] = 'form-' . $element['#button_type'];
-  $element['#attributes']['class'][] = 'btn';
-  if (!empty($element['#attributes']['disabled'])) {
-    $element['#attributes']['class'][] = 'form-button-disabled';
+  // Add Bootstrap JS.
+  $base = parse_url($base_url);
+  drupal_add_js($base['scheme'] . '://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js', 'external');
+
+  // Add CSS for Font Awesome
+  // drupal_add_css('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css', 'external');
+
+  // Determine if the page is rendered using panels.
+  $variables['is_panel'] = FALSE;
+  if (module_exists('page_manager') && count(page_manager_get_current_page())) {
+    $variables['is_panel'] = TRUE;
   }
 
-  return '<input' . drupal_attributes($element['#attributes']) . ' />';
+  // Make sure tabs is empty.
+  if (empty($variables['tabs']['#primary']) && empty($variables['tabs']['#secondary'])) {
+    $variables['tabs'] = '';
+  }
+
+  // Theme action links as buttons.
+  foreach ($variables['action_links'] as $key => &$link) {
+    $link['#link']['localized_options']['attributes'] = array('class' => array('btn', 'btn-primary', 'btn-sm'));
+  }
+
+  // Add search_form to theme.
+  $variables['search_form'] = '';
+  if (module_exists('search') && user_access('search content')) {
+    $search_box_form = drupal_get_form('search_form');
+    $search_box_form['basic']['keys']['#title'] = '';
+    $search_box_form['basic']['keys']['#size'] = 20;
+    $search_box_form['basic']['keys']['#attributes'] = array('placeholder' => 'Search');
+    $search_box_form['basic']['keys']['#attributes']['class'][] = 'form-control';
+    $search_box_form['basic']['submit']['#value'] = t('Search');
+    $search_box_form['#attributes']['class'][] = 'navbar-form';
+    $search_box_form['#attributes']['class'][] = 'navbar-right';
+    $search_box = drupal_render($search_box_form);
+    $variables['search_form'] = (user_access('search content')) ? $search_box : NULL;
+  }
+
+  // Format and add main menu to theme.
+  $variables['main_menu'] = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
+  $variables['main_menu']['#theme_wrappers'] = array('menu_tree__navbar_nav');
+
+  // Format and add user menu to theme.
+  $variables['user_menu'] = menu_tree('user-menu');
+  $variables['user_menu']['#theme_wrappers'] = array('menu_tree__navbar_right');
+
+  // Add a copyright message.
+  $variables['copyright'] = t('Drupal is a registered trademark of Dries Buytaert.');
+
+  // Display a message if Sass has not been compiled.
+  $stylesheet_path = path_to_theme() . '/assets/stylesheets/screen.css';
+  if (_radix_current_theme() == 'radix') {
+    $stylesheet_path = path_to_theme() . '/assets/stylesheets/radix-style.css';
+  }
+  if (!file_exists($stylesheet_path)) {
+    drupal_set_message(t('It looks like !path has not been created yet. Run !command in your theme directory to create it.', array(
+      '!path' => '<em>' . $stylesheet_path . '</em>',
+      '!command' => '<code>compass watch</code>',
+    )), 'error');
+  }
 }

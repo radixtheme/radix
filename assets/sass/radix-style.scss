@@ -4,28 +4,13 @@
 
 // COMPASS Imports
 // --------------------------------------------------
-@import "compass/reset";
-@import "compass/css3";
-@include global-reset;
-@include reset-html5;
+@import "compass";
 
-// Twitter Bootstrap
-// @see https://github.com/thomas-mcdonald/bootstrap-sass
+// Radix Variables and Mixins
 // --------------------------------------------------
-@import "bootstrap";
-@import "bootstrap-responsive";
+@import "variable";
 
-// Theme CSS
+// Compass plugin for Radix
+// @see https://github.com/arshad/compass_radix
 // --------------------------------------------------
-@import "mixin";
-@import "color";
-@import "font";
-@import "_fontawesome";
-@import "layout";
-@import "structure";
-@import "menu";
-@import "page";
-@import "panel";
-@import "view";
-@import "form";
-@import "node";
+@import "compass_radix";
