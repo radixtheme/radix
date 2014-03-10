@@ -140,10 +140,18 @@ function drush_radix($name = NULL, $machine_name = NULL) {
   drush_op('radix_file_str_replace', $subtheme_path . '/theme-settings.php', '{{machine_name}}', $machine_name);
 
   // Notify user of the newly created theme.
-  $message = dt('Radix subtheme "!name" created in: !path using the "!kit" kit.', array(
+  $message = 'Radix subtheme "!name" created in: !path using the "!kit" kit';
+  
+  // Add bootstwatch to message.
+  if ($bootswatch != '') {
+    $message .= ' and the "!bootswatch" bootswatch theme';
+  }
+
+  $message = dt($message . '.', array(
     '!name' => $name,
     '!path' => $subtheme_path,
     '!kit' => $kit,
+    '!bootswatch' => $bootswatch,
   ));
   drush_print($message);
 }
