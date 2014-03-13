@@ -11,8 +11,5 @@
     $('.navbar ul.nav li.dropdown').mouseleave(function() {
       $(this).removeClass('open');
     });
-
-    // Tooltip.
-    $('[data-toggle="tooltip"]').tooltip();
   });
 })(jQuery);
