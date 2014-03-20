@@ -7,7 +7,10 @@ Documentation:  https://drupal.org/node/1840310
 Demo:           http://dev-radix.gotpantheon.com
 Issue Queue:    http://drupal.org/project/issues/radix
 
-Maintainer(s):  Arshad Chummun (http://arshad.github.io)
+# Maintainers
+
+* Arshad Chummun (http://arshad.github.io)
+* Capi Etheriel (http://barraponto.blog.br)
 
 # Subtheming Guide
 
