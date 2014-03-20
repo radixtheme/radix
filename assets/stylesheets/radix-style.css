@@ -15,7 +15,7 @@
  * Moreover, a specific value in px can be passed which is
  * used to generate a max-width media query.
  */
-/* normalize.css v2.1.3 | MIT License | git.io/normalize */
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 /* line 22, ../../../../../../../../../../usr/local/.rvm/gems/ruby-2.0.0-p0/gems/bootstrap-sass-3.0.3.0/vendor/assets/stylesheets/bootstrap/_normalize.scss */
 article,
 aside,
@@ -7691,7 +7691,7 @@ td.visible-print {
     display: none !important;
   }
 }
-/*
+/*!
  *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
@@ -10519,7 +10519,7 @@ fieldset .panel-body {
 
 /* line 75, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 html.js input.form-autocomplete {
-  background: url('../images/throbber.gif?1391716347') no-repeat right 8px white !important;
+  background: url('../images/throbber.gif?1391986149') no-repeat right 8px white !important;
 }
 /* line 78, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 html.js input.throbbing {
@@ -10712,17 +10712,21 @@ html.js fieldset.collapsed {
   padding: 0;
 }
 /* line 235, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+.navbar-form .form-item-keys {
+  margin-top: 0 !important;
+}
+/* line 238, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 .navbar-form .form-submit {
   display: none;
 }
 
-/* line 245, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 248, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 .pane-search-box form .form-wrapper .form-group {
   display: block;
   margin-bottom: 10px;
 }
 
-/* line 255, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
+/* line 258, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 .tabledrag-handle .handle {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
