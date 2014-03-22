@@ -84,11 +84,22 @@
       }
     }
 
+    // First, let's get rid of the body overflow.
+    $('body').addClass('modal-open');
+
     resize();
 
     $('.modal-title', Drupal.CTools.Modal.modal).html(Drupal.CTools.Modal.currentSettings.loadingText);
     Drupal.CTools.Modal.modalContent(Drupal.CTools.Modal.modal, settings.modalOptions, settings.animation, settings.animationSpeed);
     $('#modalContent .modal-body').html(Drupal.theme(settings.throbberTheme));
+  };
+
+  Drupal.CTools.Modal.dismiss = function() {
+      console.log('oi');
+    if (Drupal.CTools.Modal.modal) {
+      $('body').removeClass('modal-open');
+      Drupal.CTools.Modal.unmodalContent(Drupal.CTools.Modal.modal);
+    }
   };
 
   /**
@@ -100,7 +111,7 @@
     html += '    <div class="ctools-modal-dialog modal-dialog">'
     html += '      <div class="modal-content">'
     html += '        <div class="modal-header">';
-    html += '          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>';
+    html += '          <button type="button" class="close ctools-close-modal" aria-hidden="true">&times;</button>';
     html += '          <h4 id="modal-title" class="modal-title">&nbsp;</h4>';
     html += '        </div>';
     html += '        <div id="modal-content" class="modal-body">';
