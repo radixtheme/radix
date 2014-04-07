@@ -47,6 +47,13 @@ function radix_menu_tree__nav_tabs(&$variables) {
 }
 
 /**
+ * Implements theme_menu_tree__nav_tabs_justified().
+ */
+function radix_menu_tree__nav_tabs_justified(&$variables) {
+  return '<ul class="nav nav-tabs nav-justified">' . $variables['tree'] . '</ul>';
+}
+
+/**
  * Implements theme_menu_tree__nav_pills().
  */
 function radix_menu_tree__nav_pills(&$variables) {
@@ -58,6 +65,13 @@ function radix_menu_tree__nav_pills(&$variables) {
  */
 function radix_menu_tree__nav_pills_stacked(&$variables) {
   return '<ul class="nav nav-pills nav-stacked">' . $variables['tree'] . '</ul>';
+}
+
+/**
+ * Implements theme_menu_tree__nav_pills_justified().
+ */
+function radix_menu_tree__nav_pills_justified(&$variables) {
+  return '<ul class="nav nav-pills nav-justified">' . $variables['tree'] . '</ul>';
 }
 
 /**
