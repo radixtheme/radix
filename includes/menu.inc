@@ -75,6 +75,13 @@ function radix_menu_tree__nav_pills_justified(&$variables) {
 }
 
 /**
+ * Implements theme_menu_tree__nav_expanded().
+ */
+function radix_menu_tree__nav_expanded(&$variables) {
+  return '<ul class="nav nav-expanded nav-justified">' . $variables['tree'] . '</ul>';
+}
+
+/**
  * Implements theme_menu_link().
  */
 function radix_menu_link($variables) {

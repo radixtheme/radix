@@ -60,6 +60,14 @@ function radix_js_alter(&$javascript) {
     $javascript[$radix_modal] = array_merge(
       drupal_js_defaults(), array('group' => JS_THEME, 'data' => $radix_modal));
   }
+
+  // Add radix-slideshow only when required.
+  $field_slideshow = drupal_get_path('module', 'field_slideshow') . '/field_slideshow.js';
+  $radix_field_slideshow = drupal_get_path('theme', 'radix') . '/assets/javascripts/radix-field-slideshow.js';
+  if (!empty($javascript[$field_slideshow]) && empty($javascript[$radix_field_slideshow])) {
+    $javascript[$radix_field_slideshow] = array_merge(
+      drupal_js_defaults(), array('group' => JS_THEME, 'data' => $radix_field_slideshow));
+  }
 }
 
 /**
