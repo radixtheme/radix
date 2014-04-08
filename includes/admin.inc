@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Theme and preprocess functions for admin.
+ */
 
 /**
  * Implements theme_user_admin_permissions().

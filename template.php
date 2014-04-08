@@ -13,6 +13,7 @@ require_once dirname(__FILE__) . '/includes/comment.inc';
 require_once dirname(__FILE__) . '/includes/panel.inc';
 require_once dirname(__FILE__) . '/includes/view.inc';
 require_once dirname(__FILE__) . '/includes/admin.inc';
+require_once dirname(__FILE__) . '/includes/contrib.inc';
 
 /**
  * Implementation of template_preprocess_html().
