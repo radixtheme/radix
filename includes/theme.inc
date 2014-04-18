@@ -33,6 +33,14 @@ function radix_theme(&$existing, $type, $theme, $path) {
       ),
       'function' => 'theme_radix_button_dropdown',
     ),
+    'radix_modal' => array(
+      'variables' => array(
+        'header' => NULL,
+        'content' => NULL,
+        'buttons' => NULL,
+      ),
+      'template' => 'templates/other/radix-modal',
+    ),
   );
 }
 
@@ -214,3 +222,64 @@ function theme_radix_button_dropdown($variables) {
   $output .= '</div>';
   return $output;
 }
+
+/**
+ * Implements template_proprocess_radix_modal().
+ */
+function radix_preprocess_radix_modal(&$variables) {
+  $variables['modal_id'] = drupal_html_id($variables['id']);
+
+  // Create trigger button.
+  if (isset($variables['trigger_button'])) {
+    $trigger_button = $variables['trigger_button'];
+    $text = (isset($trigger_button['text'])) ? $trigger_button['text'] : t('Open');
+    $attributes = array(
+      'data-toggle' => 'modal',
+      'data-target' => '#' . $variables['modal_id'],
+      'class' => array('btn', 'btn-default')
+    );
+    
+    if (isset($trigger_button['attributes'])) {
+      $attributes = array_merge($attributes, $trigger_button['attributes']);
+    }
+
+    $variables['trigger_button']['#markup'] = l($text, '', array(
+      'absolute' => TRUE,
+      'fragment' => FALSE,
+      'attributes' => $attributes,
+    ));
+  }
+
+  // Format content and add to template.
+  if (isset($variables['content'])) {
+    if (is_string($variables['content'])) {
+      $variables['content']['#markup'] = $variables['content'];
+    }
+  }
+
+  // Format modal butttons.
+  if (isset($variables['buttons'])) {
+    if (count($variables['buttons'])) {
+      foreach ($variables['buttons'] as $key => $button) {
+        $text = isset($button['text']) ? $button['text'] : '';
+        $link = isset($button['link']) ? $button['link'] : '';
+        $options = array();
+
+        // If not link is provided, set as fragment.
+        if (empty($link)) {
+          $options['absolute'] = TRUE;
+          $options['fragment'] = FALSE;
+        }
+
+        // Merge options.
+        $options['attributes'] = array('class' => array('btn', 'btn-default'));
+        if (isset($button['attributes'])) {
+          $options['attributes'] = array_merge($options['attributes'], $button['attributes']);
+        }
+
+        $variables['buttons'][$key] = l($button['text'], $link, $options);
+      }
+    }
+  }
+}
+
