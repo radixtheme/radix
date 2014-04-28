@@ -91,7 +91,8 @@ function drush_radix($name = NULL, $machine_name = NULL) {
   }
 
   // Make a fresh copy of the kit.
-  $kit_path = drush_normalize_path(drush_core_drupal_directory('radix') . '/kits/' . $kit);
+  // $kit_path = drush_normalize_path(drush_core_drupal_directory('radix') . '/kits/' . $kit);
+  $kit_path = drush_normalize_path(drush_get_context('DRUSH_DRUPAL_ROOT') . '/' . drupal_get_path('theme', 'radix') . '/kits/' . $kit);
   if (!is_dir(dirname($subtheme_path))) {
     drush_die(dt('The directory "!directory" was not found.', array('!directory' => dirname($subtheme_path))));
   }
