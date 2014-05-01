@@ -11,33 +11,32 @@
  */
 ?>
 <header id="header" class="header" role="header">
-  <div class="container">
     <nav class="navbar navbar-default" role="navigation">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-          <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a href="<?php print $front_page; ?>" id="logo" class="navbar-brand">
-          <?php print $site_name; ?>
-        </a>
-      </div> <!-- /.navbar-header -->
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="<?php print $front_page; ?>" id="logo" class="navbar-brand">
+            <?php print $site_name; ?>
+          </a>
+        </div> <!-- /.navbar-header -->
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <?php if ($main_menu): ?>
-          <?php print render($main_menu); ?>
-        <?php endif; ?>
-        <?php if ($search_form): ?>
-          <?php print $search_form; ?>
-        <?php endif; ?>
-      </div><!-- /.navbar-collapse -->
-
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <?php if ($main_menu): ?>
+            <?php print render($main_menu); ?>
+          <?php endif; ?>
+          <?php if ($search_form): ?>
+            <?php print $search_form; ?>
+          <?php endif; ?>
+        </div><!-- /.navbar-collapse -->
+      </div> <!-- /.container -->
     </nav>
-  </div> <!-- /.container -->
 </header>
 
 <div id="main-wrapper">
