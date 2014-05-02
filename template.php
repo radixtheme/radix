@@ -104,7 +104,7 @@ function radix_preprocess_page(&$variables) {
 
   // Theme action links as buttons.
   foreach ($variables['action_links'] as $key => &$link) {
-    $link['#link']['localized_options']['attributes'] = array('class' => array('btn', 'btn-primary', 'btn-sm'));
+    $link['#link']['localized_options']['attributes'] = array('class' => array('btn', 'btn-primary'));
   }
 
   // Add search_form to theme.
