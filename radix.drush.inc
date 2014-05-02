@@ -120,8 +120,6 @@ function drush_radix($name = NULL, $machine_name = NULL) {
       drush_tarball_extract($filename, $dirname, TRUE);
       $kit_path = getcwd() . '/' . $dirname . '/radix-kit-' . $kit_name . '-master';
 
-      drush_print($kit_path);
-
       // Set working directory back to the previous working directory.
       chdir($current_dir);
     }
