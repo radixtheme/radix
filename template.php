@@ -124,7 +124,7 @@ function radix_preprocess_page(&$variables) {
 
   // Format and add main menu to theme.
   $variables['main_menu'] = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
-  $variables['main_menu']['#theme_wrappers'] = array('menu_tree__navbar_nav');
+  $variables['main_menu']['#theme_wrappers'] = array();
 
   // Format and add user menu to theme.
   $variables['user_menu'] = menu_tree('user-menu');
