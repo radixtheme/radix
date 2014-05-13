@@ -173,7 +173,7 @@ function drush_radix($name = NULL, $machine_name = NULL) {
   drush_op('radix_file_str_replace', $subtheme_path . '/theme-settings.php', '{{machine_name}}', $machine_name);
 
   // Notify user of the newly created theme.
-  $message = 'Radix subtheme "!name" created in: !path using the "!kit" kit';
+  $message = 'Successfully created the Radix subtheme "!name" created in: !path using the "!kit" kit';
 
   // Add bootstwatch to message.
   if ($bootswatch != '') {
