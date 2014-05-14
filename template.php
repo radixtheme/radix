@@ -128,7 +128,7 @@ function radix_preprocess_page(&$variables) {
 
   // Format and add user menu to theme.
   $variables['user_menu'] = menu_tree('user-menu');
-  $variables['user_menu']['#theme_wrappers'] = array('menu_tree__navbar_right');
+  $variables['user_menu']['#theme_wrappers'] = array();
 
   // Add a copyright message.
   $variables['copyright'] = t('Drupal is a registered trademark of Dries Buytaert.');
