@@ -5,7 +5,7 @@
  */
 
 /**
- * Implements template_preprocess().
+ * Implements template_preprocess_views_view().
  */
 function radix_preprocess_views_view(&$variables) {
   $view = $variables['view'];
@@ -18,7 +18,7 @@ function radix_preprocess_views_view(&$variables) {
 }
 
 /**
- * Implements theme_views_mini_pager().
+ * Implements template_preprocess_views_view_table().
  */
 function radix_preprocess_views_view_table(&$variables) {
   // Add Bootstrap table classes.
