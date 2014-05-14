@@ -37,8 +37,7 @@
           <?php print $search_form; ?>
         <?php endif; ?>
       </div><!-- /.navbar-collapse -->
-
-    </nav>
+    </nav><!-- /.navbar -->
   </div> <!-- /.container -->
 </header>
 
