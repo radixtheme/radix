@@ -301,15 +301,16 @@ function radix_preprocess_radix_tabs(&$variables) {
     // Create an attributes_array for each tab.
     $attributes_array = !empty($tab['attributes_array']) ? $tab['attributes_array'] : array();
 
+    // Get options.
+    $options = !empty($tab['options']) ? $tab['options'] : array();
+    $options = array_merge($options, array('html' => TRUE, 'attributes' => $attributes_array));
+
     // Create the tab element.
     $tab['tab'] = array(
       '#theme' => 'link',
       '#text' => $tab['title'],
       '#path' => isset($tab['href']) ? $tab['href'] : current_path(),
-      '#options' => array(
-        'html' => TRUE,
-        'attributes' => $attributes_array,
-      ),
+      '#options' => $options,
     );
 
     // If content is not empty, this tab can toggle a tab.
