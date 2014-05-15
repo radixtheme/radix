@@ -144,6 +144,8 @@ function radix_menu_link__management($variables) {
  */
 function radix_link($variables) {
   $icons = '';
+  $variables['options']['attributes'] = !empty($variables['options']['attributes']) ? $variables['options']['attributes'] : array();
+  $variables['options']['html'] = !empty($variables['options']['html']) ? $variables['options']['html'] : FALSE;
   if (isset($variables['options']['attributes']['class']) && is_array($variables['options']['attributes']['class'])) {
     $css_classes = $variables['options']['attributes']['class'];
     if ($icon_classes = preg_grep('/^icon\-.*/', $css_classes)) {
