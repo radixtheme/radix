@@ -301,15 +301,23 @@ function radix_preprocess_radix_tabs(&$variables) {
     // Create an attributes_array for each tab.
     $attributes_array = !empty($tab['attributes_array']) ? $tab['attributes_array'] : array();
 
+    // Create the tab element.
+    $tab['tab'] = array(
+      '#theme' => 'link',
+      '#text' => $tab['title'],
+      '#path' => isset($tab['href']) ? $tab['href'] : current_path(),
+      '#options' => array(
+        'html' => TRUE,
+        'attributes' => $attributes_array,
+      ),
+    );
+
     // If content is not empty, this tab can toggle a tab.
     if (!empty($tab['content'])) {
       $tab['id'] = drupal_html_class($tab['title']);
-      $tab['href'] = '#' . $tab['id'];
-      $attributes_array['data-toggle'] = "tab";
+      $tab['tab']['#options']['fragment'] = $tab['id'];
+      $tab['tab']['#options']['attributes']['data-toggle'] = "tab";
     }
-
-    // Create attributes.
-    $tab['attributes'] = drupal_attributes($attributes_array);
   }
 
   // Default to nav-tabs if type is not provided.

@@ -9,7 +9,7 @@
   <!-- Nav tabs -->
   <ul class="nav nav-<?php print $type; ?>">
     <?php foreach ($tabs as $tab): ?>
-      <li><a href="<?php print $tab['href']; ?>" <?php print $tab['attributes']; ?>><?php print $tab['title']; ?></a></li>
+      <li><?php print render($tab['tab']); ?></li>
     <?php endforeach; ?>
   </ul>
 
