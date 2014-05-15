@@ -9,14 +9,16 @@
   <!-- Nav tabs -->
   <ul class="nav nav-<?php print $type; ?>">
     <?php foreach ($tabs as $tab): ?>
-      <li><a href="#<?php print $tab['id']; ?>" data-toggle="tab"><?php print $tab['title']; ?></a></li>
+      <li><a href="<?php print $tab['href']; ?>" <?php print $tab['attributes']; ?>><?php print $tab['title']; ?></a></li>
     <?php endforeach; ?>
   </ul>
 
   <!-- Tab panes -->
   <div class="tab-content">
     <?php foreach ($tabs as $tab): ?>
-      <div class="tab-pane" id="<?php print $tab['id']; ?>"><?php print render($tab['content']); ?></div>
+      <?php if (!empty($tab['content'])): ?>
+        <div class="tab-pane" id="<?php print $tab['id']; ?>"><?php print render($tab['content']); ?></div>
+      <?php endif; ?>
     <?php endforeach; ?>
   </div>
 <?php endif; ?>
