@@ -44,6 +44,7 @@ function radix_theme(&$existing, $type, $theme, $path) {
     'radix_tabs' => array(
       'variables' => array(
         'tabs' => NULL,
+        'type' => NULL,
       ),
       'template' => 'templates/other/radix-tabs',
     ),
@@ -295,8 +296,14 @@ function radix_preprocess_radix_modal(&$variables) {
 function radix_preprocess_radix_tabs(&$variables) {
   $tabs = &$variables['tabs'];
 
+  // Create an id for each tab.
   foreach ($tabs as &$tab) {
     $tab['id'] = drupal_html_class($tab['title']);
+  }
+
+  // Default to nav-tabs if type is not provided.
+  if (empty($variables['type'])) {
+    $variables['type'] = 'tabs';
   }
 }
 

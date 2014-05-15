@@ -7,7 +7,7 @@
 ?>
 <?php if (count($tabs)): ?>
   <!-- Nav tabs -->
-  <ul class="nav nav-tabs">
+  <ul class="nav nav-<?php print $type; ?>">
     <?php foreach ($tabs as $tab): ?>
       <li><a href="#<?php print $tab['id']; ?>" data-toggle="tab"><?php print $tab['title']; ?></a></li>
     <?php endforeach; ?>
