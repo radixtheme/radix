@@ -16,7 +16,7 @@
   <!-- Tab panes -->
   <div class="tab-content">
     <?php foreach ($tabs as $tab): ?>
-      <div class="tab-pane" id="<?php print $tab['id']; ?>"><?php print $tab['content']; ?></div>
+      <div class="tab-pane" id="<?php print $tab['id']; ?>"><?php print render($tab['content']); ?></div>
     <?php endforeach; ?>
   </div>
 <?php endif; ?>
