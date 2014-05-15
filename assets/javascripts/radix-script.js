@@ -10,5 +10,9 @@
         $('[href="' + hash + '"]').tab('show');
       }
     }
+    else {
+      // Show the first tab.
+      $('[data-toggle="tab"]').first().tab('show');
+    }
   });
 })(jQuery, Drupal, this, this.document);
