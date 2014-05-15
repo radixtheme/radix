@@ -41,6 +41,12 @@ function radix_theme(&$existing, $type, $theme, $path) {
       ),
       'template' => 'templates/other/radix-modal',
     ),
+    'radix_tabs' => array(
+      'variables' => array(
+        'tabs' => NULL,
+      ),
+      'template' => 'templates/other/radix-tabs',
+    ),
   );
 }
 
@@ -280,6 +286,17 @@ function radix_preprocess_radix_modal(&$variables) {
         $variables['buttons'][$key] = l($button['text'], $link, $options);
       }
     }
+  }
+}
+
+/**
+ * Implements template_proprocess_radix_tabs().
+ */
+function radix_preprocess_radix_tabs(&$variables) {
+  $tabs = &$variables['tabs'];
+
+  foreach ($tabs as &$tab) {
+    $tab['id'] = drupal_html_class($tab['title']);
   }
 }
 
