@@ -48,6 +48,12 @@ function radix_theme(&$existing, $type, $theme, $path) {
       ),
       'template' => 'templates/other/radix-tabs',
     ),
+    'radix_grid' => array(
+      'variables' => array(
+        'items' => NULL,
+      ),
+      'template' => 'templates/other/radix-grid',
+    ),
   );
 }
 
