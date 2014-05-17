@@ -1,6 +1,7 @@
 # Require any additional compass plugins here.
 require 'bootstrap-sass';
 # require "compass_radix";
+require File.join(File.dirname(__FILE__), 'scripts/css_splitter.rb');
 
 # Set environment [development, production]
 environment = :development
@@ -29,3 +30,8 @@ line_comments = (environment == :development) ? true : false
 # preferred_syntax = :sass
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
+
+# Split css files if it goes over IE's 4095 limit.
+on_stylesheet_saved do |path|
+  CssSplitter.split(path) unless path[/\d+$/]
+end
