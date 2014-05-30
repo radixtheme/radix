@@ -72,6 +72,10 @@ function _radix_process_input(&$element, &$form_state) {
     'searchfield',
     'telfield',
     'urlfield',
+    'email',
+    'webform_email',
+    'webform_number',
+    'number',
   );
   if (!empty($element['#type']) && (in_array($element['#type'], $types))) {
     $element['#attributes']['class'][] = 'form-control';
