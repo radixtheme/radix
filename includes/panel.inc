@@ -5,6 +5,25 @@
  */
 
 /**
+ * Implements template_preprocess_panelizer_view_mode().
+ */
+function radix_preprocess_panelizer_view_mode(&$variables) {
+  $element = $variables['element'];
+
+  // Add some custom classes.
+  $variables['classes_array'] = array();
+  $variables['classes_array'][] = drupal_html_class($element['#entity_type'] . '-' . $element['#bundle']);
+  $variables['classes_array'][] = drupal_html_class('view-mode-' . $element['#view_mode']);
+}
+
+/**
+ * Implements theme_panels_default_style_render_region().
+ */
+function radix_panels_default_style_render_region($vars) {
+  return implode("", $vars['panes']);
+}
+
+/**
  * Implements template_preprocess_panels_pane().
  */
 function radix_preprocess_panels_pane(&$variables) {
