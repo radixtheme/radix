@@ -17,5 +17,13 @@
       e.preventDefault();
       window.location.href = $(this).attr('href');
     });
+
+    // Show first tab by default.
+    $('.nav-tabs > li').first().find('a').tab('show');
+
+    // Show tab if hash is set.
+    if (hash = window.location.hash) {
+      $('.nav-tabs > li > a[href$=' + hash + ']').tab('show');
+    }
   });
 })(jQuery, Drupal, this, this.document);
