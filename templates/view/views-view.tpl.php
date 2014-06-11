@@ -52,7 +52,7 @@
   <?php endif; ?>
 
   <?php if ($rows): ?>
-    <div class="<?php print $view_content_class; ?>">
+    <div class="view-content">
       <?php print $rows; ?>
     </div>
   <?php elseif ($empty): ?>
