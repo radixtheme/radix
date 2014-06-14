@@ -3,19 +3,28 @@
  * JS for Radix.
  */
 (function ($, Drupal, window, document, undefined) {
-  $(document).ready(function() {
-    // Show dropdown on hover.
-    $('.dropdown').mouseenter(function() {
-      $(this).addClass('open');
-    });
-    $('.dropdown').mouseleave(function() {
-      $(this).removeClass('open');
-    });
 
+  Drupal.behaviors.radix_dropdown = {
+    attach: function(context, setting) {
+      $('.dropdown').once('radix-dropdown', function(){
+        // Show dropdown on hover.
+        $(this).mouseenter(function(){
+          $(this).addClass('open');
+        });
+        $(this).mouseleave(function(){
+          $(this).removeClass('open');
+        });
+      });
+    }
+  }
+
+  $(document).ready(function() {
     // Allow main menu dropdown-toggle to be clickable.
-    $('#main-menu .dropdown > a.dropdown-toggle').click(function(e) {
-      e.preventDefault();
-      window.location.href = $(this).attr('href');
+    $('#main-menu .dropdown > a.dropdown-toggle').once('radix-dropdown', function(){
+      $(this).click(function(e) {
+        e.preventDefault();
+        window.location.href = $(this).attr('href');
+      });
     });
 
     // Show first tab by default.
