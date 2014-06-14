@@ -4,6 +4,7 @@
  */
 (function ($, Drupal, window, document, undefined) {
 
+  // Show dropdown on hover.
   Drupal.behaviors.radix_dropdown = {
     attach: function(context, setting) {
       $('.dropdown').once('radix-dropdown', function(){
@@ -15,6 +16,13 @@
           $(this).removeClass('open');
         });
       });
+    }
+  }
+
+  // Bootstrap tooltip.
+  Drupal.behaviors.radix_tooltip = {
+    attach: function(context, setting) {
+      $("[data-toggle='tooltip']").tooltip();
     }
   }
 
