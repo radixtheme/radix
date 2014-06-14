@@ -332,7 +332,7 @@ function radix_pager($variables) {
     }
     return '<div class="text-center">' . theme('item_list', array(
       'items' => $items,
-      'attributes' => array('class' => array('pagination')),
+      'attributes' => array('class' => array('pagination', 'pager')),
     )) . '</div>';
   }
 }
