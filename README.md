@@ -4,7 +4,7 @@ Radix is a base theme for [Panopoly](http://drupal.org/project/panopoly). It has
 
 * Project Page:   http://drupal.org/project/radix
 * Documentation:  https://drupal.org/node/1840310
-* Demo:           http://dev-radix.gotpantheon.com
+* Demo:           http://dev-radix.chapterthree.com
 * Issue Queue:    http://drupal.org/project/issues/radix
 
 ## Maintainer(s): 
@@ -16,7 +16,7 @@ Radix is a base theme for [Panopoly](http://drupal.org/project/panopoly). It has
 
 1. Install the required gems:
 
-        sudo gem install compass_radix -v 2
+        sudo gem install compass_radix
 
   This should install all required gems for Radix.
 
