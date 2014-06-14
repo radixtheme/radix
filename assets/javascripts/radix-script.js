@@ -26,6 +26,13 @@
     }
   }
 
+  // Bootstrap popover.
+  Drupal.behaviors.radix_popover = {
+    attach: function(context, setting) {
+      $("[data-toggle='popover']").popover();
+    }
+  }
+
   $(document).ready(function() {
     // Allow main menu dropdown-toggle to be clickable.
     $('#main-menu .dropdown > a.dropdown-toggle').once('radix-dropdown', function(){
