@@ -54,6 +54,12 @@ function radix_theme(&$existing, $type, $theme, $path) {
       ),
       'template' => 'templates/other/radix-grid',
     ),
+    'radix_alert' => array(
+      'variables' => array(
+        'text' => NULL,
+        'type' => 'status',
+      ),
+    ),
   );
 }
 
@@ -331,5 +337,16 @@ function radix_preprocess_radix_tabs(&$variables) {
   if (empty($variables['type'])) {
     $variables['type'] = 'tabs';
   }
+}
+
+/**
+ * Implements template_preprocess_radix_alert().
+ */
+function template_preprocess_radix_alert(&$variables) {
+  $type = $variables['type'];
+
+  // Add classes.
+  $variables['classes_array'][] = 'alert';
+  $variables['classes_array'][] = 'alert-' . $type;
 }
 
