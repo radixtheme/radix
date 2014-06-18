@@ -101,7 +101,8 @@ function theme_radix_dropdown($variables) {
       continue;
     }
 
-    if (isset($link['href']) && ($link['href'] == $_GET['q'] || ($link['href'] == '<front>' && drupal_is_front_page())) && (empty($link['language']) || $link['language']->language == $language_url->language)) {
+    if (isset($link['href']) && ($link['href'] == $_GET['q']
+        || ($link['href'] == '<front>' && drupal_is_front_page()))) {
       $class[] = 'active';
     }
 
