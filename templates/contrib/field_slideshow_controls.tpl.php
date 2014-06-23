@@ -1,9 +1,7 @@
 <?php
 /**
  * @file
- * Template file for field_slideshow_controls
- *
- *
+ * Template file for field_slideshow_controls.
  */
 ?>
 <div id="field-slideshow-<?php print $slideshow_id; ?>-controls" class="field-slideshow-controls">
