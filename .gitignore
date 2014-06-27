@@ -1,6 +1,6 @@
 # Ignore SASS files
 /.sass-cache
 .DS_Store
-/extensions
+/extensions/compass_radix
 *.codekit
 .idea
