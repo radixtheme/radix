@@ -24,7 +24,7 @@ function radix_drush_command() {
       'machine_name' => 'The machine-readable name of your subtheme. This will be auto-generated from the human-readable name if ommited.',
       'description' => 'The description of your subtheme.',
       'destination' => 'The destination of your subtheme. Defaults to "all" (sites/all/themes).',
-      'kit' => 'The name of the starter kit to use. Defaults to "default".',
+      'kit' => 'The name or url of the starter kit to use. Defaults to "default".',
       'bootswatch' => 'The Bootswatch theme to use. See https://github.com/arshad/radix-bootswatch.',
     ),
     'examples' => array(
