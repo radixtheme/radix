@@ -36,7 +36,13 @@ function radix_preprocess_html(&$variables) {
 
     // Get the current panel display and add some classes to body.
     if ($display = panels_get_current_page_display()) {
-      $variables['classes_array'][] = 'layout-' . $display->layout;
+      $variables['classes_array'][] = 'panel-layout-' . $display->layout;
+
+      // Add a custom class for each region that has content.
+      $regions = array_keys($display->panels);
+      foreach ($regions as $region) {
+        $variables['classes_array'][] = 'panel-region-' . $region;
+      }
     }
   }
 }
