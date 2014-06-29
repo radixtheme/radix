@@ -29,6 +29,16 @@ function radix_preprocess_html(&$variables) {
     ),
   );
   drupal_add_html_head($element, 'bootstrap_responsive');
+
+  // Add some custom classes for panels pages.
+  if (module_exists('page_manager') && count(page_manager_get_current_page())) {
+    $variables['is_panel'] = TRUE;
+
+    // Get the current panel display and add some classes to body.
+    if ($display = panels_get_current_page_display()) {
+      $variables['classes_array'][] = 'layout-' . $display->layout;
+    }
+  }
 }
 
 /**
