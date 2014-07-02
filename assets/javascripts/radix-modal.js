@@ -95,7 +95,6 @@
   };
 
   Drupal.CTools.Modal.dismiss = function() {
-      console.log('oi');
     if (Drupal.CTools.Modal.modal) {
       $('body').removeClass('modal-open');
       Drupal.CTools.Modal.unmodalContent(Drupal.CTools.Modal.modal);
