@@ -14,7 +14,6 @@ stylesheets-conditional[IE 7][all][] = assets/stylesheets/radix-ie7.css
 stylesheets-conditional[IE 8][all][] = assets/stylesheets/radix-ie8.css
 
 ; Javascript
-scripts[] = assets/javascripts/modernizr.js
 scripts[] = assets/javascripts/radix-script.js
 
 ; Regions

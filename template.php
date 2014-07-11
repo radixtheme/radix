@@ -107,6 +107,12 @@ function radix_preprocess_page(&$variables) {
     drupal_add_js($base['scheme'] . '://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js', 'external');
   }
 
+  // Add support for the Modenizr module.
+  // Load modernizr.js only if modernizr module is not present.
+  if (!module_exists('modernizr')) {
+    drupal_add_js(drupal_get_path('theme', 'radix') . '/assets/javascripts/modernizr.js');
+  }
+
   // Determine if the page is rendered using panels.
   $variables['is_panel'] = FALSE;
   if (module_exists('page_manager') && count(page_manager_get_current_page())) {
