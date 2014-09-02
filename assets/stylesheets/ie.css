@@ -1431,13 +1431,14 @@ ul.nav > li.dropdown:after {
   display: none;
 }
 
-/* line 15, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
-.view-mode-featured .container {
+/* line 16, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
+.view-mode-featured .container,
+.view-mode-teaser .container {
   width: auto;
   padding: 0;
 }
 
-/* line 23, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
+/* line 24, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
 div#panels-ipe-control-container {
   width: auto;
   left: 0;
@@ -1445,47 +1446,47 @@ div#panels-ipe-control-container {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 28, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
+/* line 29, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
 div#panels-ipe-control-container .panels-ipe-button-container {
   text-align: center;
 }
-/* line 30, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
+/* line 31, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
 div#panels-ipe-control-container .panels-ipe-button-container .panels-ipe-pseudobutton-container {
   margin: 0 5px;
 }
-/* line 32, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
+/* line 33, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
 div#panels-ipe-control-container .panels-ipe-button-container .panels-ipe-pseudobutton-container a {
   padding: 0px 10px 0px 34px;
 }
-/* line 34, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
+/* line 35, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
 div#panels-ipe-control-container .panels-ipe-button-container .panels-ipe-pseudobutton-container a:hover {
   text-decoration: none;
 }
-/* line 42, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
+/* line 43, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
 div#panels-ipe-control-container .panels-ipe-form-container form > div {
   text-align: center;
 }
-/* line 45, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
+/* line 46, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
 div#panels-ipe-control-container .panels-ipe-form-container form .form-submit {
   margin: 0 5px;
   padding: 0px 10px 0px 34px;
 }
-/* line 48, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
+/* line 49, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
 div#panels-ipe-control-container .panels-ipe-form-container form .form-submit:hover {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-/* line 56, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
+/* line 57, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
 ul.panels-ipe-linkbar {
   list-style: none outside none;
 }
-/* line 58, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
+/* line 59, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
 ul.panels-ipe-linkbar > li {
   display: inline-block;
   margin: 0 0 0 5px;
 }
-/* line 61, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
+/* line 62, ../../extensions/compass_radix/stylesheets/compass_radix/_panel.scss */
 ul.panels-ipe-linkbar > li a {
   margin: 0 !important;
 }
