@@ -24,7 +24,7 @@
   <div id="main-wrapper">
     <div id="main" class="main container">
       <div class="row">
-        <?php if ($sidebar_first): ?>
+        <?php if (!empty($sidebar_first)): ?>
           <div class="col-md-3 sidebar">
             <?php print $sidebar_first; ?>
           </div>
