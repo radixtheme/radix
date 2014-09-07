@@ -14,36 +14,5 @@ Radix is a base theme for [Panopoly](http://drupal.org/project/panopoly). It has
 
 ## Subtheming Guide
 
-1. Install the required gems:
-
-        sudo gem install compass_radix
-
-  This should install all required gems for Radix.
-
-2. Download the latest Radix and place it in your themes folder.
-
-3. Using drush run the following command to create a subtheme.
-
-        drush radix "SUBTHEME_NAME"
-
-  You can also specify some options when creating your subtheme.
-
-        drush radix "SUBTHEME_NAME" --description="This is the description of subtheme."
-
-  Available options:
-
-        --bootswatch                              The Bootswatch theme to use. See https://github.com/arshad/radix-bootswatch.
-        --description                             The description of your subtheme.
-        --destination                             The destination of your subtheme. Defaults to "all" (sites/all/themes).
-        --kit                                     The name or url of the starter kit to use. Defaults to "default".
-        --machine_name                            The machine-readable name of your subtheme. Auto-generated if ommited.
-
-4. To start making changes to your theme, using a command line cd to your subtheme directory and run:
-        
-        compass watch
-
-  You can now start adding your Sass to your subtheme.
-
-
-For more information on subtheming, visit the Radix Handbook at https://drupal.org/node/1840310.
+See the guide here: https://www.drupal.org/node/1896382
 
