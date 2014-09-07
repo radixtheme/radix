@@ -7,12 +7,7 @@ Radix is a base theme for [Panopoly](http://drupal.org/project/panopoly). It has
 * Demo:           http://dev-radix.chapterthree.com
 * Issue Queue:    http://drupal.org/project/issues/radix
 
-## Maintainer(s): 
-
-* Arshad Chummun
-* Capi Etheriel
-
-## Subtheming Guide
+## Theming Guide
 
 See the guide here: https://www.drupal.org/node/1896382
 
