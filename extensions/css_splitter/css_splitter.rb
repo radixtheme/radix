@@ -1,5 +1,7 @@
 # Splits stylesheets that go beyond the IE limit of 4095 selectors.
 # See https://github.com/zweilove/css_splitter
+Encoding.default_external = Encoding::UTF_8
+Encoding.default_internal = Encoding::UTF_8
 class CssSplitter
 
   def self.split(infile, outdir = File.dirname(infile), max_selectors = 4095)
