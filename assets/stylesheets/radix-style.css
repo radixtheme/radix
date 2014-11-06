@@ -1,20 +1,3 @@
-/**
- * Responsive mixin. 
- *
- * - phone
- * - tablet-portrait
- * - tablet-landscape-desktop
- * - large-desktop
- *
- * Additional parameters for tagetting retina and non-retina
- * devices
- *
- * - retina
- * - non-retina
- *
- * Moreover, a specific value in px can be passed which is
- * used to generate a max-width media query.
- */
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /* line 9, ../../../../../../../../../.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.0/vendor/assets/stylesheets/bootstrap/_normalize.scss */
 html {
@@ -11016,7 +10999,7 @@ fieldset .panel-body {
 
 /* line 73, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 html.js input.form-autocomplete {
-  background: url('../images/throbber.gif?1409683263') no-repeat right 8px white !important;
+  background: url('../images/throbber.gif?1415300482') no-repeat right 8px white !important;
 }
 /* line 76, ../../extensions/compass_radix/stylesheets/compass_radix/_form.scss */
 html.js input.throbbing {
@@ -11231,92 +11214,81 @@ html.js fieldset.collapsed {
   box-sizing: content-box;
 }
 
-/* line 9, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
-.field img.panopoly-image-full,
-.field img.panopoly-image-half,
-.field img.panopoly-image-quarter {
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  float: none;
-  margin: 0;
-}
-
-/* line 18, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
+/* line 6, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
 .field-collection-container {
   border: 0;
 }
-/* line 20, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
+/* line 8, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
 .field-collection-container .field-collection-view {
   margin: 0;
   padding: 0;
   border: none;
 }
 
-/* line 32, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
+/* line 20, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
 .node-panopoly-page.node-teaser .panel-pane {
   margin: 0 0 10px 260px;
 }
-/* line 35, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
+/* line 23, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
 .node-panopoly-page.node-teaser .pane-node-field-featured-image {
   float: left;
   margin-left: 0;
 }
 @media (max-width: 767px) {
-  /* line 41, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
+  /* line 29, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
   .node-panopoly-page .panel-pane {
     float: none !important;
     margin: 0 0 10px !important;
   }
 }
 
-/* line 53, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
+/* line 41, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
 .node-panopoly-news-article.node-teaser .panel-pane {
   margin: 0 0 10px 260px;
 }
-/* line 56, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
+/* line 44, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
 .node-panopoly-news-article.node-teaser .pane-node-field-featured-image {
   float: left;
   margin-left: 0;
 }
 @media (max-width: 767px) {
-  /* line 62, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
+  /* line 50, ../../extensions/compass_radix/stylesheets/compass_radix/_node.scss */
   .node-panopoly-news-article .panel-pane {
     float: none !important;
     margin: 0 0 10px !important;
   }
 }
 
-/* line 5, ../../extensions/compass_radix/stylesheets/compass_radix/_comment.scss */
+/* line 3, ../../extensions/compass_radix/stylesheets/compass_radix/_comment.scss */
 .comment {
   margin-top: 15px;
 }
-/* line 7, ../../extensions/compass_radix/stylesheets/compass_radix/_comment.scss */
+/* line 5, ../../extensions/compass_radix/stylesheets/compass_radix/_comment.scss */
 .comment .user-picture {
   float: left;
   margin-right: 10px;
 }
-/* line 10, ../../extensions/compass_radix/stylesheets/compass_radix/_comment.scss */
+/* line 8, ../../extensions/compass_radix/stylesheets/compass_radix/_comment.scss */
 .comment .user-picture a {
   display: block;
 }
-/* line 14, ../../extensions/compass_radix/stylesheets/compass_radix/_comment.scss */
+/* line 12, ../../extensions/compass_radix/stylesheets/compass_radix/_comment.scss */
 .comment .submitted {
   font-size: 0.90em;
 }
-/* line 16, ../../extensions/compass_radix/stylesheets/compass_radix/_comment.scss */
+/* line 14, ../../extensions/compass_radix/stylesheets/compass_radix/_comment.scss */
 .comment .submitted .permalink {
   margin-left: 5px;
 }
-/* line 19, ../../extensions/compass_radix/stylesheets/compass_radix/_comment.scss */
+/* line 17, ../../extensions/compass_radix/stylesheets/compass_radix/_comment.scss */
 .comment .submitted .new {
   color: #d9534f;
 }
-/* line 23, ../../extensions/compass_radix/stylesheets/compass_radix/_comment.scss */
+/* line 21, ../../extensions/compass_radix/stylesheets/compass_radix/_comment.scss */
 .comment .content {
   margin: 10px 0;
 }
-/* line 26, ../../extensions/compass_radix/stylesheets/compass_radix/_comment.scss */
+/* line 24, ../../extensions/compass_radix/stylesheets/compass_radix/_comment.scss */
 .comment .links {
   font-size: 0.80em;
 }
