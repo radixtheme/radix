@@ -154,15 +154,29 @@ function radix_form_element($variables) {
   $suffix = isset($element['#field_suffix']) ? ' <span class="field-suffix">' . $element['#field_suffix'] . '</span>' : '';
 
   switch ($element['#title_display']) {
-    case 'before':
     case 'invisible':
+      if ($is_radio || $is_checkbox) {
+        // render the normal invisible label for screen readers
+        $output .= ' ' . theme('form_element_label', $variables);
+        // but still ensure checkbox is wrapped in an empty label
+        $element['#title_display'] = 'before';
+        $element['#title'] = '';
+        $output .= ' ' . $prefix . theme('form_element_label', $variables) . $suffix . "\n";
+      }
+      else {
+        $output .= ' ' . theme('form_element_label', $variables);
+        $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
+      }
+      break;
+
+    case 'before':
       $output .= ' ' . theme('form_element_label', $variables);
       $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
       break;
 
     case 'after':
       if ($is_radio || $is_checkbox) {
-        $output .= ' ' . $prefix . theme('form_element_label', $variables) . $suffix;
+        $output .= ' ' . $prefix . theme('form_element_label', $variables) . $suffix . "\n";
       }
       else {
         $variables['#children'] = ' ' . $prefix . $element['#children'] . $suffix;
@@ -172,8 +186,15 @@ function radix_form_element($variables) {
 
     case 'none':
     case 'attribute':
-      // Output no label and no required marker, only the children.
-      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
+      if ($is_radio || $is_checkbox) {
+        // ensure checkboxes still wrapped in a label
+        $element['#title_display'] = 'before';
+        $output .= ' ' . $prefix . theme('form_element_label', $variables) . $suffix;
+      }
+      else {
+        // Output no label and no required marker, only the children.
+        $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
+      }
       break;
   }
 
@@ -205,7 +226,7 @@ function radix_form_element_label($variables) {
   // If the element is required, a required marker is appended to the label.
   $required = !empty($element['#required']) ? theme('form_required_marker', array('element' => $element)) : '';
 
-  $title = filter_xss_admin($element['#title']);
+  $title = !empty($element['#title']) ? filter_xss_admin($element['#title']) : '';
 
   $attributes = array();
   // Style the label as class option to display inline with the element.
@@ -223,7 +244,7 @@ function radix_form_element_label($variables) {
 
   // Radio and checkboxes goes inside label.
   $output = '';
-  if ($is_radio_or_checkbox && isset($element['#children'])) {
+  if ($is_radio_or_checkbox && isset($element['#children']) && ($element['#title_display'] != 'invisible')) {
     $output .= $element['#children'];
   }
 
