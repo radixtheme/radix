@@ -72,7 +72,7 @@
         <?php endif; ?>
       </div>
     </div>
-    <div id="content" class="<?php print (!$is_panel) ? 'container' : ''; ?>">
+    <div id="content" class="container">
       <?php print render($page['content']); ?>
     </div>
   </div> <!-- /#main -->

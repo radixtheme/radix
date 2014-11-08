@@ -2102,14 +2102,15 @@
   content: "\f20c";
 }
 
-/* line 4, ../../extensions/compass_radix/stylesheets/compass_radix/_layout.scss */
-.container .container {
+/* line 5, ../../extensions/compass_radix/stylesheets/compass_radix/_layout.scss */
+.container .container,
+.container .container-fluid {
   width: auto;
   margin-left: -15px;
   margin-right: -15px;
 }
 
-/* line 11, ../../extensions/compass_radix/stylesheets/compass_radix/_layout.scss */
+/* line 12, ../../extensions/compass_radix/stylesheets/compass_radix/_layout.scss */
 #footer {
   margin: 36px 0;
 }
