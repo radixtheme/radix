@@ -152,15 +152,15 @@ function radix_preprocess_page(&$variables) {
   $variables['copyright'] = t('Drupal is a registered trademark of Dries Buytaert.');
 
   // Display a message if Sass has not been compiled.
-  $theme_path = drupal_get_path('theme', $GLOBALS['theme']);
-  $stylesheet_path = $theme_path . '/assets/stylesheets/screen.css';
-  if (_radix_current_theme() == 'radix') {
-    $stylesheet_path = $theme_path . '/assets/stylesheets/radix-style.css';
-  }
-  if (!file_exists($stylesheet_path)) {
-    drupal_set_message(t('It looks like %path has not been created yet. Run <code>@command</code> in your theme directory to create it.', array(
-      '%path' => $stylesheet_path,
-      '@command' => 'compass watch',
-    )), 'error');
-  }
+//  $theme_path = drupal_get_path('theme', $GLOBALS['theme']);
+//  $stylesheet_path = $theme_path . '/assets/stylesheets/screen.css';
+//  if (_radix_current_theme() == 'radix') {
+//    $stylesheet_path = $theme_path . '/assets/stylesheets/radix-style.css';
+//  }
+//  if (!file_exists($stylesheet_path)) {
+//    drupal_set_message(t('It looks like %path has not been created yet. Run <code>@command</code> in your theme directory to create it.', array(
+//      '%path' => $stylesheet_path,
+//      '@command' => 'compass watch',
+//    )), 'error');
+//  }
 }
