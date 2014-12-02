@@ -5,95 +5,32 @@
  */
 
 /**
- * Implements theme_form_element().
+ * Implements hook_preprocess_input().
  */
-function radix_form_element($variables) {
-  $element = &$variables['element'];
-  // This is also used in the installer, pre-database setup.
-  $t = get_t();
-
-  // This function is invoked as theme wrapper, but the rendered form element
-  // may not necessarily have been processed by form_builder().
-  $element += array(
-    '#title_display' => 'before',
-  );
-
-  // Add element #id for #type 'item'.
-  if (isset($element['#markup']) && !empty($element['#id'])) {
-    $attributes['id'] = $element['#id'];
-  }
-  // Add element's #type and #name as class to aid with JS/CSS selectors.
-  $attributes['class'] = array('form-item');
-  if (!empty($element['#type'])) {
-    $attributes['class'][] = 'form-type-' . strtr($element['#type'], '_', '-');
-  }
-  if (!empty($element['#name'])) {
-    $attributes['class'][] = 'form-item-' . strtr($element['#name'], array(
-      ' ' => '-',
-      '_' => '-',
-      '[' => '-',
-      ']' => '',
-    ));
-  }
-  // Add a class for disabled elements to facilitate cross-browser styling.
-  if (!empty($element['#attributes']['disabled'])) {
-    $attributes['class'][] = 'form-disabled';
-  }
-  $output = '<div' . drupal_attributes($attributes) . '>' . "\n";
-
-  // If #title is not set, we don't display any label or required marker.
-  if (!isset($element['#title'])) {
-    $element['#title_display'] = 'none';
-  }
-  $prefix = isset($element['#field_prefix']) ? '<span class="field-prefix">' . $element['#field_prefix'] . '</span> ' : '';
-  $suffix = isset($element['#field_suffix']) ? ' <span class="field-suffix">' . $element['#field_suffix'] . '</span>' : '';
-
-  switch ($element['#title_display']) {
-    case 'before':
-    case 'invisible':
-      $output .= ' ' . theme('form_element_label', $variables);
-      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
-      break;
-
-    case 'after':
-      $output .= ' ' . $prefix . $element['#children'] . $suffix;
-      $output .= ' ' . theme('form_element_label', $variables) . "\n";
-      break;
-
-    case 'none':
-    case 'attribute':
-      // Output no label and no required marker, only the children.
-      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
-      break;
-  }
-
-  if (!empty($element['#description'])) {
-    $output .= '<div class="description">' . $element['#description'] . "</div>\n";
-  }
-
-  $output .= "</div>\n";
-
-  return $output;
+function radix_preprocess_input(&$variables) {
+  $element = $variables['element'];
+  // Add the element type to the theme.
+  $variables['type'] = $element['#type'];
 }
 
 /**
- * Implements theme_button().
+ * Implements template_preprocess_links().
  */
-function radix_button($variables) {
-  $element = $variables['element'];
-  $element['#attributes']['type'] = 'submit';
-  element_set_attributes($element, array('id', 'name', 'value'));
+function radix_preprocess_links(&$variables) {
+  switch ($variables['theme_hook_original']) {
+    case 'links__dropbutton':
+    case 'links__dropbutton__operations':
+      // Get the first link and render it as a button.
+      $variables['first_link'] = array_shift($variables['links']);
 
-  $element['#attributes']['class'][] = 'form-' . $element['#button_type'];
-  $element['#attributes']['class'][] = 'btn';
-  if (!empty($element['#attributes']['disabled'])) {
-    $element['#attributes']['class'][] = 'form-button-disabled';
+      if (!empty($variables['first_link']['link'])) {
+        $variables['first_link']['link']['#attributes']['class'][] = 'btn';
+        $variables['first_link']['link']['#attributes']['class'][] = 'btn-default';
+        unset($variables['first_link']['text']);
+      }
+
+      // Remove all classes and add bootstrap classes.
+      $variables['attributes']['class'] = array('dropdown-menu');
+      break;
   }
-
-  // Add a btn-primary class if submit button.
-  if (isset($element['#parents']) && ($element['#parents'][0] == 'submit')) {
-    $element['#attributes']['class'][] = 'btn-primary';
-  }
-
-  return '<input' . drupal_attributes($element['#attributes']) . ' />';
 }

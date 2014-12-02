@@ -1,0 +1,94 @@
+<?php
+/**
+ * @file
+ * Theme hooks for Radix.
+ */
+
+require_once dirname(__FILE__) . '/includes/utilities.inc';
+require_once dirname(__FILE__) . '/includes/theme.inc';
+require_once dirname(__FILE__) . '/includes/structure.inc';
+require_once dirname(__FILE__) . '/includes/form.inc';
+require_once dirname(__FILE__) . '/includes/menu.inc';
+require_once dirname(__FILE__) . '/includes/comment.inc';
+require_once dirname(__FILE__) . '/includes/block.inc';
+require_once dirname(__FILE__) . '/includes/panel.inc';
+require_once dirname(__FILE__) . '/includes/view.inc';
+require_once dirname(__FILE__) . '/includes/admin.inc';
+require_once dirname(__FILE__) . '/includes/contrib.inc';
+
+use Drupal\Core\Page\MetaElement;
+use Drupal\Core\Menu\MenuTreeParameters;
+
+/**
+ * Implementation of template_preprocess_html().
+ */
+function radix_preprocess_html(&$variables) {
+  $page = $variables['page_object'];
+
+  // Add meta for Bootstrap Responsive.
+  // <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  $attributes = array(
+    'name' => 'viewport',
+    'content' => 'width=device-width, initial-scale=1.0',
+  );
+  $metatag = new MetaElement(NULL, $attributes);
+  $page->addMetaElement($metatag);
+
+  // Add some custom classes for panels pages.
+  if (\Drupal::moduleHandler()->moduleExists('page_manager') && count(page_manager_get_current_page())) {
+    $variables['is_panel'] = TRUE;
+
+    // Get the current panel display and add some classes to body.
+    if ($display = panels_get_current_page_display()) {
+      $variables['classes_array'][] = 'panel-layout-' . $display->layout;
+
+      // Add a custom class for each region that has content.
+      $regions = array_keys($display->panels);
+      foreach ($regions as $region) {
+        $variables['classes_array'][] = 'panel-region-' . $region;
+      }
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_page().
+ */
+function radix_preprocess_page(&$variables) {
+  // Determine if the page is rendered using panels.
+  $variables['is_panel'] = FALSE;
+  if (\Drupal::moduleHandler()->moduleExists('page_manager') && count(page_manager_get_current_page())) {
+    $variables['is_panel'] = TRUE;
+  }
+
+  // Make sure tabs is empty.
+  if (empty($variables['tabs']['#primary']) && empty($variables['tabs']['#secondary'])) {
+    $variables['tabs'] = '';
+  }
+
+  // Theme action links as buttons.
+  foreach ($variables['action_links'] as $key => &$link) {
+    $link['#link']['localized_options']['attributes'] = array('class' => array('btn', 'btn-primary'));
+  }
+
+  // Add search_form to theme.
+  $variables['search_form'] = '';
+  if (\Drupal::moduleHandler()->moduleExists('search') && \Drupal::currentUser()->hasPermission('search content')) {
+    $search_box_form = \Drupal::formBuilder()->getForm('Drupal\search\Form\SearchBlockForm');
+    $search_box_form['keys']['#title'] = '';
+    $search_box_form['keys']['#size'] = 20;
+    $search_box_form['keys']['#placeholder'] = t('Search');
+    $search_box_form['actions']['submit']['#value'] = t('Search');
+    $search_box_form['#attributes']['class'][] = 'navbar-form';
+    $search_box_form['#attributes']['class'][] = 'navbar-right';
+    $search_box = drupal_render($search_box_form);
+    $variables['search_form'] = (\Drupal::currentUser()->hasPermission('search content')) ? $search_box : NULL;
+  }
+
+  // Format and add main menu to theme.
+  $menu = \Drupal::menuTree()->load('main', new MenuTreeParameters());
+  $variables['main_menu'] = \Drupal::menuTree()->build($menu);
+
+  // Add a copyright message.
+  $variables['copyright'] = t('Drupal is a registered trademark of Dries Buytaert.');
+}

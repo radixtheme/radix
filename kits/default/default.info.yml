@@ -1,0 +1,23 @@
+name: ||Name||
+description: ||Description||
+screenshot: screenshot.png
+core: 8.x
+stylesheets:
+  all:
+   - assets/stylesheets/screen.css
+  print:
+   - assets/stylesheets/print.css
+stylesheets-remove:
+  - radix-style.css
+  - radix-print.css
+scripts:
+   - assets/javascripts/script.js
+regions:
+   primary_menu: 'Primary menu'
+   content: 'Content'
+features:
+version: VERSION
+engine: twig
+type: theme
+base theme: radix
+hidden: true

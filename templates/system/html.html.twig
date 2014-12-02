@@ -1,69 +1,46 @@
 {#
 /**
  * @file
- * Default theme implementation to display the basic html structure of a single
- * Drupal page.
+ * Default theme implementation for the basic structure of a single Drupal page.
  *
  * Variables:
- * - $css: An array of CSS files for the current page.
- * - $language: (object) The language the site is being displayed in.
- *   $language->language contains its textual representation.
- *   $language->dir contains the language direction. It will either be 'ltr' or 'rtl'.
- * - $rdf_namespaces: All the RDF namespace prefixes used in the HTML document.
- * - $grddl_profile: A GRDDL profile allowing agents to extract the RDF data.
- * - $head_title: A modified version of the page title, for use in the TITLE
- *   tag.
- * - $head_title_array: (array) An associative array containing the string parts
- *   that were used to generate the $head_title variable, already prepared to be
- *   output as TITLE tag. The key/value pairs may contain one or more of the
- *   following, depending on conditions:
- *   - title: The title of the current page, if any.
- *   - name: The name of the site.
- *   - slogan: The slogan of the site, if any, and if there is no title.
- * - $head: Markup for the HEAD section (including meta tags, keyword tags, and
+ * - css: A list of CSS files for the current page.
+ * - head: Markup for the HEAD element (including meta tags, keyword tags, and
  *   so on).
- * - $styles: Style tags necessary to import all CSS files for the page.
- * - $scripts: Script tags necessary to load the JavaScript files and settings
- *   for the page.
- * - $page_top: Initial markup from any modules that have altered the
- *   page. This variable should always be output first, before all other dynamic
- *   content.
- * - $page: The rendered page content.
- * - $page_bottom: Final closing markup from any modules that have altered the
- *   page. This variable should always be output last, after all other dynamic
- *   content.
- * - $classes String of classes that can be used to style contextually through
- *   CSS.
+ * - head_title: A modified version of the page title, for use in the TITLE tag.
+ * - head_title_array: List of text elements that make up the head_title
+ *   variable. May contain or more of the following:
+ *   - title: The title of the page.
+ *   - name: The name of the site.
+ *   - slogan: The slogan of the site.
+ * - page_top: Initial rendered markup. This should be printed before 'page'.
+ * - page: The rendered page markup.
+ * - page_bottom: Closing rendered markup. This variable should be printed after
+ *   'page'.
+ * - styles: Style tags necessary to import all necessary CSS files in the head.
+ * - scripts: Script tags necessary to load the JavaScript files and settings
+ *   in the head.
  *
- * @see template_preprocess()
  * @see template_preprocess_html()
- * @see template_process()
- */#}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
-  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{ language.language }}" version="XHTML+RDFa 1.0" dir="{{ language.dir }}"{{ rdf_namespaces }}>
-
-<head profile="{{ grddl_profile }}">
-  {{ head }}
-  <title>{{ head_title }}</title>
-  {{ styles }}
-  {{ scripts }}
-  <!--[if lt IE 9]>
-   <script>
-      document.createElement('header');
-      document.createElement('nav');
-      document.createElement('section');
-      document.createElement('article');
-      document.createElement('aside');
-      document.createElement('footer');
-   </script>
-  <![endif]-->
+ *
+ * @ingroup themeable
+ */
+#}
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+<head>
+    {{ page.head }}
+    <title>{{ head_title }}</title>
+    {{ page.styles }}
+    {{ page.scripts }}
 </head>
-<body class="{{ classes }}" {{ attributes }}>
-  <div id="skip-link">
-    <a href="#main-content" class="element-invisible element-focusable">{{ 'Skip to main content'|t }}</a>
-  </div>
-  {{ page_top }}
-  {{ page }}
-  {{ page_bottom }}
+<body{{ attributes }}>
+<a href="#main-content" class="visually-hidden focusable skip-link">
+    {{ 'Skip to main content'|t }}
+</a>
+{{ page_top }}
+{{ page.content }}
+{{ page_bottom }}
+{{ page.scripts('footer') }}
 </body>
 </html>

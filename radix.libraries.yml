@@ -1,0 +1,10 @@
+bootstrap:
+  version: VERSION
+  js:
+    //netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js : {}
+
+base:
+  version: VERSION
+  js:
+    assets/javascripts/modernizr.js: {}
+    assets/javascripts/radix-script.js: {}
