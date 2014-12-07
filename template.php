@@ -50,7 +50,7 @@ function radix_preprocess_page(&$variables) {
   // Add Bootstrap JS from CDN if bootstrap library is not installed.
   if (!module_exists('bootstrap_library')) {
     $base = parse_url($base_url);
-    drupal_add_js($base['scheme'] . '://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js', 'external');
+    drupal_add_js($base['scheme'] . '://netdna.bootstrapcdn.com/bootstrap/2.3.1/js/bootstrap.min.js', 'external');
   }
 
   // Add CSS for Font Awesome
