@@ -16,7 +16,7 @@ require_once dirname(__FILE__) . '/includes/admin.inc';
 require_once dirname(__FILE__) . '/includes/contrib.inc';
 
 /**
- * Implementation of template_preprocess_html().
+ * Implements template_preprocess_html().
  */
 function radix_preprocess_html(&$variables) {
   // Add meta for Bootstrap Responsive.
