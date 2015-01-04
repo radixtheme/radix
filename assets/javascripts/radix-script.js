@@ -43,7 +43,10 @@
     });
 
     // Show first tab by default.
-    $('.nav-tabs > li').first().find('a').tab('show');
+    // Ignore the "primary" tabs on the node edit page.
+    var tabs = $('.nav-tabs').not('.primary');
+    tabs.children('li').first().find('a').tab('show');
+
     if (hash = window.location.hash) {
       $('.nav-tabs > li > a[href$=' + hash + ']').tab('show');
     }
