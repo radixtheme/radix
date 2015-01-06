@@ -19,6 +19,20 @@ require_once dirname(__FILE__) . '/includes/contrib.inc';
  * Implements template_preprocess_html().
  */
 function radix_preprocess_html(&$variables) {
+  global $base_url;
+
+  // Add Bootstrap JS from CDN if bootstrap library is not installed.
+  if (!module_exists('bootstrap_library')) {
+    $base = parse_url($base_url);
+    drupal_add_js($base['scheme'] . '://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js', 'external');
+  }
+
+  // Add support for the Modenizr module.
+  // Load modernizr.js only if modernizr module is not present.
+  if (!module_exists('modernizr')) {
+    drupal_add_js(drupal_get_path('theme', 'radix') . '/assets/javascripts/modernizr.js');
+  }
+  
   // Add meta for Bootstrap Responsive.
   // <meta name="viewport" content="width=device-width, initial-scale=1.0">
   $element = array(
@@ -99,20 +113,6 @@ function radix_js_alter(&$javascript) {
  * Implements template_preprocess_page().
  */
 function radix_preprocess_page(&$variables) {
-  global $base_url;
-
-  // Add Bootstrap JS from CDN if bootstrap library is not installed.
-  if (!module_exists('bootstrap_library')) {
-    $base = parse_url($base_url);
-    drupal_add_js($base['scheme'] . '://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js', 'external');
-  }
-
-  // Add support for the Modenizr module.
-  // Load modernizr.js only if modernizr module is not present.
-  if (!module_exists('modernizr')) {
-    drupal_add_js(drupal_get_path('theme', 'radix') . '/assets/javascripts/modernizr.js');
-  }
-
   // Determine if the page is rendered using panels.
   $variables['is_panel'] = FALSE;
   if (module_exists('page_manager') && count(page_manager_get_current_page())) {
