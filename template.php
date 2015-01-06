@@ -24,7 +24,8 @@ function radix_preprocess_html(&$variables) {
   // Add Bootstrap JS from CDN if bootstrap library is not installed.
   if (!module_exists('bootstrap_library')) {
     $base = parse_url($base_url);
-    drupal_add_js($base['scheme'] . '://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js', 'external');
+    $url = $base['scheme'] . '://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js';
+    drupal_add_js($url, 'external');
   }
 
   // Add support for the Modenizr module.
@@ -32,7 +33,7 @@ function radix_preprocess_html(&$variables) {
   if (!module_exists('modernizr')) {
     drupal_add_js(drupal_get_path('theme', 'radix') . '/assets/javascripts/modernizr.js');
   }
-  
+
   // Add meta for Bootstrap Responsive.
   // <meta name="viewport" content="width=device-width, initial-scale=1.0">
   $element = array(
