@@ -136,7 +136,8 @@ function radix_preprocess_page(&$variables) {
   $variables['search_form'] = '';
   if (module_exists('search') && user_access('search content')) {
     $search_box_form = drupal_get_form('search_form');
-    $search_box_form['basic']['keys']['#title'] = '';
+    $search_box_form['basic']['keys']['#title'] = 'Search';
+    $search_box_form['basic']['keys']['#title_display'] = 'invisible';
     $search_box_form['basic']['keys']['#size'] = 20;
     $search_box_form['basic']['keys']['#attributes'] = array('placeholder' => 'Search');
     $search_box_form['basic']['keys']['#attributes']['class'][] = 'form-control';
