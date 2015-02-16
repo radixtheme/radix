@@ -126,10 +126,12 @@ function radix_preprocess_page(&$variables) {
   }
 
   // Theme action links as buttons.
-  foreach (element_children($variables['action_links']) as $key) {
-    $variables['action_links'][$key]['#link']['localized_options']['attributes'] = array(
-      'class' => array('btn', 'btn-primary', 'btn-sm'),
-    );
+  if (!empty($variables['action_links'])) {
+    foreach (element_children($variables['action_links']) as $key) {
+      $variables['action_links'][$key]['#link']['localized_options']['attributes'] = array(
+        'class' => array('btn', 'btn-primary', 'btn-sm'),
+      );
+    }
   }
 
   // Add search_form to theme.
