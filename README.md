@@ -1,13 +1,9 @@
 # Radix
 
-Radix is a base theme for [Panopoly](http://drupal.org/project/panopoly). It has Sass and Compass support, and makes it easy to build responsive themes with Panels.
+Radix is a base theme Drupal and BackdropCMS. It has Sass and Compass support, and makes it easy to build responsive themes.
 
-* Project Page:   http://drupal.org/project/radix
-* Documentation:  https://drupal.org/node/1840310
+* Project Page:   http://radixtheme.github.io
+* Documentation:  http://radixtheme.github.io
 * Demo:           http://dev-radix.chapterthree.com
-* Issue Queue:    http://drupal.org/project/issues/radix
-
-## Theming Guide
-
-See the guide here: https://www.drupal.org/node/1896382
+* Issue Queue:    https://github.com/radixtheme/radix/issues
 
