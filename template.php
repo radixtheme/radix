@@ -86,19 +86,23 @@ function radix_css_alter(&$css) {
  */
 function radix_js_alter(&$javascript) {
   // Add radix-modal when required.
-  $ctools_modal = drupal_get_path('module', 'ctools') . '/js/modal.js';
-  $radix_modal = drupal_get_path('theme', 'radix') . '/assets/javascripts/radix-modal.js';
-  if (!empty($javascript[$ctools_modal]) && empty($javascript[$radix_modal])) {
-    $javascript[$radix_modal] = array_merge(
-      drupal_js_defaults(), array('group' => JS_THEME, 'data' => $radix_modal));
+  if (module_exists('ctools')) {
+    $ctools_modal = drupal_get_path('module', 'ctools') . '/js/modal.js';
+    $radix_modal = drupal_get_path('theme', 'radix') . '/assets/javascripts/radix-modal.js';
+    if (!empty($javascript[$ctools_modal]) && empty($javascript[$radix_modal])) {
+      $javascript[$radix_modal] = array_merge(
+        drupal_js_defaults(), array('group' => JS_THEME, 'data' => $radix_modal));
+    }
   }
 
   // Add radix-field-slideshow when required.
-  $field_slideshow = drupal_get_path('module', 'field_slideshow') . '/field_slideshow.js';
-  $radix_field_slideshow = drupal_get_path('theme', 'radix') . '/assets/javascripts/radix-field-slideshow.js';
-  if (!empty($javascript[$field_slideshow]) && empty($javascript[$radix_field_slideshow])) {
-    $javascript[$radix_field_slideshow] = array_merge(
-      drupal_js_defaults(), array('group' => JS_THEME, 'data' => $radix_field_slideshow));
+  if (module_exists('field_slideshow')) {
+    $field_slideshow = drupal_get_path('module', 'field_slideshow') . '/field_slideshow.js';
+    $radix_field_slideshow = drupal_get_path('theme', 'radix') . '/assets/javascripts/radix-field-slideshow.js';
+    if (!empty($javascript[$field_slideshow]) && empty($javascript[$radix_field_slideshow])) {
+      $javascript[$radix_field_slideshow] = array_merge(
+        drupal_js_defaults(), array('group' => JS_THEME, 'data' => $radix_field_slideshow));
+    }
   }
 
   // Add radix-progress when required.
