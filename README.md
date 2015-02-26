@@ -7,7 +7,7 @@ Radix is a base theme Drupal and BackdropCMS. It has Sass and Compass support, a
 1. Works with Panels, Panopoly and Blocks.
 2. Components and plugins from Bootstrap.
 3. Fixed, fluid and responsive grid system.
-4. Responsive Panels with (Radix Layouts)[http://drupal.org/project/radix_layouts].
+4. Responsive Panels with [Radix Layouts](http://drupal.org/project/radix_layouts).
 5. Sass awesomeness.
 6. Drush intergration: drush radix "My Subtheme".
 7. Icons with Font Awesome.
