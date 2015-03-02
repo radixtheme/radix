@@ -9,8 +9,6 @@ stylesheets[print][]   = assets/stylesheets/radix-print.css
 
 ; CSS - Conditional
 stylesheets-conditional[lte IE 9][all][] = assets/stylesheets/ie.css
-stylesheets-conditional[IE 7][all][] = assets/stylesheets/radix-ie7.css
-stylesheets-conditional[IE 8][all][] = assets/stylesheets/radix-ie8.css
 
 ; Javascript
 scripts[] = assets/javascripts/radix-script.js
