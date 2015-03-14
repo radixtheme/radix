@@ -303,6 +303,14 @@ function radix_button($variables) {
     $element['#attributes']['class'][] = 'btn-primary';
   }
 
+  if (!empty($element['#button_icon'])) {
+    $value  = theme('radix_icon', array('icon' => $element['#button_icon']));
+    $value .= ' ';
+    $value .= '<span class="button-text">' . check_plain($element['#value']) . '</span>';
+
+    return '<button' . drupal_attributes($element['#attributes']) . '>' . $value . '</button>';
+  }
+
   return '<input' . drupal_attributes($element['#attributes']) . ' />';
 }
 
