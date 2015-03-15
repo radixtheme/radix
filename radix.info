@@ -14,6 +14,7 @@ stylesheets-conditional[lte IE 9][all][] = assets/stylesheets/ie.css
 scripts[] = assets/javascripts/radix-script.js
 
 ; Regions
+regions[sidebar_first] = Sidebar
 regions[content] = Content
 
 ; Features
