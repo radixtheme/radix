@@ -350,7 +350,7 @@ function radix_fieldset($variables) {
   if (!empty($element['#description'])) {
     $output .= '<p class="help-block">' . $element['#description'] . '</p>';
   }
-  $output .= $element['#children'];
+  $output .= (is_array($element['#children'])) ? render($element['#children']) : $element['#children'];
   if (isset($element['#value'])) {
     $output .= $element['#value'];
   }
