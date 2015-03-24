@@ -1688,7 +1688,7 @@ mark,
 }
 
 /* line 102, ../../../../../../../../../.rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.3.1.0/assets/stylesheets/bootstrap/_type.scss */
-.text-muted, body.maintenance-page .tasks-list > div.done {
+.text-muted, body.maintenance-page .tasks-list > div {
   color: #999999;
 }
 
@@ -12090,8 +12090,8 @@ body.maintenance-page .navbar-right {
 /* line 45, ../../extensions/compass_radix/stylesheets/compass_radix/_maintenance.scss */
 body.maintenance-page .tasks-list > div {
   margin-bottom: 25px;
-  border-left: 3px solid white;
-  padding-left: 20px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 /* line 49, ../../extensions/compass_radix/stylesheets/compass_radix/_maintenance.scss */
 body.maintenance-page .tasks-list > div h6 {
@@ -12102,12 +12102,8 @@ body.maintenance-page .tasks-list > div h4 {
   margin-top: 0;
 }
 /* line 55, ../../extensions/compass_radix/stylesheets/compass_radix/_maintenance.scss */
-body.maintenance-page .tasks-list > div.active {
-  border-left-color: black;
-}
-/* line 58, ../../extensions/compass_radix/stylesheets/compass_radix/_maintenance.scss */
-body.maintenance-page .tasks-list > div.done {
-  border-left-color: rgba(0, 0, 0, 0.1);
-  opacity: 0.5;
-  filter: alpha(opacity=50);
+body.maintenance-page .tasks-list > div.active, body.maintenance-page .tasks-list > div.done {
+  color: black;
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
