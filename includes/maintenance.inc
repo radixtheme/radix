@@ -39,7 +39,6 @@ function radix_preprocess_maintenance_page(&$variables) {
 
     // Load the site name, version and logo from info file.
     $variables['site_name'] = $info['name'];
-    $version['version'] = $info['version'];
     $variables['logo'] = drupal_get_path('profile', $profile) . '/' . $profile . '.png';
 
     // Quick fix to add the required radix-progress.js.
