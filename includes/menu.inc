@@ -51,7 +51,6 @@ function radix_preprocess_menu(&$variables, $hook) {
 
       if (count($item['below'])) {
         $item['url']->setOption('html', TRUE);
-        kint($item['url']->getOptions());
       }
     }
   }
