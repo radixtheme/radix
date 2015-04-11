@@ -39,28 +39,30 @@
   </div> <!-- /.container -->
 </header>
 
-<div id="main-wrapper">
-  <div id="main" class="main">
-    <div class="container">
+<main id="main" class="main">
+  <div class="container">
+    {% if breadcrumb %}
       {{ breadcrumb }}
+    {% endif %}
+    {% if messages %}
       {{ messages }}
-      <div id="page-header">
-        {% if title %}
-          <div class="page-header">
-            <h1 class="title">{{ title }}</h1>
-          </div>
-        {% endif %}
-        {{ tabs }}
-        {% if action_links %}
-          <nav class="action-links">{{ action_links }}</nav>
-        {% endif %}
-      </div>
+    {% endif %}
+    <div id="page-header">
+      {% if title %}
+        <div class="page-header">
+          <h1 class="title">{{ title }}</h1>
+        </div>
+      {% endif %}
+      {{ tabs }}
+      {% if action_links %}
+        <nav class="action-links">{{ action_links }}</nav>
+      {% endif %}
     </div>
-    <div id="content" class="container">
-        {{ page.content }}
-    </div>
-  </div> <!-- /#main -->
-</div> <!-- /#main-wrapper -->
+  </div>
+  <div id="content" class="container">
+    {{ page.content }}
+  </div>
+</main> <!-- /#main -->
 
 <footer id="footer" class="footer" role="footer">
   <div class="container">

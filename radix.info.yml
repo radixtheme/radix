@@ -1,12 +1,8 @@
 name: Radix
+type: theme
 description: Radix is a base theme for Drupal with Bootstrap and Sass.
 screenshot: screenshot.png
 core: 8.x
-stylesheets:
-  all:
-   - assets/stylesheets/radix-style.css
-  print:
-   - assets/stylesheets/radix-print.css
 stylesheets-remove:
   - system.theme.css
   - system.menus.css
@@ -14,9 +10,7 @@ libraries:
   - radix/bootstrap
   - radix/base
 regions:
-   primary_menu: 'Primary menu'
-   content: 'Content'
-features:
+   page_top: 'Page top'
+   page_bottom: 'Page bottom'
+   content: Content
 version: VERSION
-engine: twig
-type: theme

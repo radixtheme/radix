@@ -4,6 +4,8 @@
  * Theme hooks for Radix.
  */
 
+use Drupal\Core\Menu\MenuTreeParameters;
+
 require_once dirname(__FILE__) . '/includes/utilities.inc';
 require_once dirname(__FILE__) . '/includes/theme.inc';
 require_once dirname(__FILE__) . '/includes/structure.inc';
@@ -16,24 +18,10 @@ require_once dirname(__FILE__) . '/includes/view.inc';
 require_once dirname(__FILE__) . '/includes/admin.inc';
 require_once dirname(__FILE__) . '/includes/contrib.inc';
 
-use Drupal\Core\Page\MetaElement;
-use Drupal\Core\Menu\MenuTreeParameters;
-
 /**
  * Implementation of template_preprocess_html().
  */
 function radix_preprocess_html(&$variables) {
-  $page = $variables['page_object'];
-
-  // Add meta for Bootstrap Responsive.
-  // <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  $attributes = array(
-    'name' => 'viewport',
-    'content' => 'width=device-width, initial-scale=1.0',
-  );
-  $metatag = new MetaElement(NULL, $attributes);
-  $page->addMetaElement($metatag);
-
   // Add some custom classes for panels pages.
   if (\Drupal::moduleHandler()->moduleExists('page_manager') && count(page_manager_get_current_page())) {
     $variables['is_panel'] = TRUE;
