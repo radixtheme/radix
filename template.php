@@ -157,7 +157,11 @@ function radix_preprocess_page(&$variables) {
   }
 
   // Format and add main menu to theme.
-  $variables['main_menu'] = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
+  $main_menu_data = menu_build_tree(variable_get('menu_main_links_source', 'main-menu'), array(
+    'min_depth' => 1,
+    'max_depth' => 2,
+  ));
+  $variables['main_menu'] = menu_tree_output($main_menu_data);
   $variables['main_menu']['#theme_wrappers'] = array();
 
   // Add a copyright message.
