@@ -69,14 +69,18 @@ function radix_preprocess_html(&$variables) {
  */
 function radix_css_alter(&$css) {
   // Unset some panopoly css.
-  $panopoly_admin_path = drupal_get_path('module', 'panopoly_admin');
-  if (isset($css[$panopoly_admin_path . '/panopoly-admin.css'])) {
-    unset($css[$panopoly_admin_path . '/panopoly-admin.css']);
+  if (module_exists('panopoly_admin')) {
+    $panopoly_admin_path = drupal_get_path('module', 'panopoly_admin');
+    if (isset($css[$panopoly_admin_path . '/panopoly-admin.css'])) {
+      unset($css[$panopoly_admin_path . '/panopoly-admin.css']);
+    }
   }
 
-  $panopoly_magic_path = drupal_get_path('module', 'panopoly_magic');
-  if (isset($css[$panopoly_magic_path . '/css/panopoly-modal.css'])) {
-    unset($css[$panopoly_magic_path . '/css/panopoly-modal.css']);
+  if (module_exists('panopoly_magic')) {
+    $panopoly_magic_path = drupal_get_path('module', 'panopoly_magic');
+    if (isset($css[$panopoly_magic_path . '/css/panopoly-modal.css'])) {
+      unset($css[$panopoly_magic_path . '/css/panopoly-modal.css']);
+    }
   }
 
   // Unset some core css.
