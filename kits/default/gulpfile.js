@@ -1,6 +1,7 @@
 // Include gulp
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
+var proxy = "192.168.56.144";
 
 // Include Our Plugins
 var sass = require('gulp-sass');
@@ -25,7 +26,7 @@ gulp.task('images', function () {
 // Static Server + watching scss files
 gulp.task('serve', ['sass'], function() {
   browserSync.init({
-    proxy: "192.168.56.144"
+    proxy: proxy
   })
 
   gulp.watch('assets/sass/**/*.scss', ['sass']);
@@ -48,23 +49,6 @@ gulp.task('sass', function() {
 gulp.task('drush', shell.task([
   'drush cache-clear theme-registry'
 ]));
-
-// Watch Files For Changes
-//gulp.task('watch', function() {
-
-//browserSync.reload();
-
-// Watch php, inc and info file changes to run drush task.
-//gulp.watch('**/*.{php, inc, info}', ['drush']);
-
-// Start livereload and watch on css/js changes.
-//var server = livereload();
-//livereload.listen();
-//gulp.watch('assets/stylesheets/*.css').on('change', livereload.changed);
-//gulp.watch('assets/stylesheets/*.css').on('change', function(file) {
-//  server.changed(file.path);
-//});
-//});
 
 // Default Task
 gulp.task('default', ['serve']);
