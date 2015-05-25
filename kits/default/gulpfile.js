@@ -1,7 +1,7 @@
 // Include gulp
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
-var proxy = "192.168.56.144";
+var config = require('./config.json');
 
 // Include Our Plugins
 var sass = require('gulp-sass');
@@ -26,7 +26,7 @@ gulp.task('images', function () {
 // Static Server + watching scss files
 gulp.task('serve', ['sass'], function() {
   browserSync.init({
-    proxy: proxy
+    proxy: config.browserSyncProxy
   })
 
   gulp.watch('assets/sass/**/*.scss', ['sass']);
