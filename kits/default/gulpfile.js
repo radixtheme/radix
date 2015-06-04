@@ -10,7 +10,9 @@ var compass = require('gulp-compass');
 var imagemin = require('gulp-imagemin');
 var pngcrush = require('imagemin-pngcrush');
 var livereload = require('gulp-livereload');
-var shell = require('gulp-shell')
+var shell = require('gulp-shell');
+var gutil = require('gulp-util');
+var plumber = require('gulp-plumber');
 
 // Compress images
 gulp.task('images', function () {
@@ -36,6 +38,11 @@ gulp.task('serve', ['sass'], function() {
 // Compile Our Sass with Bundle[d] Compass
 gulp.task('sass', function() {
   return gulp.src('assets/sass/*.scss')
+    .pipe(plumber({
+      errorHandler: function (error) {
+        console.log(error.message);
+        this.emit('end');
+      }}))
     .pipe(compass({
       config_file: 'config.rb',
       css: 'assets/stylesheets',

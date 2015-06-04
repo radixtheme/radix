@@ -20,6 +20,8 @@
     "gulp-imagemin": "~2.2.1",
     "gulp-sass": "~2.0.1",
     "gulp": "~3.8.11",
-    "browser-sync": "~2.7.4"
+    "browser-sync": "~2.7.4",
+    "gulp-util": "~3.0.5",
+    "gulp-plumber": "~1.0.1"
   }
 }
