@@ -105,9 +105,16 @@ function _radix_process_input(&$element, &$form_state) {
     'webform_number',
     'number',
   );
-  if (!empty($element['#type']) && (in_array($element['#type'], $types))) {
+
+  // Skip elements with these #theme key.
+  $skip_themes = array(
+    'select_as_checkboxes',
+  );
+
+  if (!empty($element['#type']) && in_array($element['#type'], $types) && !in_array($element['#theme'], $skip_themes)) {
     $element['#attributes']['class'][] = 'form-control';
   }
+
   return $element;
 }
 
