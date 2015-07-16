@@ -27,3 +27,7 @@ The Restaurant Distribution has everything you need to kickstart your restaurant
 * Demo:           http://dev-radix.chapterthree.com
 * Issue Queue:    https://github.com/radixtheme/radix/issues
 
+## Roadmap
+https://github.com/radixtheme/radix/wiki/Roadmap
+
+
