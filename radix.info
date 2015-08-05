@@ -17,6 +17,10 @@ scripts[] = assets/javascripts/radix-script.js
 regions[sidebar_first] = Sidebar
 regions[content] = Content
 
+; Hide the sidebar region.
+; Used only for installation.
+regions_hidden[] = sidebar_first
+
 ; Features
 features[] = logo
 features[] = name
