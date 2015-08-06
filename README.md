@@ -18,7 +18,7 @@ Open Atrium is an intranet in a box that has group spaces to allow different tea
 ##### [Open Academy](http://drupal.org/project/openacademy)
 Open Academy is a Drupal distribution that brings the best in web publishing for higher education on a customizable Drupal platform.
 
-##### [Restaurant](http://drupal.org/project/restaurant)
+##### [Open Restaurant](http://drupal.org/project/restaurant)
 The Restaurant Distribution has everything you need to kickstart your restaurant website. It comes with a menu management system, a reservation system, a customizable blog and events management.
 
 ## Support
