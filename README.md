@@ -1,5 +1,5 @@
 # Radix
-Radix is a base theme Drupal and BackdropCMS. It has Sass and Compass support, and makes it easy to build responsive themes.
+Radix is a base theme for Drupal and BackdropCMS. It has Sass and Compass support, and makes it easy to build responsive themes.
 
 ##Features
 1. Works with Panels, Panopoly and Blocks.
