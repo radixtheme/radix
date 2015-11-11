@@ -10,15 +10,10 @@ You can read a guide on how to install node here: https://docs.npmjs.com/getting
 Install bower: `npm install -g bower`.
 
 #### Step 3
-Go to the root of {{Name}} theme and run the following commands:
-
-`npm install`
-`bower install`
+Go to the root of {{Name}} theme and run the following commands: `npm run setup`.
 
 #### Step 4
 Update `browserSyncProxy` in **config.json**.
 
 #### Step 5
-Run the following command to compile Sass and watch for changes.
-
-`gulp`
+Run the following command to compile Sass and watch for changes: `gulp`.
