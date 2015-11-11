@@ -3,5 +3,5 @@
  * Custom scripts for theme.
  */
 (function ($) {
-  // code here
+  // Add your code here.
 })(jQuery);
