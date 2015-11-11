@@ -16,10 +16,18 @@
   "private": true,
   "ignore": [
     "**/.*",
-    "node_modules",
     "bower_components",
-    "test",
-    "tests"
+    "includes",
+    "kits",
+    "node_modules",
+    "templates",
+    "*.json",
+    "*.js",
+    "*.png",
+    "*.inc",
+    "*.info",
+    "*.md",
+    "*.php",
   ],
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
