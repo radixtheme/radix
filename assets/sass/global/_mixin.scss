@@ -1,0 +1,39 @@
+// Breakpoint mixin.
+// Usage: @include breakpoint(sm) { ... }
+// -----------------------------------------------------------------------------
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: $screen-xs-max) { @content; }
+  }
+  @else if $class == sm {
+    @media (min-width: $screen-sm) { @content; }
+  }
+  @else if $class == md {
+    @media (min-width: $screen-md) { @content; }
+  }
+  @else if $class == lg {
+    @media (min-width: $screen-lg) { @content; }
+  }
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
+}
+
+// Font Awesome.
+// Usage: @include fa(bars) { ... }
+// -----------------------------------------------------------------------------
+@mixin fa($icon) {
+  @extend .fa;
+  @extend .fa-#{$icon}
+}
+
+// Transparent mixin.
+// -----------------------------------------------------------------------------
+@mixin transparent($color, $alpha) {
+  $rgba: rgba($color, $alpha);
+  $ie-hex-str: ie-hex-str($rgba);
+  background-color: transparent;
+  background-color: $rgba;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+  zoom: 1;
+}

@@ -101,7 +101,7 @@ function radix_js_alter(&$javascript) {
   // Add radix-modal when required.
   if (module_exists('ctools')) {
     $ctools_modal = drupal_get_path('module', 'ctools') . '/js/modal.js';
-    $radix_modal = drupal_get_path('theme', 'radix') . '/assets/javascripts/radix-modal.js';
+    $radix_modal = drupal_get_path('theme', 'radix') . '/assets/javascripts/radix.modal.js';
     if (!empty($javascript[$ctools_modal]) && empty($javascript[$radix_modal])) {
       $javascript[$radix_modal] = array_merge(
         drupal_js_defaults(), array('group' => JS_THEME, 'data' => $radix_modal));
@@ -111,7 +111,7 @@ function radix_js_alter(&$javascript) {
   // Add radix-field-slideshow when required.
   if (module_exists('field_slideshow')) {
     $field_slideshow = drupal_get_path('module', 'field_slideshow') . '/field_slideshow.js';
-    $radix_field_slideshow = drupal_get_path('theme', 'radix') . '/assets/javascripts/radix-field-slideshow.js';
+    $radix_field_slideshow = drupal_get_path('theme', 'radix') . '/assets/javascripts/radix.slideshow.js';
     if (!empty($javascript[$field_slideshow]) && empty($javascript[$radix_field_slideshow])) {
       $javascript[$radix_field_slideshow] = array_merge(
         drupal_js_defaults(), array('group' => JS_THEME, 'data' => $radix_field_slideshow));
@@ -120,7 +120,7 @@ function radix_js_alter(&$javascript) {
 
   // Add radix-progress when required.
   $progress = 'misc/progress.js';
-  $radix_progress = drupal_get_path('theme', 'radix') . '/assets/javascripts/radix-progress.js';
+  $radix_progress = drupal_get_path('theme', 'radix') . '/assets/javascripts/radix.progress.js';
   if (!empty($javascript[$progress]) && empty($javascript[$radix_progress])) {
     $javascript[$radix_progress] = array_merge(
       drupal_js_defaults(), array('group' => JS_THEME, 'data' => $radix_progress));

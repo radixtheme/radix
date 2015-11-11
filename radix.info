@@ -4,14 +4,10 @@ screenshot  = screenshot.png
 core        = 7.x
 
 ; CSS - General
-stylesheets[all][]     = assets/stylesheets/radix-style.css
-stylesheets[print][]   = assets/stylesheets/radix-print.css
-
-; CSS - Conditional
-stylesheets-conditional[lte IE 9][all][] = assets/stylesheets/ie.css
+stylesheets[all][]     = assets/stylesheets/radix.screen.css
 
 ; Javascript
-scripts[] = assets/javascripts/radix-script.js
+scripts[] = assets/javascripts/radix.script.js
 
 ; Regions
 regions[sidebar_first] = Sidebar
