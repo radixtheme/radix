@@ -1,0 +1,18 @@
+// Fix for nested containers.
+// -----------------------------------------------------------------------------
+.container {
+  .container,
+  .container-fluid {
+    width: auto;
+    margin-left: - ($grid-gutter-width / 2);
+    margin-right: - ($grid-gutter-width / 2);
+  }
+}
+
+// Footer
+// -----------------------------------------------------------------------------
+#footer {
+  @include breakpoint(md) {
+    margin: $grid-gutter-width 0;
+  }
+}

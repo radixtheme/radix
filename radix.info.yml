@@ -1,6 +1,6 @@
 name: Radix
 type: theme
-description: Radix is a base theme for Drupal with Bootstrap and Sass.
+description: Responsive base theme for Drupal.
 screenshot: screenshot.png
 core: 8.x
 stylesheets-remove:

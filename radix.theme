@@ -4,6 +4,7 @@
  * Theme hooks for Radix.
  */
 
+use Drupal\Core\Url;
 use Drupal\Core\Menu\MenuTreeParameters;
 
 require_once dirname(__FILE__) . '/includes/utilities.inc';
@@ -50,13 +51,20 @@ function radix_preprocess_page(&$variables) {
   }
 
   // Make sure tabs is empty.
-  if (empty($variables['tabs']['#primary']) && empty($variables['tabs']['#secondary'])) {
+  if (isset($variables['tabs']['#primary']) && isset($variables['tabs']['#secondary'])) {
     $variables['tabs'] = '';
   }
 
   // Theme action links as buttons.
-  foreach ($variables['action_links'] as $key => &$link) {
-    $link['#link']['localized_options']['attributes'] = array('class' => array('btn', 'btn-primary'));
+  if (isset($variables['action_links'])) {
+    foreach ($variables['action_links'] as $key => &$link) {
+      $link['#link']['localized_options']['attributes'] = array(
+        'class' => array(
+          'btn',
+          'btn-primary'
+        )
+      );
+    }
   }
 
   // Add search_form to theme.
@@ -78,5 +86,5 @@ function radix_preprocess_page(&$variables) {
   $variables['main_menu'] = \Drupal::menuTree()->build($menu);
 
   // Add a copyright message.
-  $variables['copyright'] = t('Drupal is a registered trademark of Dries Buytaert.');
+  $variables['copyright'] = t('Built with <a href=":radixurl">Radix</a>.', array(':radixurl' => 'http://radixtheme.org'));
 }

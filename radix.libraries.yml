@@ -7,10 +7,9 @@ base:
   version: VERSION
   css:
     theme:
-      assets/stylesheets/radix-style.css: {}
+      assets/css/radix.style.css: {}
   js:
-    assets/javascripts/modernizr.js: {}
-    assets/javascripts/radix-script.js: {}
+    assets/js/radix.script.js: {}
   dependencies:
     - core/jquery
     - core/drupal
