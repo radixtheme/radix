@@ -2,6 +2,7 @@
   "name": "Radix",
   "version": "3.0.0",
   "description": "Base theme for Drupal",
+  "private": true,
   "scripts": {
     "postinstall": "find node_modules/ -name '*.info' -type f -delete"
   },
@@ -10,7 +11,7 @@
     "drupal",
     "theme"
   ],
-  "author": "Arshad Chummun <arshad@chummun.com> (http://arshad.github.io/)",
+  "author": "Arshad Chummun <arshad@chummun.com> (http://arshad.io/)",
   "dependencies": {
     "gulp-rename": "~1.2.2",
     "gulp-compass": "~2.1.0",
