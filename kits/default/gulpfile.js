@@ -64,8 +64,14 @@ gulp.task('images', function () {
     .pipe(gulp.dest(config.images.dest));
 });
 
+// Fonts.
+gulp.task('fonts', function() {
+  return gulp.src(config.fonts.src)
+    .pipe(gulp.dest(config.fonts.dest));
+});
+
 // Static Server + Watch
-gulp.task('serve', ['css', 'js'], function() {
+gulp.task('serve', ['css', 'js', 'fonts'], function() {
   browserSync.init({
     proxy: config.browserSyncProxy
   });
