@@ -1,8 +1,0 @@
-{
-  "browserSyncProxy" : "192.168.56.222",
-  "bowerDir": "./bower_components",
-  "sassIncludePaths": [
-    "./bower_components/bootstrap-sass/assets/stylesheets",
-    "./bower_components/font-awesome/scss"
-  ]
-}

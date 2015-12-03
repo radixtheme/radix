@@ -13,21 +13,14 @@ var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
 var autoprefix = require('gulp-autoprefixer');
 var glob = require('gulp-sass-glob');
+var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
+var rename = require('gulp-rename');
+var sourcemaps = require('gulp-sourcemaps');
 
-// Compress images.
-gulp.task('images', function () {
-  return gulp.src('assets/images/**/*')
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{ removeViewBox: false }],
-      use: [pngcrush()]
-    }))
-    .pipe(gulp.dest('assets/images'));
-});
-
-// Sass.
-gulp.task('sass', function() {
-  return gulp.src('assets/sass/*.scss')
+// CSS.
+gulp.task('css', function() {
+  return gulp.src(config.css.src)
     .pipe(glob())
     .pipe(plumber({
       errorHandler: function (error) {
@@ -39,24 +32,48 @@ gulp.task('sass', function() {
         }) (error);
         this.emit('end');
       }}))
+    .pipe(sourcemaps.init())
     .pipe(sass({
       style: 'compressed',
       errLogToConsole: true,
-      includePaths: config.sassIncludePaths
+      includePaths: config.css.includePaths
     }))
     .pipe(autoprefix('last 2 versions', '> 1%', 'ie 9', 'ie 10'))
-    .pipe(gulp.dest('assets/css'));
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(config.css.dest));
 });
 
-// Static Server + watching scss files
-gulp.task('serve', ['sass'], function() {
+// JS
+gulp.task('js', function() {
+  return gulp.src(config.js.src)
+    .pipe(sourcemaps.init())
+    .pipe(concat(config.js.file))
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(config.js.dest));
+});
+
+// Compress images.
+gulp.task('images', function () {
+  return gulp.src(config.images.src)
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{ removeViewBox: false }],
+      use: [pngcrush()]
+    }))
+    .pipe(gulp.dest(config.images.dest));
+});
+
+// Static Server + Watch
+gulp.task('serve', ['css', 'js'], function() {
   browserSync.init({
     proxy: config.browserSyncProxy
-  })
+  });
 
-  gulp.watch('assets/sass/**/*.scss', ['sass']);
-  gulp.watch('assets/images/**/*', ['images']);
-  gulp.watch('assets/css/**/*').on('change', browserSync.reload);
+  gulp.watch(config.js.src, ['js']);
+  gulp.watch(config.css.src, ['css']);
+  gulp.watch(config.images.src, ['images']);
+  gulp.watch('assets/**/*').on('change', browserSync.reload);
 });
 
 // Run drush to clear the theme registry.

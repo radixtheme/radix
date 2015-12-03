@@ -1,10 +1,30 @@
 {
   "name": "{{Name}}",
   "description": "{{Description}}",
-  "browserSyncProxy" : "192.168.56.222",
+  "browserSyncProxy" : "http://panopoly.dev",
   "bowerDir": "./bower_components",
-  "sassIncludePaths": [
-    "./bower_components/bootstrap-sass/assets/stylesheets",
-    "./bower_components/font-awesome/scss"
-  ]
+  "css": {
+    "file" : "{{machine_name}}.style.scss",
+    "src": [
+      "scss/**/*.scss"
+    ],
+    "dest": "assets/css",
+    "includePaths": [
+      "./bower_components/bootstrap-sass/assets/stylesheets",
+      "./bower_components/font-awesome/scss"
+    ]
+  },
+  "js": {
+    "file" : "{{machine_name}}.script.js",
+    "src": [
+      "js/**/*.js"
+    ],
+    "dest": "assets/js"
+  },
+  "images": {
+    "src": [
+      "assets/images/**/*"
+    ],
+    "dest": "assets/images/"
+  }
 }
