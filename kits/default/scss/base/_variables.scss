@@ -1,14 +1,14 @@
 // Variables
-// --------------------------------------------------
+// -----------------------------------------------------------------------------
 
 // bootstrap specific variable. set to false if not using ruby + asset pipeline / compass.
 $bootstrap-sass-asset-helper: false !default;
 
 // Global values
-// --------------------------------------------------
+// -----------------------------------------------------------------------------
 
 // Grays
-// -------------------------
+// -----------------------------------------------------------------------------
 
 $gray-darker:            lighten(#000, 13.5%) !default; // #222
 $gray-dark:              lighten(#000, 20%) !default;   // #333
@@ -17,7 +17,7 @@ $gray-light:             lighten(#000, 60%) !default;   // #999
 $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
 
 // Brand colors
-// -------------------------
+// -----------------------------------------------------------------------------
 
 $brand-primary:         #428bca !default;
 $brand-success:         #5cb85c !default;
@@ -26,19 +26,19 @@ $brand-danger:          #d9534f !default;
 $brand-info:            #5bc0de !default;
 
 // Scaffolding
-// -------------------------
+// -----------------------------------------------------------------------------
 
 $body-bg:               #fff !default;
 $text-color:            $gray-dark !default;
 
 // Links
-// -------------------------
+// -----------------------------------------------------------------------------
 
 $link-color:            $brand-primary !default;
 $link-hover-color:      darken($link-color, 15%) !default;
 
 // Typography
-// -------------------------
+// -----------------------------------------------------------------------------
 
 $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
@@ -66,14 +66,14 @@ $headings-color:          inherit !default;
 
 
 // Iconography
-// -------------------------
+// -----------------------------------------------------------------------------
 
 $icon-font-path: "bootstrap/" !default;
-$icon-font-name:          "glyphicons-halflings-regular" !default;
+$icon-font-name: "glyphicons-halflings-regular" !default;
 
 
 // Components
-// -------------------------
+// -----------------------------------------------------------------------------
 // Based on 14px font-size and 1.428 line-height (~20px to start)
 
 $padding-base-vertical:          6px !default;
@@ -102,7 +102,7 @@ $caret-width-base:               4px !default;
 $caret-width-large:              5px !default;
 
 // Tables
-// -------------------------
+// -----------------------------------------------------------------------------
 
 $table-cell-padding:                 8px !default;
 $table-condensed-cell-padding:       5px !default;
@@ -116,7 +116,7 @@ $table-border-color:                 #ddd !default; // table and cell border
 
 
 // Buttons
-// -------------------------
+// -----------------------------------------------------------------------------
 
 $btn-font-weight:                normal !default;
 
@@ -148,7 +148,7 @@ $btn-link-disabled-color:        $gray-light !default;
 
 
 // Forms
-// -------------------------
+// -----------------------------------------------------------------------------
 
 $input-bg:                       #fff !default;
 $input-bg-disabled:              $gray-lighter !default;
@@ -172,7 +172,7 @@ $input-group-addon-border-color: $input-border !default;
 
 
 // Dropdowns
-// -------------------------
+// -----------------------------------------------------------------------------
 
 $dropdown-bg:                    #fff !default;
 $dropdown-border:                rgba(0,0,0,.15) !default;
@@ -192,11 +192,11 @@ $dropdown-header-color:          $gray-light !default;
 
 
 // COMPONENT VARIABLES
-// --------------------------------------------------
+// ------------------------------------------------------------------------------------------------------
 
 
 // Z-index master list
-// -------------------------
+// -----------------------------------------------------------------------------
 // Used for a bird's eye view of components dependent on the z-axis
 // Try to avoid customizing these :)
 
@@ -209,7 +209,7 @@ $zindex-modal-background:  1040 !default;
 $zindex-modal:             1050 !default;
 
 // Media queries breakpoints
-// --------------------------------------------------
+// ------------------------------------------------------------------------------------------------------
 
 // Extra small screen / phone
 // Note: Deprecated $screen-xs and $screen-phone as of v3.0.1
@@ -242,7 +242,7 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 
 
 // Grid system
-// --------------------------------------------------
+// ------------------------------------------------------------------------------------------------------
 
 // Number of columns in the grid system
 $grid-columns:              12 !default;
@@ -258,7 +258,7 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 
 
 // Navbar
-// -------------------------
+// -----------------------------------------------------------------------------
 
 // Basics of a navbar
 $navbar-height:                    50px !default;
@@ -319,7 +319,7 @@ $navbar-inverse-toggle-border-color:        #333 !default;
 
 
 // Navs
-// -------------------------
+// -----------------------------------------------------------------------------
 
 $nav-link-padding:                          10px 15px !default;
 $nav-link-hover-bg:                         $gray-lighter !default;
@@ -348,7 +348,7 @@ $nav-pills-active-link-hover-color:         $component-active-color !default;
 
 
 // Pagination
-// -------------------------
+// -----------------------------------------------------------------------------
 
 $pagination-bg:                        #fff !default;
 $pagination-border:                    #ddd !default;
@@ -362,14 +362,14 @@ $pagination-disabled-color:            $gray-light !default;
 
 
 // Pager
-// -------------------------
+// -----------------------------------------------------------------------------
 
 $pager-border-radius:                  15px !default;
 $pager-disabled-color:                 $gray-light !default;
 
 
 // Jumbotron
-// -------------------------
+// -----------------------------------------------------------------------------
 
 $jumbotron-padding:              30px !default;
 $jumbotron-color:                inherit !default;
@@ -379,7 +379,7 @@ $jumbotron-font-size:            ceil($font-size-base * 1.5) !default;
 
 
 // Form states and alerts
-// -------------------------
+// -----------------------------------------------------------------------------
 
 $state-success-text:             #3c763d !default;
 $state-success-bg:               #dff0d8 !default;
@@ -399,7 +399,7 @@ $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !
 
 
 // Tooltips
-// -------------------------
+// -----------------------------------------------------------------------------
 $tooltip-max-width:           200px !default;
 $tooltip-color:               #fff !default;
 $tooltip-bg:                  #000 !default;
@@ -409,7 +409,7 @@ $tooltip-arrow-color:         $tooltip-bg !default;
 
 
 // Popovers
-// -------------------------
+// -----------------------------------------------------------------------------
 $popover-bg:                          #fff !default;
 $popover-max-width:                   276px !default;
 $popover-border-color:                rgba(0,0,0,.2) !default;
@@ -426,7 +426,7 @@ $popover-arrow-outer-fallback-color:  #999 !default;
 
 
 // Labels
-// -------------------------
+// -----------------------------------------------------------------------------
 
 $label-default-bg:            $gray-light !default;
 $label-primary-bg:            $brand-primary !default;
@@ -440,7 +440,7 @@ $label-link-hover-color:      #fff !default;
 
 
 // Modals
-// -------------------------
+// -----------------------------------------------------------------------------
 $modal-inner-padding:         20px !default;
 
 $modal-title-padding:         15px !default;
@@ -456,7 +456,7 @@ $modal-footer-border-color:   $modal-header-border-color !default;
 
 
 // Alerts
-// -------------------------
+// -----------------------------------------------------------------------------
 $alert-padding:               15px !default;
 $alert-border-radius:         $border-radius-base !default;
 $alert-link-font-weight:      bold !default;
@@ -479,7 +479,7 @@ $alert-danger-border:         $state-danger-border !default;
 
 
 // Progress bars
-// -------------------------
+// -----------------------------------------------------------------------------
 $progress-bg:                 #f5f5f5 !default;
 $progress-bar-color:          #fff !default;
 
@@ -491,7 +491,7 @@ $progress-bar-info-bg:        $brand-info !default;
 
 
 // List group
-// -------------------------
+// -----------------------------------------------------------------------------
 $list-group-bg:               #fff !default;
 $list-group-border:           #ddd !default;
 $list-group-border-radius:    $border-radius-base !default;
@@ -506,7 +506,7 @@ $list-group-link-heading-color:  #333 !default;
 
 
 // Panels
-// -------------------------
+// -----------------------------------------------------------------------------
 $panel-bg:                    #fff !default;
 $panel-inner-border:          #ddd !default;
 $panel-border-radius:         $border-radius-base !default;
@@ -538,7 +538,7 @@ $panel-info-heading-bg:       $state-info-bg !default;
 
 
 // Thumbnails
-// -------------------------
+// -----------------------------------------------------------------------------
 $thumbnail-padding:           4px !default;
 $thumbnail-bg:                $body-bg !default;
 $thumbnail-border:            #ddd !default;
@@ -549,12 +549,12 @@ $thumbnail-caption-padding:   9px !default;
 
 
 // Wells
-// -------------------------
+// -----------------------------------------------------------------------------
 $well-bg:                     #f5f5f5 !default;
 
 
 // Badges
-// -------------------------
+// -----------------------------------------------------------------------------
 $badge-color:                 #fff !default;
 $badge-link-hover-color:      #fff !default;
 $badge-bg:                    $gray-light !default;
@@ -568,7 +568,7 @@ $badge-border-radius:         10px !default;
 
 
 // Breadcrumbs
-// -------------------------
+// -----------------------------------------------------------------------------
 $breadcrumb-bg:               #f5f5f5 !default;
 $breadcrumb-color:            #ccc !default;
 $breadcrumb-active-color:     $gray-light !default;
@@ -618,7 +618,7 @@ $blockquote-border-color:     $gray-lighter !default;
 $page-header-border-color:    $gray-lighter !default;
 
 // Miscellaneous
-// -------------------------
+// -----------------------------------------------------------------------------
 
 // Hr border color
 $hr-border:                   $gray-lighter !default;
@@ -628,7 +628,7 @@ $component-offset-horizontal: 180px !default;
 
 
 // Container sizes
-// --------------------------------------------------
+// ------------------------------------------------------------------------------------------------------
 
 // Small screen / tablet
 $container-tablet:             ((720px + $grid-gutter-width)) !default;

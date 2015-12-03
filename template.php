@@ -23,7 +23,7 @@ require_once dirname(__FILE__) . '/includes/contrib.inc';
 function radix_preprocess_html(&$variables) {
   global $base_url;
 
-  // Add Bootstrap JS from CDN if bootstrap library is not installed.
+//  // Add Bootstrap JS from CDN if bootstrap library is not installed.
   if (!module_exists('bootstrap_library')) {
     $base = parse_url($base_url);
     $url = $base['scheme'] . '://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js';
@@ -36,12 +36,12 @@ function radix_preprocess_html(&$variables) {
       'weight' => $jquery_ui_js['weight'] - 1,
     ));
   }
-
-  // Add support for the Modenizr module.
-  // Load modernizr.js only if modernizr module is not present.
-  if (!module_exists('modernizr')) {
-    drupal_add_js(drupal_get_path('theme', 'radix') . '/assets/javascripts/modernizr.js');
-  }
+//
+//  // Add support for the Modenizr module.
+//  // Load modernizr.js only if modernizr module is not present.
+//  if (!module_exists('modernizr')) {
+//    drupal_add_js(drupal_get_path('theme', 'radix') . '/assets/js/modernizr.js');
+//  }
 
   // Add meta for Bootstrap Responsive.
   // <meta name="viewport" content="width=device-width, initial-scale=1.0">

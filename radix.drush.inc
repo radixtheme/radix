@@ -141,7 +141,7 @@ function drush_radix($name = NULL, $machine_name = NULL) {
       drush_tarball_extract($filename, $dirname, TRUE);
 
       // Copy bootswatch theme to subtheme.
-      $bootswatch_path = $subtheme_path . '/assets/sass/bootswatch/';
+      $bootswatch_path = $subtheme_path . '/scss/bootswatch/';
       drush_print($bootswatch_path);
       drush_move_dir($dirname . '/radix-bootswatch-master/' . $bootswatch, $bootswatch_path, TRUE);
     }
@@ -167,8 +167,7 @@ function drush_radix($name = NULL, $machine_name = NULL) {
     'config.json',
     'bower.json',
     'package.json',
-    'INSTALL.md',
-    'assets/sass/' . $kit . '.style.scss',
+    'scss/' . $kit . '.style.scss',
   );
   foreach ($files_to_replace as $file_to_replace) {
     drush_op('radix_file_str_replace', $subtheme_path . '/' . $file_to_replace, array_keys($alterations), $alterations);
@@ -177,8 +176,8 @@ function drush_radix($name = NULL, $machine_name = NULL) {
   // Rename files.
   $files_to_rename = array(
     '{{kit}}.info',
-    'assets/sass/{{kit}}.style.scss',
-    'assets/js/{{kit}}.script.js',
+    'scss/{{kit}}.style.scss',
+    'js/{{kit}}.script.js',
   );
   foreach ($files_to_rename as $file_to_rename_path) {
     $file_original_path = $subtheme_path . '/' . str_replace('{{kit}}', $kit, $file_to_rename_path);
