@@ -26,5 +26,11 @@
       "assets/images/**/*"
     ],
     "dest": "assets/images/"
+  },
+  "fonts": {
+    "src": [
+      "./bower_components/font-awesome/fonts/**.*"
+    ],
+    "dest": "./assets/fonts/"
   }
 }
