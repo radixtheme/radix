@@ -80,7 +80,6 @@
       </div>
     </div>
     <div id="content" class="container">
-      <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
       <?php print render($page['content']); ?>
     </div>
   </div> <!-- /#main -->
