@@ -1,15 +1,7 @@
 # Radix
-Radix is a base theme for Drupal and BackdropCMS. It has Sass and Compass support, and makes it easy to build responsive themes.
+Radix is a base theme for Drupal and BackdropCMS. It has Bootstrap, Sass, Gulp, Bower, BrowserSync and Font Awesome built-in.
 
-##Features
-1. Works with Panels, Panopoly and Blocks.
-2. Components and plugins from Bootstrap.
-3. Fixed, fluid and responsive grid system.
-4. Responsive Panels with [Radix Layouts](http://drupal.org/project/radix_layouts).
-5. Sass awesomeness.
-6. Drush intergration: drush radix "My Subtheme".
-7. Icons with Font Awesome.
-8. Works with Bootswatch themes: drush radix "My Subtheme" --bootswatch=cerulean".
+![alt tag](https://www.drupal.org/files/drupal-radix.png)
 
 ## Distributions using Radix
 ##### [Open Atrium](http://openatrium.com/)
@@ -22,15 +14,16 @@ Open Academy is a Drupal distribution that brings the best in web publishing for
 Open Berkeley is a turnkey web platform solution for UC Berkeley campus websites.
 
 ##### [Open Restaurant](http://drupal.org/project/restaurant)
-The Restaurant Distribution has everything you need to kickstart your restaurant website. It comes with a menu management system, a reservation system, a customizable blog and events management.
+The Open Restaurant distribution has everything you need to kickstart your restaurant website. It comes with a menu management system, a reservation system, a customizable blog and events management.
+
+##Features
+1. Components and plugins from Bootstrap.
+2. Responsive Panels with [Radix Layouts](http://drupal.org/project/radix_layouts).
+5. Sass, Gulp, BrowserSync and Font Awesome built-in.
+6. Drush intergration: drush radix "My Subtheme".
+8. Works with Bootswatch themes: drush radix "My Subtheme" --bootswatch=cerulean".
 
 ## Support
 * Project Page:   http://github.com/radixtheme
 * Documentation:  http://radixtheme.org/documentation
 * Demo:           http://dev-radix.chapterthree.com
-* Issue Queue:    https://github.com/radixtheme/radix/issues
-
-## Roadmap
-https://github.com/radixtheme/radix/wiki/Roadmap
-
-
