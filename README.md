@@ -23,7 +23,8 @@ The Open Restaurant distribution has everything you need to kickstart your resta
 6. Drush intergration: drush radix "My Subtheme".
 8. Works with Bootswatch themes: drush radix "My Subtheme" --bootswatch=cerulean".
 
-## Support
-* Project Page:   http://github.com/radixtheme
+## Links
+* Project Page:   http://radixtheme.org
 * Documentation:  http://radixtheme.org/documentation
 * Demo:           http://dev-radix.chapterthree.com
+* Support:        https://www.drupal.org/project/issues/radix
