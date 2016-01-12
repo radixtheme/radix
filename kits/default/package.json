@@ -12,7 +12,6 @@
     "node-sass": "^3.4.1",
     "gulp": "~3.9.0",
     "gulp-autoprefixer": "^3.1.0",
-    "gulp-compass": "~2.1.0",
     "gulp-concat": "^2.6.0",
     "gulp-imagemin": "~2.2.1",
     "gulp-notify": "^2.2.0",
