@@ -8,7 +8,6 @@ var sass = require('gulp-sass');
 var imagemin = require('gulp-imagemin');
 var pngcrush = require('imagemin-pngcrush');
 var shell = require('gulp-shell');
-var gutil = require('gulp-util');
 var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
 var autoprefix = require('gulp-autoprefixer');
