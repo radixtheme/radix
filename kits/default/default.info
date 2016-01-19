@@ -10,6 +10,12 @@ hidden = true
 ; Regions
 regions[content] = Content
 
+; Breakpoints
+breakpoints[xs] = (max-width: 767px)
+breakpoints[sm] = (min-width: 768px) and (max-width: 991px)
+breakpoints[md] = (min-width: 992px) and (max-width: 1199px)
+breakpoints[lg] = (min-width: 1200px)
+
 ; Panels
 plugins[panels][layouts] = panels/layouts
 plugins[panels][styles] = panels/styles
