@@ -27,6 +27,19 @@
   display: inline-block;
 }
 
+// Override compass-mixins clearfix mixin.
+// See https://www.drupal.org/node/2636880#comment-10764772.
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
 // Breakpoint mixin.
 // Usage: @include breakpoint(sm) { ... }
 // -----------------------------------------------------------------------------
