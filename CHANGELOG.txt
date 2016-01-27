@@ -1,0 +1,24 @@
+Radix 7.x-3.2, 2016-01-27
+-------------------
+- Menu dropdown behaviour not working properly after upgrade to v3.1.
+- Add default breakpoint support.
+- Remove unused hook.
+- Remove unused gutil library.
+- Merge branch '7.x-3.x' of github.com:radixtheme/radix into 7.x-3.x.
+- Rename menu to nav.
+- Add plumber error handler to gulpfile.
+- Remove breadrcumb template.
+- Add templates for block and system block.
+- Update comment style for scss files.
+- Ruby Gems and Compass still required, even with new 3.1 version. Proposed Solution.
+- Update README.md.
+- Update THEMING.md.
+- Update default logo.
+- Add compass-mixins for backward compatibility.
+- Add fonts task to gulp.
+- Add dynamic require_once for template.php.
+- Remove debug html code from page.tpl.php.
+- Update js and scss file paths.
+- Merge branch 'radix-libsass' of github.com:radixtheme/radix into radix-libsass.
+- Radix_form_element doesn't handle #title_display "after" correctly.
+- Set private to true.
