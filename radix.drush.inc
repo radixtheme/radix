@@ -32,6 +32,10 @@ function radix_drush_command() {
     ),
   );
 
+  $items['radix-upgrade-31'] = array(
+    'description' => 'Update subtheme to Radix 3.1.',
+  );
+
   return $items;
 }
 
@@ -42,6 +46,8 @@ function radix_drush_help($section) {
   switch ($section) {
     case 'drush:radix':
       return dt('This command will create a Radix subtheme. See examples to get started.');
+    case 'drush:radix-upgrade-31':
+      return dt('This command will upgrade a Radix subtheme to version 3.1.');
   }
 }
 
@@ -200,6 +206,119 @@ function drush_radix($name = NULL, $machine_name = NULL) {
     '!bootswatch' => $bootswatch,
   ));
   drush_print($message);
+}
+
+/**
+ * Implements drush_hook_COMMAND().
+ */
+function drush_radix_upgrade_31() {
+  global $base_url;
+
+  // Prepare options.
+  $all_themes = list_themes();
+
+  // Remove default option.
+  unset($all_themes['default']);
+
+  $options = array_filter($all_themes, function($n) {
+    return ($n->base_theme == 'radix');
+  });
+
+  array_walk($options, function(&$n, $key) {
+    $n = $n->info['name'];
+  });
+
+  // Set configuration values.
+  $machine_name = drush_choice($options, dt('Which theme would you like to update?'));
+  $name = $all_themes[$machine_name]->info['name'];
+  $description = $all_themes[$machine_name]->info['description'];
+  $theme_path = drush_normalize_path(drush_get_context('DRUSH_DRUPAL_ROOT') . '/' . drupal_get_path('theme', 'radix')) . '/';
+  $subtheme_path = drush_normalize_path(drush_get_context('DRUSH_DRUPAL_ROOT') . '/' . drupal_get_path('theme', $machine_name)) . '/';
+
+  // Remove files that are no longer necessary.
+  $remove_files = array(
+    'config.rb',
+    'Gemfile',
+    'Gemfile.lock',
+    'Guardfile',
+    'assets/sass/screen.scss',
+  );
+
+  foreach ($remove_files as $file) {
+    if (drush_op('unlink', $subtheme_path . $file)) {
+      print "Deleted file: $file.\n";
+    } else {
+      print "Failed to delete file: $file.\n";
+    }
+  }
+
+  // Copy files from kit.
+  $copy_files = array(
+    'bower.json' => 'bower.json',
+    'config.json' => 'config.json',
+    'package.json' => 'package.json',
+    'gulpfile.js' => 'gulpfile.js',
+    'scss/default.style.scss' => "assets/sass/$machine_name.style.scss",
+  );
+
+  foreach ($copy_files as $from => $to) {
+    if (drush_op('copy', $theme_path . 'kits/default/' . $from, $subtheme_path . $to)) {
+      print "Copied file: $from to $to.\n";
+    } else {
+      print "Failed to copy file: $from to $to.\n";
+    }
+  }
+
+  // Update configuration files.
+  $update_files = array(
+    'bower.json',
+    'config.json',
+    'package.json',
+  );
+
+  foreach ($update_files as $file) {
+    $file_path = $subtheme_path . $file;
+    radix_file_str_replace($file_path, 'http://panopoly.dev', $base_url);
+    radix_file_str_replace($file_path, '{{Name}}', $machine_name);
+    radix_file_str_replace($file_path, '{{Description}}', $description);
+    radix_file_str_replace($file_path, '{{machine_name}}', $machine_name);
+  }
+
+  // Copy radix scss.
+  if (drush_op('drush_copy_dir', $theme_path . 'kits/default/scss/radix', $subtheme_path . 'assets/sass/radix')) {
+    print "Copied directory: radix/scss.\n";
+  } else {
+    print "Failed to copy directory: radix/scss.\n";
+  }
+
+  // Move files.
+  $rename_files = array(
+    'assets/sass' => 'scss',
+    'scss/global' => 'scss/base',
+    'scss/partials' => 'scss/components',
+    'scss/base/_helper.scss' => 'scss/base/_helpers.scss',
+    'scss/base/_mixin.scss' => 'scss/base/_mixins.scss',
+    'scss/base/_variable.scss' => 'scss/base/_variables.scss',
+    'assets/stylesheets' => 'css',
+    'assets/javascripts' => 'js',
+    'js/script.js' => "js/$machine_name.script.js",
+  );
+
+  foreach ($rename_files as $from => $to) {
+    if (drush_op('rename', $subtheme_path . $from, $subtheme_path . $to)) {
+      print "Renamed file: $from to $to.\n";
+    }
+    else {
+      print "Failed to rename file: $from.\n";
+    }
+  }
+
+  // Update info file.
+  $info_file_path = "$subtheme_path$machine_name.info";
+  radix_file_str_replace($info_file_path, 'assets/stylesheets', 'assets/css');
+  radix_file_str_replace($info_file_path, 'assets/javascripts', 'assets/js');
+  radix_file_str_replace($info_file_path, 'assets/css/screen.css', "assets/css/$machine_name.style.css");
+  radix_file_str_replace($info_file_path, 'assets/js/script.js', "assets/js/$machine_name.script.js");
 }
 
 /**
