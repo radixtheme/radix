@@ -32,8 +32,8 @@ function radix_drush_command() {
     ),
   );
 
-  $items['radix-upgrade-31'] = array(
-    'description' => 'Update subtheme to Radix 3.1.',
+  $items['radix-upgrade32'] = array(
+    'description' => 'Update subtheme to Radix 3.2.',
   );
 
   return $items;
@@ -46,8 +46,8 @@ function radix_drush_help($section) {
   switch ($section) {
     case 'drush:radix':
       return dt('This command will create a Radix subtheme. See examples to get started.');
-    case 'drush:radix-upgrade-31':
-      return dt('This command will upgrade a Radix subtheme to version 3.1.');
+    case 'drush:radix-upgrade32':
+      return dt('This command will upgrade a Radix subtheme to version 3.2.');
   }
 }
 
@@ -211,7 +211,7 @@ function drush_radix($name = NULL, $machine_name = NULL) {
 /**
  * Implements drush_hook_COMMAND().
  */
-function drush_radix_upgrade_31() {
+function drush_radix_upgrade32() {
   global $base_url;
 
   // Prepare options.
