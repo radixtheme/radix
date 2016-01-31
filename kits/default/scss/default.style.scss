@@ -4,7 +4,7 @@
 
 // Bootstrap global partials.
 // -----------------------------------------------------------------------------
-// Core variables and mixins
+@import "base/variables";
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 
@@ -18,7 +18,6 @@
 
 // {{Name}} global partials.
 // -----------------------------------------------------------------------------
-@import "base/variables";
 @import "radix/mixins";
 @import "base/mixins";
 @import "base/helpers";
