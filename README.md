@@ -24,7 +24,7 @@ The Open Restaurant distribution has everything you need to kickstart your resta
 8. Works with Bootswatch themes: drush radix "My Subtheme" --bootswatch=cerulean".
 
 ## Links
-* Project Page:   http://radixtheme.org
-* Documentation:  http://radixtheme.org/documentation
+* Project Page:   http://www.radixtheme.org
+* Documentation:  http://www.radixtheme.org/documentation
 * Demo:           http://dev-radix.chapterthree.com
 * Support:        https://www.drupal.org/project/issues/radix
