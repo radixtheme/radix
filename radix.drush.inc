@@ -34,6 +34,9 @@ function radix_drush_command() {
 
   $items['radix-upgrade-33'] = array(
     'description' => 'Update subtheme to Radix 3.3.',
+    'examples' => array(
+      'drush radix-upgrade-33 my_theme' => 'Upgrades my_theme to work with Radix 3.3',
+    ),
   );
 
   return $items;
