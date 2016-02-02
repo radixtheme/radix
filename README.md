@@ -1,9 +1,11 @@
 # Radix
 Radix is a base theme for Drupal and BackdropCMS. It has Bootstrap, Sass, Gulp, Bower, BrowserSync and Font Awesome built-in.
 
-[![Documentation Status](https://readthedocs.org/projects/radix/badge/?version=latest)](http://docs.radixtheme.org/en/latest/?badge=latest)
-
 ![alt tag](https://www.drupal.org/files/drupal-radix.png)
+
+## Status
+
+[![Documentation Status](https://readthedocs.org/projects/radix/badge/?version=latest)](http://docs.radixtheme.org/en/latest/?badge=latest)
 
 ## Distributions using Radix
 ##### [Open Atrium](http://openatrium.com/)
