@@ -29,6 +29,8 @@ function radix_form($variables) {
  */
 function radix_container($variables) {
   $element = $variables['element'];
+  // Ensure an array is always passed to drupal_attributes().
+  $element['#attributes'] = is_array($element['#attributes']) ? $element['#attributes'] : array();
 
   // Special handling for form elements.
   if (isset($element['#array_parents'])) {
