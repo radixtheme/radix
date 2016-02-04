@@ -32,10 +32,10 @@ function radix_drush_command() {
     ),
   );
 
-  $items['radix-upgrade-33'] = array(
-    'description' => 'Update subtheme to Radix 3.3.',
+  $items['radix-upgrade-gulp'] = array(
+    'description' => 'Upgrade subtheme to use Gulp instead of Compass.',
     'examples' => array(
-      'drush radix-upgrade-33 my_theme' => 'Upgrades my_theme to work with Radix 3.3',
+      'drush radix-upgrade-gulp my_theme' => 'Upgrades my_theme to use Gulp',
     ),
   );
 
@@ -49,8 +49,8 @@ function radix_drush_help($section) {
   switch ($section) {
     case 'drush:radix':
       return dt('This command will create a Radix subtheme. See examples to get started.');
-    case 'drush:radix-upgrade-33':
-      return dt('This command will upgrade a Radix subtheme to version 3.3.');
+    case 'drush:radix-upgrade-gulp':
+      return dt('This command will upgrade a Radix subtheme to the Gulp version.');
   }
 }
 
@@ -214,7 +214,7 @@ function drush_radix($name = NULL, $machine_name = NULL) {
 /**
  * Implements drush_hook_COMMAND().
  */
-function drush_radix_upgrade_33() {
+function drush_radix_upgrade_gulp() {
   global $base_url;
 
   // Prepare options.
