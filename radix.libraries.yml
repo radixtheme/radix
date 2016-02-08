@@ -5,9 +5,6 @@ bootstrap:
 
 base:
   version: VERSION
-  css:
-    theme:
-      assets/css/radix.style.css: {}
   js:
     assets/js/radix.script.js: {}
   dependencies:

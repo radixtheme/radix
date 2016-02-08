@@ -1,17 +1,12 @@
-name: ||Name||
-description: ||Description||
+name: RADIX_SUBTHEME_NAME
+description: RADIX_SUBTHEME_DESCRIPTION
 screenshot: screenshot.png
 core: 8.x
 stylesheets:
   all:
-   - assets/stylesheets/screen.css
-  print:
-   - assets/stylesheets/print.css
-stylesheets-remove:
-  - radix-style.css
-  - radix-print.css
+   - assets/css/RADIX_SUBTHEME_MACHINE_NAME.css
 scripts:
-   - assets/javascripts/script.js
+   - assets/js/RADIX_SUBTHEME_MACHINE_NAME.script.js
 regions:
    primary_menu: 'Primary menu'
    content: 'Content'
