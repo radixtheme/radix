@@ -158,7 +158,7 @@ function drush_radix($name = NULL, $machine_name = NULL) {
     'RADIX_SUBTHEME_NAME' => $name,
     'RADIX_SUBTHEME_DESCRIPTION' => $description,
     'RADIX_SUBTHEME_MACHINE_NAME' => $machine_name,
-    'hidden = true' => '',
+    'hidden: true' => '',
   );
 
   // Replace all occurrences of '{{machine_name}}' with the machine name of our sub theme.
@@ -169,7 +169,9 @@ function drush_radix($name = NULL, $machine_name = NULL) {
 
   // Rename files.
   $files_to_rename = array(
-    '{{kit}}.info',
+    '{{kit}}.info.yml',
+    '{{kit}}.libraries.yml',
+    '{{kit}}.theme',
     'scss/{{kit}}.style.scss',
     'js/{{kit}}.script.js',
   );

@@ -1,0 +1,12 @@
+base:
+  version: VERSION
+  css:
+    theme:
+      assets/css/RADIX_SUBTHEME_MACHINE_NAME.style.css: {}
+  js:
+    bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js: {}
+    assets/js/RADIX_SUBTHEME_MACHINE_NAME.script.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal

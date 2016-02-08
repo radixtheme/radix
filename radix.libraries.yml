@@ -9,4 +9,5 @@ base:
     assets/js/radix.script.js: {}
   dependencies:
     - core/jquery
+    - core/jquery.once
     - core/drupal

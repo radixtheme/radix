@@ -4,7 +4,7 @@ screenshot: screenshot.png
 core: 8.x
 stylesheets:
   all:
-   - assets/css/RADIX_SUBTHEME_MACHINE_NAME.css
+   - assets/css/RADIX_SUBTHEME_MACHINE_NAME.style.css
 scripts:
    - assets/js/RADIX_SUBTHEME_MACHINE_NAME.script.js
 regions:
