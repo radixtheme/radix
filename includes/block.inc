@@ -6,7 +6,6 @@
 
 use Drupal\Core\Render\Element;
 
-
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
