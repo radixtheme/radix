@@ -1,6 +1,6 @@
 // Site name and logo
 // -----------------------------------------------------------------------------
-#logo {
+.site-logo {
   display: block;
   float: left;
   margin-right: $navbar-padding-horizontal;
@@ -10,7 +10,8 @@
   height: 100%;
   width: auto;
 }
-#site-name {
+
+.site-name {
   float: left;
 }
 
