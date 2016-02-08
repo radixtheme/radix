@@ -2,17 +2,18 @@ name: RADIX_SUBTHEME_NAME
 description: RADIX_SUBTHEME_DESCRIPTION
 screenshot: screenshot.png
 core: 8.x
-stylesheets:
-  all:
-   - assets/css/RADIX_SUBTHEME_MACHINE_NAME.style.css
-scripts:
-   - assets/js/RADIX_SUBTHEME_MACHINE_NAME.script.js
-regions:
-   primary_menu: 'Primary menu'
-   content: 'Content'
-features:
 version: VERSION
 engine: twig
 type: theme
 base theme: radix
 hidden: true
+
+regions:
+  navbar_branding: 'Navbar branding'
+  navbar_left:  'Navbar left'
+  navbar_right: 'Navbar right'
+  content: Content
+  footer: Footer
+
+libraries:
+  - RADIX_SUBTHEME_MACHINE_NAME/base
