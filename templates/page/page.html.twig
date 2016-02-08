@@ -1,74 +1,47 @@
-<?php
-
+{#
 /**
  * @file
- * Default theme implementation to display a single Drupal page.
- *
- * @see template_preprocess()
- * @see template_preprocess_page()
- * @see template_process()
- * @see html.tpl.php
+ * Template for the main page.
  */
-?>
-<header id="header" class="header" role="header">
-  <div class="container">
-    <nav class="navbar navbar-default" role="navigation">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-          <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a href="{{ front_page }}" id="logo" class="navbar-brand">
-          {{ site_name }}
-        </a>
-      </div> <!-- /.navbar-header -->
+#}
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      {{ page.navbar_branding }}
+    </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        {% if main_menu %}
-            {{ main_menu }}
-        {% endif %}
-        {% if search_form %}
-          {{ search_form }}
-        {% endif %}
-      </div><!-- /.navbar-collapse -->
-    </nav><!-- /.navbar -->
-  </div> <!-- /.container -->
-</header>
-
-<main id="main" class="main">
-  <div class="container">
-    {% if breadcrumb %}
-      {{ breadcrumb }}
-    {% endif %}
-    {% if messages %}
-      {{ messages }}
-    {% endif %}
-    <div id="page-header">
-      {% if title %}
-        <div class="page-header">
-          <h1 class="title">{{ title }}</h1>
+    <div class="collapse navbar-collapse">
+      {% if page.navbar_left %}
+        <div class="navbar-left">
+          {{ page.navbar_left }}
         </div>
       {% endif %}
-      {{ tabs }}
-      {% if action_links %}
-        <nav class="action-links">{{ action_links }}</nav>
+
+      {% if page.navbar_right %}
+        <div class="navbar-right">
+          {{ page.navbar_right }}
+        </div>
       {% endif %}
     </div>
   </div>
-  <div id="content" class="container">
+</nav>
+
+<main id="main" class="main">
+  <div class="container">
     {{ page.content }}
   </div>
-</main> <!-- /#main -->
+</main>
 
+{% if page.footer %}
 <footer id="footer" class="footer" role="footer">
   <div class="container">
-      {% if copyright %}
-        <small class="copyright pull-left">{{ copyright }}</small>
-      {% endif %}
-    <small class="pull-right"><a href="#"> {{ 'Back to Top'|t }}</a></small>
+      {{ page.footer }}
   </div>
 </footer>
+{% endif %}
