@@ -25,3 +25,14 @@ function radix_preprocess_input(&$variables) {
   // Add the element type to the theme.
   $variables['type'] = $element['#type'];
 }
+
+/**
+ * Implements template_preprocess_form_element().
+ */
+function radix_preprocess_form_element(&$variables) {
+  // Render the form element inside the label for checkbox and radio.
+  if (in_array($variables['element']['#type'], ['checkbox', 'radio'])) {
+    $variables['label']['#children'] = $variables['children'];
+    unset($variables['children']);
+  }
+}
