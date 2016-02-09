@@ -6,6 +6,7 @@ core: 8.x
 stylesheets-remove:
   - system.theme.css
   - system.menus.css
+  - system.admin.css
 libraries:
   - radix/bootstrap
   - radix/base
