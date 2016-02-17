@@ -32,3 +32,6 @@ The Open Restaurant distribution has everything you need to kickstart your resta
 * Documentation:  http://docs.radixtheme.org
 * Demo:           http://dev-radix.chapterthree.com
 * Support:        https://www.drupal.org/project/issues/radix
+
+## License
+http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
