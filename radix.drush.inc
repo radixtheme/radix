@@ -89,8 +89,8 @@ function drush_radix($name = NULL, $machine_name = NULL) {
 
   // Determine the path to the new subtheme.
   $subtheme_path = 'sites/all/themes';
-  if ($path = drush_get_option('path')) {
-    $subtheme_path = drush_trim_path($path);
+  if ($destination = drush_get_option('destination')) {
+    $subtheme_path = drush_trim_path($destination);
   }
   $subtheme_path = drush_normalize_path(drush_get_context('DRUSH_DRUPAL_ROOT') . '/' . $subtheme_path . '/' . $machine_name);
 
