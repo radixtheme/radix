@@ -27,7 +27,9 @@ function radix_theme_suggestions_block_alter(array &$suggestions, array $variabl
  */
 function radix_preprocess_block(&$variables) {
   // Add the css id as class
-  $variables['attributes']['class'][] = $variables['attributes']['id'];
+  if (isset($variables['attributes']['id'])) {
+    $variables['attributes']['class'][] = $variables['attributes']['id'];
+  }
 
   // Check for BlockContent.
   if (!empty($variables['elements']['content'])) {
