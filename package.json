@@ -10,8 +10,9 @@
     "gulp": "~3.9.0"
   },
   "devDependencies": {
-    "gulp-scss-lint": "~0.3.9",
     "jshint": "~2.9.1",
-    "gulp-jshint": "~2.0.0"
+    "gulp-jshint": "~2.0.0",
+    "sass-lint": "~1.5.1",
+    "gulp-sass-lint": "~1.1.1"
   }
 }

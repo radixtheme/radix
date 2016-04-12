@@ -16,7 +16,7 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var sourcemaps = require('gulp-sourcemaps');
-var scsslint = require('gulp-scss-lint');
+var sassLint = require('gulp-sass-lint');
 var jshint = require('gulp-jshint');
 
 // CSS.
@@ -101,8 +101,9 @@ gulp.task('drush', shell.task([
 // SCSS Linting.
 gulp.task('scss-lint', function() {
   return gulp.src(['./scss/**/*.scss'])
-    .pipe(scsslint())
-    .pipe(scsslint.failReporter());
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError());
 });
 
 // JS Linting.

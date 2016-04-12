@@ -2,14 +2,15 @@
 var gulp = require('gulp');
 
 // Include plugins.
-var scsslint = require('gulp-scss-lint');
+var sassLint = require('gulp-sass-lint');
 var jshint = require('gulp-jshint');
 
 // SCSS Linting.
 gulp.task('scss-lint', function() {
   return gulp.src(['./assets/scss/**/*.scss'])
-    .pipe(scsslint())
-    .pipe(scsslint.failReporter());
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError());
 });
 
 // JS Linting.
