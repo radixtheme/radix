@@ -10,7 +10,7 @@ gulp.task('scss-lint', function() {
   return gulp.src(['./assets/scss/**/*.scss'])
     .pipe(sassLint())
     .pipe(sassLint.format())
-    .pipe(sassLint.failOnWarning());
+    .pipe(sassLint.failOnError());
 });
 
 // JS Linting.
