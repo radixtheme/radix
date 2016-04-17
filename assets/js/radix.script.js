@@ -86,7 +86,7 @@
         }
       });
     }
-  }
+  };
 
   // Bootstrap tooltip.
   Drupal.behaviors.radix_tooltip = {
@@ -95,7 +95,7 @@
         $("[data-toggle='tooltip']").tooltip();
       }
     }
-  }
+  };
 
   // Bootstrap popover.
   Drupal.behaviors.radix_popover = {
@@ -104,7 +104,7 @@
         $("[data-toggle='popover']").popover();
       }
     }
-  }
+  };
 
   $(document).ready(function() {
     // Show first tab by default.
