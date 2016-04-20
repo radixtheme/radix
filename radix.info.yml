@@ -8,8 +8,9 @@ stylesheets-remove:
   - system.menus.css
   - system.admin.css
 libraries:
-  - radix/bootstrap
   - radix/base
+libraries-override:
+  seven/global-styling: false
 regions:
    page_top: 'Page top'
    page_bottom: 'Page bottom'
