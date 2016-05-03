@@ -32,7 +32,7 @@ set classes = [
 'block-' ~ plugin_id|clean_class,
 ]
 %}
-<div{{ attributes.addClass(classes) }}>
+<div{{ attributes.addClass(classes)|without('id') }}>
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes }}>{{ label }}</h2>
