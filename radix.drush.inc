@@ -186,7 +186,7 @@ function drush_radix($name = NULL, $machine_name = NULL) {
   $files_to_rename = array(
     '{{kit}}.info',
     'scss/{{kit}}.style.scss',
-    'js/{{kit}}.script.js',
+    'assets/js/{{kit}}.script.js',
   );
   foreach ($files_to_rename as $file_to_rename_path) {
     $file_original_path = $subtheme_path . '/' . str_replace('{{kit}}', $kit, $file_to_rename_path);
