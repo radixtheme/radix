@@ -349,6 +349,18 @@ function drush_radix_upgrade_7034($subtheme = NULL) {
     return;
   }
 
+  // Ask for confirmation
+  drush_print('--- --- ---');
+  drush_print(dt('This command will upgrade subtheme \'@subtheme\' to Radix 7.x-3.4.', array(
+    '@subtheme' => $subtheme
+  )));
+  drush_print(dt('Please make sure you have a backup before proceeding.'));
+
+  if (!drush_confirm('Are you sure you want to proceed?')) {
+    drush_user_abort();
+    return;
+  }
+
   // Set paths.
   $radix_path = drush_normalize_path(drush_get_context('DRUSH_DRUPAL_ROOT') . '/' . drupal_get_path('theme', 'radix'));
   $subtheme_path = drush_normalize_path(drush_get_context('DRUSH_DRUPAL_ROOT') . '/' . $subtheme_path);
