@@ -12,8 +12,7 @@
     "includePaths": [
       "./bower_components/bootstrap-sass/assets/stylesheets",
       "./bower_components/font-awesome/scss",
-      "./bower_components/compass-mixins/lib",
-      "../radix/scss"
+      "./bower_components/compass-mixins/lib"
     ]
   },
   "js": {
