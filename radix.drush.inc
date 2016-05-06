@@ -399,14 +399,17 @@ function drush_radix_upgrade_7034($subtheme = NULL) {
   }
 
   // Step 3: Move js files.
-  if (drush_copy_dir($subtheme_path . '/js', $subtheme_path . '/assets/js', FILE_EXISTS_OVERWRITE)) {
-    drush_print(dt('3. Successfully copied js files to assets/js.'));
+  if (file_exists($subtheme_path . '/js')) {
+    if (drush_copy_dir($subtheme_path . '/js', $subtheme_path . '/assets/js', FILE_EXISTS_OVERWRITE)) {
+      drush_print(dt('3. Successfully copied js files to assets/js.'));
 
-    // Step 4: Delete js files.
-    if (drush_delete_dir($subtheme_path . '/js')) {
-      drush_print(dt('4. Successfully removed old js.'));
+      // Step 4: Delete js files.
+      if (drush_delete_dir($subtheme_path . '/js')) {
+        drush_print(dt('4. Successfully removed old js.'));
+      }
     }
-  } else {
+  }
+  else {
     drush_set_error('JS_NOT_COPIED', dt('3. Failed to copy js files to assets/js.'));
     drush_set_error('JS_NOT_COPIED', dt('4. Failed to remove old js files.'));
   }
@@ -440,7 +443,9 @@ function drush_radix_upgrade_7034($subtheme = NULL) {
 
   // Print messages.
   drush_print('--- --- ---');
-  drush_print(dt('Radix subtheme \'@subtheme\' has been upgraded to the Radix 7.x-3.4. Please verify your theme files.'));
+  drush_print(dt('Radix subtheme \'@subtheme\' has been upgraded to the Radix 7.x-3.4. Please verify your theme files.', array(
+    '@subtheme' => $subtheme
+  )));
   drush_print('--- --- ---');
 
   drush_print(dt('IMPORTANT: Run the following commands to install new npm modules: '));
