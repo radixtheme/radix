@@ -62,6 +62,8 @@ function radix_preprocess_html(&$variables) {
  * Implements hook_css_alter().
  */
 function radix_css_alter(&$css) {
+  $active_theme = variable_get('theme_default', '');
+
   // Unset some panopoly css.
   if (module_exists('panopoly_admin')) {
     $panopoly_admin_path = drupal_get_path('module', 'panopoly_admin');
@@ -81,9 +83,18 @@ function radix_css_alter(&$css) {
   unset($css['modules/system/system.menus.css']);
 
   // Remove radix stylesheets if it is not the default theme.
-  if (variable_get('theme_default', '') != 'radix') {
+  if ($active_theme != 'radix') {
     unset($css[drupal_get_path('theme', 'radix') . '/assets/css/radix.style.css']);
   }
+
+  // Allow themes to set preprocess to FALSE.
+  // Enable the ability to toggle <link> as opposed to <style> @import.
+  // Useful for injecting CSS.
+  $preprocess_css = theme_get_setting('preprocess_css', $active_theme);
+  foreach ($css as $key => $value) {
+    $css[$key]['preprocess'] = $preprocess_css;
+  }
+
 }
 
 /**

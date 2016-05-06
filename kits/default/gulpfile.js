@@ -41,7 +41,8 @@ gulp.task('css', function() {
     }))
     .pipe(autoprefix('last 2 versions', '> 1%', 'ie 9', 'ie 10'))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(config.css.dest));
+    .pipe(gulp.dest(config.css.dest))
+    .pipe(browserSync.reload({ stream: true, match: '**/*.css' }));
 });
 
 // JS
@@ -81,16 +82,17 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest(config.fonts.dest));
 });
 
+// Watch task.
+gulp.task('watch', function() {
+  gulp.watch(config.css.src, ['css']);
+  gulp.watch(config.images.src, ['images']);
+});
+
 // Static Server + Watch
-gulp.task('serve', ['css', 'js', 'fonts'], function() {
+gulp.task('serve', ['css', 'js', 'fonts', 'watch'], function() {
   browserSync.init({
     proxy: config.browserSyncProxy
   });
-
-  gulp.watch(config.js.src, ['js']);
-  gulp.watch(config.css.src, ['css']);
-  gulp.watch(config.images.src, ['images']);
-  gulp.watch('assets/**/*').on('change', browserSync.reload);
 });
 
 // Run drush to clear the theme registry.
