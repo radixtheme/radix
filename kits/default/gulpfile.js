@@ -45,26 +45,6 @@ gulp.task('css', function() {
     .pipe(browserSync.reload({ stream: true, match: '**/*.css' }));
 });
 
-// JS
-gulp.task('js', function() {
-  return gulp.src(config.js.src)
-    .pipe(sourcemaps.init())
-    .pipe(concat(config.js.file))
-    .pipe(plumber({
-      errorHandler: function (error) {
-        notify.onError({
-          title:    "JS",
-          subtitle: "Failure!",
-          message:  "Error: <%= error.message %>",
-          sound:    "Beep"
-        }) (error);
-        this.emit('end');
-      }}))
-    .pipe(uglify())
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest(config.js.dest));
-});
-
 // Compress images.
 gulp.task('images', function () {
   return gulp.src(config.images.src)
@@ -89,7 +69,7 @@ gulp.task('watch', function() {
 });
 
 // Static Server + Watch
-gulp.task('serve', ['css', 'js', 'fonts', 'watch'], function() {
+gulp.task('serve', ['css', 'fonts', 'watch'], function() {
   browserSync.init({
     proxy: config.browserSyncProxy
   });

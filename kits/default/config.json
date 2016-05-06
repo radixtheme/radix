@@ -19,7 +19,7 @@
   "js": {
     "file" : "{{machine_name}}.script.js",
     "src": [
-      "js/**/*.js"
+      "assets/js/**/*.js"
     ],
     "dest": "assets/js"
   },
