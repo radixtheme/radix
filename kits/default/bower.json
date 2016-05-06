@@ -1,5 +1,5 @@
 {
-  "name": "{{Name}}",
+  "name": "{{machine_name}}",
   "description": "{{Description}}",
   "private": true,
   "ignore": [
