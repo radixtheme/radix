@@ -428,7 +428,13 @@ function drush_radix_upgrade_7034($subtheme = NULL) {
 
   // Print messages.
   drush_print('--- --- ---');
-  drush_print(dt('Radix subtheme \'@subtheme\' has been upgraded to the Radix 7.x-3.4. Please verify your theme files by running \'gulp\' command.'));
+  drush_print(dt('Radix subtheme \'@subtheme\' has been upgraded to the Radix 7.x-3.4. Please verify your theme files.'));
+  drush_print('--- --- ---');
+
+  drush_print(dt('IMPORTANT: Run the following commands to install new npm modules: '));
+  drush_print(dt('  npm install --save gulp-jshint gulp-scss-lint'));
+  drush_print(dt('  gulp'));
+  drush_print('--- --- ---');
 }
 
 /**
