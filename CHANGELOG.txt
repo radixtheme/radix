@@ -1,0 +1,26 @@
+Radix 8.x-3.0-alpha2, 2016-02-08
+---------------------------------------
+- Fix template for checkboxes and radios
+- Update template for form-element
+- Add template for page-title
+- Add radix scss partial to main theme
+- Remove unused radix_theme hook
+- Remove system.admin.css
+- Add template for local action
+- Move radix scss partials out of the default/subtheme kit
+
+Radix 8.x-3.0-alpha1, 2016-02-08
+---------------------------------------
+- Remove id from main nav template
+- Update region template
+- Update main page template
+- Update branding block template
+- Use site-logo and site-name classes instead of ids
+- Remove stylesheets and add regions and libraries to info file
+- Update template of search form
+- Update z-index of navbar
+- Remove alter hooks from .theme file
+- Update default logos
+- Update default template for blocks
+- Remove bower_components under gitignore
+- Fix info and libraries files for latest version
