@@ -1,4 +1,17 @@
-Radix 8.x-3.0-alpha2, 2016-02-08
+Radix 8.x-3.0-alpha3, 2016-05-14
+---------------------------------------
+- Add breakpoints file to default kit
+- Updates for multiple templates: views, html, feed-icon, field and block
+- Update template for views and nodes
+- Update template for block
+- Remove theme_views_mini_pager
+- Remove bootstrapcdn js
+- Update block template
+- Remove seven/global-styling library
+- Issue #2699605: Undefined index: id in radix_preprocess_block()
+- Remove gulp-compass from default kit
+
+Radix 8.x-3.0-alpha2, 2016-05-14
 ---------------------------------------
 - Fix template for checkboxes and radios
 - Update template for form-element
