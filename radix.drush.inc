@@ -171,6 +171,7 @@ function drush_radix($name = NULL, $machine_name = NULL) {
   $files_to_rename = array(
     '{{kit}}.info.yml',
     '{{kit}}.libraries.yml',
+    '{{kit}}.breakpoints.yml',
     '{{kit}}.theme',
     'scss/{{kit}}.style.scss',
     'js/{{kit}}.script.js',
