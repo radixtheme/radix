@@ -3,5 +3,12 @@
  * Custom scripts for theme.
  */
 (function ($) {
-  // Add your code here.
+
+  // Hello World.
+  Drupal.behaviors.helloWorld = {
+    attach: function (context) {
+      console.log('Hello World');
+    }
+  }
+
 })(jQuery);
