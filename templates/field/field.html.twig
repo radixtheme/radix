@@ -1,24 +1,44 @@
 {#
 /**
  * @file
- * Template for a field. Only content is rendered. All wrappers removed.
+ * Default template for a field.
  */
 #}
+{%
+  set classes = [
+    bundle|clean_class ~ '__' ~ field_name_clean|clean_class
+  ]
+%}
 {%
   set title_classes = [
     'field__label',
     label_display == 'visually_hidden' ? 'visually-hidden',
   ]
 %}
-{% if label_display != 'hidden' %}
-  <h4{{ title_attributes.addClass(title_classes) }}>{{ label }}</h4>
-{% endif %}
-{% for item in items %}
+
+{% if label_hidden %}
   {% if multiple %}
-    <div{{ item.attributes.addClass('field__item') }}>
-  {% endif %}
-    {{ item.content }}
-  {% if multiple %}
+    <div{{ attributes.addClass(classes) }}>
+      {% for item in items %}
+        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+      {% endfor %}
     </div>
+  {% else %}
+    {% for item in items %}
+      <div{{ attributes.addClass(classes) }}>{{ item.content }}</div>
+    {% endfor %}
   {% endif %}
-{% endfor %}
+{% else %}
+  <div{{ attributes.addClass(classes) }}>
+    <strong{{ title_attributes.addClass(title_classes) }}>{{ label }}</strong>
+    {% if multiple %}
+      <div class="field__items">
+    {% endif %}
+    {% for item in items %}
+      <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+    {% endfor %}
+    {% if multiple %}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}
