@@ -1,12 +1,12 @@
 {
   "name": "RADIX_SUBTHEME_MACHINE_NAME",
   "description": "RADIX_SUBTHEME_DESCRIPTION",
-  "browserSyncProxy" : "http://panopoly.dev",
+  "proxy" : "http://drupal.dev",
   "bowerDir": "./bower_components",
   "css": {
     "file" : "RADIX_SUBTHEME_MACHINE_NAME.style.scss",
     "src": [
-      "scss/**/*.scss"
+      "assets/scss/**/*.scss"
     ],
     "dest": "assets/css",
     "includePaths": [
@@ -18,9 +18,8 @@
   "js": {
     "file" : "RADIX_SUBTHEME_MACHINE_NAME.script.js",
     "src": [
-      "js/**/*.js"
-    ],
-    "dest": "assets/js"
+      "assets/js/**/*.js"
+    ]
   },
   "images": {
     "src": [

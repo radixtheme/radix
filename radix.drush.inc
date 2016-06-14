@@ -144,7 +144,7 @@ function drush_radix($name = NULL, $machine_name = NULL) {
       drush_tarball_extract($filename, $dirname, TRUE);
 
       // Copy bootswatch theme to subtheme.
-      $bootswatch_path = $subtheme_path . '/scss/bootswatch/';
+      $bootswatch_path = $subtheme_path . '/assets/scss/bootswatch/';
       drush_print($bootswatch_path);
       drush_move_dir($dirname . '/radix-bootswatch-master/' . $bootswatch, $bootswatch_path, TRUE);
     }
@@ -173,8 +173,8 @@ function drush_radix($name = NULL, $machine_name = NULL) {
     '{{kit}}.libraries.yml',
     '{{kit}}.breakpoints.yml',
     '{{kit}}.theme',
-    'scss/{{kit}}.style.scss',
-    'js/{{kit}}.script.js',
+    'assets/scss/{{kit}}.style.scss',
+    'assets/js/{{kit}}.script.js',
   );
   foreach ($files_to_rename as $file_to_rename_path) {
     $file_original_path = $subtheme_path . '/' . str_replace('{{kit}}', $kit, $file_to_rename_path);
@@ -220,6 +220,6 @@ function radix_get_files_to_make_replacements($kit = 'default') {
     'config.json',
     'bower.json',
     'package.json',
-    'scss/' . $kit . '.style.scss',
+    'assets/scss/' . $kit . '.style.scss',
   );
 }

@@ -39,27 +39,8 @@ gulp.task('css', function() {
     }))
     .pipe(autoprefix('last 2 versions', '> 1%', 'ie 9', 'ie 10'))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(config.css.dest));
-});
-
-// JS
-gulp.task('js', function() {
-  return gulp.src(config.js.src)
-    .pipe(sourcemaps.init())
-    .pipe(concat(config.js.file))
-    .pipe(plumber({
-      errorHandler: function (error) {
-        notify.onError({
-          title:    "JS",
-          subtitle: "Failure!",
-          message:  "Error: <%= error.message %>",
-          sound:    "Beep"
-        }) (error);
-        this.emit('end');
-      }}))
-    .pipe(uglify())
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest(config.js.dest));
+    .pipe(gulp.dest(config.css.dest))
+    .pipe(browserSync.reload({ stream: true, match: '**/*.css' }));
 });
 
 // Compress images.
@@ -79,16 +60,17 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest(config.fonts.dest));
 });
 
-// Static Server + Watch
-gulp.task('serve', ['css', 'js', 'fonts'], function() {
-  browserSync.init({
-    proxy: config.browserSyncProxy
-  });
-
-  gulp.watch(config.js.src, ['js']);
+// Watch task.
+gulp.task('watch', function() {
   gulp.watch(config.css.src, ['css']);
   gulp.watch(config.images.src, ['images']);
-  gulp.watch('assets/**/*').on('change', browserSync.reload);
+});
+
+// Static Server + Watch
+gulp.task('serve', ['css', 'fonts', 'watch'], function() {
+  browserSync.init({
+    proxy: config.proxy
+  });
 });
 
 // Run drush to clear the theme registry.
