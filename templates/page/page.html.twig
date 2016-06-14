@@ -32,16 +32,16 @@
   </div>
 </nav>
 
-<main id="main" class="main">
+<main role="main">
   <div class="container">
     {{ page.content }}
   </div>
 </main>
 
 {% if page.footer %}
-<footer id="footer" class="footer" role="footer">
-  <div class="container">
-      {{ page.footer }}
-  </div>
-</footer>
+  <footer role="footer">
+    <div class="container">
+        {{ page.footer }}
+    </div>
+  </footer>
 {% endif %}

@@ -5,9 +5,6 @@
  * Theme and preprocess functions for fields.
  */
 
-use Drupal\Component\Utility\Html;
-
-
 /**
  * Implements hook_preprocess_field().
  */

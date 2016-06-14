@@ -1,15 +1,15 @@
 {#
 /**
  * @file
- * Default theme implementation for a menu block.
+ * Default template for a menu block.
  */
 #}
 {%
 set classes = [
 'block',
-'block-menu',
-'navigation',
-'menu--' ~ derivative_plugin_id|clean_class,
+'block--menu',
+bundle ? 'block--' ~ bundle|clean_class,
+id ? 'block--' ~ id|clean_class,
 ]
 %}
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
