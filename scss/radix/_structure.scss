@@ -54,7 +54,7 @@
   list-style: none outside none;
   margin: 0 0 18px;
   padding: 0;
-  @extend %clearfix;
+  @extend .clearfix;
 
   > li {
     float: left;
