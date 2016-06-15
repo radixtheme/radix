@@ -1,3 +1,13 @@
+Radix 8.x-3.0-alpha4, 2016-06-15
+---------------------------------------
+- Restore previous field.html.twig and add a field-no-wrapper.html.twig template
+- Clean up radix template files
+- Rename default files in the default kit
+- Move scss and js directories under assets
+- Issue #2711987 by jday: Minor issues in _mixins.scss calls
+- Remove compass from style.scss
+- Rename breakpoints.yml file when creating a subtheme
+
 Radix 8.x-3.0-alpha3, 2016-05-14
 ---------------------------------------
 - Add breakpoints file to default kit
