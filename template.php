@@ -90,7 +90,7 @@ function radix_css_alter(&$css) {
   // Allow themes to set preprocess to FALSE.
   // Enable the ability to toggle <link> as opposed to <style> @import.
   // Useful for injecting CSS.
-  $preprocess_css = theme_get_setting('preprocess_css', $active_theme);
+  $preprocess_css = variable_get('preprocess_css', 0);
   foreach ($css as $key => $value) {
     $css[$key]['preprocess'] = $preprocess_css;
   }
