@@ -6,12 +6,23 @@
   // Allow dropdown links to be clickable by showing dropdowns on hover/focus.
   Drupal.behaviors.radix_dropdown = {
     attach: function(context, setting) {
+      var dropdown_disabled = false;
+
+      // Prevent the dropdown from re-opening if a menu link was focused before
+      // the window was re-focused.
+      $(window).focus(function() {
+        dropdown_disabled = true;
+        setTimeout(function () {
+          dropdown_disabled = false;
+        }, 0);
+      });
+
       $('.dropdown').once('radix-dropdown', function(){
         var dropdown = this;
 
         // Helper function to show the dropdown.
         function show() {
-          if (!$(dropdown).hasClass('open')) {
+          if (!$(dropdown).hasClass('open') && !dropdown_disabled) {
             $('>[data-toggle="dropdown"]', dropdown).trigger('click.bs.dropdown');
           }
         }
