@@ -102,6 +102,12 @@
     }
   };
 
+  $(document).keyup(function (evt) {
+    if (evt.which == 27) {
+      Drupal.CTools.Modal.dismiss();
+    }
+  });
+
   /**
    * Provide the HTML for the Modal.
    */
