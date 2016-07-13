@@ -21,3 +21,6 @@ regions_hidden[] = sidebar_first
 features[] = logo
 features[] = name
 features[] = favicon
+
+; Settings
+settings[main_menu_max_depth] = 2

@@ -171,10 +171,17 @@ function radix_preprocess_page(&$variables) {
   }
 
   // Format and add main menu to theme.
-  $variables['main_menu'] = _radix_dropdown_menu_tree(variable_get('menu_main_links_source', 'main-menu'), array(
-    'min_depth' => 1,
-    'max_depth' => 2,
-  ));
+  $main_menu_parameters = array('min_depth' => 1);
+  $main_menu_max_depth = (int)theme_get_setting('main_menu_max_depth');
+  if ($main_menu_max_depth > 0) {
+    $main_menu_parameters['max_depth'] = $main_menu_max_depth;
+  }
+  elseif ($main_menu_max_depth == 0) {
+    // If the user upgraded from an old version, the value will be zero and so
+    // we set it to the default.
+    $main_menu_parameters['max_depth'] = 2;
+  }
+  $variables['main_menu'] = _radix_dropdown_menu_tree(variable_get('menu_main_links_source', 'main-menu'), $main_menu_parameters);
 
   // Add a copyright message.
   $variables['copyright'] = t('Drupal is a registered trademark of Dries Buytaert.');
