@@ -11,8 +11,7 @@
     "dest": "assets/css",
     "includePaths": [
       "./bower_components/bootstrap-sass/assets/stylesheets",
-      "./bower_components/font-awesome/scss",
-      "./bower_components/compass-mixins/lib"
+      "./bower_components/font-awesome/scss"
     ]
   },
   "js": {
