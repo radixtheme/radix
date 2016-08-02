@@ -62,6 +62,10 @@ fieldset {
   }
 }
 
+.input-group-addon label {
+  margin: 0;
+}
+
 html.js {
   input.form-autocomplete {
     background: image-url("throbber.gif") no-repeat right 8px #fff !important;
