@@ -1,3 +1,13 @@
+Radix 7.x-3.5, 2016-08-03
+-------------------
+- Issue #2223365 by dsnopek, barraponto: Use input group component for Input Format Widget
+- Issue #2773717 by cboyden: Theming for Add Content links depends on exact title text match
+- Issue #2755845 by k4v, arshadcn: Remove compass
+- Issue #2554019 by dsnopek: Nested dropdown menus
+- Issue #2583483 by dsnopek: Closing CTools dialog with escape key leaves page without scrollbars
+- Issue #2756419 by dsnopek: Menu dropdown reopen when browser tab regains focus
+- Issue #2744371 by hanoii: Preprocessing css, how to, whats the point of a theme settings?
+
 Radix 7.x-3.4, 2016-05-15
 -------------------
 - Add radix-upgrade-7034 drush command
