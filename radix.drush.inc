@@ -214,12 +214,17 @@ function radix_file_str_replace($file_path, $find, $replace) {
  */
 function radix_get_files_to_make_replacements($kit = 'default') {
   return array(
+    'assets/scss/' . $kit . '.style.scss',
+    'includes/node.inc',
+    'includes/page.inc',
+    'includes/view.inc',
+    'bower.json',
+    'config.json',
     $kit . '.info.yml',
     $kit . '.libraries.yml',
     $kit . '.theme',
-    'config.json',
-    'bower.json',
     'package.json',
-    'assets/scss/' . $kit . '.style.scss',
+    'README.md',
+    'theme-settings.php',
   );
 }
