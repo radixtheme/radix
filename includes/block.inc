@@ -27,8 +27,11 @@ function radix_theme_suggestions_block_alter(array &$suggestions, array $variabl
 /**
  * Implements hook_preprocess_block().
  */
-function radix_preprocess_block(&$variables) {// Add id to template.
-  $variables['id'] = str_replace('_', '-', $variables['elements']['#id']);
+function radix_preprocess_block(&$variables) {
+  // Add id to template.
+  if (isset($variables['elements']['#id'])) {
+    $variables['id'] = str_replace('_', '-', $variables['elements']['#id']);
+  }
 
   // Check for BlockContent.
   if ($variables['elements']['#configuration']['provider'] != 'block_content' || empty($variables['elements']['content']['#block_content'])) {
