@@ -1,3 +1,9 @@
+Radix 8.x-3.0-beta1, 2016-11-08
+---------------------------------------
+- Issue #2824400 by Laubi, arshadcn: Radix is spamming notice messages.
+- Remove comment.inc file.
+- Update the list of files to make replacement on drush.
+
 Radix 8.x-3.0-alpha3, 2016-05-14
 ---------------------------------------
 - Add breakpoints file to default kit
