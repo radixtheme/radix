@@ -1,3 +1,8 @@
+Radix 8.x-3.0, 2016-12-22
+-------------------
+- Update files to make replacement on drush command.
+- Add a composer.json file.
+
 Radix 8.x-3.0-beta1, 2016-11-08
 ---------------------------------------
 - Issue #2824400 by Laubi, arshadcn: Radix is spamming notice messages.
