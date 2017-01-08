@@ -1,13 +1,37 @@
 # Radix
+Radix is a base theme for Drupal and BackdropCMS. It has Bootstrap, Sass, Gulp, Bower, BrowserSync and Font Awesome built-in.
 
-Radix is a base theme for [Panopoly](http://drupal.org/project/panopoly). It has Sass and Compass support, and makes it easy to build responsive themes with Panels.
+![alt tag](https://www.drupal.org/files/drupal-radix.png)
 
-* Project Page:   http://drupal.org/project/radix
-* Documentation:  https://drupal.org/node/1840310
+## Status
+
+[![Documentation Status](https://readthedocs.org/projects/radix/badge/?version=latest)](http://docs.radixtheme.org/en/latest/?badge=latest)
+
+## Distributions using Radix
+##### [Open Atrium](http://openatrium.com/)
+Open Atrium is an intranet in a box that has group spaces to allow different teams to have their own conversations and collaboration.
+
+##### [Open Academy](http://drupal.org/project/openacademy)
+Open Academy is a Drupal distribution that brings the best in web publishing for higher education on a customizable Drupal platform.
+
+##### [Open Berkeley](http://open.berkeley.edu)
+Open Berkeley is a turnkey web platform solution for UC Berkeley campus websites.
+
+##### [Open Restaurant](http://drupal.org/project/restaurant)
+The Open Restaurant distribution has everything you need to kickstart your restaurant website. It comes with a menu management system, a reservation system, a customizable blog and events management.
+
+##Features
+1. Components and plugins from Bootstrap.
+2. Responsive Panels with [Radix Layouts](http://drupal.org/project/radix_layouts).
+5. Sass, Gulp, BrowserSync and Font Awesome built-in.
+6. Drush intergration: drush radix "My Subtheme".
+8. Works with Bootswatch themes: drush radix "My Subtheme" --bootswatch=cerulean".
+
+## Links
+* Project Page:   http://www.radixtheme.org
+* Documentation:  http://docs.radixtheme.org
 * Demo:           http://dev-radix.chapterthree.com
-* Issue Queue:    http://drupal.org/project/issues/radix
+* Support:        https://www.drupal.org/project/issues/radix
 
-## Theming Guide
-
-See the guide here: https://www.drupal.org/node/1896382
-
+## License
+http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
