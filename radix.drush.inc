@@ -190,6 +190,13 @@ function drush_radix($name = NULL, $machine_name = NULL) {
     'package.json',
     'scss/' . $kit . '.style.scss',
   );
+
+  // Also make alterations in the include files.
+  $include_files = array_diff(scandir($subtheme_path . '/includes'), array('..', '.'));
+  foreach ($include_files as $include) {
+    $files_to_replace[] = 'includes/' . $include;
+  }
+
   foreach ($files_to_replace as $file_to_replace) {
     drush_op('radix_file_str_replace', $subtheme_path . '/' . $file_to_replace, array_keys($alterations), $alterations);
   }
