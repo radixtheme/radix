@@ -29,6 +29,7 @@ function radix_drush_command() {
       'drush radix "My Theme"' => 'Creates a Radix subtheme called "My Theme", using the default options.',
       'drush radix "My Theme" --machine_name=my_theme' => 'Creates a Radix subtheme called "My Theme" with a specific machine name.',
       'drush radix "My Theme" --bootswatch=cerulean' => 'Creates a Radix subtheme called "My Theme" using Cerulean Bootswatch theme.',
+      'drush radix "My Theme" --kit="https://github.com/radix-kit-KITNAME/archive/BRANCH.zip"' => 'Creates a Radix subtheme called "My Theme" using a remote kit source. See http://docs.radixtheme.org/en/latest/drupal/#custom-kit.',
     ),
   );
 
