@@ -133,11 +133,14 @@ function drush_radix($name = NULL, $machine_name = NULL) {
     )));
     if ($filepath = drush_download_file($kit_url)) {
       $filename = basename($filepath);
-      $dirname =  basename($filepath, '.zip');
 
       // Decompress the zip archive.
-      drush_tarball_extract($filename, $dirname, TRUE);
-      $kit_path = getcwd() . '/' . $dirname . '/radix-kit-' . $kit_name . '-master';
+      $files = drush_tarball_extract($filename, getcwd(), TRUE);
+
+      // Re-index array.
+      // This fixes an issue where a .tag.gz tarball returns a non-zero array.
+      $files = array_values($files);
+      $kit_path = getcwd() . '/' . $files[0];
 
       // Set working directory back to the previous working directory.
       chdir($current_dir);
