@@ -1,12 +1,21 @@
-base:
+bootstrap:
+  version: VERSION
+  js:
+    bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js: {}
+
+style:
   version: VERSION
   css:
     theme:
       assets/css/radix.style.css: {}
+
+script:
+  version: VERSION
   js:
-    bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js: {}
     assets/js/radix.script.js: {}
   dependencies:
     - core/jquery
     - core/jquery.once
     - core/drupal
+
+

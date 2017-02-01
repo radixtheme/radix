@@ -10,7 +10,9 @@ stylesheets-remove:
   - system.admin.css
 
 libraries:
-  - radix/base
+  - radix/style
+  - radix/bootstrap
+  - radix/script
 
 libraries-override:
   seven/global-styling: false

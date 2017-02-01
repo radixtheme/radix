@@ -17,3 +17,7 @@ regions:
 
 libraries:
   - RADIX_SUBTHEME_MACHINE_NAME/base
+
+libraries-override:
+  radix/bootstrap: false
+  radix/style: false
