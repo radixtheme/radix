@@ -1,3 +1,24 @@
+Radix 8.x-3.1, 2017-02-01
+---------------------------------------
+- Remove unused menu template files.
+- Fixed drop-downs not showing in main navigation.
+- Add contextual links back to system-menu-block.
+- Allow kits to be created from any branch.
+- Add support for Yarn package manager.
+- Update npm dependencies.
+- Update bower dependencies.
+- Add bootstrap styles to Radix base theme.
+
+Radix 8.x-3.0, 2016-12-22
+---------------------------------------
+- No changes
+
+Radix 8.x-3.0-beta1, 2016-11-28
+---------------------------------------
+- Issue #2824400 by Laubi, arshadcn: Radix is spamming notice messages.
+- Remove comment.inc file.
+- Update the list of files to make replacement on drush.
+
 Radix 8.x-3.0-alpha4, 2016-06-15
 ---------------------------------------
 - Restore previous field.html.twig and add a field-no-wrapper.html.twig template
