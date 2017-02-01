@@ -165,9 +165,11 @@ table {
 // --------------------------------------------------
 ul.links {
   padding: 0;
+  margin: 1em 0 0;
   list-style: none outside none;
+
   &.inline {
-    margin: 0;
+
     li {
       margin: 0 10px 0 0;
       padding: 0;

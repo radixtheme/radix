@@ -3,16 +3,23 @@ type: theme
 description: Responsive base theme for Drupal.
 screenshot: screenshot.png
 core: 8.x
+
 stylesheets-remove:
   - system.theme.css
   - system.menus.css
   - system.admin.css
+
 libraries:
   - radix/base
+
 libraries-override:
   seven/global-styling: false
+
 regions:
-   page_top: 'Page top'
-   page_bottom: 'Page bottom'
-   content: Content
-version: VERSION
+  navbar_branding: 'Navbar branding'
+  navbar_left:  'Navbar left'
+  navbar_right: 'Navbar right'
+  content: Content
+  footer: Footer
+
+version: 8.x-3.0

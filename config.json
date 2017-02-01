@@ -1,0 +1,29 @@
+{
+  "name": "radix",
+  "description": "Responsive base theme for Drupal.",
+  "proxy" : "http://drupal.dev",
+  "bowerDir": "./bower_components",
+  "css": {
+    "file" : "radix.style.scss",
+    "src": [
+      "scss/**/*.scss"
+    ],
+    "dest": "assets/css",
+    "includePaths": [
+      "./bower_components/bootstrap-sass/assets/stylesheets",
+      "./bower_components/font-awesome/scss"
+    ]
+  },
+  "images": {
+    "src": [
+      "assets/images/**/*"
+    ],
+    "dest": "assets/images/"
+  },
+  "fonts": {
+    "src": [
+      "./bower_components/font-awesome/fonts/**.*"
+    ],
+    "dest": "./assets/fonts/"
+  }
+}
