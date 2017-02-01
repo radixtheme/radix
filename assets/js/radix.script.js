@@ -4,9 +4,13 @@
  */
 (function ($, Drupal, window, document, undefined) {
   // Allow dropdown links to be clickable by showing dropdowns on hover/focus.
+  // Most of the work done here was implemented after an accessibility study.
+  // @see https://www.drupal.org/node/2500635
   Drupal.behaviors.radix_dropdown = {
-    attach: function(context, setting) {
-      $('.dropdown').once('radix-dropdown', function(){
+    attach: function(context) {
+      var $context = $(context);
+
+      $context.find('.dropdown').once('radix-dropdown').each(function () {
         var dropdown = this;
 
         // Helper function to show the dropdown.
@@ -29,28 +33,6 @@
         });
         $(this).on('mouseleave.radix.dropdown', function() {
           hide();
-        });
-        $(this).on('focusin.radix.dropdown', function() {
-          show();
-        });
-        $('body').once('radix-dropdown').on('focusout.radix.dropdown', function(e) {
-          var parent = $(e.target).closest('li.radix-dropdown-processed.open').get(0);
-          if (parent) {
-            // Defer to after all handlers so we can see where focus landed.
-            setTimeout(function () {
-              // Don't do anything if no element is focused - that can only
-              // happen with the mouse and this is meant to close the menu
-              // when the keyboard is used to change focus.
-              if (!document.activeElement || document.activeElement === document.body) {
-                return;
-              }
-              // Hide the parent if it doesn't contain the now focused element
-              // and is still open.
-              if (!parent.contains(document.activeElement) && $(parent).hasClass('open')) {
-                $(parent).trigger('click.bs.dropdown');
-              }
-            }, 0);
-          }
         });
 
         $(this).on('keydown.radix.dropdown', function(e) {
@@ -85,8 +67,28 @@
           });
         }
       });
+
+      $context.find('body').once('radix-dropdown-focus').on('focusout.radix.dropdown', function(e) {
+        var parent = $(e.target).closest('li.radix-dropdown-processed.open').get(0);
+        if (parent) {
+          // Defer to after all handlers so we can see where focus landed.
+          setTimeout(function () {
+            // Don't do anything if no element is focused - that can only
+            // happen with the mouse and this is meant to close the menu
+            // when the keyboard is used to change focus.
+            if (!document.activeElement || document.activeElement === document.body) {
+              return;
+            }
+            // Hide the parent if it doesn't contain the now focused element
+            // and is still open.
+            if (!parent.contains(document.activeElement) && $(parent).hasClass('open')) {
+              $(parent).trigger('click.bs.dropdown');
+            }
+          }, 0);
+        }
+      });
     }
-  }
+  };
 
   // Bootstrap tooltip.
   Drupal.behaviors.radix_tooltip = {
@@ -95,7 +97,7 @@
         $("[data-toggle='tooltip']").tooltip();
       }
     }
-  }
+  };
 
   // Bootstrap popover.
   Drupal.behaviors.radix_popover = {
@@ -104,7 +106,7 @@
         $("[data-toggle='popover']").popover();
       }
     }
-  }
+  };
 
   $(document).ready(function() {
     // Show first tab by default.

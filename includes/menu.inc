@@ -8,20 +8,24 @@
  * Implements hook_preprocess_menu().
  */
 function radix_preprocess_menu(&$variables, $hook) {
-  if ($hook == 'menu__main') { // We're doing that for main menu.
-    // Get the current path.
-    $current_path = \Drupal::request()->getRequestUri();
-    $items = $variables['items'];
-    foreach ($items as $key => $item) {
-      // If path is current_path, set active to li.
-      if ($item['url']->toString() == $current_path) {
-        // Add active link.
-        $variables['items'][$key]['attributes']['class'] = 'active';
-      }
+  // No changes for menu toolbar.
+  if ($hook == 'menu__toolbar') {
+    return;
+  }
+  
+  // Get the current path.
+  $current_path = \Drupal::request()->getRequestUri();
 
-      if (count($item['below'])) {
-        $item['url']->setOption('html', TRUE);
-      }
+  $items = $variables['items'];
+  foreach ($items as $key => $item) {
+    // If path is current_path, set active to li.
+    if ($item['url']->toString() == $current_path) {
+      // Add active link.
+      $variables['items'][$key]['attributes']['class'] = 'active';
+    }
+
+    if (count($item['below'])) {
+      $item['url']->setOption('html', TRUE);
     }
   }
 }
