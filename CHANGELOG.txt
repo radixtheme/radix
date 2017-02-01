@@ -1,5 +1,6 @@
 Radix 8.x-3.1, 2017-02-01
 ---------------------------------------
+- Allow kits to override radix libraries.
 - Remove unused menu template files.
 - Fixed drop-downs not showing in main navigation.
 - Add contextual links back to system-menu-block.
