@@ -14,6 +14,8 @@ id ? 'block--' ~ id|clean_class,
 %}
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
 <nav{{ attributes.addClass(classes)|without('id') }} role="navigation" aria-labelledby="{{ heading_id }}">
+  {{ title_prefix }}
+  {{ title_suffix }}
   {% block content %}
     {{ content }}
   {% endblock %}
