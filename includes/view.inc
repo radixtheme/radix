@@ -26,15 +26,3 @@ function radix_theme_suggestions_views_view_unformatted_alter(array &$suggestion
   $display = $view->current_display;
   $suggestions[] = 'views_view_unformatted__' . $name . '__' . $display;
 }
-
-/**
- * Implements template_preprocess_views_view_table().
- */
-function radix_preprocess_views_view_table(&$variables) {
-  // Add Bootstrap table classes.
-  $variables['classes_array'] = array_merge($variables['classes_array'], array(
-    'table',
-    'table-striped',
-    'table-bordered',
-  ));
-}
