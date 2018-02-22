@@ -44,18 +44,19 @@
       <h2{{ heading.attributes }}>{{ heading.text }}</h2>
     {%- endif -%}
   {%- endif -%}
-  {%- if first_link.text -%}
-    {{ first_link.text }}
-  {%- elseif first_link.link -%}
+  {%- if first_link.link -%}
     {{ first_link.link }}
   {%- elseif first_link.text_attributes -%}
     <span{{ first_link.text_attributes.addClass('btn') }}>{{ first_link.text }}</span>
+  {%- elseif first_link.text -%}
+    {{ first_link.text }}
   {%- endif -%}
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+  <button type="button" class="btn btn-default dropdown-toggle"
+          data-toggle="dropdown">
     <span class="caret"></span>
     <span class="sr-only">Toggle Dropdown</span>
   </button>
-  <ul{{ attributes }}>
+  <ul{{ attributes.addClass(['dropdown-menu', 'dropdown-menu-right']).removeClass('dropbutton') }}>
     {%- for key, item in links -%}
       <li>
         {%- if item.link -%}
