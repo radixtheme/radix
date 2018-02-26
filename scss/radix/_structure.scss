@@ -238,6 +238,10 @@ ul.dropdown-menu li {
   list-style: none outside none !important;
 }
 
+.btn-group {
+  display: flex;
+}
+
 // Calendar
 // --------------------------------------------------
 .calendar-calendar {
