@@ -6,14 +6,14 @@
 #}
 {%
   set classes = [
-    bundle|clean_class ~ '__' ~ field_name_clean|clean_class
-  ]
+  bundle|clean_class ~ '__' ~ field_name_clean|clean_class
+]
 %}
 {%
   set title_classes = [
-    'field__label',
-    label_display == 'visually_hidden' ? 'visually-hidden',
-  ]
+  'field__label',
+  label_display == 'visually_hidden' ? 'visually-hidden',
+]
 %}
 
 {% if label_hidden %}
@@ -32,13 +32,13 @@
   <div{{ attributes.addClass(classes) }}>
     <strong{{ title_attributes.addClass(title_classes) }}>{{ label }}</strong>
     {% if multiple %}
-      <div class="field__items">
-    {% endif %}
-    {% for item in items %}
-      <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
-    {% endfor %}
-    {% if multiple %}
-      </div>
+    <div class="field__items">
+      {% endif %}
+      {% for item in items %}
+        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+      {% endfor %}
+      {% if multiple %}
+    </div>
     {% endif %}
   </div>
 {% endif %}

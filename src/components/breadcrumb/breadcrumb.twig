@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Template for a Breadcrumb component.
+ *
+ * Available config:
+ * - utility_classes: An array of utility classes.
+ */
+#}
+{% if breadcrumb %}
+  <nav aria-label="breadcrumb" class="{{ utility_classes|join(' ') }}">
+    <ol class="breadcrumb">
+      {% for item in breadcrumb %}
+        <li class="breadcrumb-item {{ not item.url ? 'active' }}">
+          {% if item.url %}
+            <a href="{{ item.url }}">{{ item.text }}</a>
+          {% else %}
+            {{ item.text }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  </nav>
+{% endif %}

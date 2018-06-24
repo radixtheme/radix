@@ -10,18 +10,22 @@ stylesheets-remove:
   - system.admin.css
 
 libraries:
-  - radix/style
   - radix/bootstrap
-  - radix/script
+  - radix/style
 
 libraries-override:
   seven/global-styling: false
 
 regions:
-  navbar_branding: 'Navbar branding'
-  navbar_left:  'Navbar left'
-  navbar_right: 'Navbar right'
+  navbar_branding: Navbar branding
+  navbar_left:  Navbar left
+  navbar_right: Navbar right
+  page_header: Page header
   content: Content
+  page_bottom: Page bottom
   footer: Footer
 
-version: 8.x-3.1
+component-libraries:
+  radix:
+    paths:
+      - ./src/components

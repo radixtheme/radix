@@ -1,0 +1,10 @@
+style:
+  version: VERSION
+  css:
+    theme:
+      assets/css/RADIX_SUBTHEME_MACHINE_NAME.style.css: {}
+  js:
+    assets/js/RADIX_SUBTHEME_MACHINE_NAME.script.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

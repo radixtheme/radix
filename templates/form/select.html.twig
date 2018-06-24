@@ -10,13 +10,8 @@
  * @see template_preprocess_select()
  */
 #}
-{%
-set classes = [
-  'form-control'
-]
-%}
 {% spaceless %}
-  <select{{ attributes.addClass(classes) }}>
+  <select{{ attributes.addClass('custom-select') }}>
     {% for option in options %}
       {% if option.type == 'optgroup' %}
         <optgroup label="{{ option.label }}">

@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Template for an Image component.
+ *
+ * Available config:
+ * - utility_classes: An array of utility classes.
+ * - align: left|right|center
+ * - responsive: true|false
+ */
+#}
+{% set classes = [
+  responsive ? 'img-fluid' : 'img-thumbnail',
+  align == 'left' ? 'float-left',
+  align == 'right' ? 'float-right',
+  align == 'center' ? 'mx-auto d-block',
+]|merge(utility_classes ? utility_classes : []) %}
+
+<img{{ attributes|without('alt').addClass(classes) }} src="{{ src }}" alt="{{ alt }}" />

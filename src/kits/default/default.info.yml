@@ -1,0 +1,25 @@
+name: RADIX_SUBTHEME_NAME
+description: RADIX_SUBTHEME_DESCRIPTION
+screenshot: screenshot.png
+core: 8.x
+version: VERSION
+engine: twig
+type: theme
+base theme: radix
+hidden: true
+
+regions:
+  navbar_branding: Navbar branding
+  navbar_left:  Navbar left
+  navbar_right: Navbar right
+  header: header
+  content: Content
+  page_bottom: Page bottom
+  footer: Footer
+
+libraries:
+  - RADIX_SUBTHEME_MACHINE_NAME/style
+
+libraries-override:
+  radix/bootstrap: false
+  radix/style: false

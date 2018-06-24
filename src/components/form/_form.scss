@@ -1,0 +1,15 @@
+fieldset.card {
+
+  legend {
+    font-size: 1rem;
+  }
+}
+
+.form-check {
+  margin-bottom: 1rem;
+
+  .form-radios &,
+  .form-checkboxes & {
+    margin-bottom: 0;
+  }
+}

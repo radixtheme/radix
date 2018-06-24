@@ -20,3 +20,18 @@ function radix_preprocess_field(&$variables) {
   $safe_field_name_prefix = 'field_' . $bundle . '_';
   $variables['field_name_clean'] = str_replace($safe_field_name_prefix, '', $field_name);
 }
+
+/**
+ * Implements template_preprocess_filter_caption().
+ */
+function radix_preprocess_filter_caption(&$variables) {
+  // Add the figure-img class to the rendered image markup.
+  libxml_use_internal_errors(true);
+  $doc = new DOMDocument();
+  $doc->loadHTML($variables['node']);
+  $image = $doc->getElementsByTagName('img')->item(0);
+  $image->setAttribute('class', 'figure-img img-fluid');
+  $variables['node'] = [
+    '#markup' => $image->ownerDocument->saveHTML($image),
+  ];
+}

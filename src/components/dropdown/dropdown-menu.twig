@@ -1,0 +1,11 @@
+{#
+/**
+ * @file
+ * Template for a Dropdown menu component.
+ */
+#}
+<div class="dropdown-menu">
+  {% for item in items %}
+    <a href="{{ item.url }}" class="dropdown-item {{ item.in_active_trail ? 'active' }}">{{ item.title }}</a>
+  {% endfor %}
+</div>

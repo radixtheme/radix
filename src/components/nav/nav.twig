@@ -1,0 +1,55 @@
+{#
+/**
+ * @file
+ * Template for a Nav component.
+ *
+ * Available config:
+ * - alignment: left | right | center | vertical.
+ * - style: tabs | pills
+ * - fill: fill | justify
+ * - utility_classes: An array of utility classes.
+ */
+#}
+{% import _self as menus %}
+
+{% if alignment == 'right' %}
+  {% set alignment = 'justify-content-end' %}
+{% elseif alignment == 'center' %}
+  {% set alignment = 'justify-content-center' %}
+{% elseif alignment == 'vertical' %}
+  {% set alignment = 'flex-column' %}
+{% else %}
+  {% set alignment = '' %}
+{% endif %}
+
+{% set style = style ? 'nav-' ~ style : '' %}
+{% set fill = fill ? 'nav-' ~ fill : '' %}
+
+{% set nav_classes = [ 'nav', style, alignment, fill]|merge(utility_classes ? utility_classes : []) %}
+
+{% if items %}
+  <ul{{ attributes.addClass(nav_classes) }}>
+    {% block items %}
+      {% for item in items %}
+        {% set nav_item_classes = [
+          'nav-item',
+          item.in_active_trail ? 'active',
+          item.is_expanded and item.below ? 'dropdown'
+        ] %}
+        <li class="{{ nav_item_classes|join(' ') }}">
+          {% if item.is_expanded and item.below %}
+            <a href="{{ item.url }}" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ item.title }}</a>
+            {% if item.below %}
+              {% include '@radix/dropdown/dropdown-menu.twig' with {
+                items: item.below
+              } %}
+            {% endif %}
+          {% else %}
+            <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    {% endblock %}
+  </ul>
+{% endif %}
+

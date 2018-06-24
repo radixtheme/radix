@@ -1,0 +1,9 @@
+.navbar {
+
+  .form-inline {
+
+    .form-group {
+      @extend .mr-sm-2;
+    }
+  }
+}

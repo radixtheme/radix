@@ -1,13 +1,10 @@
 <?php
 /**
  * @file
- * Contains Drush hooks. Inspired by Zen and Omega Tools.
+ * Contains Drush hooks.
  */
 
 use Drupal\Component\Utility\UrlHelper;
-
-// BOOTSWATCH_URL
-define('BOOTSWATCH_URL', 'https://github.com/arshad/radix-bootswatch/archive/master.zip');
 
 /**
  * Implements hook_drush_command().
@@ -23,14 +20,12 @@ function radix_drush_command() {
     'options' => array(
       'machine_name' => 'The machine-readable name of your subtheme. This will be auto-generated from the human-readable name if ommited.',
       'description' => 'The description of your subtheme',
-      'destination' => 'The destination of your subtheme. Defaults to "all" (sites/all/themes).',
+      'destination' => 'The destination of your subtheme. Defaults to "./themes".',
       'kit' => 'The name or url of the starter kit to use. Defaults to "default".',
-      'bootswatch' => 'The Bootswatch theme to use. See https://github.com/arshad/radix-bootswatch.',
     ),
     'examples' => array(
       'drush radix "My Theme"' => 'Creates a Radix subtheme called "My Theme", using the default options.',
       'drush radix "My Theme" --machine_name=my_theme' => 'Creates a Radix subtheme called "My Theme" with a specific machine name.',
-      'drush radix "My Theme" --bootswatch=cerulean' => 'Creates a Radix subtheme called "My Theme" using Cerulean Bootswatch theme.',
     ),
   );
 
@@ -92,7 +87,7 @@ function drush_radix($name = NULL, $machine_name = NULL) {
   $kit = (drush_get_option('kit')) ? drush_trim_path(drush_get_option('kit')) : 'default';
 
   // Make a fresh copy of the kit.
-  $kit_path = drush_normalize_path(drush_get_context('DRUSH_DRUPAL_ROOT') . '/' . drupal_get_path('theme', 'radix') . '/kits/' . $kit);
+  $kit_path = drush_normalize_path(drush_get_context('DRUSH_DRUPAL_ROOT') . '/' . drupal_get_path('theme', 'radix') . '/src/kits/' . $kit);
 
   // Allow kits to be pulled from external urls.
   if (UrlHelper::isValid($kit, TRUE)) {
@@ -133,29 +128,6 @@ function drush_radix($name = NULL, $machine_name = NULL) {
   }
   drush_op('drush_copy_dir', $kit_path, $subtheme_path);
 
-  // Copy Bootswatch theme to bootswatch folder.
-  if ($bootswatch = drush_get_option('bootswatch')) {
-    // Switch to a temp directory.
-    $current_dir = getcwd();
-    chdir(drush_tempdir());
-
-    if ($filepath = drush_download_file(BOOTSWATCH_URL)) {
-      $filename = basename($filepath);
-      $dirname =  basename($filepath, '.zip');
-
-      // Decompress the zip archive.
-      drush_tarball_extract($filename, $dirname, TRUE);
-
-      // Copy bootswatch theme to subtheme.
-      $bootswatch_path = $subtheme_path . '/assets/scss/bootswatch/';
-      drush_print($bootswatch_path);
-      drush_move_dir($dirname . '/radix-bootswatch-master/' . $bootswatch, $bootswatch_path, TRUE);
-    }
-
-    // Set working directory back to the previous working directory.
-    chdir($current_dir);
-  }
-
   // Alter the contents of the .info file based on the command options.
   $alterations = array(
     'RADIX_SUBTHEME_NAME' => $name,
@@ -176,8 +148,8 @@ function drush_radix($name = NULL, $machine_name = NULL) {
     '{{kit}}.libraries.yml',
     '{{kit}}.breakpoints.yml',
     '{{kit}}.theme',
-    'assets/scss/{{kit}}.style.scss',
-    'assets/js/{{kit}}.script.js',
+    'src/sass/{{kit}}.style.scss',
+    'src/js/{{kit}}.script.js',
   );
   foreach ($files_to_rename as $file_to_rename_path) {
     $file_original_path = $subtheme_path . '/' . str_replace('{{kit}}', $kit, $file_to_rename_path);
@@ -186,18 +158,12 @@ function drush_radix($name = NULL, $machine_name = NULL) {
   }
 
   // Notify user of the newly created theme.
-  $message = 'Successfully created the Radix subtheme "!name" created in: !path using the "!kit" kit';
-
-  // Add bootstwatch to message.
-  if ($bootswatch != '') {
-    $message .= ' and the "!bootswatch" bootswatch theme';
-  }
+  $message = 'Successfully created the Radix subtheme "!name" in "!path" using the "!kit" kit';
 
   $message = dt($message . '.', array(
     '!name' => $name,
     '!path' => $subtheme_path,
     '!kit' => $kit,
-    '!bootswatch' => $bootswatch,
   ));
   drush_print($message);
 }
@@ -217,13 +183,12 @@ function radix_file_str_replace($file_path, $find, $replace) {
  */
 function radix_get_files_to_make_replacements($kit = 'default') {
   return array(
-    'assets/scss/' . $kit . '.style.scss',
-    'bower.json',
-    'config.json',
     $kit . '.info.yml',
     $kit . '.libraries.yml',
     $kit . '.theme',
     'package.json',
+    'package-lock.json',
+    'webpack.mix.js',
     'README.md',
   );
 }

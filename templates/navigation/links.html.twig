@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * Template for links.
+ */
+#}
+{% embed '@radix/nav/nav.twig' with {
+  items: links,
+} %}
+
+{% block items %}
+  {%- for item in links -%}
+    <li{{ item.attributes.addClass('nav-item') }}>
+      {%- if item.link -%}
+        <a href="{{ item.link['#url'] }}" class="nav-link">{{ item.link['#title'] }}</a>
+      {%- elseif item.text_attributes -%}
+        <span{{ item.text_attributes.addClass('nav-link') }}>{{ item.text }}</span>
+      {%- else -%}
+        <span class="nav-link">{{ item.text }}</span>
+      {%- endif -%}
+    </li>
+  {%- endfor -%}
+{% endblock %}
+
+{% endembed %}

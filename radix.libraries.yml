@@ -1,21 +1,18 @@
 bootstrap:
   version: VERSION
   js:
-    bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js: {}
+    node_modules/popper.js/dist/umd/popper.min.js: {}
+    node_modules/bootstrap/dist/js/bootstrap.min.js: {}
+  dependencies:
+    - core/jquery
 
 style:
   version: VERSION
+  js:
+    assets/js/radix.js: {}
   css:
     theme:
-      assets/css/radix.style.css: {}
-
-script:
-  version: VERSION
-  js:
-    assets/js/radix.script.js: {}
+      assets/css/radix.css: {}
   dependencies:
     - core/jquery
-    - core/jquery.once
     - core/drupal
-
-

@@ -3,28 +3,18 @@
   "description": "Responsive base theme for Drupal.",
   "private": true,
   "scripts": {
-    "setup": "npm install && bower install",
-    "yarn": "yarn install && bower install",
-    "postinstall": "find node_modules/ -name '*.info' -type f -delete"
+    "postinstall": "find node_modules/ -name '*.info' -type f -delete",
+    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
+    "bootstrap": "^4.0.0",
     "browser-sync": "~2.18.7",
-    "imagemin-pngcrush": "~5.0.0",
+    "browser-sync-webpack-plugin": "^2.0.1",
+    "laravel-mix": "^2.1.11",
     "node-sass": "^4.5.0",
-    "gulp": "~3.9.0",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-imagemin": "~3.1.1",
-    "gulp-notify": "^3.0.0",
-    "gulp-plumber": "~1.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "~3.1.0",
-    "gulp-sass-glob": "1.0.8",
-    "gulp-shell": "~0.5.2",
-    "gulp-sourcemaps": "^2.4.0",
-    "gulp-uglify": "^2.0.1",
-    "gulp-scss-lint": "~0.4.0",
-    "jshint": "~2.9.1",
-    "gulp-jshint": "~2.0.0"
+    "popper.js": "^1.12.5"
   }
 }

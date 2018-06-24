@@ -4,44 +4,58 @@
  * Template for the main page.
  */
 #}
-<nav class="navbar navbar-default navbar-static-top" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      {{ page.navbar_branding }}
-    </div>
+<div class="page">
+  {% embed '@radix/navbar/navbar.twig' with {
+    placement: 'sticky-top',
+    container: 'fixed',
+    color: 'light',
+    utility_classes: ['bg-light'],
+  } %}
 
-    <div class="collapse navbar-collapse">
+    {% block branding %}
+      {% if page.navbar_branding %}
+        {{ page.navbar_branding }}
+      {% endif %}
+    {% endblock %}
+
+    {% block left %}
       {% if page.navbar_left %}
-        <div class="navbar-left">
+        <div class="mr-auto">
           {{ page.navbar_left }}
         </div>
       {% endif %}
+    {% endblock %}
 
+    {% block right %}
       {% if page.navbar_right %}
-        <div class="navbar-right">
-          {{ page.navbar_right }}
-        </div>
+        {{ page.navbar_right }}
       {% endif %}
-    </div>
-  </div>
-</nav>
+    {% endblock %}
+  {% endembed %}
 
-<main role="main">
-  <div class="container">
-    {{ page.content }}
-  </div>
-</main>
+  <main class="pt-5 pb-5">
+    {% if page.header %}
+      <header class="page__header mb-3">
+        <div class="container">
+          {{ page.header }}
+        </div>
+      </header>
+    {% endif %}
 
-{% if page.footer %}
-  <footer role="footer">
-    <div class="container">
+    {% if page.content %}
+      <div class="page__content">
+        <div class="container">
+          {{ page.content }}
+        </div>
+      </div>
+    {% endif %}
+  </main>
+
+  {% if page.footer %}
+    <footer class="page__footer">
+      <div class="container">
         {{ page.footer }}
-    </div>
-  </footer>
-{% endif %}
+      </div>
+    </footer>
+  {% endif %}
+</div>
