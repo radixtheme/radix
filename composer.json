@@ -1,13 +1,13 @@
 {
   "name": "drupal/radix",
-  "description": "Radix is a base theme for Drupal. It has Bootstrap, Sass, Gulp, BrowserSync and Font Awesome built-in.",
+  "description": "Radix is a base theme for Drupal. It has Bootstrap, Sass, BrowserSync and Font Awesome built-in.",
   "type": "drupal-theme",
   "homepage": "https://www.drupal.org/project/radix",
   "authors": [
     {
       "name": "Arshad Chummun",
       "email": "arshad@chummun.com",
-      "homepage": "http://arshad.io",
+      "homepage": "https://arshad.io",
       "role": "Maintainer"
     }
   ],
