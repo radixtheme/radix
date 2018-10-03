@@ -2,8 +2,22 @@
 
   .form-inline {
 
-    .form-group {
-      @extend .mr-sm-2;
+    .form-actions {
+      display: none;
+    }
+  }
+}
+
+.toolbar-oriented .toolbar-bar {
+  z-index: 1200;
+}
+
+.toolbar-horizontal {
+
+  .toolbar-menu {
+
+    &.nav {
+      float: left;
     }
   }
 }

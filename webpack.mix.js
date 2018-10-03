@@ -35,4 +35,6 @@ mix.browserSync({
  | SASS
  |--------------------------------------------------------------------------
  */
-mix.sass('src/sass/radix.style.scss', 'css');
+mix
+  .sass('src/sass/radix.bootstrap.scss', 'css')
+  .sass('src/sass/radix.style.scss', 'css');
