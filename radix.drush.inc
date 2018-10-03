@@ -190,5 +190,6 @@ function radix_get_files_to_make_replacements($kit = 'default') {
     'package-lock.json',
     'webpack.mix.js',
     'README.md',
+    'templates/content/node.html.twig',
   );
 }

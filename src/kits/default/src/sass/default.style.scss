@@ -50,5 +50,10 @@
 
 // Component
 // -----------------------------------------------------------------------------
-@import "component/node.article";
-@import "component/node.page";
+@import "../components/node/node";
+
+// Other
+// -----------------------------------------------------------------------------
+@import "block/block";
+@import "content/node.page";
+@import "content/node.article";
