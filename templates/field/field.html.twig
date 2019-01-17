@@ -6,12 +6,14 @@
 #}
 {%
   set classes = [
-  bundle|clean_class ~ '__' ~ field_name_clean|clean_class
+  bundle|clean_class ~ '__' ~ field_name_clean|clean_class,
+  label_display == 'inline' ? 'd-flex',
 ]
 %}
 {%
   set title_classes = [
   'field__label',
+  'font-weight-bold',
   label_display == 'visually_hidden' ? 'visually-hidden',
 ]
 %}
@@ -30,7 +32,9 @@
   {% endif %}
 {% else %}
   <div{{ attributes.addClass(classes) }}>
-    <strong{{ title_attributes.addClass(title_classes) }}>{{ label }}</strong>
+    <div{{ title_attributes.addClass(title_classes) }}>
+      {{ label }}{% if label_display == 'inline' %}<span class="field__label__suffix mr-1">:</span>{% endif %}
+    </div>
     {% if multiple %}
     <div class="field__items">
       {% endif %}
