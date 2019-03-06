@@ -148,6 +148,7 @@ function drush_radix($name = NULL, $machine_name = NULL) {
     '{{kit}}.libraries.yml',
     '{{kit}}.breakpoints.yml',
     '{{kit}}.theme',
+    'config/schema/{{kit}}.schema.yml',
     'src/sass/{{kit}}.style.scss',
     'src/js/{{kit}}.script.js',
   );
@@ -191,5 +192,6 @@ function radix_get_files_to_make_replacements($kit = 'default') {
     'webpack.mix.js',
     'README.md',
     'templates/content/node.html.twig',
+    'config/schema/' . $kit . '.schema.yml',
   );
 }
