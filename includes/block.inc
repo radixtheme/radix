@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Theme and preprocess functions for block
+ * Theme and preprocess functions for block.
  */
 
 use Drupal\Core\Render\Element;

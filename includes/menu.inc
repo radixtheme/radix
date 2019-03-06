@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Theme and preprocess functions for menus
+ * Theme and preprocess functions for menus.
  */
 
 /**
@@ -36,5 +36,6 @@ function radix_preprocess_menu(&$variables, $hook) {
 function radix_preprocess_menu_local_action(&$variables) {
   // Add button classes.
   $variables['link']['#options']['attributes']['class'][] = 'btn';
-  $variables['link']['#options']['attributes']['class'][] = 'btn-default';
+  $variables['link']['#options']['attributes']['class'][] = 'btn-sm';
+  $variables['link']['#options']['attributes']['class'][] = 'btn-primary';
 }

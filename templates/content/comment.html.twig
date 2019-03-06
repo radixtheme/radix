@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ * Template for a comment.
+ */
+#}
+<article{{ attributes.addClass('js-comment', 'mb-4') }}>
+  {#
+    Hide the "new" indicator by default, let a piece of JavaScript ask the
+    server which comments are new for the user. Rendering the final "new"
+    indicator here would break the render cache.
+  #}
+  <mark class="hidden" data-comment-timestamp="{{ new_indicator_timestamp }}"></mark>
+
+  <div class="row">
+    <div class="col-md-2">
+      {{ user_picture }}
+    </div>
+
+    <div class="col-md-10">
+      <div{{ content_attributes.addClass('card') }}>
+        <div class="card-header d-flex justify-content-between">
+          <span>{{ submitted }}</span>
+          {{ permalink }}
+        </div>
+
+        <div class="card-body">
+          {% if title %}
+            {{ title_prefix }}
+            <h3{{ title_attributes.addClass('visually-hidden') }}>{{ title }}</h3>
+            {{ title_suffix }}
+          {% endif %}
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    {#
+      Indicate the semantic relationship between parent and child comments for
+      accessibility. The list is difficult to navigate in a screen reader
+      without this information.
+    #}
+    {% if parent %}
+      <p class="visually-hidden">{{ parent }}</p>
+    {% endif %}
+  </footer>
+
+</article>

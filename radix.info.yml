@@ -20,7 +20,7 @@ regions:
   navbar_branding: Navbar branding
   navbar_left:  Navbar left
   navbar_right: Navbar right
-  page_header: Page header
+  header: Header
   content: Content
   page_bottom: Page bottom
   footer: Footer

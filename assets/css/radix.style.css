@@ -23,3 +23,11 @@ fieldset.card legend {
   margin-bottom: 0;
 }
 
+.forum__last-reply {
+  width: 20%;
+}
+
+.forum-list__forum {
+  width: 60%;
+}
+
