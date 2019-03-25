@@ -1,3 +1,17 @@
+Radix 8.x-4.1, 2019-03-25
+---------------------------------------
+- Issue #3042502 by kevinfunk, arshadcn: Update Bootstrap to 4.3.1
+- Update npm packages in default kit
+- Add a theme schema
+- Add template for forum and comment
+
+Radix 8.x-4.0, 2018-08-03
+---------------------------------------
+- Upgrade Bootstrap to Bootstrap 4
+- Add Twig components support
+- Add drupal/components as a composer dependency
+- Replace Gulp with Laravel Mix
+
 Radix 8.x-3.1, 2017-02-01
 ---------------------------------------
 - Remove unused menu template files.
