@@ -38,14 +38,14 @@
         ] %}
         <li class="{{ nav_item_classes|join(' ') }}">
           {% if item.is_expanded and item.below %}
-            <a href="{{ item.url }}" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ item.title }}</a>
+            {{ link(item.title, item.url, { 'class': ['nav-link', 'dropdown-toggle'], 'data-toggle': 'dropdown' }) }}
             {% if item.below %}
               {% include '@radix/dropdown/dropdown-menu.twig' with {
                 items: item.below
               } %}
             {% endif %}
           {% else %}
-            <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
+            {{ link(item.title, item.url, { 'class': ['nav-link'] }) }}
           {% endif %}
         </li>
       {% endfor %}
