@@ -29,9 +29,10 @@ function radix_preprocess_filter_caption(&$variables) {
   libxml_use_internal_errors(true);
   $doc = new DOMDocument();
   $doc->loadHTML($variables['node']);
-  $image = $doc->getElementsByTagName('img')->item(0);
-  $image->setAttribute('class', 'figure-img img-fluid');
-  $variables['node'] = [
-    '#markup' => $image->ownerDocument->saveHTML($image),
-  ];
+  if ($image = $doc->getElementsByTagName('img')->item(0)) {
+    $image->setAttribute('class', 'figure-img img-fluid');
+    $variables['node'] = [
+      '#markup' => $image->ownerDocument->saveHTML($image),
+    ];
+  }
 }
