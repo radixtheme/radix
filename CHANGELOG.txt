@@ -1,3 +1,11 @@
+Radix 8.x-4.2, 2019-04-06
+---------------------------------------
+- Added template suggestions for user entity.
+- Issue #3046104 by doxigo, arshadcn: radix_preprocess_filter_caption overrides the output of image HTML with captions
+- Issue #3045895: Call to a member function setAttribute() on null in radix_preprocess_filter_caption
+- Fixed an issue with missing attributes in nav template.
+- Issue #3026552: set processCSSUrls to false by default
+
 Radix 8.x-4.1, 2019-03-25
 ---------------------------------------
 - Issue #3042502 by kevinfunk, arshadcn: Update Bootstrap to 4.3.1
