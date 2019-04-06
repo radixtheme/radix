@@ -25,6 +25,11 @@ function radix_preprocess_field(&$variables) {
  * Implements template_preprocess_filter_caption().
  */
 function radix_preprocess_filter_caption(&$variables) {
+  // Do this for img tags only.
+  if (($variables['tag'] !== 'img')) {
+    return;
+  }
+
   // Add the figure-img class to the rendered image markup.
   libxml_use_internal_errors(true);
   $doc = new DOMDocument();
