@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Template for links within a dropbutton.
+ */
+#}
+<div {{ attributes.removeClass('dropbutton').addClass(split ? 'btn-group' : 'dropdown') }}>
+  {% if split %}
+    {{ button }}
+  {% endif %}
+
+  <button type="button" class="btn btn-sm btn-outline-dark dropdown-toggle {{ split ? 'dropdown-toggle-split' }}" data-toggle="dropdown">
+    {% if split %}
+      <span class="sr-only">{{ 'Toggle Dropdown'|t }}</span>
+    {% else %}
+      {{ button }}
+    {% endif %}
+  </button>
+  <div class="dropdown-menu dropdown-menu-right">
+    {%- for item in links -%}
+      {%- if item.link -%}
+        {{ item.link }}
+      {%- elseif item.text_attributes -%}
+        <span{{ item.text_attributes }}>{{ item.text }}</span>
+      {%- else -%}
+        {{ item.text }}
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
