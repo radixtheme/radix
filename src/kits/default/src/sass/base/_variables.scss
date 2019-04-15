@@ -1,5 +1,4 @@
 // Variables
-// Use this file to customize Bootstrap.
 //
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
@@ -21,18 +20,18 @@ $black:    #000 !default;
 $grays: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $grays: map-merge(
-  (
-    "100": $gray-100,
-    "200": $gray-200,
-    "300": $gray-300,
-    "400": $gray-400,
-    "500": $gray-500,
-    "600": $gray-600,
-    "700": $gray-700,
-    "800": $gray-800,
-    "900": $gray-900
-  ),
-  $grays
+    (
+      "100": $gray-100,
+      "200": $gray-200,
+      "300": $gray-300,
+      "400": $gray-400,
+      "500": $gray-500,
+      "600": $gray-600,
+      "700": $gray-700,
+      "800": $gray-800,
+      "900": $gray-900
+    ),
+    $grays
 );
 
 $blue:    #007bff !default;
@@ -49,22 +48,22 @@ $cyan:    #17a2b8 !default;
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $colors: map-merge(
-  (
-    "blue":       $blue,
-    "indigo":     $indigo,
-    "purple":     $purple,
-    "pink":       $pink,
-    "red":        $red,
-    "orange":     $orange,
-    "yellow":     $yellow,
-    "green":      $green,
-    "teal":       $teal,
-    "cyan":       $cyan,
-    "white":      $white,
-    "gray":       $gray-600,
-    "gray-dark":  $gray-800
-  ),
-  $colors
+    (
+      "blue":       $blue,
+      "indigo":     $indigo,
+      "purple":     $purple,
+      "pink":       $pink,
+      "red":        $red,
+      "orange":     $orange,
+      "yellow":     $yellow,
+      "green":      $green,
+      "teal":       $teal,
+      "cyan":       $cyan,
+      "white":      $white,
+      "gray":       $gray-600,
+      "gray-dark":  $gray-800
+    ),
+    $colors
 );
 
 $primary:       $blue !default;
@@ -79,17 +78,17 @@ $dark:          $gray-800 !default;
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
-  (
-    "primary":    $primary,
-    "secondary":  $secondary,
-    "success":    $success,
-    "info":       $info,
-    "warning":    $warning,
-    "danger":     $danger,
-    "light":      $light,
-    "dark":       $dark
-  ),
-  $theme-colors
+    (
+      "primary":    $primary,
+      "secondary":  $secondary,
+      "success":    $success,
+      "info":       $info,
+      "warning":    $warning,
+      "danger":     $danger,
+      "light":      $light,
+      "dark":       $dark
+    ),
+    $theme-colors
 );
 
 // Set a specific jump point for requesting color jumps
@@ -132,29 +131,29 @@ $spacer: 1rem !default;
 $spacers: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $spacers: map-merge(
-  (
-    0: 0,
-    1: ($spacer * .25),
-    2: ($spacer * .5),
-    3: $spacer,
-    4: ($spacer * 1.5),
-    5: ($spacer * 3)
-  ),
-  $spacers
+    (
+      0: 0,
+      1: ($spacer * .25),
+      2: ($spacer * .5),
+      3: $spacer,
+      4: ($spacer * 1.5),
+      5: ($spacer * 3)
+    ),
+    $spacers
 );
 
 // This variable affects the `.h-*` and `.w-*` classes.
 $sizes: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $sizes: map-merge(
-  (
-    25: 25%,
-    50: 50%,
-    75: 75%,
-    100: 100%,
-    auto: auto
-  ),
-  $sizes
+    (
+      25: 25%,
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      auto: auto
+    ),
+    $sizes
 );
 
 
@@ -257,13 +256,13 @@ $transition-collapse:         height .35s ease !default;
 $embed-responsive-aspect-ratios: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $embed-responsive-aspect-ratios: join(
-  (
-    (21 9),
-    (16 9),
-    (4 3),
-    (1 1),
-  ),
-  $embed-responsive-aspect-ratios
+      (
+          (21 9),
+          (16 9),
+          (4 3),
+          (1 1),
+      ),
+    $embed-responsive-aspect-ratios
 );
 
 // Typography
@@ -658,17 +657,17 @@ $form-feedback-icon-invalid:        str-replace(url("data:image/svg+xml,%3csvg x
 $form-validation-states: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $form-validation-states: map-merge(
-  (
-    "valid": (
-      "color": $form-feedback-valid-color,
-      "icon": $form-feedback-icon-valid
+    (
+      "valid": (
+        "color": $form-feedback-valid-color,
+        "icon": $form-feedback-icon-valid
+      ),
+      "invalid": (
+        "color": $form-feedback-invalid-color,
+        "icon": $form-feedback-icon-invalid
+      ),
     ),
-    "invalid": (
-      "color": $form-feedback-invalid-color,
-      "icon": $form-feedback-icon-invalid
-    ),
-  ),
-  $form-validation-states
+    $form-validation-states
 );
 
 // Z-index master list
