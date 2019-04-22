@@ -4,4 +4,6 @@
  * Template for the system menu block.
  */
 #}
-{% extends '@radix/block/block.twig' %}
+{% include '@radix/block/block.twig' with {
+  html_tag: 'div'
+} %}
