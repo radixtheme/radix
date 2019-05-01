@@ -36,16 +36,20 @@
           item.in_active_trail ? 'active',
           item.is_expanded and item.below ? 'dropdown'
         ] %}
+        {% set nav_link_classes = [
+          item.url.options.attributes.class,
+          'nav-link',
+        ] %}
         <li class="{{ nav_item_classes|join(' ') }}">
           {% if item.is_expanded and item.below %}
-            {{ link(item.title, item.url, { 'class': ['nav-link', 'dropdown-toggle'], 'data-toggle': 'dropdown' }) }}
+            {{ link(item.title, item.url, { 'class': nav_link_classes|merge(['dropdown-toggle']), 'data-toggle': 'dropdown' }) }}
             {% if item.below %}
               {% include '@radix/dropdown/dropdown-menu.twig' with {
                 items: item.below
               } %}
             {% endif %}
           {% else %}
-            {{ link(item.title, item.url, { 'class': ['nav-link'] }) }}
+            {{ link(item.title, item.url, { 'class': nav_link_classes }) }}
           {% endif %}
         </li>
       {% endfor %}

@@ -6,6 +6,11 @@
 #}
 <div class="dropdown-menu">
   {% for item in items %}
-    <a href="{{ item.url }}" class="dropdown-item {{ item.in_active_trail ? 'active' }}">{{ item.title }}</a>
+    {% set nav_link_classes = [
+      item.url.options.attributes.class,
+      'dropdown-item',
+      item.in_active_trail ? 'active'
+    ] %}
+    {{ link(item.title, item.url, { 'class': nav_link_classes }) }}
   {% endfor %}
 </div>
