@@ -4,12 +4,18 @@
  * Template for the branding block.
  */
 #}
-{% extends '@radix/block/block.twig' %}
+{% embed '@radix/block/block.twig' with {
+  html_tag: 'div',
+} %}
 
 {% block content %}
   {% include '@radix/navbar/navbar-brand.twig' with {
     text: site_name,
     image: site_logo,
+    width: 30,
+    height: 'auto',
     path: path('<front>'),
   } %}
 {% endblock %}
+
+{% endembed %}

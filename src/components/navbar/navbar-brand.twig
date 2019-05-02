@@ -17,9 +17,9 @@
 {% set utility_classes = utility_classes|join(' ') %}
 
 {% if path %}
-  <a href="{{ path }}" class="navbar-brand {{ utility_classes }}" aria-label="{{ text }}">
+  <a href="{{ path }}" class="navbar-brand d-flex align-items-center {{ utility_classes }}" aria-label="{{ text }}">
     {% if image %}
-      {{ navbar_brand.image(image) }}
+      {{ navbar_brand.image(image, width, height) }}
     {% endif %}
     {{ text }}
   </a>
@@ -33,5 +33,5 @@
 {% endif %}
 
 {% macro image(src, width, height) %}
-  <img src="{{ src }}" width="{{ width|default(30) }}" height="{{ width|default(30) }}" class="d-inline-block align-top" />
+  <img src="{{ src }}" width="{{ width|default(30) }}" height="{{ height|default('auto') }}" class="mr-2" />
 {% endmacro %}
