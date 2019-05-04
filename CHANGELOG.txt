@@ -1,3 +1,12 @@
+Radix 8.x-4.3, 2019-05-04
+---------------------------------------
+- Issue #3052101 by arshadcn: Add cross-env to theme for Windows support
+- Issue #3008488 by neubreed, scoff, Morbus Iff: Fix logo width and height in navbar/navbar-brand.twig
+- Issue #3051644: Nav twig file doesn't allow the class override by third-party modules
+- Issue #3049513 by sgammon, Morbus Iff, arshadcn: Menu block nav container and id/classes are not included
+- Issue #3048201: Use dropdowns for dropbutton
+- Issue #3028359 by kevinfunk, crs1138: Missing Sass variables in the subtheme
+
 Radix 8.x-4.2, 2019-04-06
 ---------------------------------------
 - Added template suggestions for user entity.
