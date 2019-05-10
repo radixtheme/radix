@@ -10,12 +10,12 @@
  * - utility_classes: An array of utility classes.
  */
 #}
+{% set dismissible = dismissible ?? true %}
 {% set classes = [
   'alert',
   type ? 'alert-' ~ type,
+  dismissible ? 'alert-dismissible',
 ]|merge(utility_classes ? utility_classes : []) %}
-
-{% set dismissible = dismissible ?? 'true' %}
 
 <div class="{{ classes|join(' ') }}" role="alert">
   {% if heading %}
