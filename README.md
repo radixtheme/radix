@@ -1,14 +1,19 @@
 # Radix
-Radix is a base theme for Drupal and BackdropCMS. It has Bootstrap, Sass, Gulp, Bower, BrowserSync and Font Awesome built-in.
-
-![alt tag](https://www.drupal.org/files/drupal-radix.png)
-
-## Status
-
 [![Documentation Status](https://readthedocs.org/projects/radix/badge/?version=latest)](http://docs.radixtheme.org/en/latest/?badge=latest)
 
+Radix is a base theme for Drupal. It has Bootstrap 4, Sass, BrowserSync and Font Awesome built-in.
+
+![alt tag](https://www.drupal.org/files/radix-steps.png)
+
+# Installation
+
+Read the documentation here: http://docs.radixtheme.org
+
 ## Distributions using Radix
-##### [Open Atrium](http://openatrium.com/)
+##### [Apigee Developer Portal](https://www.drupal.org/project/apigee_devportal_kickstart)
+Apigee Developer Kickstart is a distribution to create an Apigee developer portal using Drupal.
+
+##### [Open Atrium](http://openatrium.com)
 Open Atrium is an intranet in a box that has group spaces to allow different teams to have their own conversations and collaboration.
 
 ##### [Open Academy](http://drupal.org/project/openacademy)
@@ -20,16 +25,15 @@ Open Berkeley is a turnkey web platform solution for UC Berkeley campus websites
 ##### [Open Restaurant](http://drupal.org/project/openrestaurant)
 The Open Restaurant distribution has everything you need to kickstart your restaurant website. It comes with a menu management system, a reservation system, a customizable blog and events management.
 
-##Features
-1. Components and plugins from Bootstrap.
-2. Sass, Gulp, BrowserSync and Font Awesome built-in.
-3. Drush intergration: drush radix "My Subtheme".
-4. Works with Bootswatch themes: drush radix "My Subtheme" --bootswatch=cerulean".
+##### [DKAN Open Data Platform](https://getdkan.org)
+DKAN is a community-driven, free and open source open data platform that gives organizations and individuals ultimate freedom to publish and consume structured information.
+
+##### [University of IOWA SiteNow](https://sitenow.uiowa.edu)
+SiteNow provides flexibility in authoring websites for various audiences.
 
 ## Links
 * Project Page:   http://www.radixtheme.org
 * Documentation:  http://docs.radixtheme.org
-* Demo:           http://dev-radix.chapterthree.com
 * Support:        https://www.drupal.org/project/issues/radix
 
 ## License
