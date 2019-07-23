@@ -1,3 +1,9 @@
+Radix 8.x-4.4, 2019-07-23
+==================
+- Issue #3063109 by Jacine: Site logo should have an alt attribute
+- Issue #3008219 by hctom, jwilson3: Call to a member function bundle() on string in radix_theme_suggestions_page_alter()
+- Issue #3053875 by jwilson3: dismissible alerts syntax is confusing, missing alert-dismissible
+
 Radix 8.x-4.3, 2019-05-04
 ---------------------------------------
 - Issue #3052101 by arshadcn: Add cross-env to theme for Windows support
