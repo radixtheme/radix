@@ -18,5 +18,17 @@
   "minimum-stability": "dev",
   "require": {
     "drupal/components": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Drush\\Commands\\radix\\": "Commands/radix/"
+    }
+  },
+  "extra": {
+    "drush": {
+      "services": {
+        "drush.services.yml": "^9"
+      }
+    }
   }
 }
