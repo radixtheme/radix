@@ -50,7 +50,7 @@ class SubThemeCommands extends DrushCommands implements BuilderAwareInterface {
    * Create a Radix sub-theme.
    *
    * @command radix:generate-sub-theme
-   * @alias radix
+   * @aliases radix
    *
    * @bootstrap full
    *
