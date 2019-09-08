@@ -47,9 +47,9 @@ class SubThemeCommands extends DrushCommands implements BuilderAwareInterface {
   }
 
   /**
-   * Create a Radix sub-theme.
+   * Creates a Radix sub-theme.
    *
-   * @command radix:generate-sub-theme
+   * @command radix:create
    * @aliases radix
    *
    * @bootstrap full
@@ -64,9 +64,9 @@ class SubThemeCommands extends DrushCommands implements BuilderAwareInterface {
    * @option string $kit
    *   The name or url of the starter kit to use.
    *
-   * @usage drush radix:generate-sub-theme 'My Theme'
+   * @usage drush radix:create 'My Theme'
    *   Creates a Radix sub-theme called "My Theme", using the default options.
-   * @usage drush radix:generate-sub-theme 'My Theme' --machine_name=my_theme
+   * @usage drush radix:create 'My Theme' --machine_name=my_theme
    *   Creates a Radix sub-theme called "My Theme" with a specific machine name.
    *
    * @radixArgLabel name
@@ -202,7 +202,7 @@ class SubThemeCommands extends DrushCommands implements BuilderAwareInterface {
   }
 
   /**
-   * @hook validate radix:generate-sub-theme
+   * @hook validate radix:create
    */
   public function onHookValidateRadixGenerateSubTheme(CommandData $commandData): ?CommandError {
     $input = $commandData->input();
