@@ -1,3 +1,7 @@
+Radix 8.x-4.5, 2019-09-08
+==================
+- Issue #2933383 by Sweetchuck: Convert radix drush command to drush 9
+
 Radix 8.x-4.4, 2019-07-23
 ==================
 - Issue #3063109 by Jacine: Site logo should have an alt attribute
