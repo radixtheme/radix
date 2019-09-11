@@ -171,6 +171,7 @@ class SubThemeGenerator {
    * @return string[]
    */
   protected function getFileNamesToRename(): array {
+    // TODO: Refactor this to use an iterator.
     return [
       '{{kit}}.info.yml',
       '{{kit}}.libraries.yml',
@@ -179,6 +180,10 @@ class SubThemeGenerator {
       'config/schema/{{kit}}.schema.yml',
       'src/sass/{{kit}}.style.scss',
       'src/js/{{kit}}.script.js',
+      'assets/css/{{kit}}.style.css',
+      'assets/js/{{kit}}.script.js',
+      'css/{{kit}}.style.css',
+      'js/{{kit}}.script.js',
     ];
   }
 
