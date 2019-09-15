@@ -36,10 +36,10 @@
           item.in_active_trail ? 'active',
           item.is_expanded and item.below ? 'dropdown'
         ] %}
-        {% set nav_link_classes = [
-          item.url.options.attributes.class,
-          'nav-link',
-        ] %}
+        {% set nav_link_classes = ['nav-link'] %}
+        {% if item.url.options.attributes.class %}
+          {% set nav_link_classes = nav_link_classes|merge(item.url.options.attributes.class) %}
+        {% endif %}
         <li class="{{ nav_item_classes|join(' ') }}">
           {% if item.is_expanded and item.below %}
             {{ link(item.title, item.url, { 'class': nav_link_classes|merge(['dropdown-toggle']), 'data-toggle': 'dropdown' }) }}
