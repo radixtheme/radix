@@ -63,7 +63,7 @@
       {% endfor %}
 
 
-      {% if items.current %}
+      {% if items.current and (items.previous or items.next) %}
         <li class="page-item disabled">
           {% trans %}
             <span class="page-link">Page {{ items.current }}</span>
