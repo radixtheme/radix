@@ -81,11 +81,21 @@ class SubThemeCommands extends DrushCommands implements BuilderAwareInterface {
       'kit' => 'default',
     ]
   ) {
+    $kit = $options['kit'];
+
     // @todo Use extension service.
     $radixDir = drupal_get_path('theme', 'radix');
-
-    $kit = $options['kit'];
     $srcDir = "$radixDir/src/kits/{$kit}";
+
+    // Find kit from other active themes.
+    /** @var \Drupal\Core\Extension\Extension[] $themes */
+    foreach (\Drupal::service('theme_handler')->listInfo() as $theme) {
+      $path = "{$theme->getPath()}/src/kits/{$kit}";
+      if($this->fs->exists($path)) {
+        $srcDir = $path;
+      }
+    }
+
     $dstDir = "{$options['destination']}/{$options['machine-name']}";
 
     $cb = $this->collectionBuilder();
