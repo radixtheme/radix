@@ -1,3 +1,11 @@
+Radix 8.x-4.6, 2019-10-07
+==================
+- Issue #3081150 by arshadcn, Jacine: Drush subtheme generator expects the kit to be located in Radix
+- Issue #3081166 by arshadcn, Jacine: Provide a means to rename other additional configuration files
+- Issue #3082593 by arshadcn, diqidoq, stefan.korn, tstermitz: Radix creates html class attribute "img-thumbnail" for all images
+- Issue #3084620 by stefan.korn: Views Mini pager should not show if there is only one page of items
+- Issue #3074568 by semiaddict, charlieweb82, sgammon: nav.twig: Array to string conversion in Drupal\Core\Template\AttributeArray->__toString()
+
 Radix 8.x-4.5, 2019-09-08
 ==================
 - Issue #2933383 by Sweetchuck: Convert radix drush command to drush 9
