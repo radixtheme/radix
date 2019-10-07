@@ -6,6 +6,7 @@ namespace Drupal\radix;
 
 use RuntimeException;
 use Symfony\Component\Filesystem\Filesystem;
+use Symfony\Component\Finder\Finder;
 
 class SubThemeGenerator {
 
@@ -13,6 +14,11 @@ class SubThemeGenerator {
    * @var \Symfony\Component\Filesystem\Filesystem
    */
   protected $fs;
+
+  /**
+   * @var \Symfony\Component\Finder\Finder
+   */
+  protected $finder;
 
   /**
    * @var string
@@ -91,6 +97,7 @@ class SubThemeGenerator {
 
   public function __construct() {
     $this->fs = new Filesystem();
+    $this->finder = new Finder();
   }
 
   /**
@@ -119,10 +126,9 @@ class SubThemeGenerator {
    * @return $this
    */
   protected function modifyFileContents() {
-    $dstDir = $this->getDir();
     $replacementPairs = $this->getFileContentReplacementPairs();
     foreach ($this->getFilesToMakeReplacements() as $fileName) {
-      $this->modifyFileContent("$dstDir/$fileName", $replacementPairs);
+      $this->modifyFileContent($fileName, $replacementPairs);
     }
 
     return $this;
@@ -132,20 +138,13 @@ class SubThemeGenerator {
    * @return $this
    */
   protected function renameFiles() {
-    $dstDir = $this->getDir();
     $machineNameNew = $this->getMachineName();
     if ($this->machineNameOld === $machineNameNew) {
       return $this;
     }
 
     foreach ($this->getFileNamesToRename() as $fileName) {
-      $fileNameOld = "$dstDir/" . str_replace('{{kit}}', $this->machineNameOld, $fileName);
-      $fileNameNew = "$dstDir/" . str_replace('{{kit}}', $machineNameNew, $fileName);
-      if (!$this->fs->exists($fileNameOld)) {
-        continue;
-      }
-
-      $this->fs->rename($fileNameOld, $fileNameNew);
+      $this->fs->rename($fileName, str_replace($this->machineNameOld, $machineNameNew, $fileName));
     }
 
     return $this;
@@ -171,20 +170,8 @@ class SubThemeGenerator {
    * @return string[]
    */
   protected function getFileNamesToRename(): array {
-    // TODO: Refactor this to use an iterator.
-    return [
-      '{{kit}}.info.yml',
-      '{{kit}}.libraries.yml',
-      '{{kit}}.breakpoints.yml',
-      '{{kit}}.theme',
-      'config/schema/{{kit}}.schema.yml',
-      'src/sass/{{kit}}.style.scss',
-      'src/js/{{kit}}.script.js',
-      'assets/css/{{kit}}.style.css',
-      'assets/js/{{kit}}.script.js',
-      'css/{{kit}}.style.css',
-      'js/{{kit}}.script.js',
-    ];
+    // Find all files within the theme that match *{KIT_NAME}*.
+    return array_keys(iterator_to_array($this->finder->files()->name("*{$this->machineNameOld}*")->in($this->getDir())));
   }
 
   /**
@@ -203,19 +190,7 @@ class SubThemeGenerator {
    * @return string[]
    */
   function getFilesToMakeReplacements(): array {
-    $kit = $this->machineNameOld;
-
-    return [
-      "$kit.info.yml",
-      "$kit.libraries.yml",
-      "$kit.theme",
-      'package.json',
-      'package-lock.json',
-      'webpack.mix.js',
-      'README.md',
-      'templates/content/node.html.twig',
-      "config/schema/$kit.schema.yml",
-    ];
+    return array_keys(iterator_to_array($this->finder->files()->in($this->getDir())));
   }
 
   protected function fileGetContents(string $fileName): string {
