@@ -7,10 +7,14 @@
 <div class="dropdown-menu">
   {% for item in items %}
     {% set nav_link_classes = [
-      item.url.options.attributes.class,
       'dropdown-item',
       item.in_active_trail ? 'active'
     ] %}
+    {% if item.url.options.attributes.class is iterable %}
+      {% set nav_link_classes = nav_link_classes|merge(item.url.options.attributes.class) %}
+    {% elseif item.url.options.attributes.class %}
+      {% set nav_link_classes = nav_link_classes|merge([item.url.options.attributes.class]) %}
+    {% endif %}
     {{ link(item.title, item.url, { 'class': nav_link_classes }) }}
   {% endfor %}
 </div>
