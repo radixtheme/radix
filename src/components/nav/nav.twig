@@ -37,8 +37,10 @@
           item.is_expanded and item.below ? 'dropdown'
         ] %}
         {% set nav_link_classes = ['nav-link'] %}
-        {% if item.url.options.attributes.class %}
+        {% if item.url.options.attributes.class is iterable %}
           {% set nav_link_classes = nav_link_classes|merge(item.url.options.attributes.class) %}
+        {% elseif item.url.options.attributes.class %}
+          {% set nav_link_classes = nav_link_classes|merge([item.url.options.attributes.class]) %}
         {% endif %}
         <li class="{{ nav_item_classes|join(' ') }}">
           {% if item.is_expanded and item.below %}
