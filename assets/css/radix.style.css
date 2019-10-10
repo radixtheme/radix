@@ -31,3 +31,8 @@ fieldset.card legend {
   width: 60%;
 }
 
+#drupal-off-canvas {
+  -webkit-box-sizing: initial;
+          box-sizing: initial;
+}
+
