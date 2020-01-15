@@ -23,10 +23,6 @@ function radix_preprocess_menu(&$variables, $hook) {
       // Add active link.
       $variables['items'][$key]['attributes']['class'] = 'active';
     }
-
-    if (count($item['below'])) {
-      $item['url']->setOption('html', TRUE);
-    }
   }
 }
 
