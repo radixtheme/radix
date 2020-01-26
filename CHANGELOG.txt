@@ -1,3 +1,10 @@
+Radix 8.x-4.7, 2020-01-26
+==================
+- Issue #3097873: Pin dependencies for the default kit
+- Issue #3081833 by sgammon, stefan.korn: dropdown-menu.twig: Array to string conversion
+- Issue #3086685 by stefan.korn: Issue after upgrading theme to 4.6
+- Issue #3079855 by stefan.korn: Issue with Drupal off-canvas dialog resizing (for example using Layout Builder)
+
 Radix 8.x-4.6, 2019-10-07
 ==================
 - Issue #3081150 by arshadcn, Jacine: Drush subtheme generator expects the kit to be located in Radix
