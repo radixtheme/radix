@@ -1,3 +1,7 @@
+Radix 8.x-4.8, 2020-03-17
+==================
+- Issue #3120205 by arshadcn: Update npm packages
+
 Radix 8.x-4.7, 2020-01-26
 ==================
 - Issue #3097873: Pin dependencies for the default kit
