@@ -16,4 +16,4 @@
   align == 'center' ? 'mx-auto d-block',
 ]|merge(utility_classes ? utility_classes : []) %}
 
-<img{{ attributes|without('alt').addClass(classes) }} src="{{ src }}" alt="{{ alt }}" />
+<img{{ attributes.addClass(classes) }} />
