@@ -11,11 +11,11 @@
   },
   "devDependencies": {
     "bootstrap": "^4.3.1",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.12",
     "browser-sync-webpack-plugin": "^2.0.1",
     "cross-env": "^5.1",
-    "laravel-mix": "^5.0.4",
-    "node-sass": "^4.13.1",
+    "laravel-mix": "^5.0.5",
+    "node-sass": "^4.14.1",
     "popper.js": "^1.14.7"
   }
 }
