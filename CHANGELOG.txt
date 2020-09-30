@@ -1,3 +1,7 @@
+Radix 8.x-4.10, 2020-09-30
+==================
+- Update npm packages: browser-sync, laravel-mix and node-sass
+
 Radix 8.x-4.9, 2020-09-28
 ==================
 - Issue #3152030 by Cellar Door, JohanFeuillet, arshadcn: Radix Sub theme is not Compatible with Drupal 9.0
