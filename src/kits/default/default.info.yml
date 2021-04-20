@@ -27,7 +27,7 @@ libraries-override:
 ckeditor_stylesheets:
   - assets/css/RADIX_SUBTHEME_MACHINE_NAME.style.css
 
-component-libraries:
-  RADIX_SUBTHEME_MACHINE_NAME:
-    paths:
+components:
+  namespaces:
+    RADIX_SUBTHEME_MACHINE_NAME:
       - ./src/components

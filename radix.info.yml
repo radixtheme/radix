@@ -26,7 +26,7 @@ regions:
   page_bottom: Page bottom
   footer: Footer
 
-component-libraries:
-  radix:
-    paths:
+components:
+  namespaces:
+    radix:
       - ./src/components
