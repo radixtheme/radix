@@ -28,5 +28,4 @@ regions:
 
 components:
   namespaces:
-    radix:
-      - ./src/components
+    radix: src/components
