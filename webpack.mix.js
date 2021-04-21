@@ -7,8 +7,8 @@
  | for your application. See https://github.com/JeffreyWay/laravel-mix.
  |
  */
+const proxy = 'http://drupal.local';
 const mix = require('laravel-mix');
-const glob = require('glob');
 
 /*
  |--------------------------------------------------------------------------
@@ -16,8 +16,17 @@ const glob = require('glob');
  |--------------------------------------------------------------------------
  */
 mix
+  .webpackConfig({
+    // Use the jQuery shipped with Drupal to avoid conflicts.
+    externals: {
+      jquery: 'jQuery'
+    }
+  })
   .setPublicPath('assets')
-  .disableNotifications();
+  .disableNotifications()
+  .options({
+    processCssUrls: false
+  });
 
 /*
  |--------------------------------------------------------------------------
@@ -25,7 +34,7 @@ mix
  |--------------------------------------------------------------------------
  */
 mix.browserSync({
-  proxy: 'drupal.local',
+  proxy: proxy,
   files: ['assets/js/**/*.js', 'assets/css/**/*.css'],
   stream: true,
 });

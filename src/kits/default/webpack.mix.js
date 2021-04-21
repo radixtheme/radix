@@ -16,6 +16,12 @@ const mix = require('laravel-mix');
  |--------------------------------------------------------------------------
  */
 mix
+  .webpackConfig({
+    // Use the jQuery shipped with Drupal to avoid conflicts.
+    externals: {
+      jquery: 'jQuery'
+    }
+  })
   .setPublicPath('assets')
   .disableNotifications()
   .options({
