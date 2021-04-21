@@ -31,7 +31,7 @@ function radix_preprocess_filter_caption(&$variables) {
   }
 
   // Add the figure-img class to the rendered image markup.
-  libxml_use_internal_errors(true);
+  libxml_use_internal_errors(TRUE);
   $doc = new DOMDocument();
   $doc->loadHTML($variables['node']);
   if ($image = $doc->getElementsByTagName('img')->item(0)) {

@@ -1,9 +1,14 @@
 <?php
 
+/**
+ * @file
+ * Theme suggestions.
+ */
+
 use Drupal\node\Entity\Node;
 
 /**
- * Implements HOOK_theme_suggestions_HOOK_alter().
+ * Implements hook_theme_suggestions_hook_alter().
  */
 function radix_theme_suggestions_page_alter(array &$suggestions, array $variables) {
   // Add a template suggestions for node type.
@@ -18,7 +23,7 @@ function radix_theme_suggestions_page_alter(array &$suggestions, array $variable
 }
 
 /**
- * Implements HOOK_theme_suggestions_HOOK_alter().
+ * Implements hook_theme_suggestions_hook_alter().
  */
 function radix_theme_suggestions_user_alter(array &$suggestions, array $variables) {
   // Add a suggestion based on the view mode.

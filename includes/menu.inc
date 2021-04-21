@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Theme and preprocess functions for menus.
@@ -12,7 +13,7 @@ function radix_preprocess_menu(&$variables, $hook) {
   if ($hook == 'menu__toolbar') {
     return;
   }
-  
+
   // Get the current path.
   $current_path = \Drupal::request()->getRequestUri();
 
