@@ -1,3 +1,12 @@
+bootstrap:
+  version: VERSION
+  js:
+    node_modules/popper.js/dist/umd/popper.min.js: {}
+    node_modules/bootstrap/dist/js/bootstrap.min.js: {}
+  css:
+    theme:
+      assets/css/radix.bootstrap.css: {}
+
 style:
   version: VERSION
   css:
@@ -6,5 +15,5 @@ style:
   js:
     assets/js/RADIX_SUBTHEME_MACHINE_NAME.script.js: {}
   dependencies:
-    - core/jquery
+    # - core/jquery
     - core/drupal

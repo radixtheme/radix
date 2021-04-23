@@ -44,7 +44,7 @@ mix.browserSync({
  | SASS
  |--------------------------------------------------------------------------
  */
-mix.sass('src/sass/RADIX_SUBTHEME_MACHINE_NAME.style.scss', 'css');
+mix.sass('src/scss/RADIX_SUBTHEME_MACHINE_NAME.style.scss', 'css');
 
 /*
  |--------------------------------------------------------------------------
