@@ -10,10 +10,6 @@ stylesheets-remove:
   - system.menus.css
   - system.admin.css
 
-libraries:
-  - radix/bootstrap
-  - radix/style
-
 libraries-override:
   seven/global-styling: false
 
