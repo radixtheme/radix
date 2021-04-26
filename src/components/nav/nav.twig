@@ -44,7 +44,7 @@
         {% endif %}
         <li class="{{ nav_item_classes|join(' ') }}">
           {% if item.is_expanded and item.below %}
-            {{ link(item.title, item.url, { 'class': nav_link_classes|merge(['dropdown-toggle']), 'data-toggle': 'dropdown' }) }}
+            {{ link(item.title, item.url, { 'class': nav_link_classes|merge(['dropdown-bs-toggle']), 'data-bs-toggle': 'dropdown' }) }}
             {% if item.below %}
               {% include '@radix/dropdown/dropdown-menu.twig' with {
                 items: item.below

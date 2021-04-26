@@ -11,8 +11,8 @@
 #}
 {% set classes = [
   responsive ? 'img-fluid' : 'img-thumbnail',
-  align == 'left' ? 'float-left',
-  align == 'right' ? 'float-right',
+  align == 'left' ? 'float-start',
+  align == 'right' ? 'float-end',
   align == 'center' ? 'mx-auto d-block',
 ]|merge(utility_classes ? utility_classes : []) %}
 
