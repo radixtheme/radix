@@ -13,18 +13,18 @@ default.sm:
 default.md:
   label: MD
   mediaQuery: '(min-width: 768px) and (max-width: 991px)'
-  weight: 1
+  weight: 2
   multipliers:
     - 1x
 default.lg:
   label: LG
   mediaQuery: '(min-width: 992px) and (max-width: 1199px)'
-  weight: 1
+  weight: 3
   multipliers:
     - 1x
 default.xl:
   label: XL
   mediaQuery: '(min-width: 1200px)'
-  weight: 1
+  weight: 4
   multipliers:
     - 1x
