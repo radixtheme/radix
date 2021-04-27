@@ -18,7 +18,6 @@ regions:
   footer: Footer
 
 libraries:
-  - RADIX_SUBTHEME_MACHINE_NAME/bootstrap
   - RADIX_SUBTHEME_MACHINE_NAME/style
 
 ckeditor_stylesheets:
