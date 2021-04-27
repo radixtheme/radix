@@ -18,11 +18,7 @@ regions:
   footer: Footer
 
 libraries:
-  - radix/style
   - RADIX_SUBTHEME_MACHINE_NAME/style
-
-libraries-override:
-  radix/bootstrap: false
 
 ckeditor_stylesheets:
   - assets/css/RADIX_SUBTHEME_MACHINE_NAME.style.css
